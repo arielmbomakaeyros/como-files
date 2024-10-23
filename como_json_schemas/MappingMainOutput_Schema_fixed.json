@@ -1,0 +1,107 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/MappingMainOutput_Schema",
+    "title": "MappingResult",
+    "type": "object",
+    "description": "The main result from XNEC mapping",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC",
+            "type": "string"
+        },
+        "consideredCostsOrasThisCrosa": {
+            "type": "number"
+        },
+        "consideredCostsOrasThisHour": {
+            "type": "number"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "id": {
+            "description": "Unique identifier of the mapping result",
+            "type": "string"
+        },
+        "selectedXnecResultId": {
+            "description": "Reference to the unique identifier of the XNEC selection result (selected XNEC set)",
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "type": "string"
+        },
+        "tsoCostList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/tsoAreaCosts"
+            }
+        },
+        "xnecList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/xnecCost"
+            }
+        }
+    },
+    "definitions": {
+        "tsoAreaCosts": {
+            "type": "object",
+            "description": "Decomposition of costs for specific TSOs and RAs.",
+            "properties": {
+                "consideredCostsOrasInTsoArea": {
+                    "description": "TSO costs for the RA (convention: positive = costs, negative = revenues)",
+                    "type": "number"
+                },
+                "tsoCode": {
+                    "description": "EIC code of the TSO",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "consideredCostsOrasInTsoArea",
+                "tsoCode"
+            ]
+        },
+        "xnecCost": {
+            "type": "object",
+            "description": "Mapped costs per XNEC",
+            "properties": {
+                "convertedXnecId": {
+                    "description": "Reference to the unique identifier of the converted XNEC",
+                    "type": "string"
+                },
+                "cost": {
+                    "description": "Total XNEC costs.",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "convertedXnecId",
+                "cost"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "consideredCostsOrasThisCrosa",
+        "consideredCostsOrasThisHour",
+        "crosaVersion",
+        "csProcessVersion",
+        "id",
+        "selectedXnecResultId",
+        "timeHorizon"
+    ]
+}

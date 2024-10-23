@@ -1,0 +1,149 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/CostSharingSettings_Schema",
+    "title": "csSplittingRule",
+    "type": "object",
+    "description": "Definition of the sharing of costs inside bidding zones with multiple TSOs",
+    "properties": {
+        "biddingZoneCode": {
+            "description": "EIC code of the bidding zone",
+            "type": "string"
+        },
+        "description": {
+            "description": "Description of the related rule",
+            "type": "string"
+        },
+        "id": {
+            "description": "Identification of the single splitting rule record (for a specific time interval and bidding zone)",
+            "type": "string"
+        },
+        "timeInterval": {
+            "description": "The definition of the applicable time interval",
+            "type": "object",
+            "properties": {
+                "from": {
+                    "description": "Start of the time interval",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                },
+                "to": {
+                    "description": "End of the time interval",
+                    "type": "string",
+                    "minItems": 1,
+                    "maxItems": 1
+                }
+            }
+        }
+    },
+    "definitions": {
+        "aggregationRule": {
+            "type": "object",
+            "description": "The list of rules defining which component is considered as aggregated or distributed per bidding zone BZ in cost distribution algorithm.",
+            "properties": {
+                "aboveThreshold": {
+                    "description": "Identification whether the flows above threshold (true) or below threshold (false) are considered",
+                    "type": "boolean"
+                },
+                "aggregationType": {
+                    "description": "Definition whether the flow component is considered aggregated or distributed per bidding zone.",
+                    "type": "string"
+                },
+                "componentType": {
+                    "description": "Type of the related flow component (according to the code list)",
+                    "$ref": "#/definitions/"
+                },
+                "id": {
+                    "description": "Unique identifier of the stacking rule item",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "aggregationType",
+                "componentType",
+                "id"
+            ]
+        },
+        "stackingOrder": {
+            "type": "object",
+            "description": "List of the stacking rules applied to cost distribution algorithm.",
+            "properties": {
+                "componentType": {
+                    "description": "Type of the related flow component (according to the code list).",
+                    "type": "string",
+                    "enum": [
+                        "allocatedFlow",
+                        "internalFlow",
+                        "loopFlow",
+                        "loopFlowOutsideCore",
+                        "pstFlow"
+                    ]
+                },
+                "id": {
+                    "description": "Unique identifier of the stacking order item",
+                    "type": "string"
+                },
+                "order": {
+                    "description": "The order of the stacking when the stacking rules are applied in cost distribution.",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "componentType",
+                "id",
+                "order"
+            ]
+        },
+        "timeInterval": {
+            "type": "object",
+            "description": "The definition of the applicable time interval",
+            "properties": {
+                "from": {
+                    "description": "Start of the time interval",
+                    "type": "string"
+                },
+                "to": {
+                    "description": "End of the time interval",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "from",
+                "to"
+            ]
+        },
+        "tsoShare": {
+            "type": "object",
+            "description": "Specification of involved tso splitting share",
+            "properties": {
+                "tsoId": {
+                    "description": "Reference to the unique identifier of the related TSO",
+                    "type": "string"
+                },
+                "tsoList": {
+                    "$ref": "#/definitions/csSplittingRule"
+                },
+                "value": {
+                    "description": "The respective TSO share on the costs inside a bidding zone - a number among &lt;0;1&gt;",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "tsoId",
+                "tsoList",
+                "value"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "biddingZoneCode",
+        "description",
+        "id",
+        "timeInterval"
+    ]
+}

@@ -1,0 +1,227 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/CostDistribution_Schema",
+    "title": "costDistribution",
+    "type": "object",
+    "description": "Result of the cost distribution procedurre",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC",
+            "type": "string"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "flowDecompositionId": {
+            "description": "Reference to the unique identifier of the flow decomposition result",
+            "type": "string"
+        },
+        "id": {
+            "description": "Unique identifier of the cost distribution result.",
+            "type": "string"
+        },
+        "mappingResultId": {
+            "description": "Reference to the unique identifier of the XNEC mapping result",
+            "type": "string"
+        },
+        "selectedXnecResultId": {
+            "description": "Reference to the unique identifier of the XNEC selection result (selected XNEC set)",
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "type": "string"
+        }
+    },
+    "definitions": {
+        "ValueFlowComponentType": {
+            "description": "The code list of the flow component types",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        },
+        "biddingZoneCost": {
+            "type": "object",
+            "description": "Costs attributed to the bidding zone",
+            "properties": {
+                "biddingZoneCode": {
+                    "description": "EIC code of the bidding zone",
+                    "type": "string"
+                },
+                "contribution": {
+                    "description": "Contribution to the volume of overload attributed to the bidding zone",
+                    "type": "number"
+                },
+                "cost": {
+                    "description": "Costs distributed to the bidding zone",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "biddingZoneCode",
+                "contribution",
+                "cost"
+            ]
+        },
+        "flowComponent": {
+            "type": "object",
+            "description": "Identification of the flow component contributing to the overload based on the stacking order",
+            "properties": {
+                "Applied thresholds": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/thresholdApplication"
+                    }
+                },
+                "burdeningFlow": {
+                    "description": "Identified burdening flow",
+                    "type": "number"
+                },
+                "commonThreshold": {
+                    "description": "The threshold is expressed as a percentage of the XNEC’s Fmax value for the flow components that are “distributed per BZ”",
+                    "type": "number"
+                },
+                "contribution": {
+                    "description": "Identified contribution to the volume of overload for a specific component (respecting defined stacking order)",
+                    "type": "number"
+                },
+                "stackingOrder": {
+                    "description": "Stacking order of the related flow component as derived from the configuration",
+                    "type": "integer"
+                },
+                "type": {
+                    "description": "Type of the related flow component according to the codelist ValueFlowComponentType",
+                    "type": "string",
+                    "enum": [
+                        "allocatedFlow",
+                        "internalFlow",
+                        "loopFlow",
+                        "loopFlowOutsideCore",
+                        "pstFlow"
+                    ]
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "burdeningFlow",
+                "contribution",
+                "stackingOrder",
+                "type"
+            ]
+        },
+        "thresholdApplication": {
+            "type": "object",
+            "description": "Application of the thresholds for the XNEC's flow components that are distributed to the bidding zones",
+            "properties": {
+                "biddingZoneCode": {
+                    "description": "EIC code of the bidding zone",
+                    "type": "string"
+                },
+                "burdeningFlow": {
+                    "description": "Burdening flows from the specific Core CCR bidding zone",
+                    "type": "number"
+                },
+                "flowAboveThreshold": {
+                    "description": "Burdening flows from the specific Core CCR bidding zone that exceeds the individual threshold",
+                    "type": "number"
+                },
+                "flowBelowThreshold": {
+                    "description": "Burdening flows from the specific Core CCR bidding zone below the individual threshold",
+                    "type": "number"
+                },
+                "individualThreshold": {
+                    "description": "Calculated value of the individual threshold calculated for respective XNEC",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "biddingZoneCode",
+                "burdeningFlow",
+                "flowAboveThreshold",
+                "flowBelowThreshold",
+                "individualThreshold"
+            ]
+        },
+        "tsoCost": {
+            "type": "object",
+            "description": "Costs attributed to the TSO",
+            "properties": {
+                "contribution": {
+                    "description": "Contribution to the volume of overload attributed to the TSO",
+                    "type": "number"
+                },
+                "cost": {
+                    "description": "Costs distributed to the TSO",
+                    "type": "number"
+                },
+                "tsoCode": {
+                    "description": "EIC code of the TSO",
+                    "type": "string"
+                },
+                "tsoShare": {
+                    "description": "Share of the costs of the connecting TSO derived from its Fmax value",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "contribution",
+                "cost",
+                "tsoCode",
+                "tsoShare"
+            ]
+        },
+        "xnecCost": {
+            "type": "object",
+            "description": "Costs distributed for particular XNECs",
+            "properties": {
+                "convertedXnecId": {
+                    "description": "Reference to the unique identifier of the converted XNEC",
+                    "type": "string"
+                },
+                "cost": {
+                    "description": "Total costs attributed to the XNEC by the mapping",
+                    "type": "number"
+                },
+                "volumeOverload": {
+                    "description": "Volume of overload (total flow on the selected XNEC before the RAC,  in absolute value, reduced by the maximum between the flow limit on that XNEC and the XNEC flow after the RAC in absolute value.",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "convertedXnecId",
+                "cost",
+                "volumeOverload"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "crosaVersion",
+        "csProcessVersion",
+        "flowDecompositionId",
+        "id",
+        "mappingResultId",
+        "selectedXnecResultId",
+        "timeHorizon"
+    ]
+}

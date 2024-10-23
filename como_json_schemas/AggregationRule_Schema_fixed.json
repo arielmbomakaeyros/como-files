@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/AggregationRule_Schema",
+    "title": "aggregationRule",
+    "type": "object",
+    "description": "The list of rules defining which component is considered as aggregated or distributed per bidding zone BZ in cost distribution algorithm.",
+    "properties": {
+        "aboveThreshold": {
+            "description": "Identification whether the flows above threshold (true) or below threshold (false) are considered",
+            "type": "boolean"
+        },
+        "aggregationType": {
+            "description": "Definition whether the flow component is considered aggregated or distributed per bidding zone.",
+            "type": "string"
+        },
+        "componentType": {
+            "description": "Type of the related flow component (according to the code list)",
+            "$ref": "#/definitions/ValueFlowComponentType"
+        },
+        "id": {
+            "description": "Unique identifier of the stacking rule item",
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "ValueFlowComponentType": {
+            "description": "The code list of the flow component types",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "aggregationType",
+        "componentType",
+        "id"
+    ]
+}

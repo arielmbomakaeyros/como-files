@@ -1,0 +1,112 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/CRCPPS_Schema",
+    "title": "RAOControlParameterProfile",
+    "type": "object",
+    "properties": {
+        "businessTimestamp": {
+            "type": "string"
+        },
+        "controlParameterSet": {
+            "$ref": "#/definitions/RAOControlParameterSet"
+        },
+        "mrid": {
+            "type": "integer"
+        },
+        "timeHorizon": {
+            "type": "string"
+        },
+        "timeInterval": {
+            "$ref": "#/definitions/TimeInterval"
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "RAOControlParameterSet": {
+            "type": "object",
+            "properties": {
+                "RAOControlParameterProfile": {
+                    "$ref": "#/definitions/RAOControlParameterProfile"
+                },
+                "contingencyOutput": {
+                    "description": "Number of contingency cases in result output, sorted by impact on loading of XNE;\n&gt; 0\ndefault: 1",
+                    "type": "integer"
+                },
+                "maxChangeRA": {
+                    "description": "Max. change in redispatch of each RA;\n[MW];\n&gt; 0\ndefault: 50",
+                    "type": "number"
+                },
+                "maxChangeRASum": {
+                    "description": "Max. sum of changes in redispatch of RAs;\n[MW];\n&gt;0\ndefault: 200",
+                    "type": "number"
+                },
+                "maxCountCompIter": {
+                    "description": "Max. count of completeness iterations;\n&gt; 0\ndefault: 2",
+                    "type": "integer"
+                },
+                "maxCountLinIter": {
+                    "description": "Max. count of linearisation iterations;\n&gt;0\ndefault: 1",
+                    "type": "integer"
+                },
+                "maxNumXNECs": {
+                    "description": "Maximum number of contingencies per network element;\n&gt; 0\ndefault: 3",
+                    "type": "integer"
+                },
+                "minUtilNX": {
+                    "description": "Minimum loading to consider a XNEC combination in the optimisation problem;\n[%];\n&gt; 0\ndefault: 80",
+                    "type": "number"
+                },
+                "penaltyPATL": {
+                    "description": "Penalty cost factor effective for exceeding the PATL;\n[EUR/A];\n&gt;0\ndefault: 50000",
+                    "type": "number"
+                },
+                "penaltyTechnicalTransformer": {
+                    "description": "Objective function coefficient for tap positions within the technical but outside the operational limits of the PST.;\n[EUR/Tap];\n&gt; 0\ndefault: 2000",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "RAOControlParameterProfile",
+                "contingencyOutput",
+                "maxChangeRA",
+                "maxChangeRASum",
+                "maxCountCompIter",
+                "maxCountLinIter",
+                "maxNumXNECs",
+                "minUtilNX",
+                "penaltyPATL",
+                "penaltyTechnicalTransformer"
+            ]
+        },
+        "TimeInterval": {
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "from",
+                "to"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessTimestamp",
+        "controlParameterSet",
+        "mrid",
+        "timeHorizon",
+        "timeInterval",
+        "version"
+    ]
+}

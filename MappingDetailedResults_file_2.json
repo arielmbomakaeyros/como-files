@@ -1,0 +1,63 @@
+{
+    "businessDay": "2024-01-02",
+    "crosaVersion": 1,
+    "csProcessVersion": 3,
+    "dataPerHour": [
+        {
+            "aggregatedVolumeDownwardCostlyAnora": 7,
+            "aggregatedVolumeUpwardCostlyAnora": 29,
+            "averageCostDownwardOraOrAnora": 67,
+            "averageCostUpwardOraOrAnora": 6,
+            "penaltyCostForAnoraVolumes": 47,
+            "timestamp": "2002-08-16T18:23:34.643347",
+            "totalCostsAllOras": 59,
+            "totalIndividualShare": 49,
+            "totalRelativeWeightsAfterRba": 26,
+            "totalRelativeWeightsBeforeRba": 17
+        }
+    ],
+    "dataPerXnec": [
+        {
+            "deltaMinus": 25,
+            "deltaPlus": 10,
+            "fAfterRao": 54,
+            "fLimit": 78,
+            "fMax": 12,
+            "leastCostWeightRi": 51,
+            "lowerBalancingDualValue": 15,
+            "lowerBalancingSlack": 95,
+            "powerFlowDualValue": 99,
+            "powerFlowSlack": 30,
+            "relativeCostWeightAfterRba": 25,
+            "relativeCostWeightBeforeRba": 46,
+            "selectedXnecResultId": "4cf1e88429c4f03749fbfb49",
+            "shareOfTotalCosts": 97,
+            "sumDeltaMinus": 89,
+            "sumDeltaPlus": 87,
+            "timestamp": "2002-08-04T08:51:21.781455",
+            "totalAdjustedFlow": 44,
+            "upperBalancingDualValue": 37,
+            "upperBalancingSlack": 58,
+            "xnecId": "b8b0923fc3600ef06bebf1d0"
+        }
+    ],
+    "dataPerXnecAndXra": [
+        {
+            "timestamp": "1975-12-19T12:17:10.276350",
+            "value": 18,
+            "valueType": {},
+            "xnecId": "7950202916b544f7bd14dd60",
+            "xraId": "2a973fd70d4b6bbab3bf59d1"
+        }
+    ],
+    "dataPerXra": [
+        {
+            "orderedVolume": 27,
+            "sumAlphaOrBetaOverXnecs": 36,
+            "timestamp": "1971-05-10T14:47:19.539274",
+            "totalCost": 53,
+            "xraId": "bc4208b0f8ecb8a0f7179ed3"
+        }
+    ],
+    "timeHorizon": "Intraday"
+}

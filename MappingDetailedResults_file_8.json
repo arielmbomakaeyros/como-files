@@ -1,0 +1,63 @@
+{
+    "businessDay": "2024-01-08",
+    "crosaVersion": 5,
+    "csProcessVersion": 4,
+    "dataPerHour": [
+        {
+            "aggregatedVolumeDownwardCostlyAnora": 63,
+            "aggregatedVolumeUpwardCostlyAnora": 54,
+            "averageCostDownwardOraOrAnora": 20,
+            "averageCostUpwardOraOrAnora": 54,
+            "penaltyCostForAnoraVolumes": 100,
+            "timestamp": "2004-11-10T03:05:33.660193",
+            "totalCostsAllOras": 15,
+            "totalIndividualShare": 64,
+            "totalRelativeWeightsAfterRba": 29,
+            "totalRelativeWeightsBeforeRba": 28
+        }
+    ],
+    "dataPerXnec": [
+        {
+            "deltaMinus": 25,
+            "deltaPlus": 82,
+            "fAfterRao": 63,
+            "fLimit": 28,
+            "fMax": 15,
+            "leastCostWeightRi": 26,
+            "lowerBalancingDualValue": 37,
+            "lowerBalancingSlack": 79,
+            "powerFlowDualValue": 91,
+            "powerFlowSlack": 17,
+            "relativeCostWeightAfterRba": 20,
+            "relativeCostWeightBeforeRba": 58,
+            "selectedXnecResultId": "2f36880e22b04e8cabc6f4b1",
+            "shareOfTotalCosts": 92,
+            "sumDeltaMinus": 58,
+            "sumDeltaPlus": 93,
+            "timestamp": "2019-10-23T05:10:12.991305",
+            "totalAdjustedFlow": 93,
+            "upperBalancingDualValue": 80,
+            "upperBalancingSlack": 32,
+            "xnecId": "278407094ea0c54e27170141"
+        }
+    ],
+    "dataPerXnecAndXra": [
+        {
+            "timestamp": "2008-11-30T22:54:30.914162",
+            "value": 4,
+            "valueType": {},
+            "xnecId": "f95069dfba9d281e0da74b11",
+            "xraId": "f83714cb5f84a16711c79441"
+        }
+    ],
+    "dataPerXra": [
+        {
+            "orderedVolume": 60,
+            "sumAlphaOrBetaOverXnecs": 7,
+            "timestamp": "1990-02-14T09:07:27.890169",
+            "totalCost": 15,
+            "xraId": "ac1665f0de5b325dd3e2ffa9"
+        }
+    ],
+    "timeHorizon": "dayAhead"
+}

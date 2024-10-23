@@ -1,0 +1,166 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/XnecSelectionInput_Schema",
+    "title": "xnecSelectionInput",
+    "type": "object",
+    "description": "XNEC selection input data structure",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC",
+            "type": "string"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "id": {
+            "description": "Unique identifier of the XNEC selection input data set",
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/timeHorizonCodelist"
+        },
+        "xnecList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/overloadedXnec"
+            }
+        }
+    },
+    "definitions": {
+        "overloadedXnec": {
+            "type": "object",
+            "description": "Overloaded XNEC identified in the CGM for a specific business timestamp",
+            "properties": {
+                "biddingZoneCode": {
+                    "description": "EIC code of the bidding zone",
+                    "type": "string"
+                },
+                "contingencyMrid": {
+                    "description": "Mrid of the related contingency",
+                    "type": "string"
+                },
+                "contingencyName": {
+                    "description": "Name of the contingency",
+                    "type": "string"
+                },
+                "hasCostlyRa": {
+                    "description": "Indication whether the related costly remedial action was materialized for the XNEC (true) or not (false)",
+                    "type": "boolean"
+                },
+                "iAfter": {
+                    "description": "Current on XNEC after RAC, including agreed XRAs impact [A]",
+                    "type": "number"
+                },
+                "iBefore": {
+                    "description": "Current on XNEC before RAO [A]",
+                    "type": "number"
+                },
+                "iMax": {
+                    "description": "Maximum current on XNEC [A]",
+                    "type": "number"
+                },
+                "id": {
+                    "description": "Unique identifier of the specific XNEC (XNE - contingency pair)",
+                    "type": "string"
+                },
+                "node1": {
+                    "description": "First XNE's node data",
+                    "$ref": "#/definitions/xnecNode"
+                },
+                "node2": {
+                    "description": "Second XNE's node data",
+                    "$ref": "#/definitions/xnecNode"
+                },
+                "raMrid": {
+                    "description": "Mrid of the related costly RA",
+                    "type": "string"
+                },
+                "tsoCode": {
+                    "description": "EIC of the related TSO",
+                    "type": "string"
+                },
+                "xneMrid": {
+                    "description": "Mrid of the XNE from the CGM",
+                    "type": "string"
+                },
+                "xneName": {
+                    "description": "Name of the XNE from the CGM",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "biddingZoneCode",
+                "contingencyMrid",
+                "hasCostlyRa",
+                "iAfter",
+                "iBefore",
+                "iMax",
+                "id",
+                "node1",
+                "node2",
+                "tsoCode",
+                "xneMrid"
+            ]
+        },
+        "timeHorizonCodelist": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "xnecNode": {
+            "type": "object",
+            "description": "Node related to XNE",
+            "properties": {
+                "iMax": {
+                    "type": "number"
+                },
+                "isBoundaryNode": {
+                    "description": "Identification whether it is a boundary node (true) or not (false)",
+                    "type": "boolean"
+                },
+                "mrid": {
+                    "description": "Mrid of the node from the CGM",
+                    "type": "string"
+                },
+                "uN": {
+                    "description": "Nominal voltage of the node [V]",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "iMax",
+                "isBoundaryNode",
+                "mrid",
+                "uN"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "crosaVersion",
+        "csProcessVersion",
+        "id",
+        "timeHorizon"
+    ]
+}

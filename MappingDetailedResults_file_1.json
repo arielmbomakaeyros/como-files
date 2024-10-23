@@ -1,0 +1,63 @@
+{
+    "businessDay": "2024-01-01",
+    "crosaVersion": 5,
+    "csProcessVersion": 5,
+    "dataPerHour": [
+        {
+            "aggregatedVolumeDownwardCostlyAnora": 30,
+            "aggregatedVolumeUpwardCostlyAnora": 3,
+            "averageCostDownwardOraOrAnora": 18,
+            "averageCostUpwardOraOrAnora": 59,
+            "penaltyCostForAnoraVolumes": 99,
+            "timestamp": "2005-10-16T16:05:26.643805",
+            "totalCostsAllOras": 24,
+            "totalIndividualShare": 32,
+            "totalRelativeWeightsAfterRba": 83,
+            "totalRelativeWeightsBeforeRba": 97
+        }
+    ],
+    "dataPerXnec": [
+        {
+            "deltaMinus": 58,
+            "deltaPlus": 80,
+            "fAfterRao": 85,
+            "fLimit": 62,
+            "fMax": 45,
+            "leastCostWeightRi": 70,
+            "lowerBalancingDualValue": 99,
+            "lowerBalancingSlack": 65,
+            "powerFlowDualValue": 30,
+            "powerFlowSlack": 24,
+            "relativeCostWeightAfterRba": 15,
+            "relativeCostWeightBeforeRba": 24,
+            "selectedXnecResultId": "70cff785aec818924c1e336d",
+            "shareOfTotalCosts": 83,
+            "sumDeltaMinus": 89,
+            "sumDeltaPlus": 10,
+            "timestamp": "2019-12-18T12:17:16.829620",
+            "totalAdjustedFlow": 60,
+            "upperBalancingDualValue": 81,
+            "upperBalancingSlack": 40,
+            "xnecId": "b714502da5792119ce185277"
+        }
+    ],
+    "dataPerXnecAndXra": [
+        {
+            "timestamp": "2022-01-27T11:29:25.015469",
+            "value": 87,
+            "valueType": {},
+            "xnecId": "53ac9b149d00340a4f682a58",
+            "xraId": "5db7b8c78b3ed5492c725261"
+        }
+    ],
+    "dataPerXra": [
+        {
+            "orderedVolume": 59,
+            "sumAlphaOrBetaOverXnecs": 41,
+            "timestamp": "2022-12-04T21:39:13.041536",
+            "totalCost": 54,
+            "xraId": "f71efe94d11bb5b70961bdb1"
+        }
+    ],
+    "timeHorizon": "monthAhead"
+}

@@ -1,0 +1,47 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/StackingOrder_Schema",
+    "title": "stackingOrder",
+    "type": "object",
+    "description": "List of the stacking rules applied to cost distribution algorithm.",
+    "properties": {
+        "componentType": {
+            "description": "Type of the related flow component (according to the code list).",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        },
+        "id": {
+            "description": "Unique identifier of the stacking order item",
+            "type": "string"
+        },
+        "order": {
+            "description": "The order of the stacking when the stacking rules are applied in cost distribution.",
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "ValueFlowComponentType": {
+            "description": "The code list of the flow component types",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "componentType",
+        "id",
+        "order"
+    ]
+}

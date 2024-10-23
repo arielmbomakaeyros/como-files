@@ -1,0 +1,231 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/MappingDetailedResults_Schema",
+    "title": "MappingDetailedResult",
+    "type": "object",
+    "description": "The detailed result from CS mapping",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "dataPerHour": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/DataPerHourOfTheCrosa"
+            }
+        },
+        "dataPerXnec": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/DataPerXnec"
+            }
+        },
+        "dataPerXnecAndXra": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/DataPerXnecAndXra"
+            }
+        },
+        "dataPerXra": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/DataPerXra"
+            }
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "type": "string"
+        }
+    },
+    "definitions": {
+        "DataPerHourOfTheCrosa": {
+            "type": "object",
+            "properties": {
+                "aggregatedVolumeDownwardCostlyAnora": {
+                    "type": "number"
+                },
+                "aggregatedVolumeUpwardCostlyAnora": {
+                    "type": "number"
+                },
+                "averageCostDownwardOraOrAnora": {
+                    "type": "number"
+                },
+                "averageCostUpwardOraOrAnora": {
+                    "type": "number"
+                },
+                "penaltyCostForAnoraVolumes": {
+                    "type": "number"
+                },
+                "timestamp": {
+                    "type": "string"
+                },
+                "totalCostsAllOras": {
+                    "type": "number"
+                },
+                "totalIndividualShare": {
+                    "type": "number"
+                },
+                "totalRelativeWeightsAfterRba": {
+                    "type": "number"
+                },
+                "totalRelativeWeightsBeforeRba": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "timestamp"
+            ]
+        },
+        "DataPerXnec": {
+            "type": "object",
+            "properties": {
+                "deltaMinus": {
+                    "type": "number"
+                },
+                "deltaPlus": {
+                    "type": "number"
+                },
+                "fAfterRao": {
+                    "type": "number"
+                },
+                "fLimit": {
+                    "type": "number"
+                },
+                "fMax": {
+                    "type": "number"
+                },
+                "leastCostWeightRi": {
+                    "type": "number"
+                },
+                "lowerBalancingDualValue": {
+                    "type": "number"
+                },
+                "lowerBalancingSlack": {
+                    "type": "number"
+                },
+                "powerFlowDualValue": {
+                    "type": "number"
+                },
+                "powerFlowSlack": {
+                    "type": "number"
+                },
+                "relativeCostWeightAfterRba": {
+                    "type": "number"
+                },
+                "relativeCostWeightBeforeRba": {
+                    "type": "number"
+                },
+                "selectedXnecResultId": {
+                    "type": "string"
+                },
+                "shareOfTotalCosts": {
+                    "type": "number"
+                },
+                "sumDeltaMinus": {
+                    "type": "number"
+                },
+                "sumDeltaPlus": {
+                    "type": "number"
+                },
+                "timestamp": {
+                    "type": "string"
+                },
+                "totalAdjustedFlow": {
+                    "type": "number"
+                },
+                "upperBalancingDualValue": {
+                    "type": "number"
+                },
+                "upperBalancingSlack": {
+                    "type": "number"
+                },
+                "xnecId": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "selectedXnecResultId",
+                "timestamp",
+                "xnecId"
+            ]
+        },
+        "DataPerXnecAndXra": {
+            "type": "object",
+            "properties": {
+                "timestamp": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                },
+                "valueType": {
+                    "$ref": "#/definitions/ValueType"
+                },
+                "xnecId": {
+                    "type": "string"
+                },
+                "xraId": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "timestamp",
+                "valueType",
+                "xnecId",
+                "xraId"
+            ]
+        },
+        "DataPerXra": {
+            "type": "object",
+            "properties": {
+                "orderedVolume": {
+                    "type": "number"
+                },
+                "sumAlphaOrBetaOverXnecs": {
+                    "type": "number"
+                },
+                "timestamp": {
+                    "type": "string"
+                },
+                "totalCost": {
+                    "type": "number"
+                },
+                "xraId": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "sumAlphaOrBetaOverXnecs",
+                "timestamp",
+                "xraId"
+            ]
+        },
+        "ValueType": {
+            "type": "string",
+            "enum": [
+                "optimizationVariable",
+                "sensitivity"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "crosaVersion",
+        "csProcessVersion",
+        "timeHorizon"
+    ]
+}

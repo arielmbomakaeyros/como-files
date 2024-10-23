@@ -1,0 +1,150 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/Flow_Decomposition_Schema",
+    "title": "flowComponentList",
+    "type": "object",
+    "description": "Main result from the flow decomposition",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC. Use the \"date-time\" format to interpret this.",
+            "type": "string"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "id": {
+            "description": "Unique identifier of the flow decomposition result",
+            "type": "string"
+        },
+        "selectedXnecResultId": {
+            "description": "Reference to the related unique identifier of the XNEC selection result (selected XNEC set)",
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/timeHorizonCodelist"
+        },
+        "xnecList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/xnecFlowComponent"
+            }
+        }
+    },
+    "definitions": {
+        "ValueFlowComponentType": {
+            "description": "The code list of the flow component types",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        },
+        "componentFlow": {
+            "type": "object",
+            "properties": {
+                "biddingZoneList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/distributedFlow"
+                    }
+                },
+                "componentType": {
+                    "description": "Type of the related flow component (according to the code list)",
+                    "$ref": "#/definitions/ValueFlowComponentType"
+                },
+                "value": {
+                    "description": "The value of the related network element’s flow [MW]",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "componentType",
+                "value"
+            ]
+        },
+        "distributedFlow": {
+            "type": "object",
+            "properties": {
+                "biddingZoneCode": {
+                    "description": "EIC code of the bidding zone",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value of the related network element’s flow per bidding zone [MW]",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "biddingZoneCode",
+                "value"
+            ]
+        },
+        "timeHorizonCodelist": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "xnecFlowComponent": {
+            "type": "object",
+            "description": "Flow components for the selected XNEC",
+            "properties": {
+                "adjustedFmax": {
+                    "description": "Adjusted active power flow max to AC load flow results [MW]",
+                    "type": "number"
+                },
+                "componentList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/componentFlow"
+                    }
+                },
+                "convertedXnecId": {
+                    "description": "Reference to unique identifier of the converted XNEC",
+                    "type": "string"
+                },
+                "totalFlow": {
+                    "description": "Active power flow that is considered as the reference for the decomposition [MW]",
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "adjustedFmax",
+                "convertedXnecId",
+                "totalFlow"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "crosaVersion",
+        "csProcessVersion",
+        "id",
+        "selectedXnecResultId",
+        "timeHorizon"
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/DiscardedXnecResult_Schema",
+    "title": "discardedXnecResult",
+    "type": "object",
+    "description": "XNEC selection result - discarded XNECs",
+    "properties": {
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC",
+            "type": "string"
+        },
+        "convertedXnecList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/convertedXnec"
+            }
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "id": {
+            "description": "Unique identifier of the discarded result set",
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/timeHorizonCodelist"
+        },
+        "xnecSelectionInputId": {
+            "description": "Reference to unique identifier of the related XNEC selection input data set",
+            "type": "string"
+        }
+    },
+    "definitions": {
+        "convertedXnec": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "Unique identifier of the converted XNEC (a combination of original XNEC(s) for the related contingency)",
+                    "type": "string"
+                },
+                "originalXnec1": {
+                    "description": "First original XNEC's data",
+                    "$ref": "#/definitions/originalXnecData"
+                },
+                "originalXnec2": {
+                    "description": "Second original XNEC's data",
+                    "$ref": "#/definitions/originalXnecData"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "originalXnec1"
+            ]
+        },
+        "originalXnecData": {
+            "type": "object",
+            "properties": {
+                "biddingZoneCode": {
+                    "description": "EIC code of the bidding zone",
+                    "type": "string"
+                },
+                "continencyMrid": {
+                    "description": "Mrid of the related contingency",
+                    "type": "string"
+                },
+                "contingencyName": {
+                    "description": "Name of the contingency",
+                    "type": "string"
+                },
+                "fAfter": {
+                    "type": "number"
+                },
+                "fBefore": {
+                    "description": "Current on XNEC before RAO [A]",
+                    "type": "number"
+                },
+                "fMax": {
+                    "type": "number"
+                },
+                "hasCostlyRa": {
+                    "description": "Indication whether the related costly remedial action was materialized for the XNEC (true) or not (false)",
+                    "type": "boolean"
+                },
+                "iAfter": {
+                    "description": "Current on XNEC after RAC, including agreed XRAs impact [A]",
+                    "type": "number"
+                },
+                "iBefore": {
+                    "type": "number"
+                },
+                "iMax": {
+                    "description": "Maximum current on XNEC [A]",
+                    "type": "number"
+                },
+                "id": {
+                    "description": "Unique identifier of the original XNEC",
+                    "type": "string"
+                },
+                "raMrid": {
+                    "description": "Mrid of the related costly RA",
+                    "type": "string"
+                },
+                "tsoCode": {
+                    "description": "EIC of the related TSO",
+                    "type": "string"
+                },
+                "xneMrid": {
+                    "description": "Mrid of the XNE from the CGM",
+                    "type": "string"
+                },
+                "xneName": {
+                    "description": "Name of the XNE from the CGM",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "biddingZoneCode",
+                "continencyMrid",
+                "fAfter",
+                "fBefore",
+                "fMax",
+                "hasCostlyRa",
+                "iAfter",
+                "iBefore",
+                "iMax",
+                "id",
+                "tsoCode",
+                "xneMrid"
+            ]
+        },
+        "timeHorizonCodelist": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "crosaVersion",
+        "csProcessVersion",
+        "id",
+        "timeHorizon",
+        "xnecSelectionInputId"
+    ]
+}
