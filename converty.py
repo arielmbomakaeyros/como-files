@@ -4,12 +4,12 @@ import random
 from datetime import datetime, timedelta
 from random import choice
 import uuid
-from faker import Faker
+# from faker import Faker
 import os
 import pandas as pd
 import re
 
-fake = Faker()
+# fake = Faker()
 
 directory = '.'  # The directory where the file is located
 filename = 'Bidding_zone_EIC_code.csv'
@@ -71,11 +71,35 @@ def generate_component_flows(bidding_zone_list):
     sum_value = calculate_sum(bidding_zone_list)  # Calculate sum once for loopFlow
 
     for component_type in ValueFlowComponentType:
-        value = sum_value  # Use sum for loopFlow
-        bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
-        # if component_type == "loopFlow":
-        #     value = sum_value  # Use sum for loopFlow
-        #     bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
+        # value = sum_value  # Use sum for loopFlow
+        # bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
+        if component_type == "loopFlow":
+            value = sum_value  # Use sum for loopFlow
+            bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
+
+        else:
+            # For other types, create a distinct value
+            offset = round(random.uniform(0.1, 0.5), 2)  # Random offset for uniqueness
+            value = round(sum_value + offset, 2)  # Apply offset to the sum
+            
+            # Create a new biddingZoneList that sums to the same total
+            bidding_zone_list_copy = []
+            total_adjusted = 0  # To keep track of the adjusted total
+            
+            for zone in bidding_zone_list:
+                # Generate a unique random value for each zone
+                unique_value = round(zone["value"] + random.uniform(0.01, 0.1), 2)
+                bidding_zone_list_copy.append({
+                    "biddingZoneCode": zone["biddingZoneCode"],
+                    "value": unique_value
+                })
+                total_adjusted += unique_value
+            
+            # Adjust the last zone's value to ensure the sum remains the same
+            last_zone_value = round(value - (total_adjusted - bidding_zone_list_copy[-1]["value"]), 2)
+            bidding_zone_list_copy[-1]["value"] = last_zone_value
+
+        # THIS ELSE PORTION MAKES SURE THAT WE SUM UP EACH bidding_zone IN THE LIST AND GIVE THE SUM AS A FLOW TYPE VALUE FOR ALL NON LOOPFLOW 
         # else:
         #     # Generate a new random value for non-loopFlow types
         #     new_value = get_random_value()
@@ -94,35 +118,6 @@ def generate_component_flows(bidding_zone_list):
     return component_flows
 
 
-
-# def generate_component_flows(bidding_zone_list):
-#     component_flows = []
-#     sum_value = calculate_sum(bidding_zone_list)  # Calculate sum once for loopFlow
-
-#     for component_type in ValueFlowComponentType:
-#         if component_type == "loopFlow":
-#             value = sum_value  # Use sum for loopFlow
-#             bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
-#         else:
-#             # Generate a new random value for non-loopFlow types
-#             new_value = get_random_value()
-#             # Update biddingZoneList values for non-loopFlow types
-#             bidding_zone_list_copy = [
-#                 {**zone, "value": new_value} for zone in bidding_zone_list
-#             ]
-#             value = new_value  # Set the same value for non-loopFlow types
-
-#         component_flows.append({
-#             "componentType": component_type,
-#             "value": value,
-#             "biddingZoneList": bidding_zone_list_copy
-#         })
-    
-#     return component_flows
-
-
-
-
 # Function to generate xnecFlowComponent
 def generate_xnec_flow_component():
     bidding_zone_list = generate_bidding_zone_list(size=random.randint(2, 5))
@@ -137,14 +132,8 @@ def generate_xnec_flow_component():
 
 def generate_comp_list():
     bidding_zone_list = generate_bidding_zone_list(size=random.randint(2, 5))
+    print(bidding_zone_list, "iiiiiiiiiii")
     return generate_component_flows(bidding_zone_list)
-
-    # return {
-    #     "adjustedFmax": round(random.uniform(150, 200), 2),
-    #     "componentList": component_list,
-    #     "convertedXnecId": str(uuid.uuid4()),
-    #     "totalFlow": round(random.uniform(0, 100), 2)
-    # }
 
 # Helper functions to generate sample data for each property
 def generate_business_day(start_date, offset_days):
@@ -158,7 +147,8 @@ def generate_business_timestamp(business_day):
     return f"{business_day}T{random_hour:02}:{random_minute:02}:{random_second:02}Z"
 
 def generate_crosa_version():
-    return random.randint(1, 5)
+    # return random.randint(1, 5)
+    return random.randint(1, 1)
 
 def generate_tso_code():
     # return random.choice(["dayAhead", "weekAhead", "monthAhead", "Intraday"])
@@ -166,6 +156,7 @@ def generate_tso_code():
 
 def generate_cs_process_version():
     return random.randint(1, 5)
+    # return random.randint(1, 1)
 
 def generate_flow_decomposition_id():
     return secrets.token_hex(12)
@@ -181,13 +172,13 @@ def generate_selected_xnec_result_id():
 
 def generate_time_horizon():
     # return random.choice(["dayAhead", "weekAhead", "monthAhead", "Intraday"])
-    return random.choice(["Intraday"])
+    return random.choice(["dayAhead"])
 
 def generate_bidding_zone_cost_list():
     bidding_zones = ["EIC_DE", "EIC_SI", "EIC_NL", "EIC_FR", "EIC_PL", "EIC_SK", "EIC_RO"]
     return [
         {
-            "biddingZoneCode": zone,
+            "biddingZoneCode": generateBiddingZoneCode(),
             "contribution": random.uniform(0, 0.5),
             "cost": random.uniform(0, 25000)
         } for zone in generateBiddingZoneCode()
@@ -213,7 +204,8 @@ def generate_applied_threshold_list():
 
 def generate_applied_threshold():
     return {
-        "biddingZoneCode": random.choice(["EIC_DE", "EIC_SI", "EIC_PL", "EIC_SK", "EIC_RO"]),
+        # "biddingZoneCode": random.choice(["EIC_DE", "EIC_SI", "EIC_PL", "EIC_SK", "EIC_RO"]),
+        "biddingZoneCode": random.choice([generateBiddingZoneCode()]),
         "burdeningFlow": random.uniform(0, 100),
         "flowAboveThreshold": random.uniform(0, 100),
         "flowBelowThreshold": random.uniform(0, 100),
@@ -240,7 +232,8 @@ def generate_xnec_cost_list():
 def generate_xnec_cost():
     return {
         "biddingZoneCostList": generate_bidding_zone_cost_list(),
-        "convertedXnecId": f"ID{random.randint(1, 100)}",
+        # "convertedXnecId": f"ID{random.randint(1, 100)}",
+        "convertedXnecId": str(uuid.uuid4()),
         "cost": random.uniform(50000, 100000),
         "flowComponentList": generate_flow_component_list(),
         "tsoCostList": generate_tso_cost_list(),
@@ -259,55 +252,20 @@ def resolve_ref(schema, ref):
             return None
     return ref_obj
 
-# FUNCTION TO GENERATE RANDOM DATE VALUES
-def generate_random_date():
-    # Example function to generate a random date
-    return fake.date()
+# # FUNCTION TO GENERATE RANDOM DATE VALUES
+# def generate_random_date():
+#     # Example function to generate a random date
+#     return fake.date()
 
-# FUNCTION TO GENERATE RANDOM TIMESTAMP VALUES
-def generate_random_timestamp():
-    # Example function to generate a random timestamp
-    return fake.iso8601()
+# # FUNCTION TO GENERATE RANDOM TIMESTAMP VALUES
+# def generate_random_timestamp():
+#     # Example function to generate a random timestamp
+#     return fake.iso8601()
 
 pattern = r'^(xnec.*Id|.*xnecId)$'
 patternXra = r'^(xra.*Id|.*xraId)$'
 
-# FUNCTION TO GENERATE VALUES BASED ON DESCRIPTION AND TYPES (MANUAL CHECK)
-def ai_generate_based_on_description(description, data_type):
-    # This would be replaced with actual AI model inference
-    # For example purposes, this is a simple mapping.
-    prompt = "Once upon a time"
-    if "date" in description.lower():
-        return "2024-08-23"
-        # return generate_text(prompt)
-    if "date" in description.lower() and data_type.lower() == "string":
-        return generate_random_date ()
-        # return generate_text(prompt)
-    elif "timestamp" in description.lower() and data_type.lower() == "string":
-        return generate_random_timestamp () # "2024-08-23T12:34:56Z"
-        # return generate_text(prompt)
-    elif "timestamp" in description.lower() and data_type.lower() == "date":
-        return generate_random_timestamp () # "2024-08-23T12:34:56Z"
-        # return generate_text(prompt)
-    elif "version" in description.lower() or "identifier" in description.lower():
-        return random.randint(1, 100)
-        # return generate_text(prompt)
-    elif "code" in description.lower():
-        return "ABC123"
-        # return generate_text(prompt)
-    else:
-        # Use a language model to generate a string based on description
-        # return "sample data based on description"
-        if data_type == 'number':
-            # return random.uniform(0, 100)
-            return random.randint(1, 100)
-        elif data_type == 'integer':
-            # return round(random.uniform(0, 10000), 2)
-            return random.randint(1, 100)
-        elif data_type == 'string':
-            # return round(random.uniform(0, 10000), 2)
-            return generate_flow_decomposition_id ()
-    
+
 def resolve_reference(schema, ref):
     """Resolve a reference within the JSON schema."""
     ref_path = ref.replace("#/", "").split("/")
@@ -319,13 +277,23 @@ def resolve_reference(schema, ref):
 # GENERATE SAMPLE DATA
 def generate_sample_data(schema, root_schema):
     """Generate sample data based on the provided JSON schema."""
-    print("11111199911111")
+    start = datetime.now() - timedelta(days=365)  # One year ago from today
+    end = datetime.now()
+    random_date = start + (end - start) * random.random()
+
+    # Randomly choose either 01:30 or 02:30 for the time
+    hour = random.choice([1, 2])
+    random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+    # Format the date and timestamp
+    business_day = random_date.strftime('%Y-%m-%d')
+    # business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
     if 'type' in schema:
         if schema['type'] == 'string':
             if 'enum' in schema:
                 return random.choice(schema['enum'])
             if 'format' in schema and schema['format'] == 'date-time':
-                return generate_random_timestamp()
+                return business_day
             return generate_selected_xnec_result_id()
 
         if schema['type'] == 'integer':
@@ -335,7 +303,6 @@ def generate_sample_data(schema, root_schema):
             return round(random.uniform(1.0, 100.0), 2)
 
         if schema['type'] == 'array':
-            print("111111array11111")
             items_schema = schema.get('items', {})
             return [generate_sample_data(items_schema, root_schema) for _ in range(random.randint(1, 3))]
 
@@ -359,7 +326,6 @@ def generate_sample_data(schema, root_schema):
     if 'items' in schema:
         # Resolve reference and generate sample
         # resolved_schema = resolve_reference(root_schema, schema['$ref'])
-        # print("111111111111")
         properties = schema.get('properties', {})
         obj = {}
         for key, prop_schema in properties.items():
@@ -373,21 +339,21 @@ def generate_sample_data(schema, root_schema):
 
     return None
 
-# Generate a random date within the past year
-start = datetime.now() - timedelta(days=365)  # One year ago from today
-end = datetime.now()
-random_date = start + (end - start) * random.random()
-
-# Randomly choose either 01:30 or 02:30 for the time
-hour = random.choice([1, 2])
-random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
-
-# Format the date and timestamp
-business_day = random_date.strftime('%Y-%m-%d')
-# business_timestamp = random_date.isoformat()
-business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
 
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
+    # Generate a random date within the past year
+    start = datetime.now() - timedelta(days=365)  # One year ago from today
+    end = datetime.now()
+    random_date = start + (end - start) * random.random()
+
+    # Randomly choose either 01:30 or 02:30 for the time
+    hour = random.choice([1, 2])
+    random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+    # Format the date and timestamp
+    business_day = random_date.strftime('%Y-%m-%d')
+    # business_timestamp = random_date.isoformat()
+    business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
     obj = {}
 
     for prop, prop_schema in schema.get('properties', {}).items():
@@ -456,7 +422,7 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
 
 
 # Main function to load schema, generate data, and write to multiple files
-def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples=2):
+def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples=10):
     # Load the schema from the file
     with open(schema_file_path, 'r') as f:
         schema = json.load(f)
@@ -479,6 +445,9 @@ baseFineName = "MappingDetailedResults"
 schema_file_path = 'MappingDetailedResults_Schema_fixed.json'
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
+# baseFineName = "CostDistribution"
+# schema_file_path = 'CostDistribution_Schema_fixed.json'
+
 
 # Flow_Decomposition_Schema_fixed.json
 output_file_prefix = f'{baseFineName}_file'

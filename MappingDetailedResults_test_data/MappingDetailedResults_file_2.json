@@ -1,0 +1,63 @@
+{
+    "businessDay": "2024-10-11",
+    "crosaVersion": 1,
+    "csProcessVersion": 4,
+    "dataPerHour": [
+        {
+            "aggregatedVolumeDownwardCostlyAnora": 74.15,
+            "aggregatedVolumeUpwardCostlyAnora": 5.72,
+            "averageCostDownwardOraOrAnora": 30.98,
+            "averageCostUpwardOraOrAnora": 6.12,
+            "penaltyCostForAnoraVolumes": 80.69,
+            "timestamp": "2023-12-16T01:30:00Z",
+            "totalCostsAllOras": 92.82,
+            "totalIndividualShare": 6.93,
+            "totalRelativeWeightsAfterRba": 43.03,
+            "totalRelativeWeightsBeforeRba": 30.81
+        }
+    ],
+    "dataPerXnec": [
+        {
+            "deltaMinus": 42.65,
+            "deltaPlus": 72.81,
+            "fAfterRao": 98.92,
+            "fLimit": 10.76,
+            "fMax": 2.68,
+            "leastCostWeightRi": 36.71,
+            "lowerBalancingDualValue": 34.28,
+            "lowerBalancingSlack": 90.64,
+            "powerFlowDualValue": 63.29,
+            "powerFlowSlack": 99.44,
+            "relativeCostWeightAfterRba": 67.86,
+            "relativeCostWeightBeforeRba": 85.69,
+            "selectedXnecResultId": "421f7f8bcddf0b8c873d7c32",
+            "shareOfTotalCosts": 69.85,
+            "sumDeltaMinus": 14.93,
+            "sumDeltaPlus": 71.5,
+            "timestamp": "2024-04-08T01:30:00Z",
+            "totalAdjustedFlow": 92.76,
+            "upperBalancingDualValue": 25.44,
+            "upperBalancingSlack": 37.12,
+            "xnecId": "5bbefb4d350b7e37e84a19ef"
+        }
+    ],
+    "dataPerXnecAndXra": [
+        {
+            "timestamp": "2024-09-21T01:30:00Z",
+            "value": 28.36,
+            "valueType": "sensitivity",
+            "xnecId": "69bfa11c1cc0ab17a65632c5",
+            "xraId": "b7b2f4cb6f198842152784b9"
+        }
+    ],
+    "dataPerXra": [
+        {
+            "orderedVolume": 3.91,
+            "sumAlphaOrBetaOverXnecs": 73.07,
+            "timestamp": "2024-05-23T01:30:00Z",
+            "totalCost": 48.2,
+            "xraId": "32c39792ede49eea6358dee4"
+        }
+    ],
+    "timeHorizon": "dayAhead"
+}

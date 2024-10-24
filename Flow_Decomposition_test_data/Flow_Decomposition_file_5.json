@@ -1,0 +1,88 @@
+{
+    "businessDay": "2023-11-05",
+    "businessTimestamp": "2023-11-05T02:30:00Z",
+    "crosaVersion": 1,
+    "csProcessVersion": 2,
+    "id": "99ac106fe1d073096582c84a",
+    "selectedXnecResultId": "9cdf615fdfd4ab514fa81913",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 43.36,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": 1.36,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YPT-REN------W",
+                            "value": 0.45
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "value": 0.91
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": 1.33,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YPT-REN------W",
+                            "value": 0.45
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "value": 0.88
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": 0.95,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YPT-REN------W",
+                            "value": 0.44
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "value": 0.51
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": 1.32,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YPT-REN------W",
+                            "value": 0.54
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "value": 0.78
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": 1.39,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YPT-REN------W",
+                            "value": 0.51
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "value": 0.88
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "3ff90fe3076fe53dd66393c4",
+            "totalFlow": 10.97
+        }
+    ]
+}

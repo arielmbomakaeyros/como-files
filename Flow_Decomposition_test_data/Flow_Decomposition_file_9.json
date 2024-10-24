@@ -1,0 +1,88 @@
+{
+    "businessDay": "2024-03-11",
+    "businessTimestamp": "2024-03-11T01:30:00Z",
+    "crosaVersion": 1,
+    "csProcessVersion": 5,
+    "id": "2ca9d27e6c570193257bf1c3",
+    "selectedXnecResultId": "076d497f6093c392c9a92133",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 3.53,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": -0.38,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A46L",
+                            "value": 0.4
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "value": -0.78
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": -0.22,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A46L",
+                            "value": 0.4
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "value": -0.62
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": -0.65,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A46L",
+                            "value": 0.32
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "value": -0.97
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": -0.33,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A46L",
+                            "value": 0.41
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "value": -0.74
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": -0.21,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A46L",
+                            "value": 0.4
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "value": -0.61
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "0261fad8dacf76a22eb79d47",
+            "totalFlow": 17.06
+        }
+    ]
+}
