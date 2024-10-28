@@ -23,6 +23,20 @@ ValueFlowComponentType = [
     "pstFlow"
 ]
 
+# # Generate a random date within the past year
+# start = datetime.now() - timedelta(days=365)  # One year ago from today
+# end = datetime.now()
+# random_date = start + (end - start) * random.random()
+
+# # Randomly choose either 01:30 or 02:30 for the time
+# hour = random.choice([1, 2])
+# random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+# # Format the date and timestamp
+# business_day = random_date.strftime('%Y-%m-%d')
+# # business_timestamp = random_date.isoformat()
+# business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
+
 # Helper function to generate a random value
 def get_random_value():
     return round(random.uniform(-1, 1), 2)
@@ -46,6 +60,10 @@ def extract_bidding_zone_codes(directory, filename, variable):
     bidding_zone_codes = df[variable].tolist()
     
     return bidding_zone_codes
+
+def getBiddingZoneCode():
+    return extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
+    # return random.choice(bidding_zones)
 
 def generateBiddingZoneCode():
     bidding_zones = extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
@@ -132,7 +150,6 @@ def generate_xnec_flow_component():
 
 def generate_comp_list():
     bidding_zone_list = generate_bidding_zone_list(size=random.randint(2, 5))
-    print(bidding_zone_list, "iiiiiiiiiii")
     return generate_component_flows(bidding_zone_list)
 
 # Helper functions to generate sample data for each property
@@ -174,15 +191,7 @@ def generate_time_horizon():
     # return random.choice(["dayAhead", "weekAhead", "monthAhead", "Intraday"])
     return random.choice(["dayAhead"])
 
-def generate_bidding_zone_cost_list():
-    bidding_zones = ["EIC_DE", "EIC_SI", "EIC_NL", "EIC_FR", "EIC_PL", "EIC_SK", "EIC_RO"]
-    return [
-        {
-            "biddingZoneCode": generateBiddingZoneCode(),
-            "contribution": random.uniform(0, 0.5),
-            "cost": random.uniform(0, 25000)
-        } for zone in generateBiddingZoneCode()
-    ]
+
 
 def generate_flow_component_list():
     return [generate_flow_component() for _ in range(random.randint(1, 3))]
@@ -226,19 +235,53 @@ def generate_tso_cost():
 def generate_volume_overload():
     return random.uniform(200, 300)
 
-def generate_xnec_cost_list():
-    return [generate_xnec_cost() for _ in range(random.randint(1, 5))]
+
+def generate_bidding_zone_cost_list():
+    # bidding_zones = ["EIC_DE", "EIC_SI", "EIC_NL", "EIC_FR", "EIC_PL", "EIC_SK", "EIC_RO"]
+    bidding_zones = random.sample(getBiddingZoneCode (), 5)
+    # random.choice(bidding_zones)
+    # return [
+    #     {
+    #         "biddingZoneCode": generateBiddingZoneCode(),
+    #         "contribution": random.uniform(0, 0.5),
+    #         "cost": random.uniform(0, 25000)
+    #     } for zone in generateBiddingZoneCode()
+    # ]
+    cost_list = []
+    # for _ in range(random.randint(1, 3)):
+    for zone in bidding_zones:
+        item = {
+            # "biddingZoneCode": generateBiddingZoneCode(),
+            "biddingZoneCode": zone,
+            "contribution": random.uniform(0, 0.5),
+            "cost": random.uniform(0, 25000)
+        }
+        # print(f"Individual Cost for {item['biddingZoneCode']}: {item['cost']}")
+        cost_list.append(item)
+    return cost_list
 
 def generate_xnec_cost():
+    bidding_zone_cost_list = generate_bidding_zone_cost_list()
+
+    # Print each cost value before summing
+    for item in bidding_zone_cost_list:
+        print("Individual Cost:", item["cost"])
+
+    total_cost = sum(item["cost"] for item in bidding_zone_cost_list)
+    print(total_cost, "================")
     return {
-        "biddingZoneCostList": generate_bidding_zone_cost_list(),
+        "biddingZoneCostList": bidding_zone_cost_list,
         # "convertedXnecId": f"ID{random.randint(1, 100)}",
         "convertedXnecId": str(uuid.uuid4()),
-        "cost": random.uniform(50000, 100000),
+        "cost": total_cost,
         "flowComponentList": generate_flow_component_list(),
         "tsoCostList": generate_tso_cost_list(),
         "volumeOverload": generate_volume_overload()
     }
+
+def generate_xnec_cost_list():
+    return [generate_xnec_cost() for _ in range(random.randint(1, 5))]
+
 
 
 def resolve_ref(schema, ref):
@@ -251,16 +294,6 @@ def resolve_ref(schema, ref):
             print(f"Unable to resolve reference: {ref}")
             return None
     return ref_obj
-
-# # FUNCTION TO GENERATE RANDOM DATE VALUES
-# def generate_random_date():
-#     # Example function to generate a random date
-#     return fake.date()
-
-# # FUNCTION TO GENERATE RANDOM TIMESTAMP VALUES
-# def generate_random_timestamp():
-#     # Example function to generate a random timestamp
-#     return fake.iso8601()
 
 pattern = r'^(xnec.*Id|.*xnecId)$'
 patternXra = r'^(xra.*Id|.*xraId)$'
@@ -304,6 +337,7 @@ def generate_sample_data(schema, root_schema):
 
         if schema['type'] == 'array':
             items_schema = schema.get('items', {})
+            print(items_schema, "typetype------------")
             return [generate_sample_data(items_schema, root_schema) for _ in range(random.randint(1, 3))]
 
         if schema['type'] == 'object':
@@ -320,6 +354,7 @@ def generate_sample_data(schema, root_schema):
 
     if '$ref' in schema:
         # Resolve reference and generate sample
+        print(schema, "typetype------------")
         resolved_schema = resolve_reference(root_schema, schema['$ref'])
         return generate_sample_data(resolved_schema, root_schema)
     
@@ -441,12 +476,12 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
 # schema_file_path = 'CostDistribution_Schema_fixed.json'
 # output_file_prefix = 'como_sample_data'
 # Example usage
-baseFineName = "MappingDetailedResults"
-schema_file_path = 'MappingDetailedResults_Schema_fixed.json'
+# baseFineName = "MappingDetailedResults"
+# schema_file_path = 'MappingDetailedResults_Schema_fixed.json'
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
-# baseFineName = "CostDistribution"
-# schema_file_path = 'CostDistribution_Schema_fixed.json'
+baseFineName = "CostDistribution"
+schema_file_path = 'CostDistribution_Schema_fixed.json'
 
 
 # Flow_Decomposition_Schema_fixed.json

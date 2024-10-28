@@ -1,532 +1,399 @@
 {
-    "businessDay": "2023-12-20",
-    "businessTimestamp": "2023-12-20T01:30:00Z",
+    "businessDay": "2024-01-30",
+    "businessTimestamp": "2024-01-30T01:30:00Z",
     "crosaVersion": 1,
-    "csProcessVersion": 1,
-    "flowDecompositionId": "f79bb9b6508b90a954d5125d",
-    "id": "8b44b13177bc5e9bfcdd7784",
-    "mappingResultId": "fdc5913780fb602329bbfeee",
-    "selectedXnecResultId": "e68b8926f3e1df9b9660a45c",
+    "csProcessVersion": 2,
+    "flowDecompositionId": "8f222a3a908eaa18cc08614d",
+    "id": "23c38849f3e328ee2517301d",
+    "mappingResultId": "3e8272bfc4e9f054ed1eac86",
+    "selectedXnecResultId": "5005b13da006d1aa5317cfa8",
     "timeHorizon": "dayAhead",
     "xnecCostList": [
         {
             "biddingZoneCostList": [
                 {
-                    "biddingZoneCode": "10YNL----------L",
-                    "contribution": 0.10808385724258496,
-                    "cost": 1087.5190039431493
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A016",
-                    "contribution": 0.3724812936847288,
-                    "cost": 637.9787153380945
-                },
-                {
-                    "biddingZoneCode": "10YSI-ELES-----O",
-                    "contribution": 0.24744321039488298,
-                    "cost": 371.89944656512984
-                },
-                {
-                    "biddingZoneCode": "10YDK-2--------M",
-                    "contribution": 0.214884900719978,
-                    "cost": 5362.626582587974
-                },
-                {
-                    "biddingZoneCode": "10YMA-ONE------O",
-                    "contribution": 0.3115873250755087,
-                    "cost": 23362.664017947467
-                },
-                {
-                    "biddingZoneCode": "43YLRE-------008",
-                    "contribution": 0.38159871986933847,
-                    "cost": 20608.932551513248
-                },
-                {
                     "biddingZoneCode": "10Y1001A1001A64J",
-                    "contribution": 0.4371222604525484,
-                    "cost": 14732.693584266395
-                },
-                {
-                    "biddingZoneCode": "38YNPSRUIMP----S",
-                    "contribution": 0.054695481287736436,
-                    "cost": 15478.762138685597
-                },
-                {
-                    "biddingZoneCode": "22Y201903145---4",
-                    "contribution": 0.16859410458325452,
-                    "cost": 5439.024785310631
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A70O",
-                    "contribution": 0.45402369302507606,
-                    "cost": 24561.642033200314
-                },
-                {
-                    "biddingZoneCode": "10YNL----------L",
-                    "contribution": 0.355166170701518,
-                    "cost": 1117.6408444508595
-                },
-                {
-                    "biddingZoneCode": "38YNPSRUIMP----S",
-                    "contribution": 0.4280125536742567,
-                    "cost": 11244.28273964973
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A788",
-                    "contribution": 0.2745872869328343,
-                    "cost": 14791.59333987583
-                },
-                {
-                    "biddingZoneCode": "10YLV-1001A00074",
-                    "contribution": 0.27820883980725547,
-                    "cost": 19397.915119129895
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A75E",
-                    "contribution": 0.2274000036594488,
-                    "cost": 11961.775520346877
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A47J",
-                    "contribution": 0.017643758753590533,
-                    "cost": 6999.200200509298
-                }
-            ],
-            "convertedXnecId": "9ea0ca88-25d4-4fcd-b187-d02117ed064d",
-            "cost": 78129.02155026789,
-            "flowComponentList": [
-                {
-                    "appliedThresholdList": [],
-                    "burdeningFlow": 436.80953862547807,
-                    "commonThreshold": 51.8435446462152,
-                    "contribution": 32.134642168511405,
-                    "stackingOrder": 5,
-                    "type": "loopFlowOutsideCore"
-                }
-            ],
-            "tsoCostList": [
-                {
-                    "contribution": 0.4591347222527625,
-                    "cost": 49897.45700547092,
-                    "tsoCode": "PSE",
-                    "tsoShare": 1.0442432195813534
-                },
-                {
-                    "contribution": 0.37119018391674696,
-                    "cost": 42139.76633728927,
-                    "tsoCode": "Transelectrica",
-                    "tsoShare": 1.2111837988814464
-                },
-                {
-                    "contribution": 0.17680399847132972,
-                    "cost": 20088.130338806022,
-                    "tsoCode": "APG",
-                    "tsoShare": 1.4951120971274947
-                }
-            ],
-            "volumeOverload": 272.4308727809008
-        },
-        {
-            "biddingZoneCostList": [
-                {
-                    "biddingZoneCode": "10YPT-REN------W",
-                    "contribution": 0.398941383498882,
-                    "cost": 980.9778602187736
-                },
-                {
-                    "biddingZoneCode": "10YAT-APG------L",
-                    "contribution": 0.41660557622734073,
-                    "cost": 18973.93743513759
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A788",
-                    "contribution": 0.19083595074060083,
-                    "cost": 5240.270455103704
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A46L",
-                    "contribution": 0.31751612377204036,
-                    "cost": 1557.5947508263328
-                },
-                {
-                    "biddingZoneCode": "10YNO-2--------T",
-                    "contribution": 0.17765034391214468,
-                    "cost": 15278.52663739114
-                },
-                {
-                    "biddingZoneCode": "10YDK-1--------W",
-                    "contribution": 0.24056604587270858,
-                    "cost": 18192.41722783966
-                },
-                {
-                    "biddingZoneCode": "10YDOM-1001A082L",
-                    "contribution": 0.06160574801215013,
-                    "cost": 3146.960182386663
-                },
-                {
-                    "biddingZoneCode": "10YFR-RTE------C",
-                    "contribution": 0.2816597211353339,
-                    "cost": 1379.394435287404
-                },
-                {
-                    "biddingZoneCode": "10Y1001C--00038X",
-                    "contribution": 0.14530680547617159,
-                    "cost": 1969.5941026582898
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A016",
-                    "contribution": 0.0799692760858951,
-                    "cost": 24494.753402211078
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A74G",
-                    "contribution": 0.19772353992945818,
-                    "cost": 4413.526399909692
-                },
-                {
-                    "biddingZoneCode": "10YNO-4--------9",
-                    "contribution": 0.44041632066473524,
-                    "cost": 3805.083762625158
-                },
-                {
-                    "biddingZoneCode": "10Y1001C--00038X",
-                    "contribution": 0.41960529756492526,
-                    "cost": 4782.495669435743
-                },
-                {
-                    "biddingZoneCode": "10Y1001C--000611",
-                    "contribution": 0.41975731224916785,
-                    "cost": 5223.295870980005
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A67D",
-                    "contribution": 0.12863511444915154,
-                    "cost": 21114.807447719315
-                },
-                {
-                    "biddingZoneCode": "10YPL-AREA-----S",
-                    "contribution": 0.3340500951790384,
-                    "cost": 20202.708442350595
-                }
-            ],
-            "convertedXnecId": "bdde0a0c-c4fd-4107-9cdf-d3046e0feeb2",
-            "cost": 51604.57792705574,
-            "flowComponentList": [
-                {
-                    "appliedThresholdList": [
-                        {
-                            "biddingZoneCode": "10YCA-BULGARIA-R",
-                            "burdeningFlow": 18.152879181050018,
-                            "flowAboveThreshold": 87.1554808585752,
-                            "flowBelowThreshold": 14.367448544868932,
-                            "individualThreshold": 18.139919754441813
-                        },
-                        {
-                            "biddingZoneCode": "10Y1001C--00096J",
-                            "burdeningFlow": 79.81313833662067,
-                            "flowAboveThreshold": 91.07347836420708,
-                            "flowBelowThreshold": 73.67189114216369,
-                            "individualThreshold": 15.24034289600765
-                        }
-                    ],
-                    "burdeningFlow": 424.60117639740054,
-                    "commonThreshold": 87.82306349690543,
-                    "contribution": 63.12759817229689,
-                    "stackingOrder": 2,
-                    "type": "loopFlow"
-                },
-                {
-                    "appliedThresholdList": [],
-                    "burdeningFlow": 484.3780673882391,
-                    "commonThreshold": 90.42059184417977,
-                    "contribution": 12.147114922844581,
-                    "stackingOrder": 7,
-                    "type": "loopFlowOutsideCore"
-                },
-                {
-                    "appliedThresholdList": [],
-                    "burdeningFlow": 318.83860642253705,
-                    "commonThreshold": 22.913544799857544,
-                    "contribution": 30.813821139177943,
-                    "stackingOrder": 10,
-                    "type": "internalFlow"
-                }
-            ],
-            "tsoCostList": [
-                {
-                    "contribution": 0.25328657391552156,
-                    "cost": 28919.615232121585,
-                    "tsoCode": "Transelectrica",
-                    "tsoShare": 0.969597443471874
-                }
-            ],
-            "volumeOverload": 214.58338730764817
-        },
-        {
-            "biddingZoneCostList": [
-                {
-                    "biddingZoneCode": "22Y201903144---9",
-                    "contribution": 0.10712610179826376,
-                    "cost": 21960.321517165958
-                },
-                {
-                    "biddingZoneCode": "10YRO-TEL------P",
-                    "contribution": 0.2708823302751634,
-                    "cost": 19430.866037862754
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A46L",
-                    "contribution": 0.3520211237922519,
-                    "cost": 21021.613306913932
-                },
-                {
-                    "biddingZoneCode": "22Y201903144---9",
-                    "contribution": 0.3719212203054771,
-                    "cost": 10890.991658056453
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A885",
-                    "contribution": 0.24825586843593767,
-                    "cost": 10177.231722847027
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A47J",
-                    "contribution": 0.005965282647643344,
-                    "cost": 23459.972430062924
-                },
-                {
-                    "biddingZoneCode": "10YCA-BULGARIA-R",
-                    "contribution": 0.12912760218813313,
-                    "cost": 16937.514025048138
-                },
-                {
-                    "biddingZoneCode": "10YDK-2--------M",
-                    "contribution": 0.008130517123438097,
-                    "cost": 17706.6004557808
-                },
-                {
-                    "biddingZoneCode": "10YAT-APG------L",
-                    "contribution": 0.20846380494408862,
-                    "cost": 5352.293739447972
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A788",
-                    "contribution": 0.4889633356622238,
-                    "cost": 388.0102794858925
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A74G",
-                    "contribution": 0.05607801871264706,
-                    "cost": 24635.524997890396
-                },
-                {
-                    "biddingZoneCode": "10YNO-4--------9",
-                    "contribution": 0.0158119242986956,
-                    "cost": 15961.02250619082
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A39I",
-                    "contribution": 0.3730063029504186,
-                    "cost": 20184.99022111151
-                },
-                {
-                    "biddingZoneCode": "10YRO-TEL------P",
-                    "contribution": 0.07632271877682578,
-                    "cost": 4223.761598673642
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A893",
-                    "contribution": 0.2399146686789047,
-                    "cost": 20784.338658749064
-                },
-                {
-                    "biddingZoneCode": "10YHR-HEP------M",
-                    "contribution": 0.33037718286591944,
-                    "cost": 10592.198294831027
-                }
-            ],
-            "convertedXnecId": "07a0dbdc-ab29-47ad-bb64-2dd7e13ce995",
-            "cost": 57255.9550751669,
-            "flowComponentList": [
-                {
-                    "appliedThresholdList": [
-                        {
-                            "biddingZoneCode": "10YAT-APG------L",
-                            "burdeningFlow": 60.93372430467906,
-                            "flowAboveThreshold": 29.814986146969304,
-                            "flowBelowThreshold": 21.744058715654536,
-                            "individualThreshold": 18.955337901528566
-                        },
-                        {
-                            "biddingZoneCode": "10Y1001A1001A885",
-                            "burdeningFlow": 71.14825353760862,
-                            "flowAboveThreshold": 88.96188209212339,
-                            "flowBelowThreshold": 40.22095052054643,
-                            "individualThreshold": 12.47892259298915
-                        },
-                        {
-                            "biddingZoneCode": "10Y1001A1001A75E",
-                            "burdeningFlow": 86.33033061334457,
-                            "flowAboveThreshold": 85.76637325002527,
-                            "flowBelowThreshold": 5.1858179495244965,
-                            "individualThreshold": 12.917800342837761
-                        },
-                        {
-                            "biddingZoneCode": "10YNO-4--------9",
-                            "burdeningFlow": 5.2008047262932955,
-                            "flowAboveThreshold": 98.01186453108733,
-                            "flowBelowThreshold": 56.50173258387198,
-                            "individualThreshold": 19.927107257798724
-                        },
-                        {
-                            "biddingZoneCode": "10YLV-1001A00074",
-                            "burdeningFlow": 38.87088289048729,
-                            "flowAboveThreshold": 35.27069472934458,
-                            "flowBelowThreshold": 8.641943458332847,
-                            "individualThreshold": 17.793263488968606
-                        }
-                    ],
-                    "burdeningFlow": 221.21067852219926,
-                    "commonThreshold": 0.8716850636357187,
-                    "contribution": 78.75176727182763,
-                    "stackingOrder": 7,
-                    "type": "internalFlow"
-                }
-            ],
-            "tsoCostList": [
-                {
-                    "contribution": 0.15111599861317454,
-                    "cost": 33071.94207463573,
-                    "tsoCode": "MAVIR",
-                    "tsoShare": 0.7890397693277228
-                },
-                {
-                    "contribution": 0.22535574163377897,
-                    "cost": 38156.50300325602,
-                    "tsoCode": "APG",
-                    "tsoShare": 0.8227948440236859
-                }
-            ],
-            "volumeOverload": 247.30253509904642
-        },
-        {
-            "biddingZoneCostList": [
-                {
-                    "biddingZoneCode": "10Y1001A1001A39I",
-                    "contribution": 0.37287197944745587,
-                    "cost": 4424.411088052052
-                },
-                {
-                    "biddingZoneCode": "10YBE----------2",
-                    "contribution": 0.3590077864250758,
-                    "cost": 18718.051771757222
-                },
-                {
-                    "biddingZoneCode": "10YIE-1001A00010",
-                    "contribution": 0.2026661582534185,
-                    "cost": 15697.35110125617
+                    "contribution": 0.36606533385675827,
+                    "cost": 9942.594861378171
                 },
                 {
                     "biddingZoneCode": "10Y1001A1001A80L",
-                    "contribution": 0.10239152082199587,
-                    "cost": 10905.411845212722
+                    "contribution": 0.08746431661280912,
+                    "cost": 2094.7731557172942
                 },
                 {
-                    "biddingZoneCode": "10YSK-SEPS-----K",
-                    "contribution": 0.48679930286711526,
-                    "cost": 11787.030762513787
+                    "biddingZoneCode": "10Y1001A1001A47J",
+                    "contribution": 0.4567152425598998,
+                    "cost": 13148.202930131309
                 },
                 {
-                    "biddingZoneCode": "22Y201903145---4",
-                    "contribution": 0.2483299309302447,
-                    "cost": 17490.691761225364
+                    "biddingZoneCode": "10YPT-REN------W",
+                    "contribution": 0.361922240287591,
+                    "cost": 8342.550767423434
                 },
                 {
-                    "biddingZoneCode": "10YNO-3--------J",
-                    "contribution": 0.19773189919394318,
-                    "cost": 2285.481215675639
-                },
-                {
-                    "biddingZoneCode": "10YBE----------2",
-                    "contribution": 0.17160862986188818,
-                    "cost": 14726.756277050587
-                },
-                {
-                    "biddingZoneCode": "10YHU-MAVIR----U",
-                    "contribution": 0.28842551836116176,
-                    "cost": 5365.643922203034
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A71M",
-                    "contribution": 0.2506171625432828,
-                    "cost": 3260.8841031334405
-                },
-                {
-                    "biddingZoneCode": "10YCZ-CEPS-----N",
-                    "contribution": 0.42486955263687376,
-                    "cost": 12769.32519418204
-                },
-                {
-                    "biddingZoneCode": "10YSI-ELES-----O",
-                    "contribution": 0.32727176972687916,
-                    "cost": 23907.208283032625
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A46L",
-                    "contribution": 0.4487011659403308,
-                    "cost": 3290.028065606071
-                },
-                {
-                    "biddingZoneCode": "10YNO-4--------9",
-                    "contribution": 0.38997515394432347,
-                    "cost": 24146.840772793224
-                },
-                {
-                    "biddingZoneCode": "10Y1001C--00038X",
-                    "contribution": 0.3874070458907846,
-                    "cost": 16487.067592356096
-                },
-                {
-                    "biddingZoneCode": "10Y1001A1001A016",
-                    "contribution": 0.373966493422317,
-                    "cost": 18078.36459748074
+                    "biddingZoneCode": "10Y1001A1001A877",
+                    "contribution": 0.24169999884666993,
+                    "cost": 1450.4157356182934
                 }
             ],
-            "convertedXnecId": "c2d99bb5-b101-45af-950b-e2dca6ffa434",
-            "cost": 80129.22296220154,
+            "convertedXnecId": "8081ae99-2a97-4648-9c7c-c4f89dbe95f6",
+            "cost": 34978.5374502685,
             "flowComponentList": [
                 {
-                    "appliedThresholdList": [],
-                    "burdeningFlow": 334.0781670572653,
-                    "commonThreshold": 22.020258752543775,
-                    "contribution": 61.313087388387245,
-                    "stackingOrder": 4,
-                    "type": "internalFlow"
-                },
-                {
-                    "appliedThresholdList": [],
-                    "burdeningFlow": 205.48434700526605,
-                    "commonThreshold": 38.09506080699474,
-                    "contribution": 49.59461577171681,
+                    "appliedThresholdList": [
+                        {
+                            "biddingZoneCode": "10YES-REE------0",
+                            "burdeningFlow": 19.997474878027067,
+                            "flowAboveThreshold": 4.286522580330265,
+                            "flowBelowThreshold": 57.30241483516979,
+                            "individualThreshold": 10.423926074792178
+                        },
+                        {
+                            "biddingZoneCode": "10YDK-2--------M",
+                            "burdeningFlow": 15.658836791729748,
+                            "flowAboveThreshold": 47.99504062625347,
+                            "flowBelowThreshold": 21.365945499157803,
+                            "individualThreshold": 17.294292971097285
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "burdeningFlow": 15.187152144987637,
+                            "flowAboveThreshold": 83.33448384796296,
+                            "flowBelowThreshold": 14.771411037223093,
+                            "individualThreshold": 19.61106599821605
+                        },
+                        {
+                            "biddingZoneCode": "22Y201903144---9",
+                            "burdeningFlow": 22.272783514372595,
+                            "flowAboveThreshold": 75.32616207500101,
+                            "flowBelowThreshold": 46.843418903963276,
+                            "individualThreshold": 18.66634541051284
+                        },
+                        {
+                            "biddingZoneCode": "10Y1001A1001A66F",
+                            "burdeningFlow": 17.19446089677712,
+                            "flowAboveThreshold": 6.895140615595841,
+                            "flowBelowThreshold": 37.9587475017269,
+                            "individualThreshold": 15.40767025576162
+                        }
+                    ],
+                    "burdeningFlow": 397.5973651343122,
+                    "commonThreshold": 20.024846581779222,
+                    "contribution": 31.90617422681603,
                     "stackingOrder": 8,
-                    "type": "allocatedFlow"
+                    "type": "loopFlow"
                 }
             ],
             "tsoCostList": [
                 {
-                    "contribution": 0.38626289559890237,
-                    "cost": 38483.08166174489,
-                    "tsoCode": "CEPS",
-                    "tsoShare": 0.6526426136133563
+                    "contribution": 0.39865158206272555,
+                    "cost": 36123.88108561371,
+                    "tsoCode": "Transelectrica",
+                    "tsoShare": 0.9125753185736821
                 },
                 {
-                    "contribution": 0.23572389827875734,
-                    "cost": 26961.40524107278,
+                    "contribution": 0.498688220930312,
+                    "cost": 29773.3972636292,
                     "tsoCode": "CEPS",
-                    "tsoShare": 1.428827347810791
+                    "tsoShare": 0.8840639975837123
                 }
             ],
-            "volumeOverload": 273.34496869575594
+            "volumeOverload": 281.02060240664775
+        },
+        {
+            "biddingZoneCostList": [
+                {
+                    "biddingZoneCode": "10Y1001C--000611",
+                    "contribution": 0.15959210165265597,
+                    "cost": 4416.652879138752
+                },
+                {
+                    "biddingZoneCode": "10Y1001A1001A788",
+                    "contribution": 0.09340717782407493,
+                    "cost": 4129.460251686706
+                },
+                {
+                    "biddingZoneCode": "10YNO-2--------T",
+                    "contribution": 0.05921488140137571,
+                    "cost": 3106.0307082538875
+                },
+                {
+                    "biddingZoneCode": "10YIE-1001A00010",
+                    "contribution": 0.265335553849966,
+                    "cost": 24409.41205920466
+                },
+                {
+                    "biddingZoneCode": "43YLRE-------008",
+                    "contribution": 0.41886648712113184,
+                    "cost": 2245.149243493763
+                }
+            ],
+            "convertedXnecId": "e6c5bfd1-2e4e-4563-9080-f8e27eeb37d2",
+            "cost": 38306.70514177777,
+            "flowComponentList": [
+                {
+                    "appliedThresholdList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A64J",
+                            "burdeningFlow": 53.19180778299118,
+                            "flowAboveThreshold": 96.0899902210681,
+                            "flowBelowThreshold": 47.92132006745483,
+                            "individualThreshold": 17.366890327566544
+                        },
+                        {
+                            "biddingZoneCode": "10YPL-AREA-----S",
+                            "burdeningFlow": 3.6466827823301684,
+                            "flowAboveThreshold": 12.030051711115009,
+                            "flowBelowThreshold": 3.978680048380012,
+                            "individualThreshold": 11.798675658252055
+                        }
+                    ],
+                    "burdeningFlow": 220.74412074511068,
+                    "commonThreshold": 73.51328715409497,
+                    "contribution": 46.41462327496756,
+                    "stackingOrder": 6,
+                    "type": "loopFlow"
+                },
+                {
+                    "appliedThresholdList": [
+                        {
+                            "biddingZoneCode": "10YCB-GERMANY--8",
+                            "burdeningFlow": 4.622999474513878,
+                            "flowAboveThreshold": 29.71633852311705,
+                            "flowBelowThreshold": 99.1033539279082,
+                            "individualThreshold": 12.390955105058001
+                        }
+                    ],
+                    "burdeningFlow": 444.61981269909256,
+                    "commonThreshold": 13.389793625966695,
+                    "contribution": 32.32264508831757,
+                    "stackingOrder": 8,
+                    "type": "internalFlow"
+                },
+                {
+                    "appliedThresholdList": [],
+                    "burdeningFlow": 324.66171371892335,
+                    "commonThreshold": 62.24835498660063,
+                    "contribution": 45.90778283033992,
+                    "stackingOrder": 1,
+                    "type": "pstFlow"
+                }
+            ],
+            "tsoCostList": [
+                {
+                    "contribution": 0.19734756224356803,
+                    "cost": 30184.854500184192,
+                    "tsoCode": "APG",
+                    "tsoShare": 1.1359203518847831
+                }
+            ],
+            "volumeOverload": 209.84344184462404
+        },
+        {
+            "biddingZoneCostList": [
+                {
+                    "biddingZoneCode": "10Y1001A1001A56I",
+                    "contribution": 0.0694311327345376,
+                    "cost": 10220.631800317262
+                },
+                {
+                    "biddingZoneCode": "10YDOM-1001A082L",
+                    "contribution": 0.4797583740896669,
+                    "cost": 20425.091256697557
+                },
+                {
+                    "biddingZoneCode": "10Y1001A1001A64J",
+                    "contribution": 0.3013520602716494,
+                    "cost": 6255.376670240692
+                },
+                {
+                    "biddingZoneCode": "10YBE----------2",
+                    "contribution": 0.2509319213535687,
+                    "cost": 12456.373324040254
+                },
+                {
+                    "biddingZoneCode": "10Y1001A1001A75E",
+                    "contribution": 0.31255411372668895,
+                    "cost": 18545.53348333901
+                }
+            ],
+            "convertedXnecId": "b9285998-01b8-4a1e-b8b8-51e2ee336ef6",
+            "cost": 67903.00653463477,
+            "flowComponentList": [
+                {
+                    "appliedThresholdList": [
+                        {
+                            "biddingZoneCode": "10YPL-AREA-----S",
+                            "burdeningFlow": 58.520345317083255,
+                            "flowAboveThreshold": 50.67317998841953,
+                            "flowBelowThreshold": 10.612945706541122,
+                            "individualThreshold": 11.644510328686984
+                        },
+                        {
+                            "biddingZoneCode": "10Y1001A1001A71M",
+                            "burdeningFlow": 87.87955219413588,
+                            "flowAboveThreshold": 65.89563424753152,
+                            "flowBelowThreshold": 82.80354786689512,
+                            "individualThreshold": 17.924397975944256
+                        },
+                        {
+                            "biddingZoneCode": "10YCA-BULGARIA-R",
+                            "burdeningFlow": 24.36903297793014,
+                            "flowAboveThreshold": 79.17865578584433,
+                            "flowBelowThreshold": 34.045033736346106,
+                            "individualThreshold": 11.50146003349633
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "burdeningFlow": 14.937367615958907,
+                            "flowAboveThreshold": 0.6078149318463844,
+                            "flowBelowThreshold": 64.73040478430302,
+                            "individualThreshold": 16.13729289996972
+                        },
+                        {
+                            "biddingZoneCode": "10Y1001A1001A66F",
+                            "burdeningFlow": 64.51184446588405,
+                            "flowAboveThreshold": 1.6697982253056964,
+                            "flowBelowThreshold": 6.149674851323839,
+                            "individualThreshold": 16.58052166947267
+                        }
+                    ],
+                    "burdeningFlow": 209.58925346148197,
+                    "commonThreshold": 6.16943256828778,
+                    "contribution": 66.70033254006059,
+                    "stackingOrder": 8,
+                    "type": "loopFlowOutsideCore"
+                }
+            ],
+            "tsoCostList": [
+                {
+                    "contribution": 0.4133012884781382,
+                    "cost": 29895.4134621695,
+                    "tsoCode": "Transelectrica",
+                    "tsoShare": 0.7132171498165447
+                },
+                {
+                    "contribution": 0.25435312105084157,
+                    "cost": 44267.61191959161,
+                    "tsoCode": "APG",
+                    "tsoShare": 1.219540251341288
+                },
+                {
+                    "contribution": 0.43672985084594096,
+                    "cost": 45340.15338862053,
+                    "tsoCode": "Transelectrica",
+                    "tsoShare": 0.6558805371616339
+                }
+            ],
+            "volumeOverload": 238.24684353621313
+        },
+        {
+            "biddingZoneCostList": [
+                {
+                    "biddingZoneCode": "10Y1001A1001A70O",
+                    "contribution": 0.38835418065523436,
+                    "cost": 15740.700983815097
+                },
+                {
+                    "biddingZoneCode": "10Y1001A1001A016",
+                    "contribution": 0.1551280082006174,
+                    "cost": 19047.31517207354
+                },
+                {
+                    "biddingZoneCode": "10Y1001A1001A788",
+                    "contribution": 0.008125665636002588,
+                    "cost": 5190.873273482252
+                },
+                {
+                    "biddingZoneCode": "10YLV-1001A00074",
+                    "contribution": 0.15030246686000848,
+                    "cost": 8677.216136119396
+                },
+                {
+                    "biddingZoneCode": "10YHR-HEP------M",
+                    "contribution": 0.047885476173298136,
+                    "cost": 697.0549245605279
+                }
+            ],
+            "convertedXnecId": "0df34a95-22e6-4743-aaed-8882a5927119",
+            "cost": 49353.16049005082,
+            "flowComponentList": [
+                {
+                    "appliedThresholdList": [],
+                    "burdeningFlow": 451.278206125629,
+                    "commonThreshold": 89.80139068742119,
+                    "contribution": 97.4399976413279,
+                    "stackingOrder": 5,
+                    "type": "pstFlow"
+                },
+                {
+                    "appliedThresholdList": [],
+                    "burdeningFlow": 278.476658611121,
+                    "commonThreshold": 36.73657705643163,
+                    "contribution": 50.21496105999417,
+                    "stackingOrder": 5,
+                    "type": "internalFlow"
+                },
+                {
+                    "appliedThresholdList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "burdeningFlow": 4.409624049897554,
+                            "flowAboveThreshold": 50.27580430302269,
+                            "flowBelowThreshold": 59.042468824462325,
+                            "individualThreshold": 15.05340851853798
+                        },
+                        {
+                            "biddingZoneCode": "10Y1001A1001A893",
+                            "burdeningFlow": 67.34636499776775,
+                            "flowAboveThreshold": 17.392826956472273,
+                            "flowBelowThreshold": 50.067055232356005,
+                            "individualThreshold": 10.168734351419044
+                        },
+                        {
+                            "biddingZoneCode": "10YFI-1--------U",
+                            "burdeningFlow": 13.321765797059893,
+                            "flowAboveThreshold": 56.48524149898881,
+                            "flowBelowThreshold": 83.81424130690341,
+                            "individualThreshold": 12.550363680935483
+                        },
+                        {
+                            "biddingZoneCode": "10Y1001A1001A45N",
+                            "burdeningFlow": 89.75012649626235,
+                            "flowAboveThreshold": 64.12427484299869,
+                            "flowBelowThreshold": 6.295016091333783,
+                            "individualThreshold": 17.251405553084382
+                        }
+                    ],
+                    "burdeningFlow": 287.8008889401749,
+                    "commonThreshold": 55.81070909203687,
+                    "contribution": 19.22634088317714,
+                    "stackingOrder": 1,
+                    "type": "loopFlow"
+                }
+            ],
+            "tsoCostList": [
+                {
+                    "contribution": 0.47650902945306567,
+                    "cost": 38070.02732665126,
+                    "tsoCode": "CEPS",
+                    "tsoShare": 1.3885464375327459
+                },
+                {
+                    "contribution": 0.09459299057366843,
+                    "cost": 21203.419550742015,
+                    "tsoCode": "APG",
+                    "tsoShare": 1.499110289619185
+                },
+                {
+                    "contribution": 0.1365313773413429,
+                    "cost": 47195.30787556131,
+                    "tsoCode": "PSE",
+                    "tsoShare": 0.8220614374029094
+                }
+            ],
+            "volumeOverload": 262.3009814448661
         }
     ]
 }
