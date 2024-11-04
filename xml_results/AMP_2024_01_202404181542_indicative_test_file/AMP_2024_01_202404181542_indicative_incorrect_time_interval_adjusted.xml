@@ -10,7 +10,7 @@
 		<dcterms:accessRights rdf:resource="http://energy.referencedata.eu/Confidentiality/4cd9b326-1275-4da7-9724-28c5e1deeb87" />
 		<dcat:version>1.0</dcat:version>
 		<dcterms:description>This is an example of  remedial action schedule profile.</dcterms:description>
-		<dcat:startDate>2024-01-09T04:00:00Z</dcat:startDate>
+		<dcat:startDate>2024-01-10T00:00:00Z</dcat:startDate>
 		<dcat:endDate>2024-01-09T23:00:00Z</dcat:endDate>
 		<dcterms:identifier>urn:uuid:3d899608-c4f6-4553-9a4d-1ce58f60c60a</dcterms:identifier>
 		<dcterms:conformsTo rdf:resource="http://entsoe.eu/ns/CIM/RemedialActionSchedule-EU/2.2" />

@@ -1,40 +1,69 @@
 import xml.etree.ElementTree as ET
 import os
+import random
+import string
 
-def build_missing_element(input_file: str, output_dir: str, endsWith: str, result_to_achieve: str, new_value: str):
+def build_modified_mrid_elements(input_file: str, output_dir: str, setting_count: int, element_to_modify: str, output_file_name: str):
+    """
+    Modifies the XML file by locating mRID elements and setting a subset of them to duplicate values.
+    
+    Parameters:
+        input_file (str): Path to the XML input file.
+        output_dir (str): Directory to save the modified XML output.
+        setting_count (int): Number of element_to_modify elements to duplicate.
+        setting_count (int): Number of element_to_modify elements to modify with long values.
+        output_file_name (str): Name of the output XML file.
+    """
     try:
-        # Parse the input XML file and capture namespaces
+        # Parse the XML file and capture namespaces
         namespaces = {}
         for event, elem in ET.iterparse(input_file, events=('start-ns',)):
             prefix, uri = elem
             namespaces[prefix] = uri
 
-        # Re-parse the input XML file with namespaces now captured
+        # Re-parse the input XML file
         tree = ET.parse(input_file)
         root = tree.getroot()
 
-        # Register each namespace to ensure prefixes are preserved in the output
+        # Register each namespace for proper output
         for prefix, uri in namespaces.items():
             ET.register_namespace(prefix, uri)
 
-        print(root, "...........................................")
+        # Locate all element_to_modify elements
+        mRID_elements = [elem for elem in root.iter() if elem.tag.endswith(element_to_modify)]
+        
+        # Get a random subset of element_to_modify elements to duplicate values
+        if setting_count > len(mRID_elements):
+            print(f"Warning: setting_count exceeds the number of ${ element_to_modify } elements. Setting setting_count to {len(mRID_elements)}.")
+            setting_count = len(mRID_elements)
+        
+        # # ===================================================================
+        # # Select random element_to_modify elements to duplicate their values
+        # duplicated_values = random.sample(mRID_elements, setting_count)
+        # if duplicated_values:
+        #     duplicate_value = duplicated_values[0].text  # Take one value to duplicate
+        #     for elem in duplicated_values:
+        #         elem.text = duplicate_value  # Set selected elements to duplicate value
 
-        # Locate elements with local name 'version' and clear their content
-        for elem in root.iter():
-            if elem.tag.endswith(endsWith):  # Checking if tag ends with 'version'
-                print("0000, ", elem)
-                elem.text = new_value  # Clear the content for any version tag
+        # ===================================================================
+        # Select random element_to_modify elements to modify with long values
+        elements_to_modify = random.sample(mRID_elements, setting_count)
+        for elem in elements_to_modify:
+            # Generate a random string longer than 60 characters
+            long_value = ''.join(random.choices(string.ascii_letters + string.digits, k=65))
+            elem.text = long_value  # Set selected elements to a long value
 
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
 
-        # Construct the output file path
-        base_name = os.path.splitext(os.path.basename(input_file))[0]
-        output_file = os.path.join(output_dir, f"{base_name}_{ result_to_achieve }_{endsWith}_.xml")
+        # Construct output file path
+        # base_name = os.path.splitext(os.path.basename(input_file))[0]
+        # output_file = os.path.join(output_dir, f"{base_name}_duplicate_mRID.xml")
+        output_file = os.path.join(output_dir, f"{ output_file_name }")
 
-        # Write the modified XML to the output file, preserving original namespaces
+        # Write modified XML to the output file, preserving namespaces
         tree.write(output_file, encoding="utf-8", xml_declaration=True)
-        print(f"Modified XML file generated as '{output_file}'")
+        print(f"Modified XML file generated as '{output_file}' with {setting_count} duplicated { element_to_modify } values.")
 
     except ET.ParseError:
         print("Error: The XML file could not be parsed. Please check the file format.")
@@ -46,14 +75,11 @@ def build_missing_element(input_file: str, output_dir: str, endsWith: str, resul
 # Example usage
 directory_name = 'xml_results'
 schema_file_path = 'AMP_2024_01_202404181542_indicative.xml'
-variable = 'version'
-result_to_achieve = "wrong_formated"
-# result_to_achieve = "missing"
-new_value = "version"
-# new_value = ""
+setting_count = 2  # Number of mRID elements to set to the same value
+output_file_str = 'RASP8.xml'
+variableTOManipulate = 'mRID'
 
-build_missing_element(schema_file_path, directory_name, variable, result_to_achieve, new_value)
-
+build_modified_mrid_elements(schema_file_path, directory_name, setting_count, variableTOManipulate, output_file_str)
 
 
 
