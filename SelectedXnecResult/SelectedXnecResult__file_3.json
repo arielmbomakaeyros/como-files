@@ -1,0 +1,38 @@
+{
+    "businessDay": "2024-06-07",
+    "businessTimestamp": "2024-06-07T01:30:00Z",
+    "comoDocumentType": "CS_SELECTED_XNEC_RESULT",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "convertedXnecList": [
+        {
+            "id": "adb049298b4bc5c72c12d7c9",
+            "originalXnec1": {
+                "assessedElementMrid": "f3f0f7712f144a172fd381b7",
+                "assessedElementName": null,
+                "biddingZoneCode": "b8e6d5e8aaeb99a38e1236ae",
+                "conductingEquipmentMrid": null,
+                "contingencyMrid": "ebffb3f313e208ba68cc7f32",
+                "contingencyName": null,
+                "fAfter": 75.19,
+                "fBefore": 70.63,
+                "fMax": 23.85,
+                "hasCostlyRa": null,
+                "iAfter": 55.77,
+                "iBefore": 26.89,
+                "iMax": 46.84,
+                "id": "888cd018a4741f6775b3fcbe",
+                "raMrid": "64c5b32bf2c617749b01ef84",
+                "tsoCode": "703ff0a12f379f7b0ebb9b66",
+                "xneMrid": "4358d1dbd5556d05e2c4fbe2",
+                "xneName": "78a8f4519cad8d6e545bb123"
+            },
+            "originalXnec2": null
+        }
+    ],
+    "crosaProcessType": "0f16cc0a14ee0666b05f556a",
+    "crosaVersion": 1,
+    "csProcessVersion": 2,
+    "id": "f73693afd6082f573e103876",
+    "timeHorizon": "dayAhead",
+    "xnecSelectionInputId": "10b6a342506b6d8c574d455f"
+}

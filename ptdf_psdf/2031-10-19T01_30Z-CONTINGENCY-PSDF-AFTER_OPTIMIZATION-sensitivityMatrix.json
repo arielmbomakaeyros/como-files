@@ -1,0 +1,355 @@
+{
+    "columnHeaderList": [
+        {
+            "key": "_817229bc-5d3d-4d5e-ae9f-bfd5f7e9663c",
+            "unit": "MW/TAP",
+            "value": "DOLL-DOLL-BLAU"
+        },
+        {
+            "key": "_e4e5f458-338a-46ba-9274-76611876f308",
+            "unit": "MW/TAP",
+            "value": "DOLL-DOLL-GELB"
+        }
+    ],
+    "matrixType": "Sensitivities_Outage_afterOpt_PST",
+    "rowHeaderList": [
+        {
+            "coKey": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "coValue": "CO-SOTT-STAD-BLAU",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731ca",
+            "value": "DOLL-LUEN-BLAU-2"
+        },
+        {
+            "coKey": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "coValue": "CO-SOTT-STAD-BLAU",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731cb",
+            "value": "LUEN-DOLL-BLAU-2"
+        },
+        {
+            "coKey": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "coValue": "CO-SOTT-STAD-BLAU",
+            "key": "_c37b61de-abf8-4711-a2ae-fea12eb15577",
+            "value": "WAHL-LAND-BLAU-2"
+        },
+        {
+            "coKey": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "coValue": "CO-SOTT-STAD-BLAU",
+            "key": "_b56dbbd2-012f-4451-9975-e47d233eafbc",
+            "value": "DOLL-SOTT-GELB"
+        },
+        {
+            "coKey": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "coValue": "CO-SOTT-STAD-BLAU",
+            "key": "_c37b61de-abf8-4711-a2ae-fea12eb15575",
+            "value": "LAND-WAHL-BLAU-1"
+        },
+        {
+            "coKey": "_298826d7-6ba4-47ea-a3a6-1674e088c711",
+            "coValue": "CO-STAD-WAHL-GELB",
+            "key": "_c37b61de-abf8-4711-a2ae-fea12eb15577",
+            "value": "WAHL-LAND-BLAU-2"
+        },
+        {
+            "coKey": "_298826d7-6ba4-47ea-a3a6-1674e088c711",
+            "coValue": "CO-STAD-WAHL-GELB",
+            "key": "_b56dbbd2-012f-4451-9975-e47d233eafbc",
+            "value": "DOLL-SOTT-GELB"
+        },
+        {
+            "coKey": "_298826d7-6ba4-47ea-a3a6-1674e088c711",
+            "coValue": "CO-STAD-WAHL-GELB",
+            "key": "_c37b61de-abf8-4711-a2ae-fea12eb15575",
+            "value": "LAND-WAHL-BLAU-1"
+        },
+        {
+            "coKey": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+            "coValue": "CO-LAND-SOTT-BLAU",
+            "key": "_a233f14f-3868-4786-b6a0-7fe5d569450c",
+            "value": "DOLL-SOTT-BLAU"
+        },
+        {
+            "coKey": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+            "coValue": "CO-LAND-SOTT-BLAU",
+            "key": "_2e611c20-d756-4b8c-9410-29b03b425f88",
+            "value": "SOTT-STAD-BLAU-1"
+        },
+        {
+            "coKey": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+            "coValue": "CO-LAND-SOTT-BLAU",
+            "key": "_b84ffe2c-5962-47a0-a61c-8617b60bbc91",
+            "value": "STAD-WAHL-GELB"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731ca",
+            "value": "DOLL-LUEN-BLAU-2"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_a233f14f-3868-4786-b6a0-7fe5d569450c",
+            "value": "DOLL-SOTT-BLAU"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731cb",
+            "value": "LUEN-DOLL-BLAU-2"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_17819726-5dc0-4054-bfbf-e383256987db",
+            "value": "LUEN-STAD-BLAU"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_2e611c20-d756-4b8c-9410-29b03b425f88",
+            "value": "SOTT-STAD-BLAU-1"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_f71f118e-bf0f-449c-a4a8-5404cf9096e4",
+            "value": "LUEN-STAD-GELB"
+        },
+        {
+            "coKey": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "coValue": "CO-DOLL-SOTT-GELB",
+            "key": "_b84ffe2c-5962-47a0-a61c-8617b60bbc91",
+            "value": "STAD-WAHL-GELB"
+        },
+        {
+            "coKey": "_b5e76b71-a98c-4763-a5c5-1aabd51ad62e",
+            "coValue": "CO-LUEN-STAD-BLAU",
+            "key": "_f71f118e-bf0f-449c-a4a8-5404cf9096e4",
+            "value": "LUEN-STAD-GELB"
+        },
+        {
+            "coKey": "_cb67fc82-110e-445d-bbee-0bb03e5039876",
+            "coValue": "CO-LUEN-DOLL-BLAU",
+            "key": "_a233f14f-3868-4786-b6a0-7fe5d569450c",
+            "value": "DOLL-SOTT-BLAU"
+        },
+        {
+            "coKey": "_cb67fc82-110e-445d-bbee-0bb03e5039876",
+            "coValue": "CO-LUEN-DOLL-BLAU",
+            "key": "_2e611c20-d756-4b8c-9410-29b03b425f88",
+            "value": "SOTT-STAD-BLAU-1"
+        },
+        {
+            "coKey": "_cb67fc82-110e-445d-bbee-0bb03e5039876",
+            "coValue": "CO-LUEN-DOLL-BLAU",
+            "key": "_b56dbbd2-012f-4451-9975-e47d233eafbc",
+            "value": "DOLL-SOTT-GELB"
+        },
+        {
+            "coKey": "_d783772c-b644-4603-8d72-b213431be829",
+            "coValue": "CO-LUEN-STAD-GELB",
+            "key": "_17819726-5dc0-4054-bfbf-e383256987db",
+            "value": "LUEN-STAD-BLAU"
+        },
+        {
+            "coKey": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "coValue": "CO-LAND-WAHL-BLAU",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731ca",
+            "value": "DOLL-LUEN-BLAU-2"
+        },
+        {
+            "coKey": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "coValue": "CO-LAND-WAHL-BLAU",
+            "key": "_a233f14f-3868-4786-b6a0-7fe5d569450c",
+            "value": "DOLL-SOTT-BLAU"
+        },
+        {
+            "coKey": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "coValue": "CO-LAND-WAHL-BLAU",
+            "key": "_48e8af56-21ac-4e73-aec6-fcc27a6731cb",
+            "value": "LUEN-DOLL-BLAU-2"
+        },
+        {
+            "coKey": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "coValue": "CO-LAND-WAHL-BLAU",
+            "key": "_2e611c20-d756-4b8c-9410-29b03b425f88",
+            "value": "SOTT-STAD-BLAU-1"
+        },
+        {
+            "coKey": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "coValue": "CO-LAND-WAHL-BLAU",
+            "key": "_b84ffe2c-5962-47a0-a61c-8617b60bbc91",
+            "value": "STAD-WAHL-GELB"
+        }
+    ],
+    "rowList": [
+        {
+            "rowValueList": [
+                -14.538,
+                -14.538
+            ]
+        },
+        {
+            "rowValueList": [
+                -13.54,
+                -13.54
+            ]
+        },
+        {
+            "rowValueList": [
+                13.824,
+                13.824
+            ]
+        },
+        {
+            "rowValueList": [
+                16.269,
+                16.269
+            ]
+        },
+        {
+            "rowValueList": [
+                14.901,
+                14.901
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.567,
+                -0.567
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.743,
+                -0.743
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.657,
+                -0.657
+            ]
+        },
+        {
+            "rowValueList": [
+                17.249,
+                17.249
+            ]
+        },
+        {
+            "rowValueList": [
+                15.961,
+                15.961
+            ]
+        },
+        {
+            "rowValueList": [
+                -8.968,
+                -8.968
+            ]
+        },
+        {
+            "rowValueList": [
+                -20.364,
+                -20.364
+            ]
+        },
+        {
+            "rowValueList": [
+                21.562,
+                21.562
+            ]
+        },
+        {
+            "rowValueList": [
+                -19.233,
+                -19.233
+            ]
+        },
+        {
+            "rowValueList": [
+                -11.516,
+                -11.516
+            ]
+        },
+        {
+            "rowValueList": [
+                19.846,
+                19.846
+            ]
+        },
+        {
+            "rowValueList": [
+                -11.516,
+                -11.516
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.317,
+                -0.317
+            ]
+        },
+        {
+            "rowValueList": [
+                -24.314,
+                -24.314
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.284,
+                -0.284
+            ]
+        },
+        {
+            "rowValueList": [
+                0.975,
+                0.975
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.755,
+                -0.755
+            ]
+        },
+        {
+            "rowValueList": [
+                -24.314,
+                -24.314
+            ]
+        },
+        {
+            "rowValueList": [
+                -20.056,
+                -20.056
+            ]
+        },
+        {
+            "rowValueList": [
+                21.799,
+                21.799
+            ]
+        },
+        {
+            "rowValueList": [
+                -18.926,
+                -18.926
+            ]
+        },
+        {
+            "rowValueList": [
+                20.228,
+                20.228
+            ]
+        },
+        {
+            "rowValueList": [
+                -0.086,
+                -0.086
+            ]
+        }
+    ]
+}

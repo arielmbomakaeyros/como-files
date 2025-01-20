@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://iec.ch/TC57/MappingDetailedResultSchema",
+    "$id": "http://iec.ch/TC57/MappingDetailedResults_Schema",
     "title": "MappingDetailedResult",
     "type": "object",
     "description": "The detailed result from CS mapping",
@@ -8,12 +8,6 @@
         "businessDay": {
             "description": "Business date - a date for which the process is executed",
             "type": "string"
-        },
-        "comoDocumentType": {
-            "$ref": "#/definitions/DocumentTypeKind"
-        },
-        "comoDocumentVersion": {
-            "$ref": "#/definitions/DocumentVersionKind"
         },
         "crosaVersion": {
             "description": "Version of the related CROSA process",
@@ -24,44 +18,32 @@
             "type": "integer"
         },
         "dataPerHour": {
-            "type": [
-                "array",
-                "null"
-            ],
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/DataPerHourOfTheCrosa"
             }
         },
         "dataPerXnec": {
-            "type": [
-                "array",
-                "null"
-            ],
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/DataPerXnec"
             }
         },
         "dataPerXnecAndXra": {
-            "type": [
-                "array",
-                "null"
-            ],
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/DataPerXnecAndXra"
             }
         },
         "dataPerXra": {
-            "type": [
-                "array",
-                "null"
-            ],
+            "type": "array",
             "items": {
                 "$ref": "#/definitions/DataPerXra"
             }
         },
         "timeHorizon": {
             "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
-            "$ref": "#/definitions/TimeHorizonKind"
+            "type": "string"
         }
     },
     "definitions": {
@@ -69,64 +51,37 @@
             "type": "object",
             "properties": {
                 "aggregatedVolumeDownwardCostlyAnora": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "aggregatedVolumeUpwardCostlyAnora": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "averageCostDownwardOraOrAnora": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "averageCostUpwardOraOrAnora": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "penaltyCostForAnoraVolumes": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "timestamp": {
                     "type": "string"
                 },
                 "totalCostsAllOras": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "totalIndividualShare": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "totalRelativeWeightsAfterRba": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "totalRelativeWeightsBeforeRba": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [
                 "timestamp"
             ]
@@ -135,124 +90,70 @@
             "type": "object",
             "properties": {
                 "deltaMinus": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "deltaPlus": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "fAfterRao": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "fLimit": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "fMax": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "leastCostWeightRi": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "lowerBalancingDualValue": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "lowerBalancingSlack": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "powerFlowDualValue": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "powerFlowSlack": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "relativeCostWeightAfterRba": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "relativeCostWeightBeforeRba": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "selectedXnecResultId": {
                     "type": "string"
                 },
                 "shareOfTotalCosts": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "sumDeltaMinus": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "sumDeltaPlus": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "timestamp": {
                     "type": "string"
                 },
                 "totalAdjustedFlow": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "upperBalancingDualValue": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "upperBalancingSlack": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "xnecId": {
                     "type": "string"
                 }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [
                 "selectedXnecResultId",
                 "timestamp",
@@ -266,10 +167,7 @@
                     "type": "string"
                 },
                 "value": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "valueType": {
                     "$ref": "#/definitions/ValueType"
@@ -281,7 +179,7 @@
                     "type": "string"
                 }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [
                 "timestamp",
                 "valueType",
@@ -293,10 +191,7 @@
             "type": "object",
             "properties": {
                 "orderedVolume": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "sumAlphaOrBetaOverXnecs": {
                     "type": "number"
@@ -305,40 +200,17 @@
                     "type": "string"
                 },
                 "totalCost": {
-                    "type": [
-                        "number",
-                        "null"
-                    ]
+                    "type": "number"
                 },
                 "xraId": {
                     "type": "string"
                 }
             },
-            "additionalProperties": true,
+            "additionalProperties": false,
             "required": [
                 "sumAlphaOrBetaOverXnecs",
                 "timestamp",
                 "xraId"
-            ]
-        },
-        "DocumentTypeKind": {
-            "type": "string",
-            "const": "CS_MAPPING_DETAILED_RESULT"
-        },
-        "DocumentVersionKind": {
-            "type": "string",
-            "const": "R24Q4V1_0"
-        },
-        "TimeHorizonKind": {
-            "description": "The code list of the time horizons",
-            "type": "string",
-            "enum": [
-                "dayAhead",
-                "intraday",
-                "monthAhead",
-                "twoDaysAhead",
-                "weekAhead",
-                "yearAhead"
             ]
         },
         "ValueType": {
@@ -349,11 +221,9 @@
             ]
         }
     },
-    "additionalProperties": true,
+    "additionalProperties": false,
     "required": [
         "businessDay",
-        "comoDocumentType",
-        "comoDocumentVersion",
         "crosaVersion",
         "csProcessVersion",
         "timeHorizon"

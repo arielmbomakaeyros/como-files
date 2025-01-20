@@ -39,7 +39,7 @@
 		<cim:RemedialActionCost.mRID>2acfb288-2084-4f33-9330-a43705ee2535</cim:RemedialActionCost.mRID>
 		<nc:RemedialActionCost.startupCost>0</nc:RemedialActionCost.startupCost>
 		<nc:RemedialActionCost.shutdownCost>0</nc:RemedialActionCost.shutdownCost>
-		<nc:RemedialActionCost.RemedialActionSchedule rdf:resource="#_2ad86e6a-326a-47d6-9fc7-9b8fbf4f79b1" rdf:resource="fcfb1193-a63b-acc5-6b81-1f90c26f0dbc" />
+		<nc:RemedialActionCost.RemedialActionSchedule rdf:resource="#_2ad86e6a-326a-47d6-9fc7-9b8fbf4f79b1" />
 		<nc:RemedialActionCost.kind rdf:resource="http://entsoe.eu/ns/nc#CostSettledKind.indicative" />
 	</nc:RemedialActionCost>
 	<nc:PowerSchedule rdf:ID="_ea12e3e0-1a5b-453c-9527-7ad1d129eeab">

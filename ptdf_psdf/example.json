@@ -1,0 +1,68 @@
+{
+  "aggregatedVolumeDownwardCostlyAnora": 2653.09,
+  "aggregatedVolumeUpwardCostlyAnora": 2005.09,
+  "averageCostDownwardOraOrAnora": 198.81,
+  "averageCostUpwardOraOrAnora": 218.77,
+  "businessTimestamp": "2024-10-01T00:30:00Z",
+  "businessDay": "2024-10-01",
+  "comoDocumentType": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR",
+  "comoDocumentVersion": "R24Q4V1_0",
+  "crosaVersion": 5,
+  "csProcessType": "crosaId1",
+  "csProcessVersion": 3,
+  "hourCongested": true,
+  "penaltyBalancingSlack": 22,
+  "penaltyCostForAnoraVolumes": 0,
+  "penaltyFlowSlack": 233,
+  "timeHorizon": "intraday",
+  "totalCostsAllOras": 13401.56,
+  "totalCostsAllPsts": 10001.1,
+  "psdfData": [
+    {
+      "convertedXnecId": "596a0eedc2d60451755ae6c8",
+      "pstId": "pstId-1",
+      "sensitivity": -14.538
+    }
+  ],
+  "pstData": [
+    {
+      "costsPst": 120.3,
+      "pstId": "pstId-1",
+      "tapAfter": 10.5,
+      "tapBefore": 13
+    }
+  ],
+  "ptdfData": [
+    {
+      "convertedXnecId": "c0da9301c97b1a8b335e0d42",
+      "raId": "20220227_DA_CROSA_ORA_0601",
+      "sensitivity": 1.212
+    }
+  ],
+  "raData": [
+    {
+      "costsOra": 13401.56,
+      "costsOraVariable": 3401.56,
+      "hourlyCostsAfterFixedCosts": 10000,
+      "hourlyCostsAfterReallocation": 13401.56,
+      "hourlyCostsFiltered": 100,
+      "raId": "20220227_DA_CROSA_ORA_0601",
+      "variableCostFinal": 13401.56,
+      "variableCostIntermediate": 10400.56
+    }
+  ],
+  "xnecData": [
+    {
+      "convertedXnecId": "c0da9301c97b1a8b335e0d42",
+      "fLimit": 122,
+      "fPrimeB": 130,
+      "fWithoutOrasAndPsts": 140
+    },
+    {
+      "convertedXnecId": "596a0eedc2d60451755ae6c8",
+      "fLimit": 120,
+      "fPrimeB": 110,
+      "fWithoutOrasAndPsts": 120
+    }
+  ]
+}

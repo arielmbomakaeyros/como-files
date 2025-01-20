@@ -1,0 +1,58 @@
+{
+    "aggregatedVolumeDownwardCostlyAnora": 35.98,
+    "aggregatedVolumeUpwardCostlyAnora": 81.86,
+    "averageCostDownwardOraOrAnora": 85.57,
+    "averageCostUpwardOraOrAnora": 56.37,
+    "businessDay": "2024-05-12",
+    "businessTimestamp": "2024-05-12T02:30:00Z",
+    "comoDocumentType": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaVersion": 1,
+    "csProcessType": "23ccc8f5cc1ff68e6110491d",
+    "csProcessVersion": 1,
+    "hourCongested": false,
+    "penaltyBalancingSlack": 35.45,
+    "penaltyCostForAnoraVolumes": 8.4,
+    "penaltyFlowSlack": 94.46,
+    "psdfData": {
+        "convertedXnecId": "39c64f59-3475-4db2-a7a6-d0a4201b20d7",
+        "raId": "8b446525-e2a7-439e-a382-5aa27dd425b5",
+        "sensitivity": 208124.3456420739
+    },
+    "pstData": [
+        {
+            "costsPst": 11.24,
+            "pstId": "e8975aad33a2bcc3ebd8f088",
+            "tapAfter": 33.74,
+            "tapBefore": 50.24
+        }
+    ],
+    "ptdfData": {
+        "convertedXnecId": "0347d3d4-fb77-4a49-8e14-212481ca77fa",
+        "raId": "920e3296-11df-4746-ac48-c4feed4e6d2f",
+        "sensitivity": 2.85
+    },
+    "raData": [
+        {
+            "costsOra": 198.11,
+            "costsOraVariable": 162.21,
+            "hourlyCostsAfterFixedCosts": 196.48,
+            "hourlyCostsAfterReallocation": 152.14,
+            "hourlyCostsFiltered": 17.28,
+            "raId": "fccb76ef-8de8-4c67-851e-0b8635f26b1a",
+            "variableCostFinal": 179.58,
+            "variableCostIntermediate": 189.02
+        }
+    ],
+    "timeHorizon": "dayAhead",
+    "totalCostsAllOras": 198.11,
+    "totalCostsAllPsts": 86.52,
+    "xnecData": [
+        {
+            "convertedXnecId": "f546340df6e0c7fcd46fae05",
+            "fLimit": 87.48,
+            "fPrimeB": 79.02,
+            "fWithoutOrasAndPsts": 86.86
+        }
+    ]
+}

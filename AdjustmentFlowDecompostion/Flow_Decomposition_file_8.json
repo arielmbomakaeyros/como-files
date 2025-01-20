@@ -1,0 +1,131 @@
+{
+    "businessDay": "2024-03-22",
+    "businessTimestamp": "2024-03-22T02:30:00Z",
+    "comoDocumentType": "CS_FLOW_COMPONENT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaProcessType": "70746ca4393e0fd96dc4ae2c",
+    "crosaVersion": 1,
+    "csProcessVersion": 1,
+    "id": "f14d8cc39ded42bedd93fda1",
+    "selectedXnecResultId": "0a4ddd8537d781f2a736a568",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 54.14,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": -1.77,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "value": -0.4
+                        },
+                        {
+                            "biddingZoneCode": "10YSI-ELES-----O",
+                            "value": -0.66
+                        },
+                        {
+                            "biddingZoneCode": "10YBE----------2",
+                            "value": -0.2
+                        },
+                        {
+                            "biddingZoneCode": "10YSK-SEPS-----K",
+                            "value": -0.51
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": -1.85,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "value": -0.43
+                        },
+                        {
+                            "biddingZoneCode": "10YSI-ELES-----O",
+                            "value": -0.63
+                        },
+                        {
+                            "biddingZoneCode": "10YBE----------2",
+                            "value": -0.21
+                        },
+                        {
+                            "biddingZoneCode": "10YSK-SEPS-----K",
+                            "value": -0.58
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": -2.0,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "value": -0.47
+                        },
+                        {
+                            "biddingZoneCode": "10YSI-ELES-----O",
+                            "value": -0.71
+                        },
+                        {
+                            "biddingZoneCode": "10YBE----------2",
+                            "value": -0.3
+                        },
+                        {
+                            "biddingZoneCode": "10YSK-SEPS-----K",
+                            "value": -0.52
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": -1.78,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "value": -0.43
+                        },
+                        {
+                            "biddingZoneCode": "10YSI-ELES-----O",
+                            "value": -0.67
+                        },
+                        {
+                            "biddingZoneCode": "10YBE----------2",
+                            "value": -0.28
+                        },
+                        {
+                            "biddingZoneCode": "10YSK-SEPS-----K",
+                            "value": -0.4
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": -1.73,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YRO-TEL------P",
+                            "value": -0.42
+                        },
+                        {
+                            "biddingZoneCode": "10YSI-ELES-----O",
+                            "value": -0.66
+                        },
+                        {
+                            "biddingZoneCode": "10YBE----------2",
+                            "value": -0.26
+                        },
+                        {
+                            "biddingZoneCode": "10YSK-SEPS-----K",
+                            "value": -0.39
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "8d09ca980cf71e70d3729e79",
+            "totalFlow": 2.88
+        }
+    ]
+}

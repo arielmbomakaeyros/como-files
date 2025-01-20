@@ -1,0 +1,68 @@
+{
+    "aggregatedVolumeDownwardCostlyAnora": 99.66,
+    "aggregatedVolumeUpwardCostlyAnora": 23.35,
+    "averageCostDownwardOraOrAnora": 73.65,
+    "averageCostUpwardOraOrAnora": 78.46,
+    "businessDay": "2024-10-09",
+    "businessTimestamp": "2024-10-09T02:30:00Z",
+    "comoDocumentType": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaVersion": 1,
+    "csProcessType": "a7bd8bc41c437960c04fcf9b",
+    "csProcessVersion": 3,
+    "hourCongested": true,
+    "penaltyBalancingSlack": 62.66,
+    "penaltyCostForAnoraVolumes": 74.06,
+    "penaltyFlowSlack": 39.86,
+    "psdfData": {
+        "convertedXnecId": "074dea38-1178-4d6a-bf4b-524075ed5e65",
+        "raId": "b3bde2f9-38a7-4e0a-862c-43830c4ad413",
+        "sensitivity": 521005.2635608617
+    },
+    "pstData": [
+        {
+            "costsPst": 53.25,
+            "pstId": "b145dc32b3aecf0657d2c860",
+            "tapAfter": 92.38,
+            "tapBefore": 28.59
+        }
+    ],
+    "ptdfData": {
+        "convertedXnecId": "dd0d13db-96d3-4c27-b5a7-ba59b7368cfe",
+        "raId": "a8c2a4cb-c557-4cea-aa4c-7302d754e5f5",
+        "sensitivity": 2.59
+    },
+    "raData": [
+        {
+            "costsOra": 163.41,
+            "costsOraVariable": 172.05,
+            "hourlyCostsAfterFixedCosts": 178.41,
+            "hourlyCostsAfterReallocation": 178.32,
+            "hourlyCostsFiltered": 21.21,
+            "raId": "652c0e55-551c-4a34-a078-48a38f6f5a5f",
+            "variableCostFinal": 174.72,
+            "variableCostIntermediate": 167.97
+        },
+        {
+            "costsOra": 160.72,
+            "costsOraVariable": 175.59,
+            "hourlyCostsAfterFixedCosts": 185.32,
+            "hourlyCostsAfterReallocation": 191.69,
+            "hourlyCostsFiltered": 14.98,
+            "raId": "10972a03-ffc9-4a0e-b77c-cb3b73f303d2",
+            "variableCostFinal": 190.76,
+            "variableCostIntermediate": 176.05
+        }
+    ],
+    "timeHorizon": "dayAhead",
+    "totalCostsAllOras": 324.13,
+    "totalCostsAllPsts": 34.15,
+    "xnecData": [
+        {
+            "convertedXnecId": "bc52941ab9618193602bbdf1",
+            "fLimit": 4.67,
+            "fPrimeB": 16.35,
+            "fWithoutOrasAndPsts": 36.27
+        }
+    ]
+}

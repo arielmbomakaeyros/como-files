@@ -1,0 +1,57 @@
+{
+    "businessDay": "2023-12-28",
+    "businessTimestamp": "2023-12-28T02:30:00Z",
+    "comoDocumentType": "CS_SELECTED_XNEC_RESULT",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "convertedXnecList": [
+        {
+            "id": "21c097192ac723eda5db72b8",
+            "originalXnec1": {
+                "assessedElementMrid": "517bf87d5a47eb1ad1102bde",
+                "assessedElementName": null,
+                "biddingZoneCode": "1bb7266e1844759ea00503fb",
+                "conductingEquipmentMrid": "c984ee11c7fdb01ac946cc22",
+                "contingencyMrid": "fb72cfd1d51d51fc9e22cf3d",
+                "contingencyName": "f9c28f82f9ef115cd88b33f7",
+                "fAfter": 3.2,
+                "fBefore": 67.63,
+                "fMax": 47.58,
+                "hasCostlyRa": null,
+                "iAfter": 16.03,
+                "iBefore": 69.56,
+                "iMax": 49.4,
+                "id": "71fc4203f19c1f696b60a6ca",
+                "raMrid": "9e4eac1c465267ad10f574c9",
+                "tsoCode": "22a997650b4d4c2575750bc2",
+                "xneMrid": "30276790238e4224a6f4ea3e",
+                "xneName": null
+            },
+            "originalXnec2": {
+                "assessedElementMrid": "f7d92890f3ce576eae0130bf",
+                "assessedElementName": "08227e8a34b48f8355c73402",
+                "biddingZoneCode": "07db276cdbd37e9ea6ea9fb0",
+                "conductingEquipmentMrid": null,
+                "contingencyMrid": "29c05666045e8a3d465c64d1",
+                "contingencyName": null,
+                "fAfter": 94.86,
+                "fBefore": 19.17,
+                "fMax": 49.88,
+                "hasCostlyRa": null,
+                "iAfter": 49.15,
+                "iBefore": 76.03,
+                "iMax": 18.2,
+                "id": "9bd2d40f8c4ebc929dbeda84",
+                "raMrid": "de3c2bbc70b3b77bc7ca5f67",
+                "tsoCode": "4b8013efe872dc6144ff8864",
+                "xneMrid": "b8fc176c2e179f15b1f8378e",
+                "xneName": null
+            }
+        }
+    ],
+    "crosaProcessType": "74ca094c628ef9bb2fa9502f",
+    "crosaVersion": 1,
+    "csProcessVersion": 3,
+    "id": "9ebda3cc83cf7333a30aed95",
+    "timeHorizon": "dayAhead",
+    "xnecSelectionInputId": "efe44804cf10250047efb5cb"
+}

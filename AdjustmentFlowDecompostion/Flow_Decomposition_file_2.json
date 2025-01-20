@@ -1,0 +1,111 @@
+{
+    "businessDay": "2024-05-24",
+    "businessTimestamp": "2024-05-24T02:30:00Z",
+    "comoDocumentType": "CS_FLOW_COMPONENT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaProcessType": "ca1c4af94a34036257d463f2",
+    "crosaVersion": 1,
+    "csProcessVersion": 1,
+    "id": "73903d8435d45bbc2e883374",
+    "selectedXnecResultId": "09324eeae1053aba157046c6",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 63.11,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": 0.86,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": 0.73
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "value": -0.51
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "value": 0.64
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": 0.7,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": 0.7
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "value": -0.54
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "value": 0.54
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": 0.45,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": 0.63
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "value": -0.55
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "value": 0.37
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": 0.91,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": 0.68
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "value": -0.49
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "value": 0.72
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": 0.66,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": 0.69
+                        },
+                        {
+                            "biddingZoneCode": "10YMA-ONE------O",
+                            "value": -0.5
+                        },
+                        {
+                            "biddingZoneCode": "10YHR-HEP------M",
+                            "value": 0.47
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "b420dcb45139da3c49c3c3a3",
+            "totalFlow": 50.48
+        }
+    ]
+}

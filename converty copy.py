@@ -23,6 +23,19 @@ ValueFlowComponentType = [
     "pstFlow"
 ]
 
+# # Generate a random date within the past year
+# start = datetime.now() - timedelta(days=365)  # One year ago from today
+# end = datetime.now()
+# random_date = start + (end - start) * random.random()
+
+# # Randomly choose either 01:30 or 02:30 for the time
+# hour = random.choice([1, 2])
+# random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+# # Format the date and timestamp
+# business_day = random_date.strftime('%Y-%m-%d')
+# # business_timestamp = random_date.isoformat()
+# business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
 
 # Helper function to generate a random value
 def get_random_value():
@@ -81,8 +94,7 @@ def generate_component_flows(bidding_zone_list):
         if component_type == "loopFlow":
             value = sum_value  # Use sum for loopFlow
             bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
-        
-        # THIS ELSE PORTION MAKES SURE THAT WE SUM UP EACH bidding_zone IN THE LIST AND GIVE THE SUM AS A FLOW TYPE VALUE FOR ALL NON LOOPFLOW 
+
         else:
             # For other types, create a distinct value
             offset = round(random.uniform(0.1, 0.5), 2)  # Random offset for uniqueness
@@ -100,17 +112,27 @@ def generate_component_flows(bidding_zone_list):
                     "value": unique_value
                 })
                 total_adjusted += unique_value
-
+            
             # Adjust the last zone's value to ensure the sum remains the same
             last_zone_value = round(value - (total_adjusted - bidding_zone_list_copy[-1]["value"]), 2)
             bidding_zone_list_copy[-1]["value"] = last_zone_value
+
+        # THIS ELSE PORTION MAKES SURE THAT WE SUM UP EACH bidding_zone IN THE LIST AND GIVE THE SUM AS A FLOW TYPE VALUE FOR ALL NON LOOPFLOW 
+        # else:
+        #     # Generate a new random value for non-loopFlow types
+        #     new_value = get_random_value()
+        #     # Update biddingZoneList values for non-loopFlow types
+        #     bidding_zone_list_copy = [
+        #         {**zone, "value": new_value} for zone in bidding_zone_list
+        #     ]
+        #     value = new_value  # Set the same value for non-loopFlow types
 
         component_flows.append({
             "componentType": component_type,
             "value": value,
             "biddingZoneList": bidding_zone_list_copy
         })
-
+    
     return component_flows
 
 
@@ -217,7 +239,14 @@ def generate_volume_overload():
 def generate_bidding_zone_cost_list():
     # bidding_zones = ["EIC_DE", "EIC_SI", "EIC_NL", "EIC_FR", "EIC_PL", "EIC_SK", "EIC_RO"]
     bidding_zones = random.sample(getBiddingZoneCode (), 5)
-
+    # random.choice(bidding_zones)
+    # return [
+    #     {
+    #         "biddingZoneCode": generateBiddingZoneCode(),
+    #         "contribution": random.uniform(0, 0.5),
+    #         "cost": random.uniform(0, 25000)
+    #     } for zone in generateBiddingZoneCode()
+    # ]
     cost_list = []
     # for _ in range(random.randint(1, 3)):
     for zone in bidding_zones:
@@ -250,61 +279,6 @@ def generate_xnec_cost():
         "volumeOverload": generate_volume_overload()
     }
 
-cumulative_costs_ora = 0
-
-def generate_ra_data():
-    # Generate a random positive real number
-    return {
-        "costsOra": round(random.uniform(150, 200), 2),
-        "costsOraVariable": round(random.uniform(150, 200), 2),
-        "hourlyCostsAfterFixedCosts": round(random.uniform(150, 200), 2),
-        "hourlyCostsAfterReallocation": round(random.uniform(150, 200), 2),
-        "hourlyCostsFiltered": round(random.uniform(0, 100), 2),
-        "raId": str(uuid.uuid4()),
-        "variableCostFinal": round(random.uniform(150, 200), 2),
-        "variableCostIntermediate": round(random.uniform(150, 200), 2)
-    }
-
-# Function to generate an array of random objects and calculate cumulative costsOra
-def generate_random_objects_and_cumulative_cost():
-    # Generate a random number of objects between 1 and 5
-    num_objects = random.randint(1, 5)
-    
-    # Generate the array of objects
-    raData = [generate_ra_data() for _ in range(num_objects)]
-    
-    # Calculate the cumulative value of costsOra
-    cumulative_costs_ora = sum(obj["costsOra"] for obj in raData)
-    
-    return {
-        "raData": raData, 
-        "cumulative_costs_ora": cumulative_costs_ora
-    }
-    # "cumulativeCostsOra": round(cumulative_costs_ora, 2),
-
-def generate_psdf_data():
-    # Generate a random positive real number
-    positive_real = abs(random.random() * random.randint(1, 1_000_000))
-
-    return {
-        "convertedXnecId": str(uuid.uuid4()),
-        "raId": str(uuid.uuid4()),
-        "sensitivity": positive_real,
-    }
-
-def generate_ptdf_data():
-    # Generate a random decimal between 1 and 3
-    random_decimal = random.uniform(1, 3)
-
-    # Specify the number of decimal places (e.g., 2 decimal places)
-    precision = 2
-    random_decimal = round(random_decimal, precision)
-    return {
-        "convertedXnecId": str(uuid.uuid4()),
-        "raId": str(uuid.uuid4()),
-        "sensitivity": random_decimal,
-    }
-
 def generate_xnec_cost_list():
     return [generate_xnec_cost() for _ in range(random.randint(1, 5))]
 
@@ -333,7 +307,7 @@ def resolve_reference(schema, ref):
         ref_schema = ref_schema.get(part, {})
     return ref_schema
 
-
+# GENERATE SAMPLE DATA
 # GENERATE SAMPLE DATA
 def generate_sample_data(schema, root_schema):
     """Generate sample data based on the provided JSON schema."""
@@ -347,13 +321,6 @@ def generate_sample_data(schema, root_schema):
 
     # Format the date and timestamp
     business_day = random_date.strftime('%Y-%m-%d')
-
-    # Detect and handle `oneOf` property
-    if 'oneOf' in schema:
-        # Randomly select one of the schemas from `oneOf`
-        chosen_schema = random.choice(schema['oneOf'])
-        print(f"Chosen schema from oneOf: {chosen_schema}")  # For analysis
-        return generate_sample_data(chosen_schema, root_schema)
 
     # Determine the type of the schema
     schema_type = schema.get('type')
@@ -384,11 +351,7 @@ def generate_sample_data(schema, root_schema):
         return random.randint(1, 100)
 
     elif schema_type == 'number':
-        print(schema, "999000999")
         return round(random.uniform(1.0, 100.0), 2)
-
-    elif schema_type == 'boolean':
-        return random.choice([True, False])
 
     elif schema_type == 'array':
         items_schema = schema.get('items', {})
@@ -415,6 +378,71 @@ def generate_sample_data(schema, root_schema):
 
     return None
 
+# def generate_sample_data(schema, root_schema):
+#     """Generate sample data based on the provided JSON schema."""
+#     start = datetime.now() - timedelta(days=365)  # One year ago from today
+#     end = datetime.now()
+#     random_date = start + (end - start) * random.random()
+
+#     # Randomly choose either 01:30 or 02:30 for the time
+#     hour = random.choice([1, 2])
+#     random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+#     # Format the date and timestamp
+#     business_day = random_date.strftime('%Y-%m-%d')
+#     # business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
+#     if 'type' in schema:
+#         if schema['type'] == 'string':
+#             if 'enum' in schema:
+#                 return random.choice(schema['enum'])
+#             if 'format' in schema and schema['format'] == 'date-time':
+#                 return business_day
+#             return generate_selected_xnec_result_id()
+
+#         if schema['type'] == 'integer':
+#             return random.randint(1, 100)
+
+#         if schema['type'] == 'number':
+#             return round(random.uniform(1.0, 100.0), 2)
+
+#         if schema['type'] == 'array':
+#             items_schema = schema.get('items', {})
+#             print(items_schema, "typetype------------")
+#             return [generate_sample_data(items_schema, root_schema) for _ in range(random.randint(1, 3))]
+
+#         if schema['type'] == 'object':
+#             properties = schema.get('properties', {})
+#             obj = {}
+#             for key, prop_schema in properties.items():
+#                 if '$ref' in prop_schema:
+#                     # Resolve the reference and generate sample for it
+#                     resolved_schema = resolve_reference(root_schema, prop_schema['$ref'])
+#                     obj[key] = generate_sample_data(resolved_schema, root_schema)
+#                 else:
+#                     obj[key] = generate_sample_data(prop_schema, root_schema)
+#             return obj
+
+#     if '$ref' in schema:
+#         # Resolve reference and generate sample
+#         print(schema, "typetype------------")
+#         resolved_schema = resolve_reference(root_schema, schema['$ref'])
+#         return generate_sample_data(resolved_schema, root_schema)
+    
+#     if 'items' in schema:
+#         # Resolve reference and generate sample
+#         # resolved_schema = resolve_reference(root_schema, schema['$ref'])
+#         properties = schema.get('properties', {})
+#         obj = {}
+#         for key, prop_schema in properties.items():
+#             if '$ref' in prop_schema:
+#                 # Resolve the reference and generate sample for it
+#                 resolved_schema = resolve_reference(root_schema, prop_schema['$ref'])
+#                 obj[key] = generate_sample_data(resolved_schema, root_schema)
+#             else:
+#                 obj[key] = generate_sample_data(prop_schema, root_schema)
+#         return obj
+
+#     return None
 
 
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
@@ -432,8 +460,6 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     # business_timestamp = random_date.isoformat()
     business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
     obj = {}
-
-    
 
     for prop, prop_schema in schema.get('properties', {}).items():
         # Check if the property has an enum and select a random value from it
@@ -479,19 +505,8 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             obj[prop] = random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"])
         elif re.search(r'convertedXnecId', prop, re.IGNORECASE):
             obj[prop] = generate_selected_xnec_result_id()
-        elif re.search(r'ptdfData', prop, re.IGNORECASE):
-            obj[prop] = generate_ptdf_data ()
-        elif re.search(r'psdfData', prop, re.IGNORECASE):
-            obj[prop] = generate_psdf_data ()
-        elif re.search(r'raData', prop, re.IGNORECASE):
-            result = generate_random_objects_and_cumulative_cost ()
-            cumulative_costs_ora = result ["cumulative_costs_ora"]
-            obj[prop] = result ["raData"]
-        elif re.search(r'totalCostsAllOras', prop, re.IGNORECASE):
-            obj[prop] = cumulative_costs_ora
         else:
             if '$ref' in prop_schema:
-                # print("999000999", prop_schema)
                 ref_schema = resolve_ref(full_schema, prop_schema['$ref'])
                 if ref_schema:
                     # obj[prop] = generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)
@@ -500,17 +515,24 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
                     obj[prop] = None
             elif ('array' in prop_schema.get('type', []) if isinstance(prop_schema.get('type'), list) else prop_schema.get('type') == 'array') and 'items' in prop_schema:
                 items_schema = prop_schema['items']
-                # print("800088800", items_schema)
                 if '$ref' in items_schema:
-                    print("77490000", items_schema['$ref'])
                     ref_schema = resolve_ref(full_schema, items_schema['$ref'])
-                    print("64792840", ref_schema)
                     if ref_schema:
                         obj[prop] = [generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)]
                     else:
                         obj[prop] = None
                 else:
                     obj[prop] = [generate_sample_data_final(items_schema, full_schema, start_date, offset_days)]
+            # elif prop_schema.get('type') == 'array' and 'items' in prop_schema:
+            #     items_schema = prop_schema['items']
+            #     if '$ref' in items_schema:
+            #         ref_schema = resolve_ref(full_schema, items_schema['$ref'])
+            #         if ref_schema:
+            #             obj[prop] = [generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)]
+            #         else:
+            #             obj[prop] = None
+            #     else:
+            #         obj[prop] = [generate_sample_data_final(items_schema, full_schema, start_date, offset_days)]
             else:
                 obj[prop] = generate_sample_data(prop_schema, full_schema)
 
@@ -542,13 +564,8 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
 
-# baseFineName = "SelectedXnecResult_"
-# schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
-
-baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
-schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
-
-
+baseFineName = "SelectedXnecResult"
+schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
 
 # baseFineName = "CostDistribution"
 # schema_file_path = 'CostDistribution_Schema_fixed.json'

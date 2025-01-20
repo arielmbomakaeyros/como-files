@@ -1,0 +1,543 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/FlowDecompositionIntermediateResult_Schema",
+    "title": "flowDecompositionIntermediateResult",
+    "type": "object",
+    "description": "Main result from the flow decomposition",
+    "properties": {
+        "baseCaseXneList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/xneIntermediateResult"
+            }
+        },
+        "biddingZoneList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/biddingZoneIntermediateResult"
+            }
+        },
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC. Use the \"date-time\" format to interpret this.",
+            "type": "string"
+        },
+        "comoDocumentType": {
+            "$ref": "#/definitions/DocumentTypeKind"
+        },
+        "comoDocumentVersion": {
+            "$ref": "#/definitions/DocumentVersionKind"
+        },
+        "crosaProcessType": {
+            "type": "string"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "id": {
+            "description": "Unique identifier of the flow decomposition result",
+            "type": "string"
+        },
+        "nemoId": {
+            "type": "string"
+        },
+        "slackNodesList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/flowDecompositionSlackNodes"
+            }
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "xnecList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/intermediateResultForSelectedXnec"
+            }
+        }
+    },
+    "definitions": {
+        "DocumentTypeKind": {
+            "type": "string",
+            "const": "CS_FLOW_DECOMPOSITION_INTERMEDIATE_RESULT"
+        },
+        "DocumentVersionKind": {
+            "type": "string",
+            "const": "R24Q4V1_0"
+        },
+        "FlowDecompositonSlackDistributionType": {
+            "type": "string",
+            "enum": [
+                "proportionalToConformLoad",
+                "proportionalToGenerationP",
+                "proportionalToGenerationPMax",
+                "proportionalToGenerationParticipationFactor",
+                "proportionalToGenerationRemainingMargin",
+                "proportionalToLoad"
+            ]
+        },
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "ValueFlowComponentType": {
+            "description": "The code list of the flow component types",
+            "type": "string",
+            "enum": [
+                "allocatedFlow",
+                "internalFlow",
+                "loopFlow",
+                "loopFlowOutsideCore",
+                "pstFlow"
+            ]
+        },
+        "biddingZoneIntermediateResult": {
+            "type": "object",
+            "properties": {
+                "biddingZoneCode": {
+                    "type": "string"
+                },
+                "bzNodeList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/bzNodeIntermediateResult"
+                    }
+                },
+                "isGlskDataProvided": {
+                    "type": "boolean"
+                },
+                "netPosition": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "biddingZoneCode",
+                "isGlskDataProvided",
+                "netPosition"
+            ]
+        },
+        "bzNodeIntermediateResult": {
+            "type": "object",
+            "properties": {
+                "baseCaseNodalInjectionAC": {
+                    "type": "number"
+                },
+                "baseCaseNodalInjectionAF": {
+                    "type": "number"
+                },
+                "baseCaseNodalInjectionDC": {
+                    "type": "number"
+                },
+                "baseCaseNodalInjectionLIF": {
+                    "type": "number"
+                },
+                "baseCaseNodalInjectionLoss": {
+                    "type": "number"
+                },
+                "glsk": {
+                    "type": "number"
+                },
+                "nodeMrid": {
+                    "type": "string"
+                },
+                "nodeName": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "baseCaseNodalInjectionAC",
+                "baseCaseNodalInjectionAF",
+                "baseCaseNodalInjectionDC",
+                "baseCaseNodalInjectionLIF",
+                "baseCaseNodalInjectionLoss",
+                "glsk",
+                "nodeMrid",
+                "nodeName"
+            ]
+        },
+        "flowComponentBeforeScalingForSelectedXnec": {
+            "type": "object",
+            "properties": {
+                "biddingZoneComponentList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/flowComponentByBiddingZone"
+                    }
+                },
+                "componentType": {
+                    "$ref": "#/definitions/ValueFlowComponentType"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "componentType",
+                "value"
+            ]
+        },
+        "flowComponentByBiddingZone": {
+            "type": "object",
+            "properties": {
+                "biddingZoneCode": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "biddingZoneCode",
+                "value"
+            ]
+        },
+        "flowDecompositionSlackNodes": {
+            "type": "object",
+            "properties": {
+                "balanceTypeAcLf": {
+                    "$ref": "#/definitions/FlowDecompositonSlackDistributionType"
+                },
+                "balanceTypeDcLf": {
+                    "$ref": "#/definitions/FlowDecompositonSlackDistributionType"
+                },
+                "contingencyMrid": {
+                    "type": "string"
+                },
+                "distributedSlackAcLf": {
+                    "type": "boolean"
+                },
+                "distributedSlackDcLf": {
+                    "type": "boolean"
+                },
+                "slackNodeAcLfMrid": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "slackNodeAcLfName": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "slackNodeDcLfMrid": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "slackNodeDcLfName": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "balanceTypeAcLf",
+                "balanceTypeDcLf",
+                "contingencyMrid",
+                "distributedSlackAcLf",
+                "distributedSlackDcLf"
+            ]
+        },
+        "intermediateResultForSelectedXnec": {
+            "type": "object",
+            "description": "Flow components for the selected XNEC",
+            "properties": {
+                "adjustedFmax": {
+                    "type": "number"
+                },
+                "componentList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/flowComponentBeforeScalingForSelectedXnec"
+                    }
+                },
+                "contingencyXneList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/xneIntermediateResultForSelectedXnec"
+                    }
+                },
+                "convertedXnecId": {
+                    "description": "Reference to unique identifier of the converted XNEC",
+                    "type": "string"
+                },
+                "nodeList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/nodeIntermediateResultForSelectedXnec"
+                    }
+                },
+                "pstList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/pstIntermediateResultForSelectedXnec"
+                    }
+                },
+                "synchronousIslandList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/slackNode"
+                    }
+                },
+                "totalFlow": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "adjustedFmax",
+                "convertedXnecId",
+                "totalFlow"
+            ]
+        },
+        "node2HubPTDF": {
+            "type": "object",
+            "properties": {
+                "nodeMrid": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "nodeMrid",
+                "value"
+            ]
+        },
+        "nodeIntermediateResultForSelectedXnec": {
+            "type": "object",
+            "properties": {
+                "baseCaseNodalInjectionLIF": {
+                    "type": "number"
+                },
+                "biddingZoneCode": {
+                    "type": "string"
+                },
+                "contingencyCaseNodalInjectionAF": {
+                    "type": "number"
+                },
+                "contingencyNodalInjectionAC": {
+                    "type": "number"
+                },
+                "contingencyNodalInjectionDC": {
+                    "type": "number"
+                },
+                "contingencyNodalInjectionLoss": {
+                    "type": "number"
+                },
+                "node2HubPTDF": {
+                    "type": "number"
+                },
+                "nodeMrid": {
+                    "type": "string"
+                },
+                "nodeName": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "baseCaseNodalInjectionLIF",
+                "biddingZoneCode",
+                "contingencyCaseNodalInjectionAF",
+                "contingencyNodalInjectionAC",
+                "contingencyNodalInjectionDC",
+                "contingencyNodalInjectionLoss",
+                "node2HubPTDF",
+                "nodeMrid",
+                "nodeName"
+            ]
+        },
+        "pstIntermediateResultForSelectedXnec": {
+            "type": "object",
+            "properties": {
+                "biddingZoneCode": {
+                    "type": "string"
+                },
+                "node2HubPSDF": {
+                    "type": "number"
+                },
+                "pstMrid": {
+                    "type": "string"
+                },
+                "pstName": {
+                    "type": "string"
+                },
+                "pstTapValue": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "biddingZoneCode",
+                "node2HubPSDF",
+                "pstMrid",
+                "pstName",
+                "pstTapValue"
+            ]
+        },
+        "slackNode": {
+            "type": "object",
+            "properties": {
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "mrid",
+                "name"
+            ]
+        },
+        "xneIntermediateResult": {
+            "type": "object",
+            "properties": {
+                "baseCaseACActivePowerLoss": {
+                    "type": "number"
+                },
+                "node1BaseCaseACActivePowerFlow": {
+                    "type": "number"
+                },
+                "node2BaseCaseACActivePowerFlow": {
+                    "type": "number"
+                },
+                "xneMrid": {
+                    "type": "string"
+                },
+                "xneName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "baseCaseACActivePowerLoss",
+                "node1BaseCaseACActivePowerFlow",
+                "node2BaseCaseACActivePowerFlow",
+                "xneMrid"
+            ]
+        },
+        "xneIntermediateResultForSelectedXnec": {
+            "type": "object",
+            "properties": {
+                "contingencyACActivePowerLoss": {
+                    "type": "number"
+                },
+                "node1ContingencyACActivePowerFlow": {
+                    "type": "number"
+                },
+                "node2ContingencyACActivePowerFlow": {
+                    "type": "number"
+                },
+                "xneMrid": {
+                    "type": "string"
+                },
+                "xneName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "contingencyACActivePowerLoss",
+                "node1ContingencyACActivePowerFlow",
+                "node2ContingencyACActivePowerFlow",
+                "xneMrid"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "businessDay",
+        "businessTimestamp",
+        "comoDocumentType",
+        "comoDocumentVersion",
+        "crosaProcessType",
+        "crosaVersion",
+        "csProcessVersion",
+        "id",
+        "nemoId",
+        "timeHorizon"
+    ]
+}

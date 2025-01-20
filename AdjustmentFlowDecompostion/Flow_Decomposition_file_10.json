@@ -1,0 +1,91 @@
+{
+    "businessDay": "2024-05-14",
+    "businessTimestamp": "2024-05-14T02:30:00Z",
+    "comoDocumentType": "CS_FLOW_COMPONENT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaProcessType": "49fcd464f8579949636d821e",
+    "crosaVersion": 1,
+    "csProcessVersion": 2,
+    "id": "76334548aa2ca2f2d1327147",
+    "selectedXnecResultId": "bd5b4364eca8a9d0e7bebb8f",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 57.65,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": -0.96,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": -0.56
+                        },
+                        {
+                            "biddingZoneCode": "10YHU-MAVIR----U",
+                            "value": -0.4
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": -1.23,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": -0.58
+                        },
+                        {
+                            "biddingZoneCode": "10YHU-MAVIR----U",
+                            "value": -0.65
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": -1.41,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": -0.59
+                        },
+                        {
+                            "biddingZoneCode": "10YHU-MAVIR----U",
+                            "value": -0.82
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": -1.16,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": -0.53
+                        },
+                        {
+                            "biddingZoneCode": "10YHU-MAVIR----U",
+                            "value": -0.63
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": -1.15,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10YIE-1001A00010",
+                            "value": -0.51
+                        },
+                        {
+                            "biddingZoneCode": "10YHU-MAVIR----U",
+                            "value": -0.64
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "f76e6feaa3a308db97e64585",
+            "totalFlow": 82.77
+        }
+    ]
+}

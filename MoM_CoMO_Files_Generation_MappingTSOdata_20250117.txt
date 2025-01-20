@@ -1,0 +1,16 @@
+(x) Schema 1: MappingTSOdata_IntermediateResultsPerHour_fixed.json
+
+(x) Generate test data based on this schema
+
+(x) Logic 1: PTDF values between and 0 and 1 (3 decimal places after comma) like 0.256 or 0.782
+
+(x) Logic 2: PSDF values can be any real number (positiv)
+
+(x) Logic 3: total cost of oras can be the sum of cost oras 
+
+    * MappingTSOdata
+    * ptdf values between and 0 and 1 (3 decimal)
+    * psdf values not necessary   
+    * total cost of oras can be the sum of cost oras
+
+(x) Start with MappingTSOdata_IntermediateResultsPerHour_fixed.json

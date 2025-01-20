@@ -1,0 +1,283 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/MappingTSOdata_IntermediateResultsPerHour",
+    "title": "MappingTSOdata_IntermediateResultsPerHour",
+    "type": "object",
+    "properties": {
+        "aggregatedVolumeDownwardCostlyAnora": {
+            "type": "number"
+        },
+        "aggregatedVolumeUpwardCostlyAnora": {
+            "type": "number"
+        },
+        "averageCostDownwardOraOrAnora": {
+            "type": "number"
+        },
+        "averageCostUpwardOraOrAnora": {
+            "type": "number"
+        },
+        "businessDay": {
+            "description": "Business date - a date for which the process is executed",
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "description": "Business timestamp (MTU) in UTC. Use the \"date-time\" format to interpret this.",
+            "type": "string"
+        },
+        "comoDocumentType": {
+            "$ref": "#/definitions/DocumentTypeKind"
+        },
+        "comoDocumentVersion": {
+            "$ref": "#/definitions/DocumentVersionKind"
+        },
+        "crosaVersion": {
+            "description": "Version of the related CROSA process",
+            "type": "integer"
+        },
+        "csProcessType": {
+            "type": "string"
+        },
+        "csProcessVersion": {
+            "description": "Version of the related Cost Sharing process",
+            "type": "integer"
+        },
+        "hourCongested": {
+            "type": "boolean"
+        },
+        "penaltyBalancingSlack": {
+            "type": "number"
+        },
+        "penaltyCostForAnoraVolumes": {
+            "type": "number"
+        },
+        "penaltyFlowSlack": {
+            "type": "number"
+        },
+        "psdfData": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PSDFdata"
+            }
+        },
+        "pstData": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PSTdata"
+            }
+        },
+        "ptdfData": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PTDFdata"
+            }
+        },
+        "raData": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/RAdata"
+            }
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "totalCostsAllOras": {
+            "type": "number"
+        },
+        "totalCostsAllPsts": {
+            "type": "number"
+        },
+        "xnecData": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/XNECdata"
+            }
+        }
+    },
+    "definitions": {
+        "DocumentTypeKind": {
+            "type": "string",
+            "const": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR"
+        },
+        "DocumentVersionKind": {
+            "type": "string",
+            "const": "R24Q4V1_0"
+        },
+        "PSDFdata": {
+            "type": "object",
+            "properties": {
+                "convertedXnecId": {
+                    "type": "string"
+                },
+                "pstId": {
+                    "type": "string"
+                },
+                "sensitivity": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "convertedXnecId",
+                "pstId",
+                "sensitivity"
+            ]
+        },
+        "PSTdata": {
+            "type": "object",
+            "properties": {
+                "costsPst": {
+                    "type": "number"
+                },
+                "pstId": {
+                    "type": "string"
+                },
+                "tapAfter": {
+                    "type": "number"
+                },
+                "tapBefore": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "costsPst",
+                "pstId",
+                "tapAfter",
+                "tapBefore"
+            ]
+        },
+        "PTDFdata": {
+            "type": "object",
+            "properties": {
+                "convertedXnecId": {
+                    "type": "string"
+                },
+                "raId": {
+                    "type": "string"
+                },
+                "sensitivity": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "convertedXnecId",
+                "raId",
+                "sensitivity"
+            ]
+        },
+        "RAdata": {
+            "type": "object",
+            "properties": {
+                "costsOra": {
+                    "type": "number"
+                },
+                "costsOraVariable": {
+                    "type": "number"
+                },
+                "hourlyCostsAfterFixedCosts": {
+                    "type": "number"
+                },
+                "hourlyCostsAfterReallocation": {
+                    "type": "number"
+                },
+                "hourlyCostsFiltered": {
+                    "type": "number"
+                },
+                "raId": {
+                    "type": "string"
+                },
+                "variableCostFinal": {
+                    "type": "number"
+                },
+                "variableCostIntermediate": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "costsOra",
+                "costsOraVariable",
+                "hourlyCostsAfterFixedCosts",
+                "hourlyCostsAfterReallocation",
+                "hourlyCostsFiltered",
+                "raId",
+                "variableCostFinal",
+                "variableCostIntermediate"
+            ]
+        },
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "XNECdata": {
+            "type": "object",
+            "properties": {
+                "convertedXnecId": {
+                    "type": "string"
+                },
+                "fLimit": {
+                    "type": "number"
+                },
+                "fPrimeB": {
+                    "type": "number"
+                },
+                "fWithoutOrasAndPsts": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "convertedXnecId",
+                "fLimit",
+                "fPrimeB",
+                "fWithoutOrasAndPsts"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "aggregatedVolumeDownwardCostlyAnora",
+        "aggregatedVolumeUpwardCostlyAnora",
+        "averageCostDownwardOraOrAnora",
+        "averageCostUpwardOraOrAnora",
+        "businessDay",
+        "businessTimestamp",
+        "comoDocumentType",
+        "comoDocumentVersion",
+        "crosaVersion",
+        "csProcessType",
+        "csProcessVersion",
+        "hourCongested",
+        "penaltyBalancingSlack",
+        "penaltyCostForAnoraVolumes",
+        "penaltyFlowSlack",
+        "timeHorizon",
+        "totalCostsAllOras",
+        "totalCostsAllPsts"
+    ]
+}
