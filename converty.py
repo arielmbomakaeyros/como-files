@@ -251,8 +251,37 @@ def generate_xnec_cost():
     }
 
 cumulative_costs_ora = 0
+cumulative_costs_pst = 0
 
-def generate_ra_data():
+def generate_string_off_dat ():
+    # Generate a random date within the past year
+    start = datetime.now() - timedelta(days=365)  # One year ago from today
+    end = datetime.now()
+    random_date = start + (end - start) * random.random()
+
+    # Randomly choose either 01:30 or 02:30 for the time
+    hour = random.choice([1, 2])
+    random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
+
+    # Format the date and timestamp
+    business_day = random_date.strftime('%Y-%m-%d')
+    # business_timestamp = random_date.isoformat()
+    business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
+
+    # Step 1: Extract the date part and remove hyphens
+    date_part = business_timestamp.split("T")[0].replace("-", "")
+
+    # Step 2: Define the static middle part
+    middle_part = "_DA_CROSA_ORA_"
+
+    # Step 3: Generate a random 4-digit number
+    random_value = random.randint(1000, 9999)  # Random 4-digit number
+
+    # Construct the final string
+    final_string = f"{date_part}{middle_part}{random_value}"  # Pad with zeros to make it 4 digits
+    return final_string
+
+def generate_ra_data(final_string):
     # Generate a random positive real number
     return {
         "costsOra": round(random.uniform(150, 200), 2),
@@ -260,18 +289,27 @@ def generate_ra_data():
         "hourlyCostsAfterFixedCosts": round(random.uniform(150, 200), 2),
         "hourlyCostsAfterReallocation": round(random.uniform(150, 200), 2),
         "hourlyCostsFiltered": round(random.uniform(0, 100), 2),
-        "raId": str(uuid.uuid4()),
+        "raId": final_string, # str(uuid.uuid4()),
         "variableCostFinal": round(random.uniform(150, 200), 2),
         "variableCostIntermediate": round(random.uniform(150, 200), 2)
     }
 
+def generate_pst_data():
+    # Generate a random positive real number
+    return {
+        "costsPst": round(random.uniform(150, 200), 2),
+        "pstId": str(uuid.uuid4()),
+        "tapAfter": round(random.uniform(0, 100), 2),
+        "tapBefore": round(random.uniform(150, 200), 2)
+    }
+
 # Function to generate an array of random objects and calculate cumulative costsOra
-def generate_random_objects_and_cumulative_cost():
+def generate_random_objects_and_cumulative_ra_cost(final_string):
     # Generate a random number of objects between 1 and 5
     num_objects = random.randint(1, 5)
     
     # Generate the array of objects
-    raData = [generate_ra_data() for _ in range(num_objects)]
+    raData = [generate_ra_data(final_string) for _ in range(num_objects)]
     
     # Calculate the cumulative value of costsOra
     cumulative_costs_ora = sum(obj["costsOra"] for obj in raData)
@@ -280,30 +318,73 @@ def generate_random_objects_and_cumulative_cost():
         "raData": raData, 
         "cumulative_costs_ora": cumulative_costs_ora
     }
-    # "cumulativeCostsOra": round(cumulative_costs_ora, 2),
 
-def generate_psdf_data():
-    # Generate a random positive real number
-    positive_real = abs(random.random() * random.randint(1, 1_000_000))
+# Function to generate an array of random objects and calculate cumulative costsOra
+def generate_random_objects_and_cumulative_pst_cost():
+    # Generate a random number of objects between 1 and 5
+    num_objects = random.randint(1, 5)
+    
+    # Generate the array of objects
+    raData = [generate_pst_data() for _ in range(num_objects)]
+
+    # Calculate the cumulative value of costsOra
+    cumulative_costs_pst = sum(obj["costsPst"] for obj in raData)
 
     return {
-        "convertedXnecId": str(uuid.uuid4()),
-        "raId": str(uuid.uuid4()),
-        "sensitivity": positive_real,
+        "pstData": raData, 
+        "cumulative_costs_pst": cumulative_costs_pst
     }
 
-def generate_ptdf_data():
-    # Generate a random decimal between 1 and 3
-    random_decimal = random.uniform(1, 3)
+def basic_psdf_data ():
+    # Generate a random positive real number
+    positive_real = abs(random.random() * random.randint(1, 10_000))
+    precision = 2
+    random_decimal = round(positive_real, precision)
+    return {
+        "convertedXnecId": str(uuid.uuid4()),
+        "raId": generate_string_off_dat (), #str(uuid.uuid4()),
+        "sensitivity": random_decimal,
+    }
+
+def generate_psdf_data(final_string):
+    num_objects = random.randint(1, 5)
+    # Generate a random positive real number
+    psdf_data = [basic_psdf_data() for _ in range(num_objects)]
+    return psdf_data
+
+def basic_ptdf_data ():
+    # Generate a random positive real number
+    # Generate a random decimal between 0 and 1 (3 decimal)
+    random_decimal = random.uniform(0, 1)
 
     # Specify the number of decimal places (e.g., 2 decimal places)
-    precision = 2
+    precision = 3
     random_decimal = round(random_decimal, precision)
     return {
         "convertedXnecId": str(uuid.uuid4()),
-        "raId": str(uuid.uuid4()),
+        "raId": generate_string_off_dat (),
         "sensitivity": random_decimal,
     }
+
+def generate_ptdf_data(final_string):
+    num_objects = random.randint(1, 5)
+    # Generate a random positive real number
+    psdf_data = [basic_ptdf_data() for _ in range(num_objects)]
+    return psdf_data
+
+# def generate_ptdf_data(final_string):
+#     # Generate a random decimal between 1 and 3
+#     random_decimal = random.uniform(0, 1)
+
+#     # Specify the number of decimal places (e.g., 2 decimal places)
+#     precision = 2
+#     random_decimal = round(random_decimal, precision)
+#     return {
+#         "convertedXnecId": str(uuid.uuid4()),
+#         "raId": final_string,
+#         "sensitivity": random_decimal,
+#     }
+
 
 def generate_xnec_cost_list():
     return [generate_xnec_cost() for _ in range(random.randint(1, 5))]
@@ -416,6 +497,8 @@ def generate_sample_data(schema, root_schema):
     return None
 
 
+def generate_random_number ():
+    return random.randint(1000, 9999)
 
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     # Generate a random date within the past year
@@ -431,6 +514,22 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     business_day = random_date.strftime('%Y-%m-%d')
     # business_timestamp = random_date.isoformat()
     business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
+
+    # Step 1: Extract the date part and remove hyphens
+    date_part = business_timestamp.split("T")[0].replace("-", "")
+
+    # Step 2: Define the static middle part
+    middle_part = "_DA_CROSA_ORA_"
+
+    # Step 3: Initialize the starting value and create the full string
+    incremental_value = 601  # Start with 0601 (as an integer for easier increment)
+
+    # Step 3: Generate a random 4-digit number
+    random_value = random.randint(1000, 9999)  # Random 4-digit number
+
+    # Construct the final string
+    final_string = f"{date_part}{middle_part}{random_value}"  # Pad with zeros to make it 4 digits
+    print(final_string)  # Output: 20220227_DA_CROSA_ORA_0601
     obj = {}
 
     
@@ -480,18 +579,23 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
         elif re.search(r'convertedXnecId', prop, re.IGNORECASE):
             obj[prop] = generate_selected_xnec_result_id()
         elif re.search(r'ptdfData', prop, re.IGNORECASE):
-            obj[prop] = generate_ptdf_data ()
+            obj[prop] = generate_ptdf_data (f"{date_part}{middle_part}{generate_random_number ()}")
         elif re.search(r'psdfData', prop, re.IGNORECASE):
-            obj[prop] = generate_psdf_data ()
+            obj[prop] = generate_psdf_data (f"{date_part}{middle_part}{generate_random_number ()}")
         elif re.search(r'raData', prop, re.IGNORECASE):
-            result = generate_random_objects_and_cumulative_cost ()
+            result = generate_random_objects_and_cumulative_ra_cost (f"{date_part}{middle_part}{generate_random_number ()}")
             cumulative_costs_ora = result ["cumulative_costs_ora"]
             obj[prop] = result ["raData"]
+        elif re.search(r'pstData', prop, re.IGNORECASE):
+            result = generate_random_objects_and_cumulative_pst_cost ()
+            cumulative_costs_pst = result ["cumulative_costs_pst"]
+            obj[prop] = result ["pstData"]
         elif re.search(r'totalCostsAllOras', prop, re.IGNORECASE):
             obj[prop] = cumulative_costs_ora
+        elif re.search(r'totalCostsAllPsts', prop, re.IGNORECASE):
+            obj[prop] = cumulative_costs_pst
         else:
             if '$ref' in prop_schema:
-                # print("999000999", prop_schema)
                 ref_schema = resolve_ref(full_schema, prop_schema['$ref'])
                 if ref_schema:
                     # obj[prop] = generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)
