@@ -13,4 +13,22 @@
     * psdf values not necessary   
     * total cost of oras can be the sum of cost oras
 
+(x) Logic 4: psdfData pstId must be in pstData
+    
+    * We must find all psdfData pstId inside pstData (only the same pstId the other properties of objects in pstData are specific to pstData objects)
+    * pstData number of object must be same number of objects in psdfData
+
+(x) Logic 5: ptdfData raId must be in raData
+
+    * We must find all ptdfData raId inside raData (only the same raId the other properties of objects in raData are specific to raData objects)
+    * raData number of object must be same number of objects in ptdfData
+
+(x) Logic 6: psdfData and ptdfData convertedXnecId must find themselves in xnecData
+    
+    * We must find all psdfData convertedXnecId inside xnecData (only the same convertedXnecId the other properties of objects in xnecData are specific to xnecData objects)
+    * We must find all ptdfData convertedXnecId inside xnecData (only the same convertedXnecId the other properties of objects in xnecData are specific to xnecData objects)
+    * xnecData number of object must be the sum of objects in psdfData + ptdfData
+
+(x) Logic 7: total cost of Psts can be the sum of costs pst 
+
 (x) Start with MappingTSOdata_IntermediateResultsPerHour_fixed.json

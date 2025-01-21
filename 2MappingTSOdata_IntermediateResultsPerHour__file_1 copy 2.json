@@ -1,0 +1,68 @@
+{
+    "aggregatedVolumeDownwardCostlyAnora": 50.18,
+    "aggregatedVolumeUpwardCostlyAnora": 67.11,
+    "averageCostDownwardOraOrAnora": 23.08,
+    "averageCostUpwardOraOrAnora": 3.13,
+    "businessDay": "2024-09-30",
+    "businessTimestamp": "2024-09-30T01:30:00Z",
+    "comoDocumentType": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaVersion": 1,
+    "csProcessType": "b7163c1fff0b1f5c59ebf87a",
+    "csProcessVersion": 5,
+    "hourCongested": true,
+    "penaltyBalancingSlack": 58.71,
+    "penaltyCostForAnoraVolumes": 20.51,
+    "penaltyFlowSlack": 41.77,
+    "psdfData": [
+        {
+            "convertedXnecId": "69df0d01-1ac2-4399-9fa3-56e71c63427a",
+            "pstId": "20240627_DA_CROSA_ORA_6169",
+            "sensitivity": 1236.354
+        }
+    ],
+    "pstData": [
+        {
+            "costsPst": 198.21,
+            "pstId": "20240627_DA_CROSA_ORA_6169",
+            "tapAfter": 54.82,
+            "tapBefore": 170.99
+        }
+    ],
+    "ptdfData": [
+        {
+            "convertedXnecId": "a427a4ca-1f10-4e73-b249-ed7a64e75f80",
+            "raId": "20250104_DA_CROSA_ORA_2112",
+            "sensitivity": 0.782
+        }
+    ],
+    "raData": [
+        {
+            "costsOra": 151.84,
+            "costsOraVariable": 164.52,
+            "hourlyCostsAfterFixedCosts": 186.62,
+            "hourlyCostsAfterReallocation": 186.1,
+            "hourlyCostsFiltered": 71.88,
+            "raId": "20250104_DA_CROSA_ORA_2112",
+            "variableCostFinal": 176.87,
+            "variableCostIntermediate": 186.93
+        }
+    ],
+    "timeHorizon": "dayAhead",
+    "totalCostsAllOras": 151.84,
+    "totalCostsAllPsts": 198.21,
+    "xnecData": [
+        {
+            "convertedXnecId": "69df0d01-1ac2-4399-9fa3-56e71c63427a",
+            "fLimit": 32.53,
+            "fPrimeB": 89.2,
+            "fWithoutOrasAndPsts": 60.87
+        },
+        {
+            "convertedXnecId": "a427a4ca-1f10-4e73-b249-ed7a64e75f80",
+            "fLimit": 44.04,
+            "fPrimeB": 91.05,
+            "fWithoutOrasAndPsts": 67.55
+        }
+    ]
+}
