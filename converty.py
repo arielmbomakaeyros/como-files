@@ -391,6 +391,9 @@ def resolve_ref(schema, ref):
 
 pattern = r'^(xnec.*Id|.*xnecId)$'
 patternXra = r'^(xra.*Id|.*xraId)$'
+offset_days = ""
+start_date = datetime(2024, 1, 1)
+
 
 
 def resolve_reference(schema, ref):
@@ -420,8 +423,29 @@ def generate_sample_data(schema, root_schema):
     if 'oneOf' in schema:
         # Randomly select one of the schemas from `oneOf`
         chosen_schema = random.choice(schema['oneOf'])
-        # print(f"Chosen schema from oneOf: {chosen_schema}")  # For analysis
+        print(f"Chosen schema from oneOf: {chosen_schema}")  # For analysis
         return generate_sample_data(chosen_schema, root_schema)
+        # return generate_sample_data_final(chosen_schema, root_schema, start_date, offset_days)
+
+    # # Detect and handle `oneOf` property
+    # if 'oneOf' in schema:
+    #     # Randomly select one of the schemas from `oneOf`
+    #     chosen_schema = random.choice(schema['oneOf'])
+    #     print(f"Chosen schema from oneOf: {chosen_schema} { offset_days }")  # For analysis
+        
+    #     # Check if the chosen schema is of type 'null'
+    #     if chosen_schema.get('type') == 'null':
+    #         return generate_sample_data(chosen_schema, root_schema)
+    #     else:
+    #         print("okay okay okay okay==========>", root_schema)
+    #         return generate_sample_data_final(chosen_schema, root_schema, start_date, offset_days)
+        
+        # # Check if the chosen schema references 'originalXnecData'
+        # if chosen_schema.get('$ref') == '#/definitions/originalXnecData':
+        #     return generate_sample_data_final(chosen_schema, root_schema, start_date, offset_days)
+    
+    # # If neither condition matches, handle as needed (optional)
+    # raise ValueError("Chosen schema does not match expected cases.")
 
     # Determine the type of the schema
     schema_type = schema.get('type')
@@ -438,6 +462,7 @@ def generate_sample_data(schema, root_schema):
 
     # Check if the schema has a 'const' property and return its value if so
     if 'const' in schema:
+        print(schema, "888888888888=======================>")
         return schema['const']
 
     # Handle each type accordingly
@@ -460,12 +485,13 @@ def generate_sample_data(schema, root_schema):
 
     elif schema_type == 'array':
         items_schema = schema.get('items', {})
-        print(items_schema, "llllllll")
+        # print(items_schema, "llllllll")
         # return [generate_sample_data_final(items_schema, root_schema, start_date, offset_days)]
         return [generate_sample_data(items_schema, root_schema) for _ in range(random.randint(1, 3))]
 
     elif schema_type == 'object':
         properties = schema.get('properties', {})
+        # print(properties, "llllllll")
         obj = {}
         for key, prop_schema in properties.items():
             if '$ref' in prop_schema:
@@ -486,6 +512,72 @@ def generate_sample_data(schema, root_schema):
 
 def generate_random_number ():
     return random.randint(1000, 9999)
+
+xneMrid_assessedElementMrid = ""
+xneName_assessedElementName = ""
+
+contingencyMrid=""
+contingencyName=""
+hasCostlyRa=""
+raMrid=""
+iBefore=""
+iAfter=""
+iMax=""
+fBefore=""
+fAfter=""
+fMax=""
+
+def generate_original_xnec1 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid):
+    xneMrid_assessedElementMrid = generate_selected_xnec_result_id ()
+    xneName_assessedElementName = generate_selected_xnec_result_id ()
+
+    return {
+        "assessedElementMrid": xneMrid_assessedElementMrid,
+        "assessedElementName": xneName_assessedElementName,
+        "biddingZoneCode": generateBiddingZoneCode(),
+        "conductingEquipmentMrid": secrets.token_hex(12), 
+        "contingencyMrid": contingencyMrid, #
+        "contingencyName": contingencyName, #
+        "fAfter": fAfter, #
+        "fBefore": fBefore, #
+        "fMax": fMax, #
+        "hasCostlyRa": hasCostlyRa, #
+        "iAfter": iAfter, #
+        "iBefore": iBefore, #
+        "iMax": iMax, #
+        "id": secrets.token_hex(12),
+        "raMrid": raMrid, #
+        "tsoCode": random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"]),
+        "xneMrid": xneMrid_assessedElementMrid,
+        "xneName": xneName_assessedElementName
+    }
+
+def generate_original_xnec2 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid):
+    xneMrid_assessedElementMrid = generate_selected_xnec_result_id ()
+    xneName_assessedElementName = generate_selected_xnec_result_id ()
+
+    return {
+        "assessedElementMrid": xneMrid_assessedElementMrid,
+        "assessedElementName": xneName_assessedElementName,
+        "biddingZoneCode": generateBiddingZoneCode(),
+        "conductingEquipmentMrid": secrets.token_hex(12), 
+        "contingencyMrid": contingencyMrid, #
+        "contingencyName": contingencyName, #
+        "fAfter": fAfter, #
+        "fBefore": fBefore, #
+        "fMax": fMax, #
+        "hasCostlyRa": hasCostlyRa, #
+        "iAfter": iAfter, #
+        "iBefore": iBefore, #
+        "iMax": iMax, #
+        "id": secrets.token_hex(12),
+        "raMrid": raMrid, #
+        "tsoCode": random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"]),
+        "xneMrid": xneMrid_assessedElementMrid,
+        "xneName": xneName_assessedElementName
+    }
+
+
 
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     # Generate a random date within the past year
@@ -508,18 +600,18 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     # Step 2: Define the static middle part
     middle_part = "_DA_CROSA_ORA_"
 
-    # Step 3: Generate a random 4-digit number
-    random_value = random.randint(1000, 9999)  # Random 4-digit number
-
-    # Construct the final string
-    final_string = f"{date_part}{middle_part}{random_value}"  # Pad with zeros to make it 4 digits
-    # print(final_string)  # Output: 20220227_DA_CROSA_ORA_0601
     obj = {}
 
-    
+    print(schema, "lllllllkkkkkkkkkkkkk")
+
+    if 'const' in schema:
+        return schema['const']
 
     for prop, prop_schema in schema.get('properties', {}).items():
         # Check if the property has an enum and select a random value from it
+        # print(prop, prop_schema, "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii99999999999", schema, "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii88888888888888")
+        if 'const' in prop_schema:
+            obj[prop] = prop_schema['const']
         if 'enum' in prop_schema:
             obj[prop] = random.choice(prop_schema['enum'])
         elif re.search(r'businessDay', prop, re.IGNORECASE):
@@ -537,7 +629,6 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
         elif re.search(r'^id$', prop, re.IGNORECASE):
             obj[prop] = generate_id()
         elif re.search(r'timestamp', prop, re.IGNORECASE):
-            # obj[prop] = generate_random_timestamp()
             obj[prop] = business_timestamp
         elif re.search(r'mappingResultId', prop, re.IGNORECASE):
             obj[prop] = generate_mapping_result_id()
@@ -575,21 +666,49 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             obj[prop] = cumulative_costs_ora
         elif re.search(r'totalCostsAllPsts', prop, re.IGNORECASE):
             obj[prop] = cumulative_costs_pst
+        elif re.search(r'assessedElementMrid', prop, re.IGNORECASE):
+            xneMrid_assessedElementMrid = generate_selected_xnec_result_id ()
+            obj[prop] = xneMrid_assessedElementMrid
+        elif re.search(r'xneMrid', prop, re.IGNORECASE):
+            obj[prop] = xneMrid_assessedElementMrid
+        elif re.search(r'assessedElementName', prop, re.IGNORECASE):
+            xneName_assessedElementName = generate_selected_xnec_result_id ()
+            obj[prop] = xneName_assessedElementName
+        elif re.search(r'xneName', prop, re.IGNORECASE):
+            obj[prop] = xneName_assessedElementName
+        elif re.search(r'originalXnec1', prop, re.IGNORECASE):
+            hasCostlyRa = random.choice([True, False])
+            generate_number = random.randint(1, 100)
+            contingencyMrid = secrets.token_hex(12)
+            contingencyName = secrets.token_hex(12)
+            raMrid = secrets.token_hex(12)
+            iBefore = random.randint(1, 100)
+            iAfter = random.randint(1, 100)
+            iMax = random.randint(1, 100)
+            fBefore = generate_number
+            fAfter = generate_number - 6
+            fMax = generate_number - 2
+            obj[prop] = generate_original_xnec1 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid)
+        elif re.search(r'originalXnec2', prop, re.IGNORECASE):
+            obj[prop] = generate_original_xnec2 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid)
         else:
+            print("****************************", prop_schema)
             if '$ref' in prop_schema:
+                print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", prop_schema)
                 ref_schema = resolve_ref(full_schema, prop_schema['$ref'])
-                print("64792840", prop_schema, prop_schema['$ref'])
+                print("64792840", prop_schema, prop_schema['$ref'], ref_schema)
                 if ref_schema:
-                    # obj[prop] = generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)
-                    obj[prop] = generate_sample_data(prop_schema, full_schema)
+                    obj[prop] = generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)
+                    # obj[prop] = generate_sample_data(ref_schema, full_schema)
                 else:
                     obj[prop] = None
             elif ('array' in prop_schema.get('type', []) if isinstance(prop_schema.get('type'), list) else prop_schema.get('type') == 'array') and 'items' in prop_schema:
+                print("#######################################", prop_schema)
                 items_schema = prop_schema['items']
                 if '$ref' in items_schema:
-                    # print("77490000", items_schema['$ref'])
+                    print("77490000", items_schema['$ref'])
                     ref_schema = resolve_ref(full_schema, items_schema['$ref'])
-                    # print("64792840", ref_schema)
+                    print("64792840", ref_schema)
                     if ref_schema:
                         obj[prop] = [generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)]
                     else:
@@ -614,6 +733,7 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
 
     # Generate and save multiple samples
     for i in range(num_samples):
+        offset_days = i
         sample_data = generate_sample_data_final(schema, schema, start_date, i)
         output_file_path = f"{output_file_prefix}_{i+1}.json"
         with open(output_file_path, 'w') as f:
@@ -628,11 +748,11 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
 
-baseFineName = "SelectedXnecResult_"
-schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
+# baseFineName = "SelectedXnecResult_"
+# schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
 
-# baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
-# schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
+baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
+schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
 
 # baseFineName = "FlowDecompositionIntermediateResult_Schema_fixed"
 # schema_file_path = 'FlowDecompositionIntermediateResult_Schema_fixed.json'

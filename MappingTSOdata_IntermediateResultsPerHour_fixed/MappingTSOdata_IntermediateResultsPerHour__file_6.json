@@ -1,68 +1,127 @@
 {
-    "aggregatedVolumeDownwardCostlyAnora": 79.78,
-    "aggregatedVolumeUpwardCostlyAnora": 77.15,
-    "averageCostDownwardOraOrAnora": 4.86,
-    "averageCostUpwardOraOrAnora": 54.71,
-    "businessDay": "2025-01-13",
-    "businessTimestamp": "2025-01-13T01:30:00Z",
+    "aggregatedVolumeDownwardCostlyAnora": 88.0,
+    "aggregatedVolumeUpwardCostlyAnora": 40.85,
+    "averageCostDownwardOraOrAnora": 74.2,
+    "averageCostUpwardOraOrAnora": 58.48,
+    "businessDay": "2024-02-11",
+    "businessTimestamp": "2024-02-11T01:30:00Z",
     "comoDocumentType": "CS_MAPPING_TSO_DATA_INTERMEDIATE_RESULTS_PER_HOUR",
     "comoDocumentVersion": "R24Q4V1_0",
     "crosaVersion": 1,
-    "csProcessType": "7e51cdb1176d30a5402db34b",
+    "csProcessType": "d7364c43c9a5d46c32b78001",
     "csProcessVersion": 1,
-    "hourCongested": true,
-    "penaltyBalancingSlack": 41.74,
-    "penaltyCostForAnoraVolumes": 11.27,
-    "penaltyFlowSlack": 95.0,
+    "hourCongested": false,
+    "penaltyBalancingSlack": 42.47,
+    "penaltyCostForAnoraVolumes": 63.37,
+    "penaltyFlowSlack": 56.28,
     "psdfData": [
         {
-            "convertedXnecId": "d9b91cbf-d978-45f5-9a9b-fe2c63161739",
-            "pstId": "20240826_DA_CROSA_ORA_1185",
-            "sensitivity": 6404.849
+            "convertedXnecId": "289f9862-284a-421f-bb8e-b863e40dce1b",
+            "pstId": "67995c89-a42f-4ab2-b63f-124bc7e24bf5",
+            "sensitivity": 6089.049
+        },
+        {
+            "convertedXnecId": "51098980-b91c-463b-99e3-f7b5180558a9",
+            "pstId": "651c12f7-c171-48ca-988d-876e23d31fd5",
+            "sensitivity": 5021.476
         }
     ],
     "pstData": [
         {
-            "costsPst": 176.0,
-            "pstId": "20240826_DA_CROSA_ORA_1185",
-            "tapAfter": 6.09,
-            "tapBefore": 155.42
+            "costsPst": 153.18,
+            "pstId": "67995c89-a42f-4ab2-b63f-124bc7e24bf5",
+            "tapAfter": 10.63,
+            "tapBefore": 196.74
+        },
+        {
+            "costsPst": 157.04,
+            "pstId": "651c12f7-c171-48ca-988d-876e23d31fd5",
+            "tapAfter": 99.71,
+            "tapBefore": 155.51
         }
     ],
     "ptdfData": [
         {
-            "convertedXnecId": "0dade40b-d9bd-4962-be97-853af6111407",
-            "raId": "20240223_DA_CROSA_ORA_6927",
-            "sensitivity": 0.019
+            "convertedXnecId": "ee9763a3-4d1b-4834-81dc-7a48c92cafe9",
+            "raId": "20240602_DA_CROSA_ORA_6543",
+            "sensitivity": 0.519
+        },
+        {
+            "convertedXnecId": "b0cf7b12-dde1-4297-a210-1be6f284dfda",
+            "raId": "20241229_DA_CROSA_ORA_3706",
+            "sensitivity": 0.897
+        },
+        {
+            "convertedXnecId": "64a6e8ef-f8e9-4fa4-8bc9-3174dd5b57d7",
+            "raId": "20240305_DA_CROSA_ORA_1472",
+            "sensitivity": 0.929
         }
     ],
     "raData": [
         {
-            "costsOra": 166.36,
-            "costsOraVariable": 191.76,
-            "hourlyCostsAfterFixedCosts": 169.25,
-            "hourlyCostsAfterReallocation": 176.8,
-            "hourlyCostsFiltered": 20.17,
-            "raId": "20240223_DA_CROSA_ORA_6927",
-            "variableCostFinal": 156.7,
-            "variableCostIntermediate": 155.95
+            "costsOra": 189.4,
+            "costsOraVariable": 150.94,
+            "hourlyCostsAfterFixedCosts": 191.66,
+            "hourlyCostsAfterReallocation": 157.95,
+            "hourlyCostsFiltered": 95.28,
+            "raId": "20240602_DA_CROSA_ORA_6543",
+            "variableCostFinal": 159.81,
+            "variableCostIntermediate": 178.99
+        },
+        {
+            "costsOra": 193.38,
+            "costsOraVariable": 179.94,
+            "hourlyCostsAfterFixedCosts": 156.79,
+            "hourlyCostsAfterReallocation": 176.7,
+            "hourlyCostsFiltered": 94.88,
+            "raId": "20241229_DA_CROSA_ORA_3706",
+            "variableCostFinal": 153.52,
+            "variableCostIntermediate": 165.41
+        },
+        {
+            "costsOra": 152.05,
+            "costsOraVariable": 161.24,
+            "hourlyCostsAfterFixedCosts": 181.43,
+            "hourlyCostsAfterReallocation": 186.88,
+            "hourlyCostsFiltered": 73.94,
+            "raId": "20240305_DA_CROSA_ORA_1472",
+            "variableCostFinal": 177.66,
+            "variableCostIntermediate": 163.92
         }
     ],
     "timeHorizon": "dayAhead",
-    "totalCostsAllOras": 166.36,
-    "totalCostsAllPsts": 176.0,
+    "totalCostsAllOras": 534.83,
+    "totalCostsAllPsts": 310.22,
     "xnecData": [
         {
-            "convertedXnecId": "d9b91cbf-d978-45f5-9a9b-fe2c63161739",
-            "fLimit": 37.01,
-            "fPrimeB": 85.73,
-            "fWithoutOrasAndPsts": 61.37
+            "convertedXnecId": "289f9862-284a-421f-bb8e-b863e40dce1b",
+            "fLimit": 40.22,
+            "fPrimeB": 82.84,
+            "fWithoutOrasAndPsts": 61.53
         },
         {
-            "convertedXnecId": "0dade40b-d9bd-4962-be97-853af6111407",
-            "fLimit": 41.4,
-            "fPrimeB": 98.39,
-            "fWithoutOrasAndPsts": 69.89
+            "convertedXnecId": "51098980-b91c-463b-99e3-f7b5180558a9",
+            "fLimit": 45.9,
+            "fPrimeB": 85.09,
+            "fWithoutOrasAndPsts": 65.5
+        },
+        {
+            "convertedXnecId": "ee9763a3-4d1b-4834-81dc-7a48c92cafe9",
+            "fLimit": 39.53,
+            "fPrimeB": 90.94,
+            "fWithoutOrasAndPsts": 65.23
+        },
+        {
+            "convertedXnecId": "b0cf7b12-dde1-4297-a210-1be6f284dfda",
+            "fLimit": 48.37,
+            "fPrimeB": 81.25,
+            "fWithoutOrasAndPsts": 64.81
+        },
+        {
+            "convertedXnecId": "64a6e8ef-f8e9-4fa4-8bc9-3174dd5b57d7",
+            "fLimit": 41.09,
+            "fPrimeB": 87.12,
+            "fWithoutOrasAndPsts": 64.11
         }
     ]
 }
