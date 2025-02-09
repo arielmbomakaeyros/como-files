@@ -1,88 +1,146 @@
 {
-    "businessDay": "2024-07-11",
-    "businessTimestamp": "2024-07-11T01:30:00Z",
+    "businessDay": "2024-02-13",
+    "businessTimestamp": "2024-02-13T02:30:00Z",
     "crosaVersion": 1,
     "csProcessVersion": 2,
-    "id": "c066ddf4dcd65cb3e8b66911",
-    "selectedXnecResultId": "c21893330962af9db013e568",
+    "id": "20fc84b53f74f5afe3144ea3",
+    "selectedXnecResultId": "69c40d091e74b6a8d72e1546",
     "timeHorizon": "dayAhead",
-    "xnecList": [
-        {
-            "adjustedFmax": 84.33,
-            "componentList": [
-                {
-                    "componentType": "allocatedFlow",
-                    "value": -0.41,
-                    "biddingZoneList": [
-                        {
-                            "biddingZoneCode": "10Y1001A1001A74G",
-                            "value": -0.62
-                        },
-                        {
-                            "biddingZoneCode": "10YFR-RTE------C",
-                            "value": 0.21
-                        }
-                    ]
-                },
-                {
-                    "componentType": "internalFlow",
-                    "value": -0.45,
-                    "biddingZoneList": [
-                        {
-                            "biddingZoneCode": "10Y1001A1001A74G",
-                            "value": -0.62
-                        },
-                        {
-                            "biddingZoneCode": "10YFR-RTE------C",
-                            "value": 0.17
-                        }
-                    ]
-                },
-                {
-                    "componentType": "loopFlow",
-                    "value": -0.56,
-                    "biddingZoneList": [
-                        {
-                            "biddingZoneCode": "10Y1001A1001A74G",
-                            "value": -0.68
-                        },
-                        {
-                            "biddingZoneCode": "10YFR-RTE------C",
-                            "value": 0.12
-                        }
-                    ]
-                },
-                {
-                    "componentType": "loopFlowOutsideCore",
-                    "value": -0.13,
-                    "biddingZoneList": [
-                        {
-                            "biddingZoneCode": "10Y1001A1001A74G",
-                            "value": -0.62
-                        },
-                        {
-                            "biddingZoneCode": "10YFR-RTE------C",
-                            "value": 0.49
-                        }
-                    ]
-                },
-                {
-                    "componentType": "pstFlow",
-                    "value": -0.08,
-                    "biddingZoneList": [
-                        {
-                            "biddingZoneCode": "10Y1001A1001A74G",
-                            "value": -0.58
-                        },
-                        {
-                            "biddingZoneCode": "10YFR-RTE------C",
-                            "value": 0.5
-                        }
-                    ]
-                }
-            ],
-            "convertedXnecId": "79c81adac4bc1c129855a0c2",
-            "totalFlow": 86.93
-        }
-    ]
+    "xnecList": {
+        "adjustedFmax": 3.8775,
+        "componentList": [
+            {
+                "componentType": "allocatedFlow",
+                "value": 3.18,
+                "biddingZoneList": [
+                    {
+                        "biddingZoneCode": "10Y1001A1001A877",
+                        "value": 0.64
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A45N",
+                        "value": 0.32
+                    },
+                    {
+                        "biddingZoneCode": "10YDK-1-------AA",
+                        "value": 0.92
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A885",
+                        "value": 1.04
+                    },
+                    {
+                        "biddingZoneCode": "10YFR-RTE------C",
+                        "value": 0.26
+                    }
+                ]
+            },
+            {
+                "componentType": "internalFlow",
+                "value": 3.0,
+                "biddingZoneList": [
+                    {
+                        "biddingZoneCode": "10Y1001A1001A877",
+                        "value": 0.57
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A45N",
+                        "value": 0.3
+                    },
+                    {
+                        "biddingZoneCode": "10YDK-1-------AA",
+                        "value": 0.87
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A885",
+                        "value": 1.03
+                    },
+                    {
+                        "biddingZoneCode": "10YFR-RTE------C",
+                        "value": 0.23
+                    }
+                ]
+            },
+            {
+                "componentType": "loopFlow",
+                "value": 2.86,
+                "biddingZoneList": [
+                    {
+                        "biddingZoneCode": "10Y1001A1001A877",
+                        "value": 0.55
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A45N",
+                        "value": 0.28
+                    },
+                    {
+                        "biddingZoneCode": "10YDK-1-------AA",
+                        "value": 0.85
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A885",
+                        "value": 0.94
+                    },
+                    {
+                        "biddingZoneCode": "10YFR-RTE------C",
+                        "value": 0.24
+                    }
+                ]
+            },
+            {
+                "componentType": "loopFlowOutsideCore",
+                "value": 3.19,
+                "biddingZoneList": [
+                    {
+                        "biddingZoneCode": "10Y1001A1001A877",
+                        "value": 0.59
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A45N",
+                        "value": 0.33
+                    },
+                    {
+                        "biddingZoneCode": "10YDK-1-------AA",
+                        "value": 0.9
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A885",
+                        "value": 1.01
+                    },
+                    {
+                        "biddingZoneCode": "10YFR-RTE------C",
+                        "value": 0.36
+                    }
+                ]
+            },
+            {
+                "componentType": "pstFlow",
+                "value": 3.28,
+                "biddingZoneList": [
+                    {
+                        "biddingZoneCode": "10Y1001A1001A877",
+                        "value": 0.64
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A45N",
+                        "value": 0.32
+                    },
+                    {
+                        "biddingZoneCode": "10YDK-1-------AA",
+                        "value": 0.93
+                    },
+                    {
+                        "biddingZoneCode": "10Y1001A1001A885",
+                        "value": 0.96
+                    },
+                    {
+                        "biddingZoneCode": "10YFR-RTE------C",
+                        "value": 0.43
+                    }
+                ]
+            }
+        ],
+        "convertedXnecId": "b7744d82-a099-4ab6-b0d1-b019c1df8185",
+        "totalFlow": 15.51
+    }
 }

@@ -13,6 +13,7 @@ import re
 
 directory = '.'  # The directory where the file is located
 filename = 'Bidding_zone_EIC_code.csv'
+filename2 = 'TSO_EIC_CODE.csv'
 
 # Enum values for ValueFlowComponentType
 ValueFlowComponentType = [
@@ -26,7 +27,7 @@ ValueFlowComponentType = [
 
 # Helper function to generate a random value
 def get_random_value():
-    return round(random.uniform(-1, 1), 2)
+    return round(random.uniform(0, 1), 2)
 
 def extract_bidding_zone_codes(directory, filename, variable):
     # Construct the full path of the file
@@ -56,6 +57,10 @@ def generateBiddingZoneCode():
     bidding_zones = extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
     return random.choice(bidding_zones)
 
+def generateTsoEicCodes():
+    tso_eic_codes = extract_bidding_zone_codes(directory, filename2, 'TS0 EIC code')
+    return random.choice(tso_eic_codes)
+
 # Generate biddingZoneList with random values
 def generate_bidding_zone_list(size):
     bidding_zone_list = []
@@ -70,16 +75,30 @@ def generate_bidding_zone_list(size):
 def calculate_sum(bidding_zone_list):
     return round(sum(zone["value"] for zone in bidding_zone_list), 2)
 
+# get percentage of a value
+def calculate_percentage(value, total):
+    """
+    Calculate the percentage of a value with respect to a total.
+
+    :param value: The part value
+    :param total: The total value
+    :return: Percentage as a float
+    """
+    if total == 0:
+        raise ValueError("Total cannot be zero.")
+    return (value * total) / 100
+
 # Function to generate component flows
 def generate_component_flows(bidding_zone_list):
     component_flows = []
-    sum_value = calculate_sum(bidding_zone_list)  # Calculate sum once for loopFlow
+    sum_value = abs(calculate_sum(bidding_zone_list))  # Calculate sum once for loopFlow
 
     for component_type in ValueFlowComponentType:
         # value = sum_value  # Use sum for loopFlow
         # bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
         if component_type == "loopFlow":
-            value = sum_value  # Use sum for loopFlow
+            # value = sum_value  # Use sum for loopFlow
+            value = max(sum_value, 0)  # Ensure value is non-negative
             bidding_zone_list_copy = bidding_zone_list  # Use original biddingZoneList
         
         # THIS ELSE PORTION MAKES SURE THAT WE SUM UP EACH bidding_zone IN THE LIST AND GIVE THE SUM AS A FLOW TYPE VALUE FOR ALL NON LOOPFLOW 
@@ -87,6 +106,7 @@ def generate_component_flows(bidding_zone_list):
             # For other types, create a distinct value
             offset = round(random.uniform(0.1, 0.5), 2)  # Random offset for uniqueness
             value = round(sum_value + offset, 2)  # Apply offset to the sum
+            value = max(value, 0)  # Ensure value is non-negative
             
             # Create a new biddingZoneList that sums to the same total
             bidding_zone_list_copy = []
@@ -94,7 +114,7 @@ def generate_component_flows(bidding_zone_list):
             
             for zone in bidding_zone_list:
                 # Generate a unique random value for each zone
-                unique_value = round(zone["value"] + random.uniform(0.01, 0.1), 2)
+                unique_value = round(abs(zone["value"] + random.uniform(0.01, 0.1)), 2)
                 bidding_zone_list_copy.append({
                     "biddingZoneCode": zone["biddingZoneCode"],
                     "value": unique_value
@@ -103,6 +123,7 @@ def generate_component_flows(bidding_zone_list):
 
             # Adjust the last zone's value to ensure the sum remains the same
             last_zone_value = round(value - (total_adjusted - bidding_zone_list_copy[-1]["value"]), 2)
+            last_zone_value = max(last_zone_value, 0)  # Ensure last_zone_value is non-negative
             bidding_zone_list_copy[-1]["value"] = last_zone_value
 
         component_flows.append({
@@ -118,12 +139,18 @@ def generate_component_flows(bidding_zone_list):
 def generate_xnec_flow_component():
     bidding_zone_list = generate_bidding_zone_list(size=random.randint(2, 5))
     component_list = generate_component_flows(bidding_zone_list)
+    print(component_list, "----------------------------------")
+
+    precision = 3
+
+    total_flow = round(sum(obj["value"] for obj in component_list), precision)
+    # total_flow = sum(obj["value"] for obj in component_list)
 
     return {
-        "adjustedFmax": round(random.uniform(150, 200), 2),
+        "adjustedFmax": calculate_percentage(25, total_flow), # total_flow - 3, # round(random.uniform(150, 200), 2),
         "componentList": component_list,
         "convertedXnecId": str(uuid.uuid4()),
-        "totalFlow": round(random.uniform(0, 100), 2)
+        "totalFlow": total_flow, # round(random.uniform(0, 100), 2)
     }
 
 def generate_comp_list():
@@ -179,7 +206,7 @@ def generate_flow_component():
         "appliedThresholdList": generate_applied_threshold_list(),
         "burdeningFlow": random.uniform(200, 500),
         "commonThreshold": random.uniform(0, 100),
-        "contribution": random.uniform(0, 100),
+        "contribution": random.uniform(0, 1),
         "stackingOrder": random.randint(1, 10),
         "type": random.choice(["allocatedFlow", "internalFlow", "loopFlow", "loopFlowOutsideCore", "pstFlow"])
     }
@@ -204,10 +231,11 @@ def generate_tso_cost_list():
 
 def generate_tso_cost():
     return {
-        "contribution": random.uniform(0, 0.5),
+        "contribution": random.uniform(0, 1),
         "cost": random.uniform(20000, 50000),
-        "tsoCode": random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"]),
-        "tsoShare": random.uniform(0.5, 1.5)
+        "tsoCode": generateTsoEicCodes (),
+        # "tsoCode": random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"]),
+        "tsoShare": random.uniform(0, 1)
     }
 
 def generate_volume_overload():
@@ -224,7 +252,7 @@ def generate_bidding_zone_cost_list():
         item = {
             # "biddingZoneCode": generateBiddingZoneCode(),
             "biddingZoneCode": zone,
-            "contribution": random.uniform(0, 0.5),
+            "contribution": random.uniform(0, 1),
             "cost": random.uniform(0, 25000)
         }
         # print(f"Individual Cost for {item['biddingZoneCode']}: {item['cost']}")
@@ -640,8 +668,10 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             obj[prop] = generate_selected_xnec_result_id()
         elif prop == "biddingZoneCode":
             obj[prop] = generateBiddingZoneCode()
-        elif prop == "componentList":
-            obj[prop] = generate_comp_list()
+        # elif prop == "componentList":
+        #     obj[prop] = generate_comp_list()
+        elif re.search(r'xnecList', prop, re.IGNORECASE):
+            obj[prop] = generate_xnec_flow_component ()
         elif re.search(patternXra, prop, re.IGNORECASE):
             obj[prop] = generate_selected_xnec_result_id()
         elif re.search(r'xnecCostList', prop, re.IGNORECASE):
@@ -740,19 +770,21 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
             json.dump(sample_data, f, indent=4)
 
 # # Example usage
-# schema_file_path = 'CostDistribution_Schema_fixed.json'
-# output_file_prefix = 'como_sample_data'
+baseFineName = "CostDistribution"
+schema_file_path = 'CostDistribution_Schema_fixed.json'
+
 # Example usage
 # baseFineName = "MappingDetailedResults"
 # schema_file_path = 'MappingDetailedResults_Schema_fixed.json'
+
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
 
 # baseFineName = "SelectedXnecResult_"
 # schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
 
-baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
-schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
+# baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
+# schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
 
 # baseFineName = "FlowDecompositionIntermediateResult_Schema_fixed"
 # schema_file_path = 'FlowDecompositionIntermediateResult_Schema_fixed.json'

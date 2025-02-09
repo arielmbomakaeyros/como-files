@@ -1,0 +1,88 @@
+{
+    "businessDay": "2024-02-23",
+    "businessTimestamp": "2024-02-23T02:30:00Z",
+    "crosaVersion": 1,
+    "csProcessVersion": 1,
+    "id": "278fd53a73bb293403f10fc4",
+    "selectedXnecResultId": "d44757cb1029b8dc3b39d5ae",
+    "timeHorizon": "dayAhead",
+    "xnecList": [
+        {
+            "adjustedFmax": 43.09,
+            "componentList": [
+                {
+                    "componentType": "allocatedFlow",
+                    "value": 0.67,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A39I",
+                            "value": 0.75
+                        },
+                        {
+                            "biddingZoneCode": "43YLRI--------04",
+                            "value": -0.08
+                        }
+                    ]
+                },
+                {
+                    "componentType": "internalFlow",
+                    "value": 0.61,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A39I",
+                            "value": 0.75
+                        },
+                        {
+                            "biddingZoneCode": "43YLRI--------04",
+                            "value": -0.14
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlow",
+                    "value": 0.48,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A39I",
+                            "value": 0.7
+                        },
+                        {
+                            "biddingZoneCode": "43YLRI--------04",
+                            "value": -0.22
+                        }
+                    ]
+                },
+                {
+                    "componentType": "loopFlowOutsideCore",
+                    "value": 0.69,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A39I",
+                            "value": 0.77
+                        },
+                        {
+                            "biddingZoneCode": "43YLRI--------04",
+                            "value": -0.08
+                        }
+                    ]
+                },
+                {
+                    "componentType": "pstFlow",
+                    "value": 0.86,
+                    "biddingZoneList": [
+                        {
+                            "biddingZoneCode": "10Y1001A1001A39I",
+                            "value": 0.73
+                        },
+                        {
+                            "biddingZoneCode": "43YLRI--------04",
+                            "value": 0.13
+                        }
+                    ]
+                }
+            ],
+            "convertedXnecId": "f1c65874b7263c29d90b41bb",
+            "totalFlow": 50.06
+        }
+    ]
+}

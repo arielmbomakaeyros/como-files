@@ -32,3 +32,22 @@
 (x) Logic 7: total cost of Psts can be the sum of costs pst 
 
 (x) Start with MappingTSOdata_IntermediateResultsPerHour_fixed.json
+
+
+build a function that will generate a spcific aura string for the raId property
+Integrating this functionality in the ptdf module data generation
+Build a function that will use the generated ptdf data to generate ra data and add up cumulative ra cost
+Construct a function for generating psdf data 
+Building the generate_random_objects_and_cumulative_pst_cost function that will generate data for pst.
+Integrating Calculation of cumulative PST cost in generate_random_objects_and_cumulative_pst_cost function
+Integrating the result of the psdf data in generate_random_objects_and_cumulative_pst_cost to base all calculation on psdf
+
+Implementing rules in xnec: making biddingZoneCode be EIC code for biddingzone
+Implementing rules in xnec: making tsoCode generate based on TSO EIC code 
+Making sure in xnec, fBefore should be higher than fMax and fAfter lower than fMax
+Making sure assessedElementMrid is the same as xneMrid and that assessedElementName is same as xneName
+
+Adjusting the algorithme so that if there is a originalXnec2 object generated, it should have a couple of properties same as originalXnec1
+
+
+

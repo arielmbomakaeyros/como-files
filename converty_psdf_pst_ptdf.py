@@ -302,6 +302,7 @@ def generate_psdf_data(final_string):
     psdf_data = [basic_psdf_data() for _ in range(num_objects)]
     return psdf_data
 
+# FUNCTION NOT USED
 def generate_pst_data():
     # Generate a random positive real number
     return {
@@ -359,6 +360,7 @@ def generate_ptdf_data(final_string):
     ptdf_data = [basic_ptdf_data() for _ in range(num_objects)]
     return ptdf_data
 
+# NOT USED NOW
 def generate_ra_data(final_string):
     # Generate a random positive real number
     return {
@@ -630,19 +632,19 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             obj[prop] = generate_selected_xnec_result_id()
         elif re.search(r'psdfData', prop, re.IGNORECASE):
             number_of_psdf_objects = generate_psdf_data (f"{date_part}{middle_part}{generate_random_number ()}")
-            print(number_of_psdf_objects, "---------->")
+            # print(number_of_psdf_objects, "---------->")
             obj[prop] = number_of_psdf_objects
         elif re.search(r'ptdfData', prop, re.IGNORECASE):
             number_of_ptdf_objects = generate_ptdf_data (f"{date_part}{middle_part}{generate_random_number ()}")
-            print(number_of_ptdf_objects, "==========>")
+            # print(number_of_ptdf_objects, "==========>")
             obj[prop] = number_of_ptdf_objects
         elif re.search(r'raData', prop, re.IGNORECASE):
             result = generate_random_objects_and_cumulative_ra_cost (number_of_ptdf_objects)
             cumulative_costs_ora = result ["cumulative_costs_ora"]
             obj[prop] = result ["raData"]
         elif re.search(r'xnecData', prop, re.IGNORECASE):
-            print(number_of_psdf_objects, "-----4444----->")
-            print(number_of_ptdf_objects, "=====3333=====>")
+            # print(number_of_psdf_objects, "-----4444----->")
+            # print(number_of_ptdf_objects, "=====3333=====>")
             result = generate_xnec_data (number_of_psdf_objects, number_of_ptdf_objects)
             obj[prop] = result
         elif re.search(r'pstData', prop, re.IGNORECASE):
@@ -664,9 +666,9 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             elif ('array' in prop_schema.get('type', []) if isinstance(prop_schema.get('type'), list) else prop_schema.get('type') == 'array') and 'items' in prop_schema:
                 items_schema = prop_schema['items']
                 if '$ref' in items_schema:
-                    print("77490000", items_schema['$ref'])
+                    # print("77490000", items_schema['$ref'])
                     ref_schema = resolve_ref(full_schema, items_schema['$ref'])
-                    print("64792840", ref_schema)
+                    # print("64792840", ref_schema)
                     if ref_schema:
                         obj[prop] = [generate_sample_data_final(ref_schema, full_schema, start_date, offset_days)]
                     else:
@@ -696,19 +698,21 @@ def generate_sample_data_files(schema_file_path, output_file_prefix, num_samples
             json.dump(sample_data, f, indent=4)
 
 # # Example usage
-# schema_file_path = 'CostDistribution_Schema_fixed.json'
-# output_file_prefix = 'como_sample_data'
+baseFineName = "CostDistribution"
+schema_file_path = 'CostDistribution_Schema_fixed.json'
+
 # Example usage
 # baseFineName = "MappingDetailedResults"
 # schema_file_path = 'MappingDetailedResults_Schema_fixed.json'
+
 # baseFineName = "Flow_Decomposition"
 # schema_file_path = 'Flow_Decomposition_Schema_fixed.json'
 
 # baseFineName = "SelectedXnecResult_"
 # schema_file_path = 'SelectedXnecResult_Scheme_fixed.json'
 
-baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
-schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
+# baseFineName = "MappingTSOdata_IntermediateResultsPerHour_"
+# schema_file_path = 'MappingTSOdata_IntermediateResultsPerHour_fixed.json'
 
 # baseFineName = "FlowDecompositionIntermediateResult_Schema_fixed"
 # schema_file_path = 'FlowDecompositionIntermediateResult_Schema_fixed.json'

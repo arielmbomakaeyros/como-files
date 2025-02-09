@@ -1,0 +1,139 @@
+{
+    "question_code": "investissement",
+    "question_label": "Êtes-vous prêt(e) à investir dans une solution efficace et personnalisée ?", 
+    "questions_answers": [
+      {
+        "answer_code": "investissement-A1",
+        "answer_label": "Oui, jusqu’à 500 €",
+        "answer_point": 1
+      },
+      {
+        "answer_code": "investissement-A2",
+        "answer_label": "Oui, entre 500 et 1000 €",
+        "answer_point": 3
+      },
+      {
+        "answer_code": "investissement-A3",
+        "answer_label": "Oui, plus de 1000 €",
+        "answer_point": 5
+      },
+      {
+        "answer_code": "investissement-A4",
+        "answer_label": "Non, pas pour le moment",
+        "answer_point": 5
+      }
+    ]
+}
+
+
+
+{
+    "question_code": "problem-impact",
+    "question_label": "Sur une échelle de 1 à 10, quel est l’impact de ce problème sur votre vie quotidienne ?", 
+    "questions_answers": [
+      {
+        "answer_code": "problem-impact-A1",
+        "answer_label": "Moins de 4",
+        "answer_point": 1
+      },
+      {
+        "answer_code": "problem-impact-A2",
+        "answer_label": "De 4 à 7",
+        "answer_point": 3
+      },
+      {
+        "answer_code": "problem-impact-A2",
+        "answer_label": "Plus de 7/10",
+        "answer_point": 5
+      }
+    ]
+}
+
+
+
+{
+    "question_code": "time",
+    "question_label": "Depuis combien de temps ressentez-vous ce besoin ?", 
+    "questions_answers": [
+      {
+        "answer_code": "time-A1",
+        "answer_label": "Moins d'un mois",
+        "answer_point": 1
+      },
+      {
+        "answer_code": "time-A2",
+        "answer_label": "1 à 6 mois",
+        "answer_point": 2
+      },
+      {
+        "answer_code": "time-A2",
+        "answer_label": "Plus de 6 mois",
+        "answer_point": 3
+      }
+    ]
+}
+
+
+
+
+
+
+{
+    "question_code": "besoin",
+    "question_label": "Quel est votre besoin principal", 
+    "questions_answers": [
+      {
+        "answer_code": "besoin-A1",
+        "answer_label": "Perte de poids",
+        "answer_point": 5
+      },
+      {
+        "answer_code": "besoin-A2",
+        "answer_label": "Performance sportive",
+        "answer_point": 5
+      },
+      {
+        "answer_code": "besoin-A2",
+        "answer_label": "Douleurs chroniques",
+        "answer_point": 5
+      }
+    ]
+}
+
+
+// he will send object of this kind: key is question Code, value is answer code plus label or just the answer like so:
+
+// {
+//     "question_code": "answer_code-answer_label"
+//     ...
+// }
+
+// then when it get to the controller, controller must be able to manipulate that object:
+// - get the keys which are the code for the question then get the attached value and find it among the list of answers for the question having that code
+// - the get the poiint attached to that answer (at every level verify whether the element exit first)
+// - doing same process going through all the object and making sure that we cumulate all the points attached to the found answers (which are the value in the object that is coming)
+
+// exmaple of object coming in the controller:
+
+// {
+//     "besoin": "Douleurs chroniques", 
+//     "time": "Moins d'un mois", 
+//     "problem-impact": "De 4 à 7", 
+//     "investissement": "Oui, jusqu’à 500 €", 
+//     "name-input": "vially" // this is filled by hand by the user (no among answers for this question)
+//     "phone-input": "696437648" // this is filled by hand by the user (no among answers for this question)
+//     "foundus": "online" // this can be selected from existing answer or can be filled by hand by the user (no among answers for this question)
+// }
+
+// Notice there could be an element that will not have multiple answer to select because when we try to take the value and search among the answer we will not find it
+// in that case then take add that value to an extra object that we will build to send to the google sheets (but this will be for another question)
+// The other object that should be constructed should be
+
+// {
+//     "name": "vially",
+//     "phone": 696437648,
+//     "totalPoints": 456
+// }
+
+// total point will be coming from the cumulative addition of all the point from selected answer determined by matching the values from the object that came from the request to the existing answers in each corresponding question (identified by the code which is the key of the object that came from the request)
+
