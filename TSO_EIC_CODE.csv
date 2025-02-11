@@ -1,15 +1,15 @@
-TSO names,TS0 EIC code,TSO Abreviation
-AMPRION GmbH,10XDE-RWENET---W,AMP
-"ČEPS, a.s.",10XCZ-CEPS-GRIDE,CEPS
-Austrian Power Grid AG,10XAT-APG------Z,APG
-Polskie Sieci Elektroenergetyczne Spółka Akcyjna,10XPL-TSO------P,PSE
+TSO names,TSO EIC code,TSO Abreviation,TSO bidding-zone-code
+AMPRION GmbH,10XDE-RWENET---W,AMP,10Y1001C--00002H
+"ČEPS, a.s.",10XCZ-CEPS-GRIDE,CEPS,10YCB-CZECH-REP5
+Austrian Power Grid AG,10XAT-APG------Z,APG,10YDOM-1010A018T
+Polskie Sieci Elektroenergetyczne Spółka Akcyjna,10XPL-TSO------P,PSE,10Y1001C--00153X
+50Hertz Transmission GmbH,10XDE-VE-TRANSMK,50HERTZ_DE_TSO, 10Y1001C--00010I
+ELIA,10X1001A1001A094,Elia Transmission Belgium,10YCB-BE-------T
+Réseau de Transport d'Electricité (RTE),10XFR-RTE------Q,RTE,10Y1001C--00083S
+DE-TRANSNETBWTSO,10XDE-ENBW--TNGX,TransnetBW GmbH,10Y1001C--000069
+TenneT TSO B.V.,10X1001A1001A361,TENNET_TSO,10YCB-NL-------V
 MAVIR Magyar Villamosenergia-ipari Átviteli Rendszerirányító Zrt.,10X1001A1001A329,MAVIR
 CNTEE TRANSELECTRICA SA(Transelectrica),10XRO-TEL------2,TEL
-50Hertz Transmission GmbH,10XDE-VE-TRANSMK,50HERTZ_DE_TSO
 ELES,10XSI-ELES-----1,"ELES, d.o.o."
-ELIA,10X1001A1001A094,Elia Transmission Belgium
 HOPCroatian Transmission System Operator Plc.,10XHR-HEP-OPS--A,HOPS
-Réseau de Transport d'Electricité (RTE),10XFR-RTE------Q,RTE
 SLOVENSKA ELEKTRIZACNA PRENOSOVA SUSTAVA a.s.,10XSK-SEPS-GRIDB,SEPS
-DE-TRANSNETBWTSO,10XDE-ENBW--TNGX,TransnetBW GmbH
-TenneT TSO B.V.,10X1001A1001A361,TENNET_TSO

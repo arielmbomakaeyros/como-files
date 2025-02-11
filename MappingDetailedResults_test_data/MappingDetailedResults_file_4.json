@@ -1,310 +1,248 @@
-[
-    {
-        "businessDay": "2024-10-04",
-        "crosaVersion": 1,
-        "csProcessVersion": 1,
-        "timeHorizon": "dayAhead",
-        "dataPerHour": [
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 2122.88,
-                "aggregatedVolumeUpwardCostlyAnora": 4356.39,
-                "averageCostDownwardOraOrAnora": 469.55,
-                "averageCostUpwardOraOrAnora": 497.47,
-                "penaltyCostForAnoraVolumes": 12.3,
-                "timestamp": "2024-10-04T00:30:00Z",
-                "totalCostsAllOras": 13678.99,
-                "totalIndividualShare": 3602.11,
-                "totalRelativeWeightsAfterRba": 1.36,
-                "totalRelativeWeightsBeforeRba": 0.74
-            },
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 3876.15,
-                "aggregatedVolumeUpwardCostlyAnora": 4481.19,
-                "averageCostDownwardOraOrAnora": 197.71,
-                "averageCostUpwardOraOrAnora": 377.65,
-                "penaltyCostForAnoraVolumes": 34.87,
-                "timestamp": "2024-10-04T01:30:00Z",
-                "totalCostsAllOras": 9489.64,
-                "totalIndividualShare": 3810.86,
-                "totalRelativeWeightsAfterRba": 1.83,
-                "totalRelativeWeightsBeforeRba": 0.74
-            },
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 4237.28,
-                "aggregatedVolumeUpwardCostlyAnora": 2352.27,
-                "averageCostDownwardOraOrAnora": 412.21,
-                "averageCostUpwardOraOrAnora": 313.27,
-                "penaltyCostForAnoraVolumes": 40.93,
-                "timestamp": "2024-10-04T02:30:00Z",
-                "totalCostsAllOras": 8403.27,
-                "totalIndividualShare": 2725.92,
-                "totalRelativeWeightsAfterRba": 0.71,
-                "totalRelativeWeightsBeforeRba": 1.85
-            },
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 2754.89,
-                "aggregatedVolumeUpwardCostlyAnora": 4822.93,
-                "averageCostDownwardOraOrAnora": 376.69,
-                "averageCostUpwardOraOrAnora": 261.59,
-                "penaltyCostForAnoraVolumes": 38.97,
-                "timestamp": "2024-10-04T03:30:00Z",
-                "totalCostsAllOras": 14289.0,
-                "totalIndividualShare": 3574.15,
-                "totalRelativeWeightsAfterRba": 1.35,
-                "totalRelativeWeightsBeforeRba": 0.52
-            },
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 4859.98,
-                "aggregatedVolumeUpwardCostlyAnora": 4288.82,
-                "averageCostDownwardOraOrAnora": 202.25,
-                "averageCostUpwardOraOrAnora": 195.01,
-                "penaltyCostForAnoraVolumes": 25.25,
-                "timestamp": "2024-10-04T04:30:00Z",
-                "totalCostsAllOras": 6242.87,
-                "totalIndividualShare": 4800.54,
-                "totalRelativeWeightsAfterRba": 1.43,
-                "totalRelativeWeightsBeforeRba": 1.08
-            },
-            {
-                "aggregatedVolumeDownwardCostlyAnora": 3171.6,
-                "aggregatedVolumeUpwardCostlyAnora": 3371.77,
-                "averageCostDownwardOraOrAnora": 202.93,
-                "averageCostUpwardOraOrAnora": 145.25,
-                "penaltyCostForAnoraVolumes": 18.78,
-                "timestamp": "2024-10-04T05:30:00Z",
-                "totalCostsAllOras": 13244.22,
-                "totalIndividualShare": 3777.58,
-                "totalRelativeWeightsAfterRba": 0.51,
-                "totalRelativeWeightsBeforeRba": 1.3
-            }
-        ],
-        "dataPerXnec": [
-            {
-                "deltaMinus": 30.79,
-                "deltaPlus": 37.19,
-                "fAfterRao": 3462.71,
-                "fLimit": 3633.27,
-                "fMax": 2480.9,
-                "leastCostWeightRi": 0.8,
-                "lowerBalancingDualValue": 67.99,
-                "lowerBalancingSlack": 32.58,
-                "powerFlowDualValue": 68.82,
-                "powerFlowSlack": 53.27,
-                "relativeCostWeightAfterRba": 1.84,
-                "relativeCostWeightBeforeRba": 1.56,
-                "selectedXnecResultId": "0a310703770f3c19c7095cfb",
-                "shareOfTotalCosts": 1812.24,
-                "sumDeltaMinus": 3090.07,
-                "sumDeltaPlus": 3904.46,
-                "timestamp": "2024-10-04T00:30:00Z",
-                "totalAdjustedFlow": 3783.01,
-                "upperBalancingDualValue": 33.68,
-                "upperBalancingSlack": 70.3,
-                "xnecId": "7e883d869f24cc20295de69e"
-            },
-            {
-                "deltaMinus": 60.58,
-                "deltaPlus": 37.89,
-                "fAfterRao": 4402.55,
-                "fLimit": 1043.21,
-                "fMax": 1248.52,
-                "leastCostWeightRi": 1.41,
-                "lowerBalancingDualValue": 76.72,
-                "lowerBalancingSlack": 81.84,
-                "powerFlowDualValue": 39.46,
-                "powerFlowSlack": 85.46,
-                "relativeCostWeightAfterRba": 1.07,
-                "relativeCostWeightBeforeRba": 1.7,
-                "selectedXnecResultId": "ba4529b97f0fed23f79ad2d5",
-                "shareOfTotalCosts": 1008.07,
-                "sumDeltaMinus": 1025.82,
-                "sumDeltaPlus": 2571.22,
-                "timestamp": "2024-10-04T01:30:00Z",
-                "totalAdjustedFlow": 1036.3,
-                "upperBalancingDualValue": 83.18,
-                "upperBalancingSlack": 70.17,
-                "xnecId": "f0832ca17637856195331e4e"
-            },
-            {
-                "deltaMinus": 16.04,
-                "deltaPlus": 42.48,
-                "fAfterRao": 3601.65,
-                "fLimit": 3367.82,
-                "fMax": 1348.48,
-                "leastCostWeightRi": 0.83,
-                "lowerBalancingDualValue": 59.08,
-                "lowerBalancingSlack": 76.51,
-                "powerFlowDualValue": 12.53,
-                "powerFlowSlack": 71.83,
-                "relativeCostWeightAfterRba": 0.75,
-                "relativeCostWeightBeforeRba": 1.73,
-                "selectedXnecResultId": "eb1845fa5ff859c51b09b7b3",
-                "shareOfTotalCosts": 3786.17,
-                "sumDeltaMinus": 3885.73,
-                "sumDeltaPlus": 2191.34,
-                "timestamp": "2024-10-04T02:30:00Z",
-                "totalAdjustedFlow": 2109.91,
-                "upperBalancingDualValue": 28.74,
-                "upperBalancingSlack": 14.45,
-                "xnecId": "43806bd91d699295bcb1f6f0"
-            },
-            {
-                "deltaMinus": 74.12,
-                "deltaPlus": 91.12,
-                "fAfterRao": 2509.04,
-                "fLimit": 3798.88,
-                "fMax": 1085.52,
-                "leastCostWeightRi": 0.92,
-                "lowerBalancingDualValue": 44.1,
-                "lowerBalancingSlack": 56.97,
-                "powerFlowDualValue": 75.78,
-                "powerFlowSlack": 33.99,
-                "relativeCostWeightAfterRba": 1.72,
-                "relativeCostWeightBeforeRba": 1.7,
-                "selectedXnecResultId": "bb4e058dd8e2be4ebfa869d4",
-                "shareOfTotalCosts": 2602.93,
-                "sumDeltaMinus": 1055.12,
-                "sumDeltaPlus": 3082.82,
-                "timestamp": "2024-10-04T03:30:00Z",
-                "totalAdjustedFlow": 3227.63,
-                "upperBalancingDualValue": 69.24,
-                "upperBalancingSlack": 90.09,
-                "xnecId": "5fe072b998e3bc3f31f00b01"
-            },
-            {
-                "deltaMinus": 96.97,
-                "deltaPlus": 21.09,
-                "fAfterRao": 2716.02,
-                "fLimit": 4889.12,
-                "fMax": 1830.24,
-                "leastCostWeightRi": 1.06,
-                "lowerBalancingDualValue": 79.2,
-                "lowerBalancingSlack": 99.86,
-                "powerFlowDualValue": 34.25,
-                "powerFlowSlack": 55.69,
-                "relativeCostWeightAfterRba": 1.96,
-                "relativeCostWeightBeforeRba": 0.66,
-                "selectedXnecResultId": "ec39ddf65db5ab0cfd68bd2e",
-                "shareOfTotalCosts": 3914.64,
-                "sumDeltaMinus": 2267.38,
-                "sumDeltaPlus": 2776.31,
-                "timestamp": "2024-10-04T04:30:00Z",
-                "totalAdjustedFlow": 3212.56,
-                "upperBalancingDualValue": 81.77,
-                "upperBalancingSlack": 38.5,
-                "xnecId": "87782304f2a54db6eab5574f"
-            },
-            {
-                "deltaMinus": 83.22,
-                "deltaPlus": 18.68,
-                "fAfterRao": 3167.6,
-                "fLimit": 2380.77,
-                "fMax": 1824.78,
-                "leastCostWeightRi": 0.9,
-                "lowerBalancingDualValue": 80.79,
-                "lowerBalancingSlack": 83.34,
-                "powerFlowDualValue": 11.01,
-                "powerFlowSlack": 86.83,
-                "relativeCostWeightAfterRba": 1.42,
-                "relativeCostWeightBeforeRba": 0.62,
-                "selectedXnecResultId": "af77d5a984d2032d67296e44",
-                "shareOfTotalCosts": 1208.6,
-                "sumDeltaMinus": 1913.89,
-                "sumDeltaPlus": 1339.0,
-                "timestamp": "2024-10-04T05:30:00Z",
-                "totalAdjustedFlow": 2199.0,
-                "upperBalancingDualValue": 75.23,
-                "upperBalancingSlack": 63.72,
-                "xnecId": "0be5717eb93b081c0aeeda96"
-            }
-        ],
-        "dataPerXnecAndXra": [
-            {
-                "timestamp": "2024-10-04T00:30:00Z",
-                "value": 5.58,
-                "valueType": "optimizationVariable",
-                "xnecId": "a8db3119470009bb21ae96eb",
-                "xraId": "2841162aac4d31ee48245287"
-            },
-            {
-                "timestamp": "2024-10-04T01:30:00Z",
-                "value": 44.45,
-                "valueType": "optimizationVariable",
-                "xnecId": "325bbef09a4f22e80748af4d",
-                "xraId": "655c4b2a76989ccdc78b61e5"
-            },
-            {
-                "timestamp": "2024-10-04T02:30:00Z",
-                "value": 99.68,
-                "valueType": "optimizationVariable",
-                "xnecId": "d11f93fd7044e65ac67a81fd",
-                "xraId": "a5c2b2b442e3e772671e8f77"
-            },
-            {
-                "timestamp": "2024-10-04T03:30:00Z",
-                "value": 59.5,
-                "valueType": "sensitivity",
-                "xnecId": "24547bdd8ef638b4966cb9a3",
-                "xraId": "472232d7262595047f13686c"
-            },
-            {
-                "timestamp": "2024-10-04T04:30:00Z",
-                "value": 97.61,
-                "valueType": "optimizationVariable",
-                "xnecId": "e4f6ba8cdaf2cf4964a95eb3",
-                "xraId": "4cd651288f8be13f67f73c76"
-            },
-            {
-                "timestamp": "2024-10-04T05:30:00Z",
-                "value": 33.58,
-                "valueType": "optimizationVariable",
-                "xnecId": "f44f14079cbfaf9b7d3fab87",
-                "xraId": "1d51a20f1faad3ffdbccd979"
-            }
-        ],
-        "dataPerXra": [
-            {
-                "orderedVolume": 486.01,
-                "sumAlphaOrBetaOverXnecs": 4928.73,
-                "timestamp": "2024-10-04T00:30:00Z",
-                "totalCost": 7765.17,
-                "xraId": "e16553446435991f6e4a859f"
-            },
-            {
-                "orderedVolume": 491.0,
-                "sumAlphaOrBetaOverXnecs": 3562.43,
-                "timestamp": "2024-10-04T01:30:00Z",
-                "totalCost": 8543.17,
-                "xraId": "e6276fa9bd8f87174cf10a12"
-            },
-            {
-                "orderedVolume": 260.94,
-                "sumAlphaOrBetaOverXnecs": 4465.98,
-                "timestamp": "2024-10-04T02:30:00Z",
-                "totalCost": 12413.85,
-                "xraId": "f8299da8149a4b1e05012c81"
-            },
-            {
-                "orderedVolume": 410.01,
-                "sumAlphaOrBetaOverXnecs": 3379.5,
-                "timestamp": "2024-10-04T03:30:00Z",
-                "totalCost": 5135.02,
-                "xraId": "4b28e8463db2dfd51e023210"
-            },
-            {
-                "orderedVolume": 417.05,
-                "sumAlphaOrBetaOverXnecs": 1186.37,
-                "timestamp": "2024-10-04T04:30:00Z",
-                "totalCost": 14376.15,
-                "xraId": "6636fbbe60464400d362dc08"
-            },
-            {
-                "orderedVolume": 280.71,
-                "sumAlphaOrBetaOverXnecs": 2633.24,
-                "timestamp": "2024-10-04T05:30:00Z",
-                "totalCost": 13891.64,
-                "xraId": "befbdb7b5eb0ef4268c1d39b"
-            }
-        ]
-    }
-]
+{
+    "dataPerXnec": [
+        {
+            "deltaMinus": 5.87,
+            "deltaPlus": 12.92,
+            "fAfterRao": 2487.53,
+            "fLimit": 2480.49,
+            "fMax": 546.23,
+            "leastCostWeightRi": 0.77,
+            "lowerBalancingDualValue": 44.96,
+            "lowerBalancingSlack": 48.58,
+            "powerFlowDualValue": 18.15,
+            "powerFlowSlack": 19.02,
+            "relativeCostWeightAfterRba": 0.92,
+            "relativeCostWeightBeforeRba": 0.77,
+            "selectedXnecResultId": "6ab774b1-ccfd-4b35-bfd0-0ba06d90f78f",
+            "shareOfTotalCosts": 4379.01,
+            "sumDeltaMinus": 4643.32,
+            "sumDeltaPlus": 4880.16,
+            "timestamp": "2024-06-06T02:30:00Z",
+            "totalAdjustedFlow": 306.86,
+            "upperBalancingDualValue": 78.6,
+            "upperBalancingSlack": 53.88,
+            "xnecId": "c5bf0c90-3e2c-407c-893b-5939c54737e4"
+        },
+        {
+            "deltaMinus": 64.79,
+            "deltaPlus": 92.01,
+            "fAfterRao": 2722.35,
+            "fLimit": 2464.08,
+            "fMax": 822.32,
+            "leastCostWeightRi": 1.75,
+            "lowerBalancingDualValue": 34.16,
+            "lowerBalancingSlack": 45.21,
+            "powerFlowDualValue": 6.49,
+            "powerFlowSlack": 10.4,
+            "relativeCostWeightAfterRba": 0.81,
+            "relativeCostWeightBeforeRba": 0.24,
+            "selectedXnecResultId": "c2d83a87-c529-4f5b-a346-1d229bd0f906",
+            "shareOfTotalCosts": 4313.87,
+            "sumDeltaMinus": 4791.55,
+            "sumDeltaPlus": 4039.58,
+            "timestamp": "2024-06-06T03:30:00Z",
+            "totalAdjustedFlow": 318.92,
+            "upperBalancingDualValue": 50.03,
+            "upperBalancingSlack": 66.33,
+            "xnecId": "21faea40-23e0-48bc-9f4a-f03ea5a86252"
+        },
+        {
+            "deltaMinus": 54.65,
+            "deltaPlus": 21.19,
+            "fAfterRao": 2747.86,
+            "fLimit": 2887.28,
+            "fMax": 549.77,
+            "leastCostWeightRi": 0.73,
+            "lowerBalancingDualValue": 46.28,
+            "lowerBalancingSlack": 23.85,
+            "powerFlowDualValue": 9.86,
+            "powerFlowSlack": 1.58,
+            "relativeCostWeightAfterRba": 0.96,
+            "relativeCostWeightBeforeRba": 1.53,
+            "selectedXnecResultId": "6f171bf9-1e1b-4810-9103-df2950e2d8cb",
+            "shareOfTotalCosts": 4346.11,
+            "sumDeltaMinus": 4513.4,
+            "sumDeltaPlus": 4413.34,
+            "timestamp": "2024-06-06T04:30:00Z",
+            "totalAdjustedFlow": 393.02,
+            "upperBalancingDualValue": 59.43,
+            "upperBalancingSlack": 63.77,
+            "xnecId": "e9687656-66c6-40e0-91d8-043af6ee96fd"
+        },
+        {
+            "deltaMinus": 91.86,
+            "deltaPlus": 36.42,
+            "fAfterRao": 2798.49,
+            "fLimit": 2128.15,
+            "fMax": 607.11,
+            "leastCostWeightRi": 1.95,
+            "lowerBalancingDualValue": 16.58,
+            "lowerBalancingSlack": 24.53,
+            "powerFlowDualValue": 7.8,
+            "powerFlowSlack": 13.15,
+            "relativeCostWeightAfterRba": 0.41,
+            "relativeCostWeightBeforeRba": 1.79,
+            "selectedXnecResultId": "7c95fab7-bee2-4197-a94d-e295037bf1c8",
+            "shareOfTotalCosts": 4745.95,
+            "sumDeltaMinus": 4053.86,
+            "sumDeltaPlus": 4859.51,
+            "timestamp": "2024-06-06T05:30:00Z",
+            "totalAdjustedFlow": 301.97,
+            "upperBalancingDualValue": 77.85,
+            "upperBalancingSlack": 84.7,
+            "xnecId": "33f1ec19-bfc9-49bf-a14f-ff7d95ee5929"
+        },
+        {
+            "deltaMinus": 73.12,
+            "deltaPlus": 25.95,
+            "fAfterRao": 2779.67,
+            "fLimit": 2543.05,
+            "fMax": 826.91,
+            "leastCostWeightRi": 0.98,
+            "lowerBalancingDualValue": 7.71,
+            "lowerBalancingSlack": 35.0,
+            "powerFlowDualValue": 15.78,
+            "powerFlowSlack": 4.82,
+            "relativeCostWeightAfterRba": 0.29,
+            "relativeCostWeightBeforeRba": 0.25,
+            "selectedXnecResultId": "45b4e85b-b4c9-49ed-ac40-aa5de1b7de96",
+            "shareOfTotalCosts": 4108.85,
+            "sumDeltaMinus": 4462.34,
+            "sumDeltaPlus": 4020.04,
+            "timestamp": "2024-06-06T06:30:00Z",
+            "totalAdjustedFlow": 369.29,
+            "upperBalancingDualValue": 51.8,
+            "upperBalancingSlack": 71.4,
+            "xnecId": "a8ceaa48-0da1-4647-8128-fd138377329a"
+        }
+    ],
+    "dataPerXra": [
+        {
+            "orderedVolume": 76.22,
+            "sumAlphaOrBetaOverXnecs": 77.55,
+            "timestamp": "2024-06-06T02:30:00Z",
+            "totalCost": 90.51,
+            "xraId": "6b519bcd-29c6-4e04-8da7-dd3311f91ce1"
+        },
+        {
+            "orderedVolume": 0.91,
+            "sumAlphaOrBetaOverXnecs": 76.68,
+            "timestamp": "2024-06-06T03:30:00Z",
+            "totalCost": 34.44,
+            "xraId": "9c209513-d970-44cf-9061-c3e20193c14e"
+        },
+        {
+            "orderedVolume": 18.97,
+            "sumAlphaOrBetaOverXnecs": 26.17,
+            "timestamp": "2024-06-06T04:30:00Z",
+            "totalCost": 84.54,
+            "xraId": "263a7cba-64ae-4a57-8617-6e2131b90e88"
+        },
+        {
+            "orderedVolume": 97.96,
+            "sumAlphaOrBetaOverXnecs": 72.59,
+            "timestamp": "2024-06-06T05:30:00Z",
+            "totalCost": 91.28,
+            "xraId": "e323218c-977b-4d62-88bb-89e570ed6af1"
+        },
+        {
+            "orderedVolume": 84.5,
+            "sumAlphaOrBetaOverXnecs": 98.22,
+            "timestamp": "2024-06-06T06:30:00Z",
+            "totalCost": 1.15,
+            "xraId": "2f7b88b1-f0a5-40f6-91a7-a0e860d6a3e8"
+        }
+    ],
+    "dataPerXnecAndXra": [
+        {
+            "timestamp": "2024-06-06T02:30:00Z",
+            "value": 29.51,
+            "valueType": "optimizationVariable",
+            "xnecId": "c5bf0c90-3e2c-407c-893b-5939c54737e4",
+            "xraId": "263a7cba-64ae-4a57-8617-6e2131b90e88"
+        },
+        {
+            "timestamp": "2024-06-06T03:30:00Z",
+            "value": -0.19,
+            "valueType": "sensitivity",
+            "xnecId": "a8ceaa48-0da1-4647-8128-fd138377329a",
+            "xraId": "9c209513-d970-44cf-9061-c3e20193c14e"
+        },
+        {
+            "timestamp": "2024-06-06T04:30:00Z",
+            "value": 0.44,
+            "valueType": "sensitivity",
+            "xnecId": "a8ceaa48-0da1-4647-8128-fd138377329a",
+            "xraId": "263a7cba-64ae-4a57-8617-6e2131b90e88"
+        },
+        {
+            "timestamp": "2024-06-06T05:30:00Z",
+            "value": 62.88,
+            "valueType": "optimizationVariable",
+            "xnecId": "21faea40-23e0-48bc-9f4a-f03ea5a86252",
+            "xraId": "263a7cba-64ae-4a57-8617-6e2131b90e88"
+        },
+        {
+            "timestamp": "2024-06-06T06:30:00Z",
+            "value": 0.61,
+            "valueType": "sensitivity",
+            "xnecId": "21faea40-23e0-48bc-9f4a-f03ea5a86252",
+            "xraId": "6b519bcd-29c6-4e04-8da7-dd3311f91ce1"
+        },
+        {
+            "timestamp": "2024-06-06T07:30:00Z",
+            "value": 7.88,
+            "valueType": "optimizationVariable",
+            "xnecId": "21faea40-23e0-48bc-9f4a-f03ea5a86252",
+            "xraId": "9c209513-d970-44cf-9061-c3e20193c14e"
+        },
+        {
+            "timestamp": "2024-06-06T08:30:00Z",
+            "value": -0.34,
+            "valueType": "sensitivity",
+            "xnecId": "21faea40-23e0-48bc-9f4a-f03ea5a86252",
+            "xraId": "9c209513-d970-44cf-9061-c3e20193c14e"
+        },
+        {
+            "timestamp": "2024-06-06T09:30:00Z",
+            "value": -0.71,
+            "valueType": "sensitivity",
+            "xnecId": "c5bf0c90-3e2c-407c-893b-5939c54737e4",
+            "xraId": "6b519bcd-29c6-4e04-8da7-dd3311f91ce1"
+        },
+        {
+            "timestamp": "2024-06-06T10:30:00Z",
+            "value": 35.73,
+            "valueType": "optimizationVariable",
+            "xnecId": "e9687656-66c6-40e0-91d8-043af6ee96fd",
+            "xraId": "e323218c-977b-4d62-88bb-89e570ed6af1"
+        },
+        {
+            "timestamp": "2024-06-06T11:30:00Z",
+            "value": 28.43,
+            "valueType": "optimizationVariable",
+            "xnecId": "e9687656-66c6-40e0-91d8-043af6ee96fd",
+            "xraId": "2f7b88b1-f0a5-40f6-91a7-a0e860d6a3e8"
+        }
+    ],
+    "businessDay": "2024-06-06",
+    "comoDocumentType": "CS_MAPPING_DETAILED_RESULT",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "crosaVersion": 1,
+    "csProcessVersion": 5,
+    "dataPerHour": [
+        {
+            "aggregatedVolumeDownwardCostlyAnora": 58.25,
+            "aggregatedVolumeUpwardCostlyAnora": 64.52,
+            "averageCostDownwardOraOrAnora": 42.08,
+            "averageCostUpwardOraOrAnora": 25.69,
+            "penaltyCostForAnoraVolumes": 63.03,
+            "timestamp": "2024-10-09T02:30:00Z",
+            "totalCostsAllOras": 37.11,
+            "totalIndividualShare": null,
+            "totalRelativeWeightsAfterRba": null,
+            "totalRelativeWeightsBeforeRba": 33.49
+        }
+    ],
+    "timeHorizon": "dayAhead"
+}

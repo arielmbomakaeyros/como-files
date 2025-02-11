@@ -12,7 +12,14 @@ import re
 # fake = Faker()
 
 directory = '.'  # The directory where the file is located
-filename = 'Bidding_zone_EIC_code.csv'
+# filename = 'Bidding_zone_EIC_code.csv'
+filename = 'TSO_EIC_CODE.csv'
+
+# Example usage
+# directory = 'path_to_directory'
+# filename = 'your_file.csv'
+# column1 = 'TSO EIC code'
+# column2 = 'TSO bidding-zone-code'
 
 # Enum values for ValueFlowComponentType
 ValueFlowComponentType = [
@@ -28,7 +35,50 @@ ValueFlowComponentType = [
 def get_random_value():
     return round(random.uniform(-1, 1), 2)
 
-def extract_bidding_zone_codes(directory, filename, variable):
+
+# Function to extract bidding zone codes and TSO EIC codes
+def extract_bidding_zone_codes(directory, filename, column1, column2):
+    # Construct the full path of the file
+    file_path = os.path.join(directory, filename)
+
+    print(f"Reading file: {file_path}")
+    
+    # Check if the file exists in the directory
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"The file '{filename}' does not exist in the directory '{directory}'")
+    
+    # Load the CSV file
+    df = pd.read_csv(file_path)
+    
+    # Print the column names for debugging
+    print("Columns in the CSV file:", df.columns.tolist())
+    
+    # Check if the columns exist in the file
+    if column1 not in df.columns:
+        print(directory, filename, column1, "llllkkkkkkjjjjjjjj")
+        raise ValueError(f"The file '{filename}' does not contain the column '{column1}'")
+    if column2 not in df.columns:
+        raise ValueError(f"The file '{filename}' does not contain the column '{column2}'")
+    
+    # Extract the columns and construct a list of objects, filtering out rows with missing values in column2
+    bidding_zone_codes = []
+    for index, row in df.iterrows():
+        if pd.notna(row[column2]):  # Check if the value in column2 is not NaN
+            obj = {
+                column1: row[column1],
+                column2: row[column2]
+            }
+            bidding_zone_codes.append(obj)
+    
+    return bidding_zone_codes
+
+
+
+
+# result = extract_bidding_zone_codes(directory, filename, column1, column2)
+# print(result)
+
+def extract_bidding_zone_codes2(directory, filename, variable):
     # Construct the full path of the file
     file_path = os.path.join(directory, filename)
     
@@ -52,9 +102,21 @@ def getBiddingZoneCode():
     return extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
     # return random.choice(bidding_zones)
 
-def generateBiddingZoneCode():
-    bidding_zones = extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
+def generateBiddingZoneCode2():
+    # bidding_zones = extract_bidding_zone_codes(directory, filename, 'Bidding Area EIC Code')
+    bidding_zones = extract_bidding_zone_codes(directory, filename, 'TSO EIC code')
     return random.choice(bidding_zones)
+
+# Function to generate a random bidding zone and TSO code
+def generateBiddingZoneCode(directory, filename):
+    # Extract the list of objects containing TSO EIC code and TSO bidding-zone-code
+    bidding_zones = extract_bidding_zone_codes(directory, filename, 'TSO EIC code', 'TSO bidding-zone-code')
+    
+    # Randomly select one object from the list
+    selected_zone = random.choice(bidding_zones)
+    
+    # Return the TSO EIC code and TSO bidding-zone-code
+    return selected_zone['TSO EIC code'], selected_zone['TSO bidding-zone-code']
 
 # Generate biddingZoneList with random values
 def generate_bidding_zone_list(size):
@@ -491,6 +553,83 @@ def generate_random_number ():
 
 xneMrid_assessedElementMrid = ""
 
+xneMrid_assessedElementMrid = ""
+xneName_assessedElementName = ""
+
+contingencyMrid=""
+contingencyName=""
+hasCostlyRa=""
+raMrid=""
+iBefore=""
+iAfter=""
+iMax=""
+fBefore=""
+fAfter=""
+fMax=""
+
+def generate_original_xnec1 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid, directory, filename):
+    xneMrid_assessedElementMrid = generate_selected_xnec_result_id ()
+    xneName_assessedElementName = generate_selected_xnec_result_id ()
+
+    # bidding_zone = generateBiddingZoneCode() 
+
+    # Get the TSO EIC code and bidding zone code
+    tso_code, bidding_zone_code = generateBiddingZoneCode(directory, filename)
+
+    return {
+        "assessedElementMrid": xneMrid_assessedElementMrid,
+        "assessedElementName": xneName_assessedElementName,
+        "biddingZoneCode": bidding_zone_code,
+        "conductingEquipmentMrid": secrets.token_hex(12), 
+        "contingencyMrid": contingencyMrid, #
+        "contingencyName": contingencyName, #
+        "fAfter": fAfter, #
+        "fBefore": fBefore, #
+        "fMax": fMax, #
+        "hasCostlyRa": hasCostlyRa, #
+        "iAfter": iAfter, #
+        "iBefore": iBefore, #
+        "iMax": iMax, #
+        "id": secrets.token_hex(12),
+        "raMrid": raMrid, #
+        # "tsoCode": random.choice(["CEPS", "APG", "PSE", "MAVIR", "Transelectrica"]),
+        "tsoCode": tso_code,
+        "xneMrid": xneMrid_assessedElementMrid,
+        "xneName": xneName_assessedElementName
+    }
+
+def generate_original_xnec2 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid, directory, filename):
+    xneMrid_assessedElementMrid = generate_selected_xnec_result_id ()
+    xneName_assessedElementName = generate_selected_xnec_result_id ()
+
+    # bidding_zone = generateBiddingZoneCode() 
+
+    # Get the TSO EIC code and bidding zone code
+    tso_code, bidding_zone_code = generateBiddingZoneCode(directory, filename)
+
+    return {
+        "assessedElementMrid": xneMrid_assessedElementMrid,
+        "assessedElementName": xneName_assessedElementName,
+        "biddingZoneCode": bidding_zone_code,
+        "conductingEquipmentMrid": secrets.token_hex(12), 
+        "contingencyMrid": contingencyMrid, #
+        "contingencyName": contingencyName, #
+        "fAfter": fAfter, #
+        "fBefore": fBefore, #
+        "fMax": fMax, #
+        "hasCostlyRa": hasCostlyRa, #
+        "iAfter": iAfter, #
+        "iBefore": iBefore, #
+        "iMax": iMax, #
+        "id": secrets.token_hex(12),
+        "raMrid": raMrid, #
+        "tsoCode": tso_code,
+        "xneMrid": xneMrid_assessedElementMrid,
+        "xneName": xneName_assessedElementName
+    }
+
+
+
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     # Generate a random date within the past year
     start = datetime.now() - timedelta(days=365)  # One year ago from today
@@ -519,6 +658,9 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
     final_string = f"{date_part}{middle_part}{random_value}"  # Pad with zeros to make it 4 digits
     # print(final_string)  # Output: 20220227_DA_CROSA_ORA_0601
     obj = {}
+
+    if 'const' in schema:
+        return schema['const']
 
     # print("&&&&&&&&&&&&&&&&&&&&&&&&&&", full_schema)
 
@@ -583,6 +725,21 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
             obj[prop] = xneMrid_assessedElementMrid
         elif re.search(r'xneMrid', prop, re.IGNORECASE):
             obj[prop] = xneMrid_assessedElementMrid
+        elif re.search(r'originalXnec1', prop, re.IGNORECASE):
+            hasCostlyRa = random.choice([True, False])
+            generate_number = random.randint(1, 100)
+            contingencyMrid = secrets.token_hex(12)
+            contingencyName = secrets.token_hex(12)
+            raMrid = secrets.token_hex(12)
+            iBefore = random.randint(1, 100)
+            iAfter = random.randint(1, 100)
+            iMax = random.randint(1, 100)
+            fBefore = generate_number
+            fAfter = generate_number - 6
+            fMax = generate_number - 2
+            obj[prop] = generate_original_xnec1 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid, directory, filename)
+        elif re.search(r'originalXnec2', prop, re.IGNORECASE):
+            obj[prop] = generate_original_xnec2 (contingencyMrid, contingencyName, fAfter, fBefore, fMax, hasCostlyRa, iAfter, iBefore, iMax, raMrid, directory, filename)
         else:
             print("****************************", prop_schema)
             if '$ref' in prop_schema:
