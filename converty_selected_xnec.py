@@ -13,7 +13,8 @@ import re
 
 directory = '.'  # The directory where the file is located
 # filename = 'Bidding_zone_EIC_code.csv'
-filename = 'TSO_EIC_CODE.csv'
+# filename = 'TSO_EIC_CODE.csv'
+filename = 'Mapping_TSO_Bidding_Zone_EIC.csv'
 
 # Example usage
 # directory = 'path_to_directory'
