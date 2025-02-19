@@ -1,0 +1,274 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/CO_Flat_List_Schema",
+    "title": "ContingencyFlatList",
+    "type": "object",
+    "properties": {
+        "businessTimestamp": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "cdsId": {
+            "type": "string"
+        },
+        "comoDocumentType": {
+            "$ref": "#/definitions/DocumentTypeKind"
+        },
+        "comoDocumentVersion": {
+            "$ref": "#/definitions/DocumentVersionKind"
+        },
+        "contingencyGroupList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/ContingencyGroup"
+            }
+        },
+        "contingencyList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/Contingency"
+            }
+        },
+        "contingencyListId": {
+            "type": "string"
+        },
+        "documentId": {
+            "type": "string"
+        },
+        "gridModelId": {
+            "type": "string"
+        },
+        "ownerCode": {
+            "type": "string"
+        },
+        "ownerRole": {
+            "type": "string"
+        },
+        "timeHorizon": {
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "timeInterval": {
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/TimeInterval"
+                }
+            ]
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "Contingency": {
+            "type": "object",
+            "properties": {
+                "contingencyCondition": {
+                    "description": "Only present if contingencyType is ExceptionalContingency.",
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ContingencyConditionKind"
+                        }
+                    ]
+                },
+                "contingencyType": {
+                    "$ref": "#/definitions/ContingencyTypeKind"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "equipmentOperatorCode": {
+                    "description": "mRID of a SystemOperator object.\n\nSystem operator that is operating the equipment that is being run a contingency on.",
+                    "type": "string"
+                },
+                "groupCode": {
+                    "type": "string"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "mustStudy": {
+                    "description": "CIM desc : Specifies the requirement of study the contingency under normal operating conditions. True means the contingency must be study in a normal scenario. False means that the contingency does not need to be included in the scenario. This is the default value if mustStudy is missing.",
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "probability": {
+                    "description": "The allowed value range is [0,100].\nCIM desc : Normal probability of the occurrence of the contingency based on normal operational condition. The value is used as the default if the probability is missing.",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "contingencyType",
+                "equipmentOperatorCode",
+                "groupCode",
+                "mrid",
+                "mustStudy"
+            ]
+        },
+        "ContingencyConditionKind": {
+            "type": "string",
+            "enum": [
+                "design",
+                "environmental",
+                "geographicalLocation",
+                "malfunction",
+                "operation"
+            ]
+        },
+        "ContingencyGroup": {
+            "type": "object",
+            "properties": {
+                "equipmentList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/Equipment"
+                    }
+                },
+                "groupCode": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "groupCode"
+            ]
+        },
+        "ContingencyTypeKind": {
+            "type": "string",
+            "enum": [
+                "exceptional",
+                "ordinary",
+                "outOfRange"
+            ]
+        },
+        "DocumentTypeKind": {
+            "type": "string",
+            "const": "INTERNAL_CO_FLAT_LIST"
+        },
+        "DocumentVersionKind": {
+            "type": "string",
+            "const": "R24Q4V1_0"
+        },
+        "Equipment": {
+            "type": "object",
+            "properties": {
+                "areaCode": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "equipmentMrid": {
+                    "type": "string"
+                },
+                "equipmentType": {
+                    "$ref": "#/definitions/EquipmentType"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "areaCode",
+                "equipmentMrid",
+                "equipmentType",
+                "mrid"
+            ]
+        },
+        "EquipmentType": {
+            "type": "string",
+            "enum": [
+                "bus",
+                "busbar",
+                "gen",
+                "line",
+                "load",
+                "shuntCompensator",
+                "staticVarCompensator",
+                "switch",
+                "transformer"
+            ]
+        },
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "TimeInterval": {
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "from",
+                "to"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "cdsId",
+        "comoDocumentType",
+        "comoDocumentVersion",
+        "contingencyListId",
+        "documentId",
+        "gridModelId",
+        "ownerCode",
+        "ownerRole",
+        "timeHorizon",
+        "version"
+    ]
+}

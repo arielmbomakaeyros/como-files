@@ -612,65 +612,6 @@ def generate_original_xnec2 (contingencyMrid, contingencyName, fAfter, fBefore, 
 
 
 # ===============================================
-# # Function to generate a timestamp starting from 2024-10-01T00:30:00Z and incrementing by 1 hour
-# def generate_timestamp(base_time, offset):
-#     return (base_time + timedelta(hours=offset)).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-# # Generate dataPerXnec
-# def generate_data_per_xnec(timestamp):
-#     xnec_id = str(uuid.uuid4())
-#     return {
-#         "deltaMinus": round(random.uniform(0, 100), 2),
-#         "deltaPlus": round(random.uniform(0, 100), 2),
-#         "fAfterRao": round(random.uniform(2000, 3000), 2),
-#         "fLimit": round(random.uniform(2000, 3000), 2),
-#         "fMax": round(random.uniform(500, 1000), 2),
-#         "leastCostWeightRi": round(random.uniform(0, 2), 2),
-#         "lowerBalancingDualValue": round(random.uniform(0, 50), 2),
-#         "lowerBalancingSlack": round(random.uniform(0, 50), 2),
-#         "powerFlowDualValue": round(random.uniform(0, 20), 2),
-#         "powerFlowSlack": round(random.uniform(0, 20), 2),
-#         "relativeCostWeightAfterRba": round(random.uniform(0, 2), 2),
-#         "relativeCostWeightBeforeRba": round(random.uniform(0, 2), 2),
-#         "selectedXnecResultId": str(uuid.uuid4()),
-#         "shareOfTotalCosts": round(random.uniform(4000, 5000), 2),
-#         "sumDeltaMinus": round(random.uniform(4000, 5000), 2),
-#         "sumDeltaPlus": round(random.uniform(4000, 5000), 2),
-#         "timestamp": timestamp,
-#         "totalAdjustedFlow": round(random.uniform(200, 400), 2),
-#         "upperBalancingDualValue": round(random.uniform(50, 100), 2),
-#         "upperBalancingSlack": round(random.uniform(50, 100), 2),
-#         "xnecId": xnec_id
-#     }
-
-# # Generate dataPerXra
-# def generate_data_per_xra(timestamp):
-#     xra_id = str(uuid.uuid4())
-#     return {
-#         "orderedVolume": round(random.uniform(0, 100), 2),
-#         "sumAlphaOrBetaOverXnecs": round(random.uniform(0, 100), 2),
-#         "timestamp": timestamp,
-#         "totalCost": round(random.uniform(0, 100), 2),
-#         "xraId": xra_id
-#     }
-
-# def generate_data_per_xnec_and_xra(xnec_id, xra_id, timestamp, value_type):
-#     # value_type = random.choice(["optimizationVariable", "sensitivity"])
-    
-#     # Adjust value based on valueType
-#     if value_type == "sensitivity":
-#         value = round(random.uniform(-1, 1), 2)  # Value between -1 and 1 for sensitivity
-#     else:
-#         value = round(random.uniform(0, 100), 2)  # Value between 0 and 100 for optimizationVariable
-
-#     return {
-#         "timestamp": timestamp,  # Same timestamp for all entries
-#         "value": value,
-#         "valueType": value_type,
-#         "xnecId": xnec_id,
-#         "xraId": xra_id
-#     }
-
 # Function to generate a timestamp starting from 2024-03-03T01:30:00Z and incrementing by 1 hour
 def generate_timestamp(base_time, offset):
     return (base_time + timedelta(hours=offset)).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -714,11 +655,6 @@ def generate_data_per_xra(timestamp):
     }
 
 def generate_data_per_xnec_and_xra(xnec_id, xra_id, timestamp, value_type, value):
-    # # Adjust value based on valueType
-    # if value_type == "sensitivity":
-    #     value = round(random.uniform(-1, 1), 2)  # Value between -1 and 1 for sensitivity
-    # else:
-    #     value = 0  # Value is 0 for optimizationVariable when no corresponding xra exists
 
     return {
         "timestamp": timestamp,  # Same timestamp for all entries
@@ -729,64 +665,6 @@ def generate_data_per_xnec_and_xra(xnec_id, xra_id, timestamp, value_type, value
     }
 
 def generate_sample_data_final(schema, full_schema, start_date, offset_days):
-    # # Generate a random date within the past year
-    # start = datetime.now() - timedelta(days=365)  # One year ago from today
-    # end = datetime.now()
-    # random_date = start + (end - start) * random.random()
-
-    # # Randomly choose either 01:30 or 02:30 for the time
-    # hour = random.choice([1, 2])
-    # random_date = random_date.replace(hour=hour, minute=30, second=0, microsecond=0)
-
-    # # Format the date and timestamp
-    # business_day = random_date.strftime('%Y-%m-%d')
-    # # business_timestamp = random_date.isoformat()
-    # business_timestamp = random_date.strftime('%Y-%m-%dT%H:%M:%S') + 'Z'  # Add 'Z' for UTC
-
-    # # Step 1: Extract the date part and remove hyphens
-    # date_part = business_timestamp.split("T")[0].replace("-", "")
-
-    # # Step 2: Define the static middle part
-    # middle_part = "_DA_CROSA_ORA_"
-
-    # obj = {}
-
-    # # Generate dataPerXnec, dataPerXra, and dataPerXnecAndXra ONLY if they exist in the schema
-    # if 'properties' in schema:
-    #     if 'dataPerXnec' in schema['properties']:
-    #         base_time = datetime.strptime(business_timestamp, '%Y-%m-%dT%H:%M:%SZ')
-    #         data_per_xnec = [generate_data_per_xnec(generate_timestamp(base_time, i)) for i in range(5)]  # 5 items for dataPerXnec
-    #         obj["dataPerXnec"] = data_per_xnec
-    #     else:
-    #         data_per_xnec = []
-
-    #     if 'dataPerXra' in schema['properties']:
-    #         base_time = datetime.strptime(business_timestamp, '%Y-%m-%dT%H:%M:%SZ')
-    #         data_per_xra = [generate_data_per_xra(generate_timestamp(base_time, i)) for i in range(5)]  # 5 items for dataPerXra
-    #         obj["dataPerXra"] = data_per_xra
-    #     else:
-    #         data_per_xra = []
-
-    #     if 'dataPerXnecAndXra' in schema['properties']:
-    #         if data_per_xnec and data_per_xra:  # Ensure dataPerXnec and dataPerXra are generated first
-    #             xnec_ids = [xnec["xnecId"] for xnec in data_per_xnec]
-    #             xra_ids = [xra["xraId"] for xra in data_per_xra]
-
-    #             # Shuffle the IDs to ensure randomness in selection order
-    #             random.shuffle(xnec_ids)
-    #             random.shuffle(xra_ids)
-
-    #             data_per_xnec_and_xra = []
-    #             for i in range(len(data_per_xnec) ):
-    #             # for i in range(min(len(xnec_ids), len(xra_ids))):  # Use the smaller length to avoid index errors
-    #                 timestamp = generate_timestamp(base_time, i)
-    #                 xnec_id = xnec_ids.pop()  # Select and remove the last xnec_id
-    #                 xra_id = xra_ids.pop()  # Select and remove the last xra_id
-    #                 data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(xnec_id, xra_id, timestamp))
-
-    #             obj["dataPerXnecAndXra"] = data_per_xnec_and_xra
-
-    # print(schema, "lllllllkkkkkkkkkkkkk")
 
     # Generate a random date within the past year
     start = datetime.now() - timedelta(days=365)  # One year ago from today
@@ -822,6 +700,9 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
         if 'dataPerXra' in schema['properties']:
             base_time = datetime.strptime(business_timestamp, '%Y-%m-%dT%H:%M:%SZ')
             num_xra = random.randint(3, 5)  # Randomly generate between 3 to 5 dataPerXra
+            # Ensure num_xra is always less than or equal to num_xnec
+            if 'dataPerXnec' in obj:
+                num_xra = min(num_xra, len(obj["dataPerXnec"]))
             data_per_xra = [generate_data_per_xra(generate_timestamp(base_time, i)) for i in range(num_xra)]
             obj["dataPerXra"] = data_per_xra
         else:
@@ -853,38 +734,22 @@ def generate_sample_data_final(schema, full_schema, start_date, offset_days):
                         xnec_id, xra_id, timestamp, "optimizationVariable", optimization_value
                     ))
 
-                # Handle extra dataPerXnec objects (if any)
-                if len(xnec_ids) > len(xra_ids):
-                    for i in range(len(xra_ids), len(xnec_ids)):
-                        timestamp = generate_timestamp(base_time, i)
-                        xnec_id = xnec_ids[i]
-                        xra_id = xra_ids[-1]  # Use the last xraId
+                # # Handle extra dataPerXnec objects (if any)
+                # if len(xnec_ids) > len(xra_ids):
+                #     for i in range(len(xra_ids), len(xnec_ids)):
+                #         timestamp = generate_timestamp(base_time, i)
+                #         xnec_id = xnec_ids[i]
+                #         xra_id = xra_ids[-1]  # Use the last xraId
 
-                        # Set value to 0 for both sensitivity and optimizationVariable
-                        data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
-                            xnec_id, xra_id, timestamp, "sensitivity", 0
-                        ))
-                        data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
-                            xnec_id, xra_id, timestamp, "optimizationVariable", 0
-                        ))
-
-                # Handle extra dataPerXra objects (if any)
-                if len(xra_ids) > len(xnec_ids):
-                    for i in range(len(xnec_ids), len(xra_ids)):
-                        timestamp = generate_timestamp(base_time, i)
-                        xnec_id = xnec_ids[-1]  # Use the last xnecId
-                        xra_id = xra_ids[i]
-
-                        # Set value to 0 for both sensitivity and optimizationVariable
-                        data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
-                            xnec_id, xra_id, timestamp, "sensitivity", 0
-                        ))
-                        data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
-                            xnec_id, xra_id, timestamp, "optimizationVariable", 0
-                        ))
+                #         # Set value to 0 for both sensitivity and optimizationVariable
+                #         data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
+                #             xnec_id, xra_id, timestamp, "sensitivity", 0
+                #         ))
+                #         data_per_xnec_and_xra.append(generate_data_per_xnec_and_xra(
+                #             xnec_id, xra_id, timestamp, "optimizationVariable", 0
+                #         ))
 
                 obj["dataPerXnecAndXra"] = data_per_xnec_and_xra
-
 
     if 'const' in schema:
         return schema['const']

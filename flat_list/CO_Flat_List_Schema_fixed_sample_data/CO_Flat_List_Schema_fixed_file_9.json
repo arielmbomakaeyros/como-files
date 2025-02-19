@@ -1,0 +1,54 @@
+{
+    "businessTimestamp": null,
+    "cdsId": "94ac15f2-dcea-4602-85ca-741bd31f435b",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": null,
+            "groupCode": "b7b1d9ff-030e-442b-9cf6-bac3127d06b5"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "29543281-5346-428b-b614-3b9fe51ffaf7",
+                    "description": null,
+                    "equipmentMrid": "6d0250e6-3fe8-4d53-9739-1c781587e54e",
+                    "equipmentType": "gen",
+                    "mrid": "cefff654-2e21-43e7-ac62-86b371c3354d",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "8296844b-de67-4cb5-a75d-e3ab56f1175d",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "dfeaa08d-2946-4f55-b1de-4c00a202bf62",
+                    "equipmentType": "gen",
+                    "mrid": "a4bdba2b-7c56-4c84-a532-894b48cc1511",
+                    "name": null
+                },
+                {
+                    "areaCode": "09e36be7-eeda-4910-af69-28b2e2dc46e5",
+                    "description": null,
+                    "equipmentMrid": "4bdd7278-3b59-4c21-ab2a-636f3ac7b537",
+                    "equipmentType": "gen",
+                    "mrid": "2c075c0d-48b3-4560-92e8-cba986d8fd24",
+                    "name": null
+                }
+            ],
+            "groupCode": "3ebee04a-1202-4210-bc4c-5021790139c4"
+        }
+    ],
+    "contingencyList": null,
+    "contingencyListId": "6d44f26b-b9c4-412b-ba83-c39b5e0162a6",
+    "documentId": "f9c3d51b-de57-48c5-a92a-9db4229f632e",
+    "gridModelId": "ecf7e1e9-5394-42f3-9203-d612da396658",
+    "ownerCode": "10XPL-TSO------P",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "monthAhead",
+    "timeInterval": {
+        "from": "2024-01-09T00:00:00",
+        "to": "2024-01-09T17:00:00"
+    },
+    "version": 7,
+    "areaCode": "10Y1001C--00153X"
+}

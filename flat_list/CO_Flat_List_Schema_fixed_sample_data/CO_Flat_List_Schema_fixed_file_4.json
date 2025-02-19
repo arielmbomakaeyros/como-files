@@ -1,0 +1,17 @@
+{
+    "businessTimestamp": "2025-02-15T20:11:24.082437",
+    "cdsId": "9e640746-c40f-4651-bee9-533052515cd0",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": null,
+    "contingencyListId": "9642e366-bfe9-4527-a235-728344c02fc0",
+    "documentId": "fb7b1266-26b2-4da6-b8f1-c0dab56fb4c1",
+    "gridModelId": "9b0c9be9-b346-4758-9b7c-2b24c4ddc399",
+    "ownerCode": "10X1001A1001A094",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "weekAhead",
+    "timeInterval": null,
+    "version": 3,
+    "areaCode": "10YCB-BE-------T"
+}

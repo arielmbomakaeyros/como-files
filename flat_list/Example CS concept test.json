@@ -1,0 +1,41 @@
+{
+    "businessTimestamp": "2031-10-19T01:30:00Z",
+    "documentId": "66a2614fac244b410091070d",
+    "ownerCode": "22XCORESO------S",
+    "ownerRole": "rcc",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2031-10-19T01:00:00Z",
+        "to": "2031-10-19T02:00:00Z"
+    },
+    "version": 1,
+    "cdsId": "bsab06817a2dc1bbaab06817a2dc1b",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "gridModelId": "aaab06817a2dc1bbaab06817a2dc1aa",
+    "contingencyListId": "19c448e3a7834f29a611b6a2aa32e240",
+    "contingencyList": [
+        {
+            "mrid": "co_mrid_1",
+            "groupCode": "23dd4c7f-cf4f-4047-8eb9-4a80f1681413", 
+            "contingencyType": "exceptional",
+            "equipmentOperatorCode": "10XRO-TEL------2",
+            "mustStudy": true
+        }
+    ],
+    "contingencyGroupList": [
+        {
+            "groupCode": "23dd4c7f-cf4f-4047-8eb9-4a80f1681413",
+            "equipmentList": [
+                {
+                    "description": null,
+                    "mrid": "acdf973f-66a7-41c3-b180-77191d0db7ed",
+                    "name": "Line 1-7 Loss",
+                    "equipmentMrid": "_7c1c97f1-177c-4a14-a6ff-2ea1b2e67b1f",
+                    "equipmentType": "line", 
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        }
+    ]
+}

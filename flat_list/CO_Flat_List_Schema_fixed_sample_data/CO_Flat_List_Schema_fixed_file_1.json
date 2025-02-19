@@ -1,0 +1,63 @@
+{
+    "businessTimestamp": "2025-02-18T20:11:24.080639",
+    "cdsId": "090206a0-05b2-4d25-97f0-1e619c1c4dbd",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "416d5c1a-1a67-4fde-8005-09dd7a333fa1",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "df1b6658-4a6c-4b4a-987c-68d7b98a6e70",
+                    "equipmentType": "bus",
+                    "mrid": "662bfbcd-1ff3-4850-ae92-6ed47a310f79",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "98e0531d-4e87-4862-b3ca-08881ef3bd88",
+                    "description": null,
+                    "equipmentMrid": "d7d4b867-6481-4816-bef3-7b61ab828219",
+                    "equipmentType": "transformer",
+                    "mrid": "3164786c-8e1c-46e9-9fc9-262754821291",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "a2767bc5-91a1-40c2-89de-a43346bc39fc",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "6146adc6-0310-4155-af38-18a6b2c63ea5",
+                    "equipmentType": "bus",
+                    "mrid": "597fd142-7ff7-4bbb-84d2-2615e6d7aea9",
+                    "name": null
+                }
+            ],
+            "groupCode": "da25d292-3bce-4c6b-bf0e-3058a46d1683"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "8031fc13-aefc-4fb5-bc7a-d10c84df0020",
+                    "description": null,
+                    "equipmentMrid": "0594c879-cace-4a41-bc89-2e63cfd6e617",
+                    "equipmentType": "bus",
+                    "mrid": "95353a68-0321-4b67-ba22-e11bbcf4859d",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "9d921ed4-0e9f-4b97-8b5e-f7867bc4b1c2"
+        }
+    ],
+    "contingencyList": null,
+    "contingencyListId": "3f3966b3-41cd-434c-ad77-1ce02711c4f8",
+    "documentId": "f36c9f63-af9b-4fa4-9c94-5a5e5e7eaab0",
+    "gridModelId": "42edb1f4-7768-4a0c-8cc1-6508e6de78b1",
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "weekAhead",
+    "timeInterval": {
+        "from": "2024-01-01T00:00:00",
+        "to": "2024-01-01T19:00:00"
+    },
+    "version": 1,
+    "areaCode": "10YDOM-1010A019R"
+}

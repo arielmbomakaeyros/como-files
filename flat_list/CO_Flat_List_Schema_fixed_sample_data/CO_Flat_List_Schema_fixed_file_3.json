@@ -1,0 +1,71 @@
+{
+    "businessTimestamp": "2025-02-16T20:11:24.081874",
+    "cdsId": "ed34136d-e073-4ab1-a60c-d0af20690ac5",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "427fce60-441b-4016-92b4-563f0ac598dd",
+                    "description": null,
+                    "equipmentMrid": "8f537843-9f5c-41ce-b07f-df62a62154eb",
+                    "equipmentType": "line",
+                    "mrid": "fe8da6c9-4d69-4a22-9276-01613dc8c63f",
+                    "name": null
+                },
+                {
+                    "areaCode": "9a9efd45-c073-40af-b44d-e2c6a2e6311e",
+                    "description": null,
+                    "equipmentMrid": "d7085c38-5e65-433d-9205-b887a4b8d412",
+                    "equipmentType": "busbar",
+                    "mrid": "e06d9483-45eb-41f0-af5d-77891553b25c",
+                    "name": null
+                },
+                {
+                    "areaCode": "839724e3-ce95-474b-ac5e-08900907e15c",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "85373fd7-0503-46f6-bc75-bd949a929f71",
+                    "equipmentType": "line",
+                    "mrid": "f7f6962f-a6a9-40b1-a2f1-ab91f5557b04",
+                    "name": null
+                }
+            ],
+            "groupCode": "2b977c62-42be-4906-8e53-3d745265d8e8"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "83db54c3-7dd4-43db-b40d-f2e0300777f4",
+                    "description": null,
+                    "equipmentMrid": "a8144bbd-8a5a-4675-aa78-d9a14bf3887c",
+                    "equipmentType": "transformer",
+                    "mrid": "7d6683e7-cd9f-4f10-b0ff-ce7bed97da8f",
+                    "name": null
+                },
+                {
+                    "areaCode": "220a9456-75f5-4e99-bd3e-127b3137f8d3",
+                    "description": null,
+                    "equipmentMrid": "e7f1a04d-e712-4882-b295-f4bbb682ca78",
+                    "equipmentType": "transformer",
+                    "mrid": "30edf423-4dd6-478c-8f74-a2b00ec0a42a",
+                    "name": null
+                }
+            ],
+            "groupCode": "be49a983-fd8f-4b36-b4c3-30f82700f6d9"
+        }
+    ],
+    "contingencyList": null,
+    "contingencyListId": "bd1d3433-85eb-46d5-93eb-d2b081f44336",
+    "documentId": "d932c6a8-dc5d-47f8-b30d-2e2327b3127e",
+    "gridModelId": "3f4b4b55-8224-4f8b-9cc7-46c10e6c8672",
+    "ownerCode": "10XPL-TSO------P",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "intraday",
+    "timeInterval": {
+        "from": "2024-01-03T00:00:00",
+        "to": "2024-01-03T02:00:00"
+    },
+    "version": 4,
+    "areaCode": "10Y1001C--00153X"
+}

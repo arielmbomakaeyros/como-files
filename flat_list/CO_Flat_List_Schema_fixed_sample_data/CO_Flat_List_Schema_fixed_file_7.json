@@ -1,0 +1,51 @@
+{
+    "businessTimestamp": "2025-02-12T20:11:24.083501",
+    "cdsId": "27f6576b-6330-4432-8813-32175be931c4",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "087e55bd-bd09-457a-9e36-fc5aadae1c8d",
+                    "description": null,
+                    "equipmentMrid": "f0daa5f0-9623-4835-b3f8-5f0ec3f3a17c",
+                    "equipmentType": "transformer",
+                    "mrid": "db345dbf-86c8-4be0-ae91-d5cf410f2ed5",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "6371b879-82d5-4eb1-be20-b07d6bd5237d",
+                    "description": null,
+                    "equipmentMrid": "6b47b5b4-b30b-4848-8ce9-7f864c5b2287",
+                    "equipmentType": "switch",
+                    "mrid": "e99a24c7-cf36-4808-ae66-b223a09a06fa",
+                    "name": null
+                },
+                {
+                    "areaCode": "bcc9d5c0-5cae-42e6-9ecd-d6425b8c6b10",
+                    "description": null,
+                    "equipmentMrid": "cb7bbc10-1f23-4c8d-806d-25866639869c",
+                    "equipmentType": "transformer",
+                    "mrid": "8a7b4356-c8a3-4e92-ba89-9c9b52e651df",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "b4e43fca-6cd7-4465-9e40-9429f654eaa8"
+        },
+        {
+            "equipmentList": null,
+            "groupCode": "9feda316-27c1-4c86-a240-e5836233b30b"
+        }
+    ],
+    "contingencyList": null,
+    "contingencyListId": "63676860-3e23-4158-8f62-da28b8038571",
+    "documentId": "501977d4-d228-4d1e-818d-412800fa778f",
+    "gridModelId": "26bc44d7-526d-49de-a44b-e4b320a9b98d",
+    "ownerCode": "10XPL-TSO------P",
+    "ownerRole": "System Operator",
+    "timeHorizon": "twoDaysAhead",
+    "timeInterval": null,
+    "version": 10,
+    "areaCode": "10Y1001C--00153X"
+}

@@ -1,0 +1,76 @@
+{
+    "businessTimestamp": null,
+    "cdsId": "e0c01498-0c50-461f-a64d-771b56da6cdc",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": [
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "3c9eee6a-5f95-4c3e-868d-7a5b8347af72",
+            "groupCode": "fac1e20a-127b-450c-9c9c-ad678b23d59e",
+            "mrid": "aaf2a627-4ee5-4e52-9214-495ad806dde5",
+            "mustStudy": true,
+            "name": null,
+            "probability": 12.59
+        },
+        {
+            "contingencyCondition": "design",
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 2",
+            "equipmentOperatorCode": "0ba8bddd-8a9b-4454-b49b-e470e1cb72a8",
+            "groupCode": "fed82956-9b68-4a95-b0fc-2ac31feec2d7",
+            "mrid": "20152915-a7d0-4d13-ad14-80186caa8260",
+            "mustStudy": false,
+            "name": null,
+            "probability": 32.04
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "e7decc3b-5c26-41e5-86d9-8099d9d98dd7",
+            "groupCode": "8ee3bc9a-7e06-412f-9de3-5a79d43e7826",
+            "mrid": "30e2f03c-df2f-4d1a-8ee0-c0347db7906e",
+            "mustStudy": true,
+            "name": "Contingency 3",
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 4",
+            "equipmentOperatorCode": "a9e2a749-ccaf-40e4-a67e-68cd0accbe2b",
+            "groupCode": "37551826-be68-4e4f-95d6-70ac52577c2a",
+            "mrid": "f9a9556e-53cf-44d3-832e-7e82caa5a7df",
+            "mustStudy": true,
+            "name": "Contingency 4",
+            "probability": 57.41
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 5",
+            "equipmentOperatorCode": "c3cdad27-54e9-4347-847d-13949c888da7",
+            "groupCode": "2224cb03-4adf-416e-ad19-e10744b11a6d",
+            "mrid": "fe7f21b9-2749-4307-a9f8-b1b486c17600",
+            "mustStudy": true,
+            "name": "Contingency 5",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "9d06f041-ae5b-4aa9-8dbf-28c271d438bf",
+    "documentId": "34c4ddeb-f7aa-4f32-b0fd-e4fa1d86f762",
+    "gridModelId": "14d1dcc9-9094-465d-948d-b10cad485763",
+    "ownerCode": "10X1001A1001A361",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "monthAhead",
+    "timeInterval": {
+        "from": "2024-01-02T00:00:00",
+        "to": "2024-01-02T12:00:00"
+    },
+    "version": 3,
+    "areaCode": "49Y000000000003M"
+}

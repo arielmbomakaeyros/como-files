@@ -1,0 +1,17 @@
+{
+    "businessTimestamp": "2025-02-09T20:11:24.084685",
+    "cdsId": "c7709dfe-332e-48e8-af35-27ebd8a36799",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": null,
+    "contingencyListId": "23387c4f-2f35-46ae-ad00-a21e15690530",
+    "documentId": "59fd74d1-0264-437a-99f1-9abc497757b8",
+    "gridModelId": "4ac670d5-6dd0-4732-adaa-fa2ea69ff191",
+    "ownerCode": "10XHR-HEP-OPS--A",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "yearAhead",
+    "timeInterval": null,
+    "version": 7,
+    "areaCode": "10XHR-HEP-OPS--A"
+}

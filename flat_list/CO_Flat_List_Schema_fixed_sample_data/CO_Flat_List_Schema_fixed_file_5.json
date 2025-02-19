@@ -1,0 +1,73 @@
+{
+    "businessTimestamp": null,
+    "cdsId": "8f779af5-ead9-4b25-b9e4-50d3ec5fe555",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "d23cf782-2a13-4f54-8af8-e6275be167ab",
+            "groupCode": "d8fc4fc8-58dd-4e94-ba03-5af395c395ef",
+            "mrid": "a8141516-dfd8-4283-b3cb-dae87d95567d",
+            "mustStudy": true,
+            "name": null,
+            "probability": 96.52
+        },
+        {
+            "contingencyCondition": "environmental",
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "f7d80788-5ca3-471a-ac63-cd4d49c6e9e1",
+            "groupCode": "71da01d4-5f8b-406b-b6ed-66df46f5b204",
+            "mrid": "3d980eb9-b123-4ad2-a7fa-b4d1e9beb8f6",
+            "mustStudy": false,
+            "name": "Contingency 2",
+            "probability": 12.52
+        },
+        {
+            "contingencyCondition": "design",
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "5cac62b9-8406-4f95-9148-f85846ba2e4b",
+            "groupCode": "ee4e0d97-2356-4659-935d-9a10c178b6a9",
+            "mrid": "bdb2dcbe-9e2a-4b3e-9b8d-f205e3a17838",
+            "mustStudy": true,
+            "name": "Contingency 3",
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "exceptional",
+            "description": "Sample contingency description 4",
+            "equipmentOperatorCode": "3e1a9c67-0caa-4114-a96e-fdcfdf8a069b",
+            "groupCode": "eb3c9db1-66d8-44d0-94e6-70bf12e2b319",
+            "mrid": "ae8a9080-f620-498c-b6bd-371b033da78a",
+            "mustStudy": true,
+            "name": null,
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 5",
+            "equipmentOperatorCode": "160bbe7c-646b-4e0d-bb9c-6fe15461e04b",
+            "groupCode": "27c10ce6-9f37-44b0-8ab1-ff65e0b3e332",
+            "mrid": "36487310-bb44-48f3-afb0-9aae361bf593",
+            "mustStudy": false,
+            "name": "Contingency 5",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "6bfe21b3-312c-4d85-9a14-eb5feb0f5f69",
+    "documentId": "2de5eaeb-1312-43c4-bc09-5017861f58eb",
+    "gridModelId": "142df2cc-9056-4a60-82a9-8b7eeeff92f0",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "System Operator",
+    "timeHorizon": "yearAhead",
+    "timeInterval": null,
+    "version": 2,
+    "areaCode": "10YDE-ENBW-----N"
+}

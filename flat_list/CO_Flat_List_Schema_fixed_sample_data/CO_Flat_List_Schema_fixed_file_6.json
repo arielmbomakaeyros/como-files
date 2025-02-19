@@ -1,0 +1,17 @@
+{
+    "businessTimestamp": "2025-02-13T20:11:24.083279",
+    "cdsId": "d6621932-58b2-47ba-a8c2-36c3b6e52ca0",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": null,
+    "contingencyListId": "a2245b2e-d3cc-4591-bf29-87bc859f7b67",
+    "documentId": "4eb52d00-0e4a-4719-906e-25cd7a65de07",
+    "gridModelId": "d8ae428f-0df5-4d27-aa2e-bf88581aa3af",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 2,
+    "areaCode": "10YDE-ENBW-----N"
+}

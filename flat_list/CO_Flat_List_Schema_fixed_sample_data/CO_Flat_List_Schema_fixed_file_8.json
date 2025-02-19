@@ -1,0 +1,62 @@
+{
+    "businessTimestamp": null,
+    "cdsId": "2543faf0-dd37-4ad6-9cf1-326d67f84f51",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": null,
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "99bf011c-3e20-43af-bb1f-dadb14422035",
+            "groupCode": "2762006b-e818-48f1-85f6-4097a82a5947",
+            "mrid": "21245ca1-bc9a-4180-a903-5bd01424878b",
+            "mustStudy": true,
+            "name": "Contingency 1",
+            "probability": 97.68
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "exceptional",
+            "description": "Sample contingency description 2",
+            "equipmentOperatorCode": "98a4d3e2-5651-4e83-ae21-a7093eeb368f",
+            "groupCode": "d1758e20-53b4-408e-9a48-e8f367dcf74e",
+            "mrid": "98b68b39-89b6-4cc2-80b4-b97fa424f938",
+            "mustStudy": false,
+            "name": null,
+            "probability": 67.78
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 3",
+            "equipmentOperatorCode": "a32688c8-c93f-4c8b-9807-10f315686cbd",
+            "groupCode": "abcbffcd-b310-4e00-9def-2f402bc9ea5c",
+            "mrid": "c420afaa-0ae4-41a2-9f39-ef68de3d2056",
+            "mustStudy": true,
+            "name": null,
+            "probability": null
+        },
+        {
+            "contingencyCondition": "environmental",
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 4",
+            "equipmentOperatorCode": "4796f980-f3f0-425a-addb-4a75289fec26",
+            "groupCode": "b443367f-fa95-4c88-82af-899c8271d8d9",
+            "mrid": "5a2047fe-bf90-4f82-acee-f23a727b862d",
+            "mustStudy": false,
+            "name": "Contingency 4",
+            "probability": 49.95
+        }
+    ],
+    "contingencyListId": "8edc685c-1650-4a19-8b29-d8c03df2208e",
+    "documentId": "a3d882c6-aab8-41a9-b573-682fffa6f6cf",
+    "gridModelId": "e89635e2-a165-4008-a5ea-62e1d2c4fd27",
+    "ownerCode": "10X1001A1001A094",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 6,
+    "areaCode": "10YCB-BE-------T"
+}
