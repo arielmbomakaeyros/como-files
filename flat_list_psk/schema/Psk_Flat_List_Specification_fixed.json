@@ -1,0 +1,238 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/Psk_Flat_List_Specification",
+    "title": "PskFlatList",
+    "type": "object",
+    "properties": {
+        "businessTimestamp": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "cdsId": {
+            "type": "string"
+        },
+        "comoDocumentType": {
+            "$ref": "#/definitions/DocumentTypeKind"
+        },
+        "comoDocumentVersion": {
+            "$ref": "#/definitions/DocumentVersionKind"
+        },
+        "documentId": {
+            "type": "string"
+        },
+        "ownerCode": {
+            "type": "string"
+        },
+        "ownerRole": {
+            "type": "string"
+        },
+        "powerShiftKeyList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PowerShiftKey"
+            }
+        },
+        "timeHorizon": {
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "timeInterval": {
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/TimeInterval"
+                }
+            ]
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "BlockType": {
+            "description": "Kind of generating and load shift keys strategy.\n",
+            "type": "string",
+            "enum": [
+                "consumptionsFlat",
+                "consumptionsP",
+                "explicitDistribution",
+                "explicitInstruction",
+                "generatorsAndConsumptionsP",
+                "generatorsFlat",
+                "generatorsP",
+                "generatorsPmax",
+                "generatorsPmin",
+                "generatorsPriority",
+                "generatorsRemainingCapacity",
+                "generatorsUsedCapacity",
+                "nonConformLoadP",
+                "storageFlat",
+                "storageP"
+            ]
+        },
+        "DocumentTypeKind": {
+            "type": "string",
+            "const": "INTERNAL_PSK_FLAT_LIST"
+        },
+        "DocumentVersionKind": {
+            "type": "string",
+            "const": "R24Q4V1_0"
+        },
+        "PowerShiftKey": {
+            "type": "object",
+            "properties": {
+                "areaCode": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "blockType": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/BlockType"
+                        }
+                    ]
+                },
+                "energyGroupMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "resourceMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "resourceType": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ResourceType"
+                        }
+                    ]
+                },
+                "value": {
+                    "$ref": "#/definitions/PowerShiftKeyValue"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "value"
+            ]
+        },
+        "PowerShiftKeyValue": {
+            "type": "object",
+            "properties": {
+                "activePowerMax": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "activePowerMin": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "blockOrder": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "participationFactor": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "shiftDirection": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ShiftDirection"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": []
+        },
+        "ResourceType": {
+            "type": "string",
+            "enum": [
+                "energyConsumer",
+                "energyGroup",
+                "generatingUnit",
+                "hydroPump",
+                "powerElectronicsUnit"
+            ]
+        },
+        "ShiftDirection": {
+            "type": "string",
+            "enum": [
+                "down",
+                "up",
+                "upAndDown"
+            ]
+        },
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "TimeInterval": {
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "from",
+                "to"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "cdsId",
+        "comoDocumentType",
+        "comoDocumentVersion",
+        "documentId",
+        "ownerCode",
+        "ownerRole",
+        "timeHorizon",
+        "version"
+    ]
+}

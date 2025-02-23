@@ -1,0 +1,45 @@
+{
+    "businessTimestamp": "2025-02-17T05:57:38.552677",
+    "cdsId": "bceedf50-70e5-4e36-8f75-ff8494910352",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "25a21105-6186-452d-827b-f1739be19332",
+    "ownerCode": "10XCZ-CEPS-GRIDE",
+    "ownerRole": "System Operator",
+    "powerShiftKeyList": [
+        {
+            "areaCode": null,
+            "blockType": null,
+            "energyGroupMrid": null,
+            "resourceMrid": "2028f99d-6055-4863-bddb-6046e7caf1f1",
+            "resourceType": "energyGroup",
+            "value": {
+                "activePowerMax": 353.19,
+                "activePowerMin": 860.83,
+                "blockOrder": null,
+                "participationFactor": 0.09,
+                "shiftDirection": "upAndDown"
+            }
+        },
+        {
+            "areaCode": "5fdad839-12af-4f73-998d-17f28066f80d",
+            "blockType": "generatorsPmax",
+            "energyGroupMrid": null,
+            "resourceMrid": "68cd06c8-4e48-4b57-91e8-483bbb32aa5f",
+            "resourceType": "generatingUnit",
+            "value": {
+                "activePowerMax": 752.68,
+                "activePowerMin": null,
+                "blockOrder": 8,
+                "participationFactor": null,
+                "shiftDirection": null
+            }
+        }
+    ],
+    "timeHorizon": "twoDaysAhead",
+    "timeInterval": {
+        "from": "2024-01-07T00:00:00",
+        "to": "2024-01-07T09:00:00"
+    },
+    "version": 10
+}

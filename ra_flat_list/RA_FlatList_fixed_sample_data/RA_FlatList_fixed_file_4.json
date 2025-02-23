@@ -1,0 +1,70 @@
+{
+    "businessTimestamp": "2025-02-20T05:00:22.972285",
+    "cdsId": "3dd0d7aa-6982-43e5-94eb-997118d1827b",
+    "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyWithRemedialActionList": null,
+    "documentId": "5c1932ca-7d2c-40fd-953d-e9c522e210f0",
+    "gridModelId": "391006ee-3919-4f90-b8c2-fb7d7d7e3843",
+    "gridStateAlterationRemedialActionList": null,
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "System Operator",
+    "powerBidScheduleList": null,
+    "powerRemedialActionList": null,
+    "powerShiftKeyDistributionList": null,
+    "powerShiftKeyList": null,
+    "remedialActionGroupList": [
+        {
+            "description": null,
+            "maxRegulatingDown": 40.63,
+            "maxRegulatingUp": null,
+            "mrid": "9334d727-9ee6-41db-935a-28e442c7a655",
+            "name": "Sample name 1",
+            "remedialActionDependencyList": [
+                {
+                    "enabled": true,
+                    "kind": "exclusive",
+                    "mrid": "e3a8f6a2-d2bd-4185-b036-623513503fce",
+                    "remedialActionMrid": "32f031d7-0b15-4ac7-a754-8cdcb22bb7e3"
+                }
+            ]
+        },
+        {
+            "description": "Sample description 2",
+            "maxRegulatingDown": 46.75,
+            "maxRegulatingUp": null,
+            "mrid": "7013773f-d10b-494d-8350-e26c8f5a6e87",
+            "name": null,
+            "remedialActionDependencyList": null
+        },
+        {
+            "description": null,
+            "maxRegulatingDown": null,
+            "maxRegulatingUp": null,
+            "mrid": "f6d8e5bb-0d1d-4935-8b59-f03aa8c3ec2e",
+            "name": "Sample name 3",
+            "remedialActionDependencyList": [
+                {
+                    "enabled": false,
+                    "kind": "none",
+                    "mrid": "865608cb-8ee8-45df-9bd3-807da22b90f8",
+                    "remedialActionMrid": "5cdef33c-eac4-45d9-bfeb-2176108237ad"
+                },
+                {
+                    "enabled": true,
+                    "kind": "exclusive",
+                    "mrid": "bebed347-e1b2-44d4-a793-0302d29f9e55",
+                    "remedialActionMrid": "c4f70ecf-f542-4392-84dd-14b9299b0aa3"
+                }
+            ]
+        }
+    ],
+    "remedialActionListId": "a2fd23c2-3617-4b2c-946d-d0ccbb0b3ed0",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-04T00:00:00",
+        "to": "2024-01-04T17:00:00"
+    },
+    "version": 4,
+    "areaCode": "10YDOM-1010A019R"
+}

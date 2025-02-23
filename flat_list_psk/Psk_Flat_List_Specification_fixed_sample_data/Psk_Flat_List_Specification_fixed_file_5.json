@@ -1,0 +1,31 @@
+{
+    "businessTimestamp": "2025-02-19T05:57:38.552206",
+    "cdsId": "190e0ad2-1f69-43ba-bacb-71a9d936b586",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "6bbcb5db-754a-4ae8-b04f-3ef941c87e76",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "Grid Manager",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "763a5d64-afa8-43ab-a5cb-b6bf0cf79d14",
+            "blockType": null,
+            "energyGroupMrid": "f28cb7aa-cb17-463b-a5e6-179ddf7428f0",
+            "resourceMrid": "d5adeefa-f82a-4ea5-8261-0d6ef7779831",
+            "resourceType": null,
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": null,
+                "participationFactor": null,
+                "shiftDirection": null
+            }
+        }
+    ],
+    "timeHorizon": "twoDaysAhead",
+    "timeInterval": {
+        "from": "2024-01-05T00:00:00",
+        "to": "2024-01-05T10:00:00"
+    },
+    "version": 5
+}

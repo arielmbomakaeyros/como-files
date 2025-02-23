@@ -1,0 +1,200 @@
+{
+    "businessTimestamp": "2023-06-05T17:17:08Z",
+    "documentId": "a64eee2b-3090-4de1-b820-3ce1b39fabd1",
+    "ownerCode": "22XCORESO------S",
+    "ownerRole": "rcc",
+    "timeHorizon": "intraday",
+    "cdsId": "sdab0ab23a2dcac2baab0ab23a2dcac2",
+    "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "gridModelId": "aaab0ab23a2dcac2baab0ab23a2dc5aa",
+    "remedialActionListId": "09c448e3a7834f29a611b6a2aa32e240",
+    "timeInterval": {
+        "from": "2023-06-05T00:30:00Z",
+        "to": "2023-06-05T00:30:00Z"
+    },
+    "version": 1,
+    "remedialActionGroupList": [
+        {
+            "description": null,
+            "mrid": "dddd0120-b693-4a65-aa81-45d450ad74a4",
+            "name": "RA Group",
+            "remedialActionDependencyList": [
+                {
+                    "kind": "inclusive",
+                    "mrid": "dd280c0a-ac5d-4589-b8d9-a93a9e945c92",
+                    "enabled": true,
+                    "remedialActionMrid": "60ecc4fd-f07f-4ec8-9dcc-44ed8f62f015"
+                },
+                {
+                    "kind": "inclusive",
+                    "mrid": "dd170120-b693-4a65-aa81-45d450ad74a4",
+                    "enabled": true,
+                    "remedialActionMrid": "7fc2fc14-eea6-4e69-b8d9-a3edc218e687"
+                }
+            ]
+        }
+    ],
+    "gridStateAlterationRemedialActionList": [
+        {
+            "description": "This is an example of RA",
+            "impactThresholdMargin": null,
+            "isCrossBorderRelevant": true,
+            "isManual": false,
+            "kind": "curative",
+            "mrid": "7fc2fc14-eea6-4e69-b8d9-a3edc218e687",
+            "name": "RA1",
+            "available": true,
+            "penaltyFactor": null,
+            "timeToImplement": null,
+            "regionCode": "10Y1001C--00059P",
+            "systemOperatorCode": "10X1001A1001A094",
+            "gridStateAlterationList": [
+                {
+                    "description": "This is an example of tap position action",
+                    "maximumPerDay": null,
+                    "minimumActivation": null,
+                    "mrid": "a4a042cf-129f-4703-b7bd-e293c3a95dfc",
+                    "name": "TapRA",
+                    "enabled": true,
+                    "timePerStage": null,
+                    "actionType": "tapPositionAction",
+                    "powerSystemResourceMrid": "_36b83adb-3d45-4693-8967-96627b5f9ec9",
+                    "rangeConstraintList": [
+                        {
+                            "description": "Constraints the tap changer lowStep to 5",
+                            "direction": "down",
+                            "mrid": "67b23587-05a1-4752-aeed-fa8b488cdec4",
+                            "name": "Range Tap action down",
+                            "value": 5.0,
+                            "valueKind": "absolute",
+                            "propertyRangeType": "static",
+                            "propertyReference": "TapChanger.step"
+                        },
+                        {
+                            "description": "Defines how much steps RAO can change in MTU",
+                            "direction": "upAndDown",
+                            "mrid": "2149d413-a923-4c35-94d1-1028ac6aae01",
+                            "name": "Intertemporal for tap changer",
+                            "value": 3.0,
+                            "valueKind": "incremental",
+                            "propertyRangeType": "intertemporal",
+                            "propertyReference": "TapChanger.step"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "This is an example. Preventive RA: topo_2N_AVELIN_tronconnement",
+            "impactThresholdMargin": null,
+            "isCrossBorderRelevant": true,
+            "isManual": null,
+            "kind": "preventive",
+            "mrid": "60ecc4fd-f07f-4ec8-9dcc-44ed8f62f015",
+            "name": "RA1 PRA_2N_AVELIN_tronconnement",
+            "available": true,
+            "penaltyFactor": null,
+            "timeToImplement": "PT1S",
+            "regionCode": "10Y1001C--00059P",
+            "systemOperatorCode": "10X1001A1001A329",
+            "gridStateAlterationList": [
+                {
+                    "description": "topological action for action on switch TRC-1A-1B at AVELIN",
+                    "maximumPerDay": 5,
+                    "minimumActivation": "PT1H",
+                    "mrid": "703b5cdb-0d76-40ef-856a-f7fa59dd314c",
+                    "name": "TopoAction2 : topo_2N_AVELIN_tronconnement CLOSE switch TRC-1B-1B",
+                    "enabled": true,
+                    "timePerStage": null,
+                    "actionType": "topologyAction",
+                    "propertyReference": "Switch.open",
+                    "powerSystemResourceMrid": "_2e4280cc-61c2-5abd-9f90-f2a83b8c07c1",
+                    "rangeConstraintList": []
+                },
+                {
+                    "description": "topological action for action on switch TRC-1A-1C at AVELIN",
+                    "maximumPerDay": 5,
+                    "minimumActivation": "PT1H",
+                    "mrid": "703b5cdb-0d76-40ef-856a-f7fa59dd314c",
+                    "name": "TopoAction3 : topo_2N_AVELIN_tronconnement OPEN switch TRC-1B-1C",
+                    "enabled": true,
+                    "timePerStage": null,
+                    "actionType": "topologyAction",
+                    "propertyReference": "Switch.open",
+                    "powerSystemResourceMrid": "_3e4280cc-61c2-5abd-9f90-f2a83b8c07ca"
+                },
+                {
+                    "description": "topological action for action on switch TRC-1A-1A at AVELIN",
+                    "maximumPerDay": 5,
+                    "minimumActivation": "PT1H",
+                    "mrid": "703b5cdb-0d76-40ef-856a-f7fa59dd314c",
+                    "name": "TopoAction1 : topo_2N_AVELIN_tronconnement OPEN switch TRC-1B-1A",
+                    "enabled": true,
+                    "timePerStage": null,
+                    "actionType": "topologyAction",
+                    "propertyReference": "Switch.open",
+                    "powerSystemResourceMrid": "_1e4280cc-61c2-5abd-9f90-f2a83b8c07ce"
+                }
+            ]
+        }
+    ],
+    "powerRemedialActionList": [
+        {
+            "description": null,
+            "impactThresholdMargin": 5.0,
+            "isCrossBorderRelevant": true,
+            "isManual": null,
+            "kind": "curative",
+            "mrid": "5dc83ca7-28dc-41d9-8b89-61466d607402",
+            "name": "SWG_BZ_CountryGLSK_curative",
+            "available": true,
+            "penaltyFactor": null,
+            "timeToImplement": "PT15M",
+            "regionCode": "10Y1001C--00059P",
+            "systemOperatorCode": "10XCH-SWISSGRIDC",
+            "glskStrategy": "proportionalForGeneratorAndLoad",
+            "maxEconomicP": null,
+            "minEconomicP": null,
+            "shiftMethod": "shared",
+            "biddingZoneCode": "10YCH-SWISSGRIDZ",
+            "powerRemedialActionType": "countertrade"
+        },
+        {
+            "description": null,
+            "impactThresholdMargin": 5.0,
+            "isCrossBorderRelevant": true,
+            "isManual": null,
+            "kind": "curative",
+            "mrid": "a25c66e3-8638-46e8-a611-3eeed7d97ff8",
+            "name": "GEBC2001____RD_RA_curative",
+            "available": true,
+            "penaltyFactor": null,
+            "timeToImplement": "PT15M",
+            "regionCode": "10Y1001C--00059P",
+            "systemOperatorCode": "10XCH-SWISSGRIDC",
+            "glskStrategy": null,
+            "maxEconomicP": null,
+            "minEconomicP": null,
+            "shiftMethod": null,
+            "biddingZoneCode": "10YCH-SWISSGRIDZ",
+            "powerRemedialActionType": "redispatch"
+        }
+    ],
+    "contingencyWithRemedialActionList": [
+        {
+            "combinationConstraintKind": "included",
+            "mrid": "69bad37a-ad53-4cc7-ae1d-76667357c449",
+            "enabled": true,
+            "contingencyMrid": "_493480ba-93c3-426e-bee5-347d8dda3749",
+            "remedialActionMrid": "7fc2fc14-eea6-4e69-b8d9-a3edc218e687"
+        },
+        {
+            "combinationConstraintKind": "included",
+            "mrid": "4f03d4f0-40d1-4fea-9d1f-12c3f5671ca8",
+            "enabled": true,
+            "contingencyMrid": "_76eaf5e7-5a39-4aa5-a9e1-8bdc9a187721",
+            "remedialActionMrid": "a25c66e3-8638-46e8-a611-3eeed7d97ff8"
+        }
+    ]
+}

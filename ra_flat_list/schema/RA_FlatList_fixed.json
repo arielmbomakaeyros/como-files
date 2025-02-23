@@ -1,0 +1,1224 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/RA_FlatList",
+    "title": "RemedialActionFlatList",
+    "type": "object",
+    "properties": {
+        "businessTimestamp": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "cdsId": {
+            "type": "string"
+        },
+        "comoDocumentType": {
+            "$ref": "#/definitions/DocumentTypeKind"
+        },
+        "comoDocumentVersion": {
+            "$ref": "#/definitions/DocumentVersionKind"
+        },
+        "contingencyWithRemedialActionList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/ContingencyWithRemedialAction"
+            }
+        },
+        "documentId": {
+            "type": "string"
+        },
+        "gridModelId": {
+            "type": "string"
+        },
+        "gridStateAlterationRemedialActionList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/GridStateAlterationRemedialAction"
+            }
+        },
+        "ownerCode": {
+            "type": "string"
+        },
+        "ownerRole": {
+            "type": "string"
+        },
+        "powerBidScheduleList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PowerBidSchedule"
+            }
+        },
+        "powerRemedialActionList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PowerRemedialAction"
+            }
+        },
+        "powerShiftKeyDistributionList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PowerShiftKeyDistributionList"
+            }
+        },
+        "powerShiftKeyList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/PowerShiftKey"
+            }
+        },
+        "remedialActionGroupList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/RemedialActionGroup"
+            }
+        },
+        "remedialActionListId": {
+            "type": "string"
+        },
+        "timeHorizon": {
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "timeInterval": {
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/TimeInterval"
+                }
+            ]
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "BidDirectionKind": {
+            "description": "Kinds of direction of the manual frequency restoration reserves action.\n\n",
+            "type": "string",
+            "enum": [
+                "down",
+                "none",
+                "up",
+                "upAndDown"
+            ]
+        },
+        "BlockType": {
+            "description": "Kind of generating and load shift keys strategy.\n",
+            "type": "string",
+            "enum": [
+                "consumptionsFlat",
+                "consumptionsP",
+                "explicitDistribution",
+                "explicitInstruction",
+                "generatorsAndConsumptionsP",
+                "generatorsFlat",
+                "generatorsP",
+                "generatorsPmax",
+                "generatorsPmin",
+                "generatorsPriority",
+                "generatorsRemainingCapacity",
+                "generatorsUsedCapacity",
+                "nonConformLoadP",
+                "storageFlat",
+                "storageP"
+            ]
+        },
+        "ContingencyWithRemedialAction": {
+            "type": "object",
+            "properties": {
+                "combinationConstraintKind": {
+                    "$ref": "#/definitions/ElementCombinationConstraintKind"
+                },
+                "contingencyMrid": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "remedialActionMrid": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "combinationConstraintKind",
+                "contingencyMrid",
+                "enabled",
+                "mrid",
+                "remedialActionMrid"
+            ]
+        },
+        "DependencyKind": {
+            "type": "string",
+            "enum": [
+                "exclusive",
+                "inclusive",
+                "none",
+                "restrictive"
+            ]
+        },
+        "DocumentTypeKind": {
+            "type": "string",
+            "const": "INTERNAL_RA_FLAT_LIST"
+        },
+        "DocumentVersionKind": {
+            "type": "string",
+            "const": "R24Q4V1_0"
+        },
+        "ElementCombinationConstraintKind": {
+            "description": "Kind of constraint for an element combination.",
+            "type": "string",
+            "enum": [
+                "considered",
+                "excluded",
+                "included"
+            ]
+        },
+        "GlskBidActionDistribution": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "energyBlockOrderMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "energyConsumerMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "energyGroupMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "generatingUnitMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "glskScheduleMrid": {
+                    "type": "string"
+                },
+                "hydroPumpMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "participationFactor": {
+                    "type": "number"
+                },
+                "powerElectronicsUnitMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "scheduleResourceMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "glskScheduleMrid",
+                "mrid",
+                "participationFactor"
+            ]
+        },
+        "GlskStrategyKind": {
+            "type": "string",
+            "enum": [
+                "explicitInstruction",
+                "explicitSchedule",
+                "generatorFlat",
+                "generatorPmax",
+                "loadFlat",
+                "proportionalForGenerator",
+                "proportionalForGeneratorAndLoad",
+                "proportionalForLoad",
+                "proportionalForRemainingCapacity"
+            ]
+        },
+        "GridStateAlteration": {
+            "type": "object",
+            "properties": {
+                "actionType": {
+                    "$ref": "#/definitions/GridStateAlterationKind"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "enabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "maximumPerDay": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "minimumActivation": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "powerSystemResourceMrid": {
+                    "description": "Mrid identifier of grid element.\nBased on actionType, the refefence links to PowerSystemResource over:\n<ul>\n\t<li>for actionType=TapPositionAction over TapChanger to PowerSystemResource</li>\n\t<li>for actionType=RegulationControlAction over RegulatingControl to PowerSystemResource</li>\n\t<li>for actionType=TopologyAction over Switch and ConductiongEquipment (multi-level inheritance) to PowerSystemResource</li>\n\t<li>for actionType=SetPointAction over multiple generalizations/specializations relations to PowerSystemResource</li>\n</ul>",
+                    "type": "string"
+                },
+                "propertyReference": {
+                    "description": "?",
+                    "type": "string"
+                },
+                "rangeConstraintList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/RangeConstraint"
+                    }
+                },
+                "timePerStage": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "actionType",
+                "mrid",
+                "powerSystemResourceMrid",
+                "propertyReference"
+            ]
+        },
+        "GridStateAlterationKind": {
+            "type": "string",
+            "enum": [
+                "acdcConverterAction",
+                "batteryUnitAction",
+                "biddingZoneAction",
+                "controlFunctionBlockAction",
+                "energySourceAction",
+                "equipmentControllerAction",
+                "equivalentInjectionAction",
+                "externalNetworkInjectionAction",
+                "loadAction",
+                "powerElectronicsConnectionAction",
+                "regulatingControlAction",
+                "rotatingMachineAction",
+                "shuntCompensatorAction",
+                "staticVarCompensatorAction",
+                "tapPositionAction",
+                "topologyAction"
+            ]
+        },
+        "GridStateAlterationRemedialAction": {
+            "type": "object",
+            "properties": {
+                "available": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "gridStateAlterationList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/GridStateAlteration"
+                    }
+                },
+                "impactThresholdMargin": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "isCrossBorderRelevant": {
+                    "type": "boolean"
+                },
+                "isManual": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "kind": {
+                    "$ref": "#/definitions/RemedialActionKind"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "penaltyFactor": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "regionCode": {
+                    "type": "string"
+                },
+                "systemOperatorCode": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "timeToImplement": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "available",
+                "isCrossBorderRelevant",
+                "kind",
+                "mrid",
+                "regionCode"
+            ]
+        },
+        "PowerBidDependency": {
+            "type": "object",
+            "properties": {
+                "delay": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "dependentPowerGridScheduleMrid": {
+                    "type": "string"
+                },
+                "kind": {
+                    "$ref": "#/definitions/PowerBidDependencyKind"
+                },
+                "mrid": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "dependentPowerGridScheduleMrid",
+                "kind",
+                "mrid"
+            ]
+        },
+        "PowerBidDependencyKind": {
+            "type": "string",
+            "enum": [
+                "exclusive",
+                "inclusive",
+                "restrictive"
+            ]
+        },
+        "PowerBidSchedule": {
+            "type": "object",
+            "properties": {
+                "currency": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "direction": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/BidDirectionKind"
+                        }
+                    ]
+                },
+                "glskBidActionDistributionList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/GlskBidActionDistribution"
+                    }
+                },
+                "interpolationKind": {
+                    "$ref": "#/definitions/TimeSeriesInterpolationKind"
+                },
+                "isOffer": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "leadTime": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "maximumUpTime": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "minimumActivationP": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "minimumOffTime": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "minimumUpTime": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "p": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "powerBidDependencyList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/PowerBidDependency"
+                    }
+                },
+                "powerRemedialActionMrid": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "priority": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "reservePrice": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "shutdownCost": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "startUpCost": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "stepIncrementP": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "totalMaximumEnergy": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "totalMinimumEnergy": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "interpolationKind",
+                "mrid",
+                "powerRemedialActionMrid"
+            ]
+        },
+        "PowerRemedialAction": {
+            "type": "object",
+            "properties": {
+                "available": {
+                    "type": "boolean"
+                },
+                "biddingZoneCode": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "glskStrategy": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/GlskStrategyKind"
+                        }
+                    ]
+                },
+                "impactThresholdMargin": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "isCrossBorderRelevant": {
+                    "type": "boolean"
+                },
+                "isManual": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "kind": {
+                    "$ref": "#/definitions/RemedialActionKind"
+                },
+                "maxEconomicP": {
+                    "description": "Active Power in MW",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "maxRegulatingDown": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "maxRegulatingUp": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "minEconomicP": {
+                    "description": "Active Power in MW",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "penaltyFactor": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "powerRemedialActionType": {
+                    "$ref": "#/definitions/PowerRemedialActionKind"
+                },
+                "regionCode": {
+                    "type": "string"
+                },
+                "shiftMethod": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ShiftMethodKind"
+                        }
+                    ]
+                },
+                "systemOperatorCode": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "timeToImplement": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "available",
+                "biddingZoneCode",
+                "isCrossBorderRelevant",
+                "kind",
+                "mrid",
+                "powerRemedialActionType",
+                "regionCode"
+            ]
+        },
+        "PowerRemedialActionKind": {
+            "type": "string",
+            "enum": [
+                "countertrade",
+                "redispatch"
+            ]
+        },
+        "PowerShiftKey": {
+            "type": "object",
+            "description": "Aggregation of PowerShiftKeyStrategy and PowerShiftKeySchedule",
+            "properties": {
+                "areaCode": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "blockType": {
+                    "$ref": "#/definitions/BlockType"
+                },
+                "energyGroupMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "resourceMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "resourceType": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ResourceType"
+                        }
+                    ]
+                },
+                "value": {
+                    "$ref": "#/definitions/PowerShiftKeyValue"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "blockType",
+                "value"
+            ]
+        },
+        "PowerShiftKeyDistributionList": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "powerBidScheduleMrid": {
+                    "type": "string"
+                },
+                "resourceMrid": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "mrid",
+                "powerBidScheduleMrid",
+                "resourceMrid"
+            ]
+        },
+        "PowerShiftKeyValue": {
+            "type": "object",
+            "properties": {
+                "activePowerMax": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "activePowerMin": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "blockOrder": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "participationFactor": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "shiftDirection": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ShiftDirection"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": []
+        },
+        "PropertyRangeKind": {
+            "type": "string",
+            "enum": [
+                "intertemporal",
+                "static"
+            ]
+        },
+        "RangeConstraint": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "direction": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/RelativeDirectionKind"
+                        }
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "propertyRangeType": {
+                    "description": "IntertemporalPropertyRange or StaticPropertyRange",
+                    "$ref": "#/definitions/PropertyRangeKind"
+                },
+                "propertyReference": {
+                    "description": "Reference to class.\nMandatory only for type=StaticPropertyReference.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "valueKind": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/ValueOffsetKind"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "mrid",
+                "propertyRangeType"
+            ]
+        },
+        "RelativeDirectionKind": {
+            "description": "Kinds of direction of the manual frequency restoration reserves action.\n",
+            "type": "string",
+            "enum": [
+                "down",
+                "none",
+                "up",
+                "upAndDown"
+            ]
+        },
+        "RemedialAction": {
+            "type": "object",
+            "properties": {
+                "available": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "impactThresholdMargin": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "isCrossBorderRelevant": {
+                    "type": "boolean"
+                },
+                "isManual": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "kind": {
+                    "$ref": "#/definitions/RemedialActionKind"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "penaltyFactor": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "regionCode": {
+                    "type": "string"
+                },
+                "systemOperatorCode": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "timeToImplement": {
+                    "description": "\"Datatype: Duration\"",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "available",
+                "isCrossBorderRelevant",
+                "kind",
+                "mrid",
+                "regionCode"
+            ]
+        },
+        "RemedialActionDependency": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "kind": {
+                    "$ref": "#/definitions/DependencyKind"
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "remedialActionMrid": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "kind",
+                "mrid",
+                "remedialActionMrid"
+            ]
+        },
+        "RemedialActionGroup": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "maxRegulatingDown": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "maxRegulatingUp": {
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "remedialActionDependencyList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/RemedialActionDependency"
+                    }
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "mrid"
+            ]
+        },
+        "RemedialActionKind": {
+            "type": "string",
+            "enum": [
+                "curative",
+                "preventive"
+            ]
+        },
+        "ResourceType": {
+            "type": "string",
+            "enum": [
+                "energyConsumer",
+                "energyGroup",
+                "generatingUnit",
+                "hydroPump",
+                "powerElectronicsUnit"
+            ]
+        },
+        "ShiftDirection": {
+            "type": "string",
+            "enum": [
+                "down",
+                "up",
+                "upAndDown"
+            ]
+        },
+        "ShiftMethodKind": {
+            "type": "string",
+            "enum": [
+                "priority",
+                "shared"
+            ]
+        },
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "TimeInterval": {
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "from",
+                "to"
+            ]
+        },
+        "TimeSeriesInterpolationKind": {
+            "type": "string",
+            "enum": [
+                "linear",
+                "next",
+                "none"
+            ]
+        },
+        "ValueOffsetKind": {
+            "description": "The kind of the value offset.\n",
+            "type": "string",
+            "enum": [
+                "absolute",
+                "incremental",
+                "incrementalPercentage"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "cdsId",
+        "comoDocumentType",
+        "comoDocumentVersion",
+        "documentId",
+        "gridModelId",
+        "ownerCode",
+        "ownerRole",
+        "remedialActionListId",
+        "timeHorizon",
+        "version"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "businessTimestamp": "2025-02-20T05:57:38.552047",
+    "cdsId": "923c387c-07a2-4fb6-aedd-b6009a18f6cf",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "4f1a97dc-15a9-4f14-a464-909bb3a35231",
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "System Operator",
+    "powerShiftKeyList": null,
+    "timeHorizon": "monthAhead",
+    "timeInterval": {
+        "from": "2024-01-04T00:00:00",
+        "to": "2024-01-04T08:00:00"
+    },
+    "version": 2
+}

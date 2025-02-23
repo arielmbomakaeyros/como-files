@@ -1,0 +1,16 @@
+{
+    "businessTimestamp": "2025-02-15T05:57:38.553168",
+    "cdsId": "58fbbc37-fbf8-45b1-92fb-86e05d38cd8e",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "736f66ad-0016-4594-950c-d46428273505",
+    "ownerCode": "10XDE-EON-NETZ-C",
+    "ownerRole": "Grid Manager",
+    "powerShiftKeyList": null,
+    "timeHorizon": "intraday",
+    "timeInterval": {
+        "from": "2024-01-09T00:00:00",
+        "to": "2024-01-09T12:00:00"
+    },
+    "version": 7
+}

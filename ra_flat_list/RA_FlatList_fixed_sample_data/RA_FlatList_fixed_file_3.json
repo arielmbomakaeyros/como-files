@@ -1,0 +1,72 @@
+{
+    "businessTimestamp": "2025-02-21T05:00:22.971887",
+    "cdsId": "4dfaa47e-cbf6-4281-8d9b-99c897f6c784",
+    "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyWithRemedialActionList": null,
+    "documentId": "db3b7033-cf9c-4817-84dc-e786065e95e2",
+    "gridModelId": "a06d794c-88b1-435a-bc42-c12627161d15",
+    "gridStateAlterationRemedialActionList": [
+        {
+            "available": true,
+            "description": null,
+            "gridStateAlterationList": null,
+            "impactThresholdMargin": 89.41,
+            "isCrossBorderRelevant": true,
+            "isManual": false,
+            "kind": "curative",
+            "mrid": "46bb2515-ba29-4655-b1af-e0eaeb2c8ed4",
+            "name": null,
+            "penaltyFactor": 65.05,
+            "regionCode": "cf643d1f-8034-460b-961d-814a2a5d0b5a",
+            "systemOperatorCode": null,
+            "timeToImplement": 21.83
+        }
+    ],
+    "ownerCode": "10XPL-TSO------P",
+    "ownerRole": "System Operator",
+    "powerBidScheduleList": null,
+    "powerRemedialActionList": [
+        {
+            "available": true,
+            "biddingZoneCode": "f6017507-4ef9-42c1-859d-4a37f6b41056",
+            "description": "Sample description 1",
+            "glskStrategy": null,
+            "impactThresholdMargin": null,
+            "isCrossBorderRelevant": true,
+            "isManual": true,
+            "kind": "curative",
+            "maxEconomicP": null,
+            "maxRegulatingDown": null,
+            "maxRegulatingUp": 63.94,
+            "minEconomicP": null,
+            "mrid": "beac7a3e-36a9-4b86-bd2d-e24385848114",
+            "name": "Sample name 1",
+            "penaltyFactor": 15.73,
+            "powerRemedialActionType": "redispatch",
+            "regionCode": "f473792a-cbf2-4c43-b860-efcb9e7b2cfe",
+            "shiftMethod": null,
+            "systemOperatorCode": "1b0fe884-6827-41a3-8ac5-2275d4a377cc",
+            "timeToImplement": 36.22
+        }
+    ],
+    "powerShiftKeyDistributionList": [
+        {
+            "description": "Sample description 1",
+            "mrid": "a31470a4-84a7-4f04-a7c1-3be18557cd9b",
+            "name": null,
+            "powerBidScheduleMrid": "11a9f9ce-d256-4497-9683-7ff398eab7e8",
+            "resourceMrid": "d0390200-49f1-4296-bc8e-b5432d5ce75c"
+        }
+    ],
+    "powerShiftKeyList": null,
+    "remedialActionGroupList": null,
+    "remedialActionListId": "e082bc07-b568-4d95-88cc-00c786ba633e",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-03T00:00:00",
+        "to": "2024-01-03T15:00:00"
+    },
+    "version": 9,
+    "areaCode": "10Y1001C--00153X"
+}

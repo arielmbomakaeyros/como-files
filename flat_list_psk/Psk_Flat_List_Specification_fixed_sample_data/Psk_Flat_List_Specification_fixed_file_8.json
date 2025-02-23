@@ -1,0 +1,28 @@
+{
+    "businessTimestamp": "2025-02-16T05:57:38.552950",
+    "cdsId": "560a6d26-4175-4c88-9024-a7c95c0ac247",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "97af9be1-5c7e-477e-baef-fc614b52a10f",
+    "ownerCode": "10YDE-VE-------2",
+    "ownerRole": "System Operator",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "80200124-11ce-4e80-afc0-25594cec7f99",
+            "blockType": null,
+            "energyGroupMrid": null,
+            "resourceMrid": null,
+            "resourceType": "energyGroup",
+            "value": {
+                "activePowerMax": 117.8,
+                "activePowerMin": 620.03,
+                "blockOrder": null,
+                "participationFactor": 0.22,
+                "shiftDirection": "up"
+            }
+        }
+    ],
+    "timeHorizon": "yearAhead",
+    "timeInterval": null,
+    "version": 1
+}

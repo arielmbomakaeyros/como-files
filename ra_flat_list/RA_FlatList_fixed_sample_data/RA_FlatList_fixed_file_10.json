@@ -1,0 +1,228 @@
+{
+    "businessTimestamp": "2025-02-14T05:00:22.979531",
+    "cdsId": "eb0a30ca-1cb6-4093-bd3f-f8e018fccdf1",
+    "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyWithRemedialActionList": null,
+    "documentId": "f8091d9e-580d-40aa-871e-a9f1a9daac2f",
+    "gridModelId": "521460dc-7670-42a1-92e8-6eceacff026b",
+    "gridStateAlterationRemedialActionList": null,
+    "ownerCode": "10XSI-ELES-----1",
+    "ownerRole": "Grid Manager",
+    "powerBidScheduleList": [
+        {
+            "currency": "EUR",
+            "description": null,
+            "direction": null,
+            "glskBidActionDistributionList": [
+                {
+                    "description": "Sample description 1",
+                    "energyBlockOrderMrid": null,
+                    "energyConsumerMrid": null,
+                    "energyGroupMrid": null,
+                    "generatingUnitMrid": null,
+                    "glskScheduleMrid": "606f04e5-2202-4bee-8197-1914732f1552",
+                    "hydroPumpMrid": "55cd3a54-c646-4562-963a-239e4b0c675f",
+                    "mrid": "9eafaaec-2e27-47b7-80d0-c65669861260",
+                    "name": "Sample name 1",
+                    "participationFactor": 48.28,
+                    "powerElectronicsUnitMrid": null,
+                    "scheduleResourceMrid": "7ea3f49a-f7bf-4352-af0c-29a5690c69f7"
+                }
+            ],
+            "interpolationKind": "linear",
+            "isOffer": true,
+            "leadTime": null,
+            "maximumUpTime": 80.15,
+            "minimumActivationP": 38.64,
+            "minimumOffTime": null,
+            "minimumUpTime": null,
+            "mrid": "1e3f4b44-d7fd-4a88-b37e-eb67f59fda2f",
+            "name": "Sample name 1",
+            "p": 11.06,
+            "powerBidDependencyList": [
+                {
+                    "delay": 43.64,
+                    "dependentPowerGridScheduleMrid": "a118ead9-eb7b-48be-9218-1f0e2900ddd1",
+                    "kind": "inclusive",
+                    "mrid": "2fedcb34-1f38-4d50-9aed-009f39500795"
+                },
+                {
+                    "delay": 27.31,
+                    "dependentPowerGridScheduleMrid": "db3baa1b-8d53-4bd9-8b67-27fa4f110721",
+                    "kind": "restrictive",
+                    "mrid": "93641a56-c125-48f3-9d1c-e2fec6c5d786"
+                },
+                {
+                    "delay": 77.06,
+                    "dependentPowerGridScheduleMrid": "e5853294-a245-43e1-bcf1-6b2bb4a5f01e",
+                    "kind": "inclusive",
+                    "mrid": "349de2bb-52bb-40e4-8ba9-9e589e5a7cdf"
+                }
+            ],
+            "powerRemedialActionMrid": "dc338a75-e5f6-46b9-8f16-9c7d53d7f9cb",
+            "price": null,
+            "priority": 6,
+            "reservePrice": 15.15,
+            "shutdownCost": null,
+            "startUpCost": null,
+            "stepIncrementP": null,
+            "totalMaximumEnergy": 1.46,
+            "totalMinimumEnergy": 59.45
+        },
+        {
+            "currency": "GBP",
+            "description": "Sample description 2",
+            "direction": null,
+            "glskBidActionDistributionList": [
+                {
+                    "description": "Sample description 1",
+                    "energyBlockOrderMrid": "06f39592-5374-4bf7-b37b-c3935f3de9dc",
+                    "energyConsumerMrid": null,
+                    "energyGroupMrid": null,
+                    "generatingUnitMrid": null,
+                    "glskScheduleMrid": "8d639e29-793c-4bf9-b600-04c4e9ac6fa9",
+                    "hydroPumpMrid": "1daed386-02c5-4dd4-b12d-c0d9ffdb4b66",
+                    "mrid": "cb75e7ea-be94-4591-b22f-a7fea2212924",
+                    "name": "Sample name 1",
+                    "participationFactor": 49.53,
+                    "powerElectronicsUnitMrid": "15897de1-e99c-4869-8ca1-881b27f97c3e",
+                    "scheduleResourceMrid": "4fc25f4e-5836-4b0b-96d3-b25ec88bc879"
+                },
+                {
+                    "description": "Sample description 2",
+                    "energyBlockOrderMrid": null,
+                    "energyConsumerMrid": "3978349d-f8a4-4adf-b934-fe2a48b072cd",
+                    "energyGroupMrid": null,
+                    "generatingUnitMrid": "b3b52853-5f79-44e2-a7c9-c66084a34973",
+                    "glskScheduleMrid": "3dc41196-c0dd-496e-b72d-22db57ab7c01",
+                    "hydroPumpMrid": "b75cbeec-e7c8-4ac2-9694-9569a931c2b7",
+                    "mrid": "223d2c34-924c-4bdf-9d59-975f81aa6f83",
+                    "name": null,
+                    "participationFactor": 41.24,
+                    "powerElectronicsUnitMrid": null,
+                    "scheduleResourceMrid": null
+                },
+                {
+                    "description": "Sample description 3",
+                    "energyBlockOrderMrid": "fa8ec011-2595-4a30-9f0f-c89083d634b9",
+                    "energyConsumerMrid": "ff43c4c4-a59a-4a21-a192-d9d9afa36ced",
+                    "energyGroupMrid": "be15b49d-3c51-4a88-aba4-266d58e664ec",
+                    "generatingUnitMrid": null,
+                    "glskScheduleMrid": "071863fe-5724-4dfe-8113-65f44d94f6a9",
+                    "hydroPumpMrid": "8d75bc62-09b3-41dd-9101-ea0f8be74135",
+                    "mrid": "3d19599c-1e63-45c4-bdb2-f952985d858b",
+                    "name": null,
+                    "participationFactor": 28.22,
+                    "powerElectronicsUnitMrid": null,
+                    "scheduleResourceMrid": null
+                }
+            ],
+            "interpolationKind": "none",
+            "isOffer": false,
+            "leadTime": null,
+            "maximumUpTime": null,
+            "minimumActivationP": null,
+            "minimumOffTime": null,
+            "minimumUpTime": 60.07,
+            "mrid": "a64b23c7-e556-420b-81bb-99678dd26137",
+            "name": "Sample name 2",
+            "p": null,
+            "powerBidDependencyList": null,
+            "powerRemedialActionMrid": "bcd55d3b-7b7c-4a59-8278-9ff70598a3ac",
+            "price": 58.93,
+            "priority": null,
+            "reservePrice": 6.21,
+            "shutdownCost": null,
+            "startUpCost": 20.98,
+            "stepIncrementP": null,
+            "totalMaximumEnergy": null,
+            "totalMinimumEnergy": 25.26
+        },
+        {
+            "currency": null,
+            "description": null,
+            "direction": "down",
+            "glskBidActionDistributionList": [
+                {
+                    "description": "Sample description 1",
+                    "energyBlockOrderMrid": "c0f9fdbf-f12b-4a9c-a12d-ad95442145bc",
+                    "energyConsumerMrid": "e87896a2-d09d-4d86-84a0-92fd6183b494",
+                    "energyGroupMrid": "e404782f-1ac4-46d4-ad00-765f36e29407",
+                    "generatingUnitMrid": null,
+                    "glskScheduleMrid": "d1188d43-2495-4fdb-93d1-2c008a74b0ea",
+                    "hydroPumpMrid": null,
+                    "mrid": "bfddeff7-0dfc-4ee8-8885-8218ad01be42",
+                    "name": "Sample name 1",
+                    "participationFactor": 29.47,
+                    "powerElectronicsUnitMrid": null,
+                    "scheduleResourceMrid": "1dbb4d2b-3890-4388-b170-f5d8b65e150e"
+                }
+            ],
+            "interpolationKind": "next",
+            "isOffer": false,
+            "leadTime": null,
+            "maximumUpTime": 96.23,
+            "minimumActivationP": 67.49,
+            "minimumOffTime": 88.46,
+            "minimumUpTime": null,
+            "mrid": "b04a110b-5530-4619-9caf-39eefeda0937",
+            "name": null,
+            "p": 67.62,
+            "powerBidDependencyList": [
+                {
+                    "delay": null,
+                    "dependentPowerGridScheduleMrid": "bc5ef84e-5bea-4a5b-b042-3a27128ea4c7",
+                    "kind": "restrictive",
+                    "mrid": "68f22704-19d9-4907-8770-0efb9012d57a"
+                },
+                {
+                    "delay": null,
+                    "dependentPowerGridScheduleMrid": "113d6df9-fa94-40b8-bc16-0737e4c8fb74",
+                    "kind": "inclusive",
+                    "mrid": "e20229f0-bc4b-477b-8958-dd7591f8888a"
+                }
+            ],
+            "powerRemedialActionMrid": "75769bc8-c3a2-4ec2-b6ab-0a6daff5ca7b",
+            "price": null,
+            "priority": 4,
+            "reservePrice": null,
+            "shutdownCost": null,
+            "startUpCost": 78.61,
+            "stepIncrementP": 1.47,
+            "totalMaximumEnergy": 15.8,
+            "totalMinimumEnergy": null
+        }
+    ],
+    "powerRemedialActionList": null,
+    "powerShiftKeyDistributionList": null,
+    "powerShiftKeyList": null,
+    "remedialActionGroupList": [
+        {
+            "description": "Sample description 1",
+            "maxRegulatingDown": null,
+            "maxRegulatingUp": null,
+            "mrid": "29d2144f-9109-484d-906d-b8a08d8064c9",
+            "name": "Sample name 1",
+            "remedialActionDependencyList": [
+                {
+                    "enabled": false,
+                    "kind": "restrictive",
+                    "mrid": "32dfed74-9b9e-46b3-b13d-1a28069c072b",
+                    "remedialActionMrid": "afb09338-7481-4484-b376-16676111b91f"
+                },
+                {
+                    "enabled": true,
+                    "kind": "exclusive",
+                    "mrid": "49c220a8-8f44-4135-8562-8b7c1724a632",
+                    "remedialActionMrid": "531a560a-00a0-4ade-998c-cc375fd5240c"
+                }
+            ]
+        }
+    ],
+    "remedialActionListId": "437f6311-c630-4358-96a7-9356aa3cc247",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 2,
+    "areaCode": "10YSI-ELES-----O"
+}

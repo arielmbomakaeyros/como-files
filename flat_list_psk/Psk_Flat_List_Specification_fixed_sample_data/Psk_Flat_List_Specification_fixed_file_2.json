@@ -1,0 +1,13 @@
+{
+    "businessTimestamp": "2025-02-22T05:57:38.551734",
+    "cdsId": "0e22139a-9c63-4962-85c6-5b013d5272bd",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "documentId": "0b1f8281-c2c7-458e-ac69-9520dc8feb08",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "Network Engineer",
+    "powerShiftKeyList": null,
+    "timeHorizon": "twoDaysAhead",
+    "timeInterval": null,
+    "version": 6
+}

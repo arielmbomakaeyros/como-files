@@ -1,0 +1,49 @@
+{
+    "businessTimestamp": null,
+    "cdsId": "7184c2e6-a893-43e7-9fc5-d3a346c7f438",
+    "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyWithRemedialActionList": [
+        {
+            "combinationConstraintKind": "considered",
+            "contingencyMrid": "d6fd3c13-e95a-4e9a-9cf5-8d710aac9b05",
+            "enabled": true,
+            "mrid": "cc5485e2-ed8b-49ef-a341-279cf1fae024",
+            "remedialActionMrid": "0520b8fc-0835-446a-b868-d1a0099eb19b"
+        },
+        {
+            "combinationConstraintKind": "included",
+            "contingencyMrid": "46542201-0855-40e1-9e3e-bb410b38c387",
+            "enabled": false,
+            "mrid": "0b3ccfe9-0ede-43ec-a979-7bf24dc577f3",
+            "remedialActionMrid": "eca7f70d-194e-481a-9d64-3ec6ffa44960"
+        }
+    ],
+    "documentId": "cb7cd804-25e9-4a56-9bbb-e8cb0fa9f59c",
+    "gridModelId": "5e96b46f-858d-4d48-a5b2-2046eae4e2c3",
+    "gridStateAlterationRemedialActionList": null,
+    "ownerCode": "10XCZ-CEPS-GRIDE",
+    "ownerRole": "Network Engineer",
+    "powerBidScheduleList": null,
+    "powerRemedialActionList": null,
+    "powerShiftKeyDistributionList": null,
+    "powerShiftKeyList": null,
+    "remedialActionGroupList": [
+        {
+            "description": "Sample description 1",
+            "maxRegulatingDown": 0.02,
+            "maxRegulatingUp": null,
+            "mrid": "f023d429-4312-42ec-9db1-683f5edaf46b",
+            "name": "Sample name 1",
+            "remedialActionDependencyList": null
+        }
+    ],
+    "remedialActionListId": "f269f3aa-4bbf-426a-8151-58074ab1b304",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-02T00:00:00",
+        "to": "2024-01-03T00:00:00"
+    },
+    "version": 3,
+    "areaCode": "10YCZ-CEPS-----N"
+}
