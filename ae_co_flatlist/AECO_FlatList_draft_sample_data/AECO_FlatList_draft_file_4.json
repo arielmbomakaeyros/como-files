@@ -1,0 +1,17 @@
+{
+    "assessedElementFlatListId": "35db1ccc-4a3d-478f-afdd-e475965297aa",
+    "contingencyFlatListId": "ee983cd9-625f-44b4-8cbf-cfc11d809b41",
+    "businessTimestamp": "2025-02-22T18:27:00.344667",
+    "cdsId": "2eab5002-122a-41c3-a505-99c2573cadc4",
+    "documentId": "75d8a788-ebbe-4518-bde8-43644d6ea5a8",
+    "gridModelId": "cd756c04-c9d0-4295-be8f-17b5f7374c3f",
+    "ownerCode": "10XSK-SEPS-GRIDB",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-04T00:00:00",
+        "to": "2024-01-04T08:00:00"
+    },
+    "version": 3,
+    "assessedElementList": null
+}

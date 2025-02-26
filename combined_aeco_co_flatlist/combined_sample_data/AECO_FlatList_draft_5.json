@@ -1,0 +1,386 @@
+{
+    "assessedElementFlatListId": "412e5b74-a9d2-4741-a66c-d34f08a4b4e4",
+    "contingencyFlatListId": "6d65cc44-67b6-4ba7-9645-3b53b2666bd5",
+    "businessTimestamp": "2025-01-05T00:30:00",
+    "cdsId": "30792cc5-0615-4b82-a1a3-1ee258c5f98e",
+    "documentId": "10819fb4-dcd2-42d0-b6c1-bfb981e3a1d6",
+    "gridModelId": "59259aa7-3c28-43fb-a2aa-566a68935a3c",
+    "ownerCode": "10X1001A1001A094",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-05T00:00:00",
+        "to": "2025-01-05T01:00:00"
+    },
+    "version": 8,
+    "assessedElementList": [
+        {
+            "appointedMargin": 86.0,
+            "areaCode": "10YBE----------2",
+            "assessedPowerTransferCorridorCode": "fc9602e1-a004-4a6a-b039-28c2154a72a3",
+            "assessedSystemOperatorCode": "10X1001A1001A094",
+            "conductingEquipmentMrid": "bc20f913-ce83-45fc-a29e-9041d5226e1c",
+            "conductingEquipmentName": "Equipment 1",
+            "contingencyList": [
+                {
+                    "contingencyMrid": "7c1099ea-6ee6-4242-b1e2-070c5d8dee1c",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                },
+                {
+                    "contingencyMrid": "bcf7fbc7-b7d2-449e-ad09-26f3bf7de310",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "b20e4485-be42-4da7-bbb4-9474e6320ce7",
+            "description": "Sample assessed element description 1",
+            "enabled": false,
+            "equipmentType": "staticVarCompensator",
+            "exclusionReason": "capacityCalculationRegion",
+            "flowReliabilityMargin": 73.16,
+            "inBaseCase": true,
+            "isCombinableWithContingency": true,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": false,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": true,
+            "maxFlow": 860.75,
+            "maxMarginAdjustment": 84.34,
+            "mrid": "adc43bf8-50ff-4a5f-9c12-fb2351b383b8",
+            "name": null,
+            "nativeRegionCode": "049b0864-38d3-4769-baa4-a7194f20bff8",
+            "overlappingZoneCode": "52f4e5c8-b788-41c2-bca4-03d11837eee9",
+            "positiveVirtualMargin": 94.04,
+            "remedialActionList": [
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "adacd2cd-006e-4b19-b861-9105be562ddf",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "805f2290-885a-47ab-93d9-293a938e8a55",
+                    "ruleType": "exclude"
+                },
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "dab4dd30-1317-4c06-bf43-cf713ef06113",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": "97a0377f-c75d-4e8b-83fe-f880b9278262",
+            "scannedThresholdMargin": 59.23,
+            "securedForRegionCode": "8b80675e-b069-4af6-9836-38eabc2034c6",
+            "targetRemainingAvailableMargin": 56.41,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "double",
+                        "duration": "PT8M",
+                        "mrid": "9a124e43-b8d2-4e4d-9180-a3e1626c764f",
+                        "type": "absolute",
+                        "value": 716.97,
+                        "variable": "activePowerMin"
+                    },
+                    "limitMrid": "aaf7179f-a06e-4e53-a4e4-a76221ba1ae3",
+                    "terminalMrid": "07497a9c-a784-45ff-bbc7-798b6268232c"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 13.32,
+            "areaCode": "10YBE----------2",
+            "assessedPowerTransferCorridorCode": "0d907c2d-3ce8-41f3-8c00-e2a1bda6dd60",
+            "assessedSystemOperatorCode": "10X1001A1001A094",
+            "conductingEquipmentMrid": "382dd90c-590d-4743-b717-02922efb4206",
+            "conductingEquipmentName": "Equipment 2",
+            "contingencyList": [
+                {
+                    "contingencyMrid": "7c1099ea-6ee6-4242-b1e2-070c5d8dee1c",
+                    "enabled": false,
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bcf7fbc7-b7d2-449e-ad09-26f3bf7de310",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "dcTieCorridorCode": "b0b526ba-71df-4f7c-b7d5-92baaf9db2f6",
+            "description": null,
+            "enabled": false,
+            "equipmentType": "gen",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": 22.77,
+            "inBaseCase": false,
+            "isCombinableWithContingency": true,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": true,
+            "maxFlow": 573.26,
+            "maxMarginAdjustment": 0.1,
+            "mrid": "b237aff2-00c8-43da-b273-ec119691c9b2",
+            "name": "Assessed Element 2",
+            "nativeRegionCode": "0e26a2dd-5074-437c-ad70-c9e2ae69badc",
+            "overlappingZoneCode": "fdccb815-27a8-44f1-9936-206d1b4781ac",
+            "positiveVirtualMargin": 68.56,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "b60e50f7-9f1c-47ca-9abd-5b548c902a19",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "6c536770-8818-44c6-9c19-44cde2631c49",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "9eadf388-1546-4814-8eab-5ba886b29dfc",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": "c480843b-8e43-4cb4-8424-06f19e842b8c",
+            "scannedThresholdMargin": 83.06,
+            "securedForRegionCode": "8a27510e-74b6-4a1e-87e3-86f58cacee91",
+            "targetRemainingAvailableMargin": 41.89,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "direct",
+                        "duration": "PT58M",
+                        "mrid": "2672d323-0f23-4a85-95f0-d2c9fb2acbe0",
+                        "type": "ratio",
+                        "value": 924.89,
+                        "variable": "voltageAngleMax"
+                    },
+                    "limitMrid": "81e5ded1-baa9-4904-9449-535ede67bd22",
+                    "terminalMrid": "f33b4ca9-5136-4f86-bf4d-ecfcccd0ccec"
+                },
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "double",
+                        "duration": "PT49M",
+                        "mrid": "b8e29ef2-e9e5-4606-8a0b-ab96ce65ca2e",
+                        "type": "ratio",
+                        "value": 969.29,
+                        "variable": "voltageMax"
+                    },
+                    "limitMrid": "1a0f4e67-e7b7-402a-a041-1e176609155c",
+                    "terminalMrid": "ab007fb3-14ff-487a-978c-9cd6bd726e27"
+                },
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "opposite",
+                        "duration": "PT32M",
+                        "mrid": "a614242b-2ee0-4d06-838c-6de281f185f0",
+                        "type": "absolute",
+                        "value": 579.02,
+                        "variable": "reactivePowerMin"
+                    },
+                    "limitMrid": "8f02d180-b881-44b5-893a-f28117f72a64",
+                    "terminalMrid": "b22b671e-8226-4530-b29d-8039acd53255"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 62.71,
+            "areaCode": "10YBE----------2",
+            "assessedPowerTransferCorridorCode": "f8185fe6-d714-4b5a-81da-882c513c01cf",
+            "assessedSystemOperatorCode": "10X1001A1001A094",
+            "conductingEquipmentMrid": "6b8046f8-2322-4344-8480-87d80c93e1fc",
+            "conductingEquipmentName": "Equipment 3",
+            "contingencyList": [
+                {
+                    "contingencyMrid": "7c1099ea-6ee6-4242-b1e2-070c5d8dee1c",
+                    "enabled": false,
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bcf7fbc7-b7d2-449e-ad09-26f3bf7de310",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "af8dafca-aea5-4f27-bd81-79d991d6e131",
+            "description": "Sample assessed element description 3",
+            "enabled": false,
+            "equipmentType": "switch",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": 25.54,
+            "inBaseCase": true,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": true,
+            "maxFlow": 295.53,
+            "maxMarginAdjustment": 11.42,
+            "mrid": "a837cb9f-02a8-4e14-8f9c-7e0d5e833d35",
+            "name": null,
+            "nativeRegionCode": "7d78bcf4-6d4e-490b-af43-1c2eacfc2425",
+            "overlappingZoneCode": "95ca7caa-1192-48f7-bf4d-24f8d31934bd",
+            "positiveVirtualMargin": 3.99,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "743cfdec-7490-44df-bfeb-266634d9e25f",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "b53eda71-83c2-4ebf-8e0a-9de2598211eb",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": "a85d602f-56e2-4dea-9e7b-c36be7ec6f05",
+            "scannedThresholdMargin": 11.44,
+            "securedForRegionCode": "a1c41a8d-fc9b-4a4e-bd8b-1272dd54b9c9",
+            "targetRemainingAvailableMargin": 64.31,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "direct",
+                        "duration": "PT14M",
+                        "mrid": "8d0b56ee-9c94-42af-8eb7-ffa58299ff51",
+                        "type": "ratio",
+                        "value": 599.96,
+                        "variable": "activePowerMin"
+                    },
+                    "limitMrid": "f1d8c768-9018-42db-a82f-be4c2c925069",
+                    "terminalMrid": "1c06ec95-72a1-49fe-8e27-9660a8c3af0d"
+                },
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "opposite",
+                        "duration": "PT6M",
+                        "mrid": "424decaa-eb28-41a4-9a58-c1724838c5c0",
+                        "type": "absolute",
+                        "value": 629.17,
+                        "variable": "voltageMin"
+                    },
+                    "limitMrid": "71123ac3-637c-4694-a2f0-ef681df9925f",
+                    "terminalMrid": "625571da-4160-4919-b1a7-3adc138f6ecc"
+                },
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "double",
+                        "duration": "PT24M",
+                        "mrid": "8283a8b6-5a23-47b0-acd4-3d2c58eee7bf",
+                        "type": "ratio",
+                        "value": 628.55,
+                        "variable": "currentMax"
+                    },
+                    "limitMrid": "8496428f-5d69-4d2a-ab33-308d3a33108e",
+                    "terminalMrid": "cd678ea9-7acb-4fc6-ab7f-46bca9932716"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 85.53,
+            "areaCode": "10YBE----------2",
+            "assessedPowerTransferCorridorCode": "dd42cea3-7ce6-44fd-8439-5ebeaf3b6eef",
+            "assessedSystemOperatorCode": "10X1001A1001A094",
+            "conductingEquipmentMrid": "fefcf499-9226-4d09-8e5e-8396aaeeb370",
+            "conductingEquipmentName": null,
+            "contingencyList": [
+                {
+                    "contingencyMrid": "7c1099ea-6ee6-4242-b1e2-070c5d8dee1c",
+                    "enabled": false,
+                    "ruleType": "exclude"
+                },
+                {
+                    "contingencyMrid": "bcf7fbc7-b7d2-449e-ad09-26f3bf7de310",
+                    "enabled": false,
+                    "ruleType": "exclude"
+                }
+            ],
+            "dcTieCorridorCode": "59b468f8-1e7a-4e53-b490-8983c269fbe5",
+            "description": null,
+            "enabled": false,
+            "equipmentType": "bus",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": 81.19,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": true,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": true,
+            "maxFlow": 749.52,
+            "maxMarginAdjustment": 85.91,
+            "mrid": "1ec9b033-6979-4c84-aad2-a75d2fe6195c",
+            "name": null,
+            "nativeRegionCode": "8e5f0001-b5ef-4c16-9317-47f9fee395b7",
+            "overlappingZoneCode": "ef4b2825-069b-4356-b1d2-45304aac6a7c",
+            "positiveVirtualMargin": 73.18,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "03d17a05-fa8a-4e5e-b3ca-08a2e50c4d9e",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "09b4fd4c-067b-445f-9eb3-595add0eb651",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": "5c39006d-7ced-427e-9fe4-1859a6b7003b",
+            "scannedThresholdMargin": 2.29,
+            "securedForRegionCode": "703115c0-49a0-43a8-98cd-c49cda7c0ec8",
+            "targetRemainingAvailableMargin": 33.12,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "direct",
+                        "duration": "PT31M",
+                        "mrid": "3e0ce5f3-bf80-4221-9704-3df69c2ca252",
+                        "type": "absolute",
+                        "value": 726.71,
+                        "variable": "reactivePowerMin"
+                    },
+                    "limitMrid": "1f2e2cba-c293-4f78-93b0-52f9951540f1",
+                    "terminalMrid": "a7bafd9f-18cd-43cd-9f1e-1c78819c8a67"
+                },
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "double",
+                        "duration": "PT7M",
+                        "mrid": "82c7ef2d-0091-43ed-8082-20f8d1987a00",
+                        "type": "absolute",
+                        "value": 849.62,
+                        "variable": "currentMin"
+                    },
+                    "limitMrid": "26e8bd0c-42cb-4387-96e1-7b117e761004",
+                    "terminalMrid": "6a621b41-7fa1-4603-a332-a554dfca95d1"
+                },
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "double",
+                        "duration": "PT45M",
+                        "mrid": "4f5a2008-40d6-4c60-aaa0-1d148079cd88",
+                        "type": "ratio",
+                        "value": 214.94,
+                        "variable": "activePowerMax"
+                    },
+                    "limitMrid": "7fa81e28-3e72-4150-8ff4-d0d727ecef87",
+                    "terminalMrid": "d24de837-30eb-420a-808b-0e532775623c"
+                }
+            ]
+        }
+    ]
+}

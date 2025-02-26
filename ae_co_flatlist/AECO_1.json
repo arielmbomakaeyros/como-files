@@ -1,0 +1,657 @@
+{
+    "id": "72c43255-25d1-44d6-b593-181be160a1c0",
+    "awid": "0018433060000000000000000008079100",
+    "businessTimestamp": "2024-06-22 19:30:00",
+    "documentId": "7b64e406-5285-468a-9239-553ea938b8dd",
+    "ownerCode": "22XCORESO------S",
+    "ownerRole": "rcc",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-06-22 19:00:00",
+        "to": "2024-06-22 20:00:00"
+    },
+    "version": "1.0",
+    "cdsId": "d6bdb5f6-1a6b-4c6a-9622-914228c2b587",
+    "gridModelId": "baf407c4-e18e-42e9-999f-797d0c6fc158",
+    "assessedElementFlatListId": "79ddf36b-fbf1-4193-9a90-23d5e95a94d3",
+    "contingencyFlatListId": "72cd8b1a-c9a4-400d-be1a-6b937d380bc9",
+    "type": "final",
+    "assessedElementList": [
+        {
+            "mrid": "bf858c47-42d1-4d1d-875c-4b21315807b0",
+            "name": "D7_POLSUM S/KUSENH2/YBELLN2",
+            "conductingEquipmentMrid": "#_9916a352-c9ef-43b1-b227-879442cda792",
+            "conductingEquipmentName": "D7_POLSUM S/KUSENH2/YBELLN2",
+            "equipmentType": "line",
+            "areaCode": "10XDE-RWENET---W",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-RWENET---W",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "01a03d4c-6ab3-458c-98e5-3d3e093a9da3",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "8e24cd93-21e9-4913-b809-c539d7b1fa5a",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "9c939e7b-9203-4042-a9e9-945f851f2ea1",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bf35b5ba-6ac5-42a6-84a5-e6122a228a8d",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "5def55f1-f87d-46d4-a2f1-703eaa3b58e6",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "df546a72-2b9a-47d8-8257-e6c0c1ac2cd7",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "1d81baf9-0075-4840-809a-1ccbed684cd0",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "af0352f3-333d-4acf-a0ce-d9a50fd760e0",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "4956ef21-86ba-4fe5-9914-2c1fcff0ebdb",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "7dd67c9f-9864-49d5-8f3b-c3dd17b71103",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": [],
+            "isCombinableWithRemedialAction": "true"
+        },
+        {
+            "mrid": "f3193ff8-7918-48fd-900a-74c7bf8d5170",
+            "name": "D7_TOESEE W/OSTRAT4/YOSTRA4",
+            "conductingEquipmentMrid": "#_3a36e729-625c-4625-90e8-ab0dbac620b0",
+            "conductingEquipmentName": "D7_TOESEE W/OSTRAT4/YOSTRA4",
+            "equipmentType": "line",
+            "areaCode": "10XDE-RWENET---W",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "true",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-RWENET---W",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "53e7649a-320f-4ce7-9915-e9eebb42a075",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "5c16bc50-427a-4909-ab87-fe263956c1bf",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "cf5ea785-b16b-4d29-a294-7bece08d7479",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "ca88404d-60ae-42a8-8037-322d15fe8889",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "9178fd2a-1a35-490c-bbea-42b47f4f0a2a",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "f0e30986-a396-47da-ac38-1e3d715f6aae",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "3462c8ab-9599-4654-8078-db8d5cdbfc55",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "267a9fe7-0907-495b-b489-378d490419f9",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0975fe52-5689-4eae-b73b-3be1f5348555",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "cf5ea785-b16b-4d29-a294-7bece08d7479",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": [],
+            "isCombinableWithRemedialAction": "true"
+        },
+        {
+            "mrid": "464d571f-66b9-42a7-8ddb-0e6f6d761185",
+            "name": "Altentreptow S\u00e2\u20ac\u00a5Gransee_479",
+            "conductingEquipmentMrid": "#_ba23151e-618a-40ec-ac17-51cd412a036c",
+            "conductingEquipmentName": "Altentreptow S\u00e2\u20ac\u00a5Gransee_479",
+            "equipmentType": "line",
+            "areaCode": "10XDE-VE-TRANSMK",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-VE-TRANSMK",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "6f97697a-712e-487c-bb63-26a1f3dbb941",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "597bb38a-a682-4f90-accd-324d9f102050",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "502bdb15-804b-4c6a-ac00-ee4b634afa77",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "4a49bc25-86de-4954-9ba2-ca3f7736c6f1",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0ca6876a-ce86-4e64-bedc-0928d0234fe6",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "14170ac2-f129-4ed9-92ee-fa8046fdc7b5",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "3c557dc0-8cb6-4b71-9387-c3710100d5b6",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "30d23a69-6ed5-48b9-be60-ed3da973c51a",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "13fba1cd-b901-4723-acca-20369903c49e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "2bb99e41-0b71-42f3-99ea-418390302742",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "15ff9c2c-77cf-487f-a403-9d1ef3f9ef5e",
+            "name": "WolkramshausenVieselbach_368",
+            "conductingEquipmentMrid": "#_042a3890-25ba-4b18-b226-353333c6afae",
+            "conductingEquipmentName": "WolkramshausenVieselbach_368",
+            "equipmentType": "line",
+            "areaCode": "10XDE-VE-TRANSMK",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-VE-TRANSMK",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "2f19e316-c66c-4d02-b0e8-624e59c7be5e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "429767df-c958-4f0c-975f-56558d5a36d3",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0b0725be-c4b8-408c-9683-4b4fc4f88059",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "17b26b04-cff0-497b-9e2b-ae769d3feb70",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "59b9269e-6565-4c6b-bdd1-557b66d093f0",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "81dd4e17-7736-4e15-a491-772bb6b20df5",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "a59cb60e-c07a-4f19-ad3d-9de3272ca5ff",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "abd648e3-6efc-4c45-84c8-876bc4d576dc",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "146d0381-13d5-4df6-bf9c-591356df3805",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "2f5f7cef-b4d7-41d2-9544-04bc8ab90a87",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "ef90b10d-d17d-49e4-9b1a-2c9c60ade73c",
+            "name": "D4BR 711-D4PHIL18-PHIWSBR7",
+            "conductingEquipmentMrid": "#_ad3855d9-6c6a-4e10-b737-80b73f2b5681",
+            "conductingEquipmentName": "D4BR 711-D4PHIL18-PHIWSBR7",
+            "equipmentType": "line",
+            "areaCode": "10XDE-ENBW--TNGX",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-ENBW--TNGX",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "be7dad87-b35d-472b-8083-8306c3dab943",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "747ee670-6511-4c48-aef9-16043cabbda6",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "3d0272b6-beb5-4101-83c0-694c9e90fb6f",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "5dd5d0aa-55ce-48fa-8e83-9754dcca3955",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "693b5785-0971-4770-9ea5-5b62cd706f9c",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "d56b0c09-2c20-48f0-b7ab-8da1dc7dc076",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "3e9c4c79-e051-4fc6-b638-aeee31a1bda3",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "f16e48ab-5c17-4f8a-8126-f2464c8306f5",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "a5a436f2-e31c-4026-869f-ef14d1374c23",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "110608b2-07d9-499c-b5fb-76244add0998",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": [],
+            "isCombinableWithRemedialAction": "true"
+        },
+        {
+            "mrid": "70d384fa-5abf-42be-b339-e08fe45db570",
+            "name": "D4GK4 21-D4WNHE21-WNHRTGK4",
+            "conductingEquipmentMrid": "#_93c03cdd-b8c7-416a-a351-38ef5fcadff7",
+            "conductingEquipmentName": "D4GK4 21-D4WNHE21-WNHRTGK4",
+            "equipmentType": "line",
+            "areaCode": "10XDE-ENBW--TNGX",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-ENBW--TNGX",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "739e69b8-0a32-4a1a-96f8-1e58e8888d5d",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "e22fb651-81a9-4257-a146-6740a4bd5508",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bbfc8e69-8316-4e52-ac85-3adf754fe933",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "e9f7dcce-a6d4-47b0-82ed-7c80856d8c2f",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "be192908-1f4d-459f-9604-33b769019863",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "c7b0ccf7-0de3-4006-8dc8-94171cc077b5",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "7c17f710-27d3-448d-94e1-ff5bbcfb5243",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "82a1b1ff-cca6-47c8-9ba7-33f98bb04442",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "07525a2e-fa72-4332-b48f-8c7d7f64c14c",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "2804dc79-25a3-4924-86fb-ad7e67eaa74d",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": [],
+            "isCombinableWithRemedialAction": "true"
+        },
+        {
+            "mrid": "1a151612-34d6-4f0d-9959-de016f8880ba",
+            "name": "D2OBR D2OBA 270",
+            "conductingEquipmentMrid": "#_A9EB2D3B-5D4C-61B0-E054-0010E06FFF68",
+            "conductingEquipmentName": "D2OBR D2OBA 270",
+            "equipmentType": "line",
+            "areaCode": "10XDE-EON-NETZ-C",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "true",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-EON-NETZ-C",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "806330e1-d8a4-49f6-b670-667d36cca33b",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0b67eb53-1f46-4797-aa97-ef0cc6798710",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "622bcf4d-69c9-4876-b3f9-b3afb1b381e2",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "ecdd034b-9300-46f9-8a3a-73c66852c046",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bc9c6cb2-a6bc-478d-9ed9-9c4dd7ad2c2e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "a3da5b0c-6336-4674-a5cc-038a09b9d39f",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "119fd64b-3233-4434-b1ff-f55d2e869f63",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "4070aae4-7e00-436b-a702-ef6bd10e2941",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "00aff231-b740-4a2d-ae37-45af980b81ef",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "8761c6f7-c046-41a8-a11c-f37cc4584023",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "3ce4fa8d-4079-4a14-92e4-525184ad310c",
+            "name": "ZOL T212",
+            "conductingEquipmentMrid": "#_d55bb741-efc0-4adc-8a51-cd9f2b401a41",
+            "conductingEquipmentName": "ZOL T212",
+            "equipmentType": "line",
+            "areaCode": "10XDE-EON-NETZ-C",
+            "enabled": "true",
+            "inBaseCase": "true",
+            "isCritical": "false",
+            "isCrossBorderRelevant": "true",
+            "isCombinableWithContingency": "true",
+            "assessedSystemOperatorCode": "10XDE-EON-NETZ-C",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "7ab71ed6-e62f-4b5a-a742-5fae9e2f235d",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "4e0e7dd4-b1df-4c22-a54f-87fb33e17bde",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "bc9c6cb2-a6bc-478d-9ed9-9c4dd7ad2c2e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "64ed767e-8981-4702-a54c-e8b0bfa4ca41",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "446cfebe-dc77-4f6a-b79d-0987bd20784e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "8c8e324e-1b65-4d85-b1d1-693545d74555",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "29c4048b-9370-4b69-ada8-aa9e1a4ac100",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0bb689df-ab0a-48f7-a1c3-64f39a692f5e",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "0b67eb53-1f46-4797-aa97-ef0cc6798710",
+                    "enabled": "true",
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "b6b9a24c-51f3-44b4-8bfb-2b7b652a4439",
+                    "enabled": "true",
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        }
+    ]
+}

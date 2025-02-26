@@ -1,72 +1,221 @@
 {
-    "businessTimestamp": "2025-02-21T05:00:22.971887",
-    "cdsId": "4dfaa47e-cbf6-4281-8d9b-99c897f6c784",
+    "businessTimestamp": "2025-02-21T09:28:56.753332",
+    "cdsId": "a6e07fca-2c65-418b-ae60-3f0c3cc7d5ab",
     "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
     "contingencyWithRemedialActionList": null,
-    "documentId": "db3b7033-cf9c-4817-84dc-e786065e95e2",
-    "gridModelId": "a06d794c-88b1-435a-bc42-c12627161d15",
-    "gridStateAlterationRemedialActionList": [
-        {
-            "available": true,
-            "description": null,
-            "gridStateAlterationList": null,
-            "impactThresholdMargin": 89.41,
-            "isCrossBorderRelevant": true,
-            "isManual": false,
-            "kind": "curative",
-            "mrid": "46bb2515-ba29-4655-b1af-e0eaeb2c8ed4",
-            "name": null,
-            "penaltyFactor": 65.05,
-            "regionCode": "cf643d1f-8034-460b-961d-814a2a5d0b5a",
-            "systemOperatorCode": null,
-            "timeToImplement": 21.83
-        }
-    ],
-    "ownerCode": "10XPL-TSO------P",
+    "documentId": "887ce6aa-d9fc-415c-943b-38d923174f96",
+    "gridModelId": "4db2ca41-09f3-4a6c-8941-b64238411e02",
+    "gridStateAlterationRemedialActionList": null,
+    "ownerCode": "10XAT-APG------Z",
     "ownerRole": "System Operator",
-    "powerBidScheduleList": null,
-    "powerRemedialActionList": [
+    "powerBidScheduleList": [
         {
-            "available": true,
-            "biddingZoneCode": "f6017507-4ef9-42c1-859d-4a37f6b41056",
+            "currency": "GBP",
             "description": "Sample description 1",
-            "glskStrategy": null,
-            "impactThresholdMargin": null,
-            "isCrossBorderRelevant": true,
-            "isManual": true,
-            "kind": "curative",
-            "maxEconomicP": null,
-            "maxRegulatingDown": null,
-            "maxRegulatingUp": 63.94,
-            "minEconomicP": null,
-            "mrid": "beac7a3e-36a9-4b86-bd2d-e24385848114",
-            "name": "Sample name 1",
-            "penaltyFactor": 15.73,
-            "powerRemedialActionType": "redispatch",
-            "regionCode": "f473792a-cbf2-4c43-b860-efcb9e7b2cfe",
-            "shiftMethod": null,
-            "systemOperatorCode": "1b0fe884-6827-41a3-8ac5-2275d4a377cc",
-            "timeToImplement": 36.22
+            "direction": "up",
+            "glskBidActionDistributionList": null,
+            "interpolationKind": "next",
+            "isOffer": false,
+            "leadTime": null,
+            "maximumUpTime": 17.34,
+            "minimumActivationP": 92.91,
+            "minimumOffTime": 91.56,
+            "minimumUpTime": 79.06,
+            "mrid": "df479ccc-4cd6-4186-8941-ac4e9a75ea0e",
+            "name": null,
+            "p": 61.62,
+            "powerBidDependencyList": [
+                {
+                    "delay": null,
+                    "dependentPowerGridScheduleMrid": "b48852c0-4c30-4073-ba13-0852d42272cb",
+                    "kind": "restrictive",
+                    "mrid": "8719efd0-5987-461e-ae15-c70948196f05"
+                }
+            ],
+            "powerRemedialActionMrid": "5d9b9e01-3141-4c7b-a57a-4659ed32f472",
+            "price": 18.1,
+            "priority": 1,
+            "reservePrice": null,
+            "shutdownCost": null,
+            "startUpCost": null,
+            "stepIncrementP": 22.92,
+            "totalMaximumEnergy": null,
+            "totalMinimumEnergy": null
+        },
+        {
+            "currency": null,
+            "description": "Sample description 2",
+            "direction": "down",
+            "glskBidActionDistributionList": null,
+            "interpolationKind": "none",
+            "isOffer": false,
+            "leadTime": null,
+            "maximumUpTime": null,
+            "minimumActivationP": null,
+            "minimumOffTime": null,
+            "minimumUpTime": null,
+            "mrid": "5449e805-bef8-4c33-87cc-35c9ae2598d8",
+            "name": null,
+            "p": null,
+            "powerBidDependencyList": [
+                {
+                    "delay": 31.85,
+                    "dependentPowerGridScheduleMrid": "36673e79-b35c-4aef-bad4-729f6111f6eb",
+                    "kind": "inclusive",
+                    "mrid": "32cc3d0c-302d-4425-9919-35faec3a6eed"
+                },
+                {
+                    "delay": null,
+                    "dependentPowerGridScheduleMrid": "ec80a8ee-e239-4270-ac27-07136a4c23f6",
+                    "kind": "exclusive",
+                    "mrid": "4e95373f-89a2-408f-93f1-86c9739e422d"
+                }
+            ],
+            "powerRemedialActionMrid": "41c367c9-0a1d-45d2-a281-93c4cf74c9b3",
+            "price": null,
+            "priority": null,
+            "reservePrice": 67.46,
+            "shutdownCost": 92.03,
+            "startUpCost": null,
+            "stepIncrementP": 33.83,
+            "totalMaximumEnergy": null,
+            "totalMinimumEnergy": 91.8
         }
     ],
+    "powerRemedialActionList": null,
     "powerShiftKeyDistributionList": [
         {
-            "description": "Sample description 1",
-            "mrid": "a31470a4-84a7-4f04-a7c1-3be18557cd9b",
+            "description": null,
+            "mrid": "9975ed60-ff18-4023-a62c-1f61803ee9c1",
+            "name": "Sample name 1",
+            "powerBidScheduleMrid": "899d3a11-e076-4491-8832-1bfd8e29b7af",
+            "resourceMrid": "2cf22c0d-88c6-426d-9d7f-fd4a390c1254"
+        },
+        {
+            "description": "Sample description 2",
+            "mrid": "842ec801-cc16-4943-be23-b2d28e5af1ee",
             "name": null,
-            "powerBidScheduleMrid": "11a9f9ce-d256-4497-9683-7ff398eab7e8",
-            "resourceMrid": "d0390200-49f1-4296-bc8e-b5432d5ce75c"
+            "powerBidScheduleMrid": "ebe4df12-439d-44dd-9f3d-9a6f1d1c45e6",
+            "resourceMrid": "b33e0a3e-6199-4e46-9f03-6dc5caaa37f9"
         }
     ],
-    "powerShiftKeyList": null,
-    "remedialActionGroupList": null,
-    "remedialActionListId": "e082bc07-b568-4d95-88cc-00c786ba633e",
+    "powerShiftKeyList": [
+        {
+            "areaCode": null,
+            "blockType": "explicitInstruction",
+            "energyGroupMrid": null,
+            "resourceMrid": "c88dcfab-024c-4391-a830-44384b50ff5a",
+            "resourceType": null,
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 2,
+                "participationFactor": null,
+                "shiftDirection": null
+            }
+        },
+        {
+            "areaCode": "3bb00e4c-39b9-4795-9dd9-8badb9886399",
+            "blockType": "generatorsRemainingCapacity",
+            "energyGroupMrid": null,
+            "resourceMrid": "5457fc7c-87d2-420c-904d-1afd0be41a24",
+            "resourceType": null,
+            "value": {
+                "activePowerMax": 143.99,
+                "activePowerMin": 2.25,
+                "blockOrder": null,
+                "participationFactor": null,
+                "shiftDirection": "up"
+            }
+        }
+    ],
+    "remedialActionGroupList": [
+        {
+            "description": "Sample description 1",
+            "maxRegulatingDown": null,
+            "maxRegulatingUp": null,
+            "mrid": "9a4f8ec7-dd12-4bc6-80e5-f7240ca4e423",
+            "name": null,
+            "remedialActionDependencyList": [
+                {
+                    "enabled": false,
+                    "kind": "none",
+                    "mrid": "9cc9a394-8b70-4088-89c7-fde33dade65a",
+                    "remedialActionMrid": "32fa13ff-d059-460e-a24d-9f63d754528c"
+                },
+                {
+                    "enabled": true,
+                    "kind": "none",
+                    "mrid": "cd9320b6-226e-4c8c-9290-2955fc6c0ea9",
+                    "remedialActionMrid": "11318e8d-10f1-4192-9a2b-13b425a9c357"
+                },
+                {
+                    "enabled": true,
+                    "kind": "inclusive",
+                    "mrid": "443f296f-5873-43c9-ab42-4c74bf223dcf",
+                    "remedialActionMrid": "b4634f2e-f2b3-4639-aa72-72a63a97ec30"
+                }
+            ]
+        },
+        {
+            "description": "Sample description 2",
+            "maxRegulatingDown": 84.92,
+            "maxRegulatingUp": null,
+            "mrid": "09f021a3-fe23-4048-8d9c-744011ab35bf",
+            "name": "Sample name 2",
+            "remedialActionDependencyList": [
+                {
+                    "enabled": false,
+                    "kind": "inclusive",
+                    "mrid": "6e38ed86-b939-4f95-80af-fcf736cd5417",
+                    "remedialActionMrid": "49b16e02-648c-439b-975a-6a1a66e187a0"
+                },
+                {
+                    "enabled": false,
+                    "kind": "restrictive",
+                    "mrid": "f9479ae8-8275-427c-83d8-6293ea959f4e",
+                    "remedialActionMrid": "de94e69a-ee4f-4fb7-8f02-85da9fd6da62"
+                },
+                {
+                    "enabled": true,
+                    "kind": "restrictive",
+                    "mrid": "9e59dfee-9c80-4c18-bc9c-e49f09f4f81b",
+                    "remedialActionMrid": "36d69140-11ba-4644-8563-07d6dd57c947"
+                }
+            ]
+        },
+        {
+            "description": null,
+            "maxRegulatingDown": 79.79,
+            "maxRegulatingUp": null,
+            "mrid": "04eb13f6-7661-4103-8a68-f5d249aef5d8",
+            "name": "Sample name 3",
+            "remedialActionDependencyList": [
+                {
+                    "enabled": false,
+                    "kind": "restrictive",
+                    "mrid": "18bea9a2-d247-4938-9811-413d573e7f10",
+                    "remedialActionMrid": "f14a80d8-2061-4b8c-b6bb-638da0126088"
+                },
+                {
+                    "enabled": true,
+                    "kind": "exclusive",
+                    "mrid": "5182572b-2897-4639-b41c-9d5d2c6c8e23",
+                    "remedialActionMrid": "5f3436ee-e981-4440-852a-298af057cf66"
+                },
+                {
+                    "enabled": true,
+                    "kind": "exclusive",
+                    "mrid": "af81e6ba-bd15-42b0-857f-83586f055c56",
+                    "remedialActionMrid": "90fd2802-90df-4a5f-b6cc-11dbdc92ecae"
+                }
+            ]
+        }
+    ],
+    "remedialActionListId": "1780c452-d5e2-479e-98bd-361ec92d10b3",
     "timeHorizon": "dayAhead",
-    "timeInterval": {
-        "from": "2024-01-03T00:00:00",
-        "to": "2024-01-03T15:00:00"
-    },
-    "version": 9,
-    "areaCode": "10Y1001C--00153X"
+    "timeInterval": null,
+    "version": 10,
+    "areaCode": "10YDOM-1010A019R"
 }

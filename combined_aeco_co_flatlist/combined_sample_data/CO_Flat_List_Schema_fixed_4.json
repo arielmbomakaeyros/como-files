@@ -1,0 +1,45 @@
+{
+    "businessTimestamp": "2025-01-04T00:30:00",
+    "cdsId": "342f768b-aa3f-41fb-b6ac-572d2ca0cc1a",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "35a2d041-91bd-45a3-97af-9143a03a6fbd",
+                    "equipmentType": "busbar",
+                    "mrid": "d93ca076-40db-487f-be83-7f51d738fee8",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "943ed709-50a8-42a2-aa0e-3357e5a4f696"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "environmental",
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "7b8e5707-af63-4c80-b852-2e5cf434ed51",
+            "groupCode": "943ed709-50a8-42a2-aa0e-3357e5a4f696",
+            "mrid": "d7c3cb7d-36d3-4ccc-996f-7c8088677e3c",
+            "mustStudy": true,
+            "name": null,
+            "probability": null
+        }
+    ],
+    "contingencyListId": "1382c0d6-0af6-4b77-9321-66eecb98ddc9",
+    "documentId": "29154ba6-8b39-4567-987a-7471972e8356",
+    "gridModelId": "d41318a3-c956-4e00-a767-ff9aa5ca9de4",
+    "ownerCode": "10XSK-SEPS-GRIDB",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-04T00:00:00",
+        "to": "2025-01-04T01:00:00"
+    },
+    "version": 2
+}

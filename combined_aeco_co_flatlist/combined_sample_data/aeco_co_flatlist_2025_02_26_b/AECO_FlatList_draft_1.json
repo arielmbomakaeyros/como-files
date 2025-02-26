@@ -1,0 +1,143 @@
+{
+    "assessedElementFlatListId": "b8ad5766-13b8-440c-997c-d9a8244a9b29",
+    "contingencyFlatListId": "7e204922-3d34-4d5e-9578-06754eb81d69",
+    "businessTimestamp": "2025-01-01T00:30:00",
+    "cdsId": "2c2ecf00-ebe4-4ae9-999d-4ba4c09920c4",
+    "documentId": "0bbd3c1a-b316-4651-b5c3-75155d6ff070",
+    "gridModelId": "35f17ead-6d0b-4145-a290-367dc38b1c30",
+    "ownerCode": "10XDE-EON-NETZ-C",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-01T00:00:00",
+        "to": "2025-01-01T01:00:00"
+    },
+    "version": 2,
+    "assessedElementList": [
+        {
+            "appointedMargin": 22.48,
+            "areaCode": "10Y1001A1001A82H",
+            "assessedPowerTransferCorridorCode": "39e024c3-6b87-4c1a-8153-48b166440d54",
+            "assessedSystemOperatorCode": "10XDE-EON-NETZ-C",
+            "conductingEquipmentMrid": "8a8da096-defe-4acd-b943-bfdf747e76c4",
+            "conductingEquipmentName": null,
+            "contingencyList": [
+                {
+                    "contingencyMrid": "371b4929-e389-4766-8380-05193cb946df",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "2621d96d-d87e-4aa9-8f16-0423122da8e3",
+            "description": "Sample assessed element description 1",
+            "enabled": false,
+            "equipmentType": "line",
+            "exclusionReason": "capacityCalculationRegion",
+            "flowReliabilityMargin": 35.8,
+            "inBaseCase": true,
+            "isCombinableWithContingency": true,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": false,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": false,
+            "maxFlow": 746.93,
+            "maxMarginAdjustment": 38.7,
+            "mrid": "f0db7178-d776-4824-8d40-e66a03239fee",
+            "name": null,
+            "nativeRegionCode": "6b38c5e4-af0e-4deb-9783-f6c577098eee",
+            "overlappingZoneCode": "701f733d-a3c8-45e5-a548-0e4e73d89b2c",
+            "positiveVirtualMargin": 12.42,
+            "remedialActionList": [
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "98d93c6a-f846-4525-bcf7-794bc3cb6b02",
+                    "ruleType": "exclude"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "b49b2e97-9765-47c8-9953-00a3cbe4dec5",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": "79c616b1-975a-4786-a36b-3be3ad2cd6c9",
+            "scannedThresholdMargin": 1.75,
+            "securedForRegionCode": "5d2b3039-ebc6-48bd-ba9d-cb164e692157",
+            "targetRemainingAvailableMargin": 9.27,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "category",
+                        "direction": "direct",
+                        "duration": "PT5M",
+                        "mrid": "5980a959-7b50-42a2-8958-0a145a70393a",
+                        "type": "absolute",
+                        "value": 288.8,
+                        "variable": "activePowerMin"
+                    },
+                    "limitMrid": "d874fbcb-6f32-41d7-9d7e-15029631a051",
+                    "terminalMrid": "591d80dd-5dcc-4ffd-b757-2423fa8c8832"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 4.44,
+            "areaCode": "10Y1001A1001A82H",
+            "assessedPowerTransferCorridorCode": "7ecefdb3-8952-4cf7-864f-91cd5df6e1f9",
+            "assessedSystemOperatorCode": "10XDE-EON-NETZ-C",
+            "conductingEquipmentMrid": "2f3c44bf-9147-4945-8f92-bc9e687a439d",
+            "conductingEquipmentName": null,
+            "contingencyList": [
+                {
+                    "contingencyMrid": "371b4929-e389-4766-8380-05193cb946df",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "ddefe562-bd4d-4263-acea-e243c8b7a741",
+            "description": null,
+            "enabled": true,
+            "equipmentType": "line",
+            "exclusionReason": "capacityCalculationRegion",
+            "flowReliabilityMargin": 36.6,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": true,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": true,
+            "maxFlow": 879.08,
+            "maxMarginAdjustment": 91.96,
+            "mrid": "b052158c-f3d4-4681-a86d-a74677318465",
+            "name": null,
+            "nativeRegionCode": "99c55c44-6761-4499-ac77-4f86d58d1b54",
+            "overlappingZoneCode": "5cf3e489-961e-409a-81a6-e909cac95d3c",
+            "positiveVirtualMargin": 11.21,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "3e236c1c-f95f-419c-b5e1-0514ad0e9743",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": "ee110ef0-d29b-46bf-9e8b-8e4c4c94778e",
+            "scannedThresholdMargin": 23.66,
+            "securedForRegionCode": "e97a9137-f924-4134-ab2d-9649e78ccf42",
+            "targetRemainingAvailableMargin": 22.89,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": "permanent",
+                        "direction": "direct",
+                        "duration": "PT38M",
+                        "mrid": "daffdd48-3cb6-4ba8-b551-a844d24dd366",
+                        "type": "absolute",
+                        "value": 451.6,
+                        "variable": "apparentPowerMax"
+                    },
+                    "limitMrid": "8f5ed5a7-fdf1-447f-9385-024768b15393",
+                    "terminalMrid": "84cfbf65-e0a4-4063-8933-02fe4efa84f2"
+                }
+            ]
+        }
+    ]
+}

@@ -1,31 +1,45 @@
 {
-    "businessTimestamp": "2025-02-19T05:57:38.552206",
-    "cdsId": "190e0ad2-1f69-43ba-bacb-71a9d936b586",
+    "businessTimestamp": null,
+    "cdsId": "495a07a5-4665-4d68-a4bd-39d196379c3c",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "6bbcb5db-754a-4ae8-b04f-3ef941c87e76",
+    "documentId": "49262b04-1588-472a-83a5-7224c6b47185",
     "ownerCode": "10XDE-ENBW--TNGX",
     "ownerRole": "Grid Manager",
     "powerShiftKeyList": [
         {
-            "areaCode": "763a5d64-afa8-43ab-a5cb-b6bf0cf79d14",
-            "blockType": null,
-            "energyGroupMrid": "f28cb7aa-cb17-463b-a5e6-179ddf7428f0",
-            "resourceMrid": "d5adeefa-f82a-4ea5-8261-0d6ef7779831",
+            "areaCode": "10YDE-ENBW-----N",
+            "blockType": "generatorsAndConsumptionsP",
+            "energyGroupMrid": "94270824-0074-4efa-b4c5-3677210cef70",
+            "resourceMrid": "610dc08a-531e-47ad-9c40-d611a2cb333d",
             "resourceType": null,
             "value": {
                 "activePowerMax": null,
-                "activePowerMin": null,
+                "activePowerMin": 444.83,
                 "blockOrder": null,
                 "participationFactor": null,
+                "shiftDirection": "upAndDown"
+            }
+        },
+        {
+            "areaCode": "10YDE-ENBW-----N",
+            "blockType": "generatorsFlat",
+            "energyGroupMrid": null,
+            "resourceMrid": null,
+            "resourceType": null,
+            "value": {
+                "activePowerMax": 18.61,
+                "activePowerMin": 344.52,
+                "blockOrder": null,
+                "participationFactor": 0.05,
                 "shiftDirection": null
             }
         }
     ],
-    "timeHorizon": "twoDaysAhead",
+    "timeHorizon": "monthAhead",
     "timeInterval": {
         "from": "2024-01-05T00:00:00",
-        "to": "2024-01-05T10:00:00"
+        "to": "2024-01-05T07:00:00"
     },
-    "version": 5
+    "version": 9
 }

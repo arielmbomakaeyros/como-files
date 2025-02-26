@@ -1,0 +1,14 @@
+{
+    "assessedElementFlatListId": "0fe46650-b0fe-443e-8ec1-42d933629eda",
+    "contingencyFlatListId": "2c9339f2-93f8-45de-9658-563209a1efce",
+    "businessTimestamp": "2025-02-19T18:27:00.349379",
+    "cdsId": "d8f1464e-4a6a-4757-9c34-bb4142202267",
+    "documentId": "2fc59aee-8a1f-4cd0-8e88-de8248ba8b51",
+    "gridModelId": "59de6eee-fc06-4365-a7d3-3c87c4ccd659",
+    "ownerCode": "10XDE-RWENET---W",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 2,
+    "assessedElementList": null
+}

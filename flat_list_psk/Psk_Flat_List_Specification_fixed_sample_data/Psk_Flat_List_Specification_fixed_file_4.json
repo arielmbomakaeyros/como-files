@@ -1,16 +1,56 @@
 {
-    "businessTimestamp": "2025-02-20T05:57:38.552047",
-    "cdsId": "923c387c-07a2-4fb6-aedd-b6009a18f6cf",
+    "businessTimestamp": "2025-02-20T08:54:31.993317",
+    "cdsId": "8afef394-dd41-461b-b67a-0b4782c8b60e",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "4f1a97dc-15a9-4f14-a464-909bb3a35231",
-    "ownerCode": "10XAT-APG------Z",
-    "ownerRole": "System Operator",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
-    "timeInterval": {
-        "from": "2024-01-04T00:00:00",
-        "to": "2024-01-04T08:00:00"
-    },
-    "version": 2
+    "documentId": "d10ff8b7-ad91-438f-a525-4bac42d25a1a",
+    "ownerCode": "10X1001A1001A361",
+    "ownerRole": "Network Engineer",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "49Y000000000003M",
+            "blockType": null,
+            "energyGroupMrid": null,
+            "resourceMrid": "86498be3-5e29-4b07-83be-221b5276c84c",
+            "resourceType": null,
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 7,
+                "participationFactor": null,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "49Y000000000003M",
+            "blockType": "consumptionsP",
+            "energyGroupMrid": null,
+            "resourceMrid": "9971d5f8-c6ad-448a-b6bb-2c019b9ff239",
+            "resourceType": null,
+            "value": {
+                "activePowerMax": 858.5,
+                "activePowerMin": 883.69,
+                "blockOrder": 4,
+                "participationFactor": 0.67,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "49Y000000000003M",
+            "blockType": null,
+            "energyGroupMrid": null,
+            "resourceMrid": null,
+            "resourceType": null,
+            "value": {
+                "activePowerMax": 607.31,
+                "activePowerMin": 65.97,
+                "blockOrder": 1,
+                "participationFactor": null,
+                "shiftDirection": null
+            }
+        }
+    ],
+    "timeHorizon": "weekAhead",
+    "timeInterval": null,
+    "version": 6
 }

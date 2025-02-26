@@ -1,0 +1,14 @@
+{
+    "assessedElementFlatListId": "36256907-504f-4342-a50a-7e52342a8c1b",
+    "contingencyFlatListId": "df6ef3b5-de73-487c-8418-cba213d9a2e4",
+    "businessTimestamp": "2025-02-25T18:27:00.336898",
+    "cdsId": "390d79ba-6f2f-4486-b6c4-c249c7b3672a",
+    "documentId": "b0abe30e-1d21-450c-be06-e47e5591d6b5",
+    "gridModelId": "b953f593-9ab2-46d8-ab25-3774a82343b2",
+    "ownerCode": "10X1001A1001A361",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 7,
+    "assessedElementList": null
+}

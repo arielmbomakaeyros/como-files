@@ -1,0 +1,524 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://iec.ch/TC57/AECO_Flat_List",
+    "title": "AssessedElementFlatList",
+    "type": "object",
+    "properties": {
+        "assessedElementList": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "$ref": "#/definitions/AssessedElement"
+            }
+        },
+        "assessedElementFlatListId": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "contingencyFlatListId": {
+            "type": "string"
+        },
+        "businessTimestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "cdsId": {
+            "type": "string"
+        },
+        "documentId": {
+            "type": "string"
+        },
+        "gridModelId": {
+            "type": "string"
+        },
+        "ownerCode": {
+            "type": "string"
+        },
+        "ownerRole": {
+            "type": "string"
+        },
+        "timeHorizon": {
+            "description": "Time horizon for which the Cost Sharing/CROSA process is executed",
+            "$ref": "#/definitions/TimeHorizonKind"
+        },
+        "timeInterval": {
+            "$ref": "#/definitions/TimeInterval"
+        },
+        "version": {
+            "type": "integer"
+        }
+    },
+    "definitions": {
+        "TimeHorizonKind": {
+            "description": "The code list of the time horizons",
+            "type": "string",
+            "enum": [
+                "dayAhead",
+                "intraday",
+                "monthAhead",
+                "twoDaysAhead",
+                "weekAhead",
+                "yearAhead"
+            ]
+        },
+        "AssessedElement": {
+            "type": "object",
+            "description": "CIM desc : Assessed element is a network element for which the electrical state is evaluated in the regional or cross-regional process and which value is expected to fulfil regional rules function of the operational security limits.\nThe measurements and limits are as defined in the steady state hypothesis.",
+            "properties": {
+                "appointedMargin": {
+                    "description": "CIM desc : The percentage (appointed to a region) of the remaining margin obtained in the grid model to reach its current limit under normal operating conditions. The maximum percentage shall by default be 10% of the remaining margin.\nIt is only used when an assessed element is considered conservative for a region.\nThe allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "areaCode": {
+                    "type": "string"
+                },
+                "assessedPowerTransferCorridorCode": {
+                    "description": "mRID of the PowerTransferCorridor.\n\nA power transfer corridor is defined as a set of circuits (transmission lines or transformers) separating two portions of the power system, or a subset of circuits exposed to a substantial portion of the transmission exchange between two parts of the system.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "assessedSystemOperatorCode": {
+                    "description": "mRID of the SystemOperator of this AssessedElement.",
+                    "type": "string"
+                },
+                "conductingEquipmentMrid": {
+                    "description": "mRID of ConductingEquipment of this Contingency.\n\nCIM desc : The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "conductingEquipmentName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "contingencyList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/Contingency"
+                    }
+                },
+                "dcTieCorridorCode": {
+                    "description": "mRID of the DCTieCorridor of this Contingency.\n\nCIM desc : A collection of one or more direct current poles that connect two different control areas.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "enabled": {
+                    "description": "CIM desc : If true, the assessed element shall be considered under normal operating conditions.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "equipmentType": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/EquipmentType"
+                        }
+                    ]
+                },
+                "exclusionReason": {
+                    "description": "CIM desc : Reason for not associating this assessed element with a secured region.",
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/SecuredExclusionReasonKind"
+                        }
+                    ]
+                },
+                "flowReliabilityMargin": {
+                    "description": "CIM desc : Percentage of the maximum flow (margin) reserved to anticipate forecasting errors.\nThe allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "inBaseCase": {
+                    "description": "CIM desc : Indicates if the assessed element is scanned in the base case. In case of a base case overload, the assessed element is considered as a limiting element for the optimization process.\nTrue means that the assessed element is scanned in the base case. False means it is not scanned in the base case.",
+                    "type": "boolean"
+                },
+                "isCombinableWithContingency": {
+                    "description": "Defines if the AssessedElement is available to be combined with Contingency. If true,  this AssessedElement can be included in various combinations not defined in the data exchange in an explicit way. If false, this assessed element is not to be considered in any combination with remedial actions and contingencies except for the exclusive combination.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "isCombinableWithRemedialAction": {
+                    "description": "Defines if the AssessedElement is available to be combined with RemedialAction. If true,  this AssessedElement can be included in various combinations not defined in the data exchange in an explicit way. If false, this assessed element is not to be considered in any combination with remedial actions and contingencies except for the exclusive combination.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "isCritical": {
+                    "description": "CIM desc : Indicates if the assessed element is critical.  True, means that the assessed element is critical. False, means that the assessed element is not critical.  Critical means that the assessed element for the conducting equipment or power transfer corridor are considered limiting for the power exchange.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "isCrossBorderRelevant": {
+                    "description": "CIM desc : If true, the conducting equipment or the power transfer corridor is cross border relevant.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "isExcludedAdHoc": {
+                    "type": "boolean"
+                },
+                "maxFlow": {
+                    "description": "CIM desc : Maximum flow on a conducting equipment or a collection of conducting equipment forming a power transfer corridor under normal operating conditions. For assessed elements that become critical due to contingency, this value represents the maximum flow with remedial action taken into consideration.",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "maxMarginAdjustment": {
+                    "description": "CIM desc : Maximum adjustment, relative to maximum flow allowed for exceeding the maximum flow of this assessed element.\nThe allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "nativeRegionCode": {
+                    "description": "mRID of native region of this Contingency.\n\nCIM desc : A region where the system operator belongs to.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "overlappingZoneCode": {
+                    "description": "mRID of the OverlappingZone of this Contingency.\n\nCIM desc : A collection of all the overlapping cross border assessed elements which have the same sets of impacted and impacting regions.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "positiveVirtualMargin": {
+                    "description": "A positive margin that defines the overload allowed in a solution for the assessed element for a normal situation. The margin represents influences that can be solved by the System Operators using available remedial action which is not cross-border relevant remedial action.\nAll relevant operational limits (e.g. PATL, TATL, etc) are modified by this margin value. The attribute represents the increase. The allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "remedialActionList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/RemedialAction"
+                    }
+                },
+                "scannedForRegionCode": {
+                    "description": "mRID of the Region this Contingency was scanned for.\n\nCIM desc : A region where the system operator belongs to.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "scannedThresholdMargin": {
+                    "description": "CIM desc : Normal threshold percentage that a scanned element can be overloaded, on a given element, on top of any overload prior to optimisation (default= 5%). e.g. Initial loading of the element is 110%, with a 5% scanned threshold margin, the new maximum is 115% of the limit (e.g. PATL, TATL, etc).\nThe allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "securedForRegionCode": {
+                    "description": "mRID of the Region this Contingency is secured for.\n\nCIM desc : A region where the system operator belongs to.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "targetRemainingAvailableMargin": {
+                    "description": "CIM desc : Target for the remaining available margin as a percentage of maximum flow.\nThe allowed value range is [0,100].",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "terminalList": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "$ref": "#/definitions/AssessedElementTerminal"
+                    }
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "areaCode",
+                "assessedSystemOperatorCode",
+                "inBaseCase",
+                "isExcludedAdHoc",
+                "mrid"
+            ]
+        },
+        "AssessedElementTerminal": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/Limit"
+                        }
+                    ]
+                },
+                "limitMrid": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "terminalMrid": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "terminalMrid"
+            ]
+        },
+        "Contingency": {
+            "type": "object",
+            "properties": {
+                "contingencyMrid": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "ruleType": {
+                    "$ref": "#/definitions/RuleType"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "contingencyMrid",
+                "enabled",
+                "ruleType"
+            ]
+        },
+        "EquipmentType": {
+            "type": "string",
+            "enum": [
+                "bus",
+                "busbar",
+                "gen",
+                "line",
+                "load",
+                "shuntCompensator",
+                "staticVarCompensator",
+                "switch",
+                "transformer"
+            ]
+        },
+        "Limit": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/LimitCategory"
+                        }
+                    ]
+                },
+                "direction": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/LimitDirection"
+                        }
+                    ]
+                },
+                "duration": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "mrid": {
+                    "type": "string"
+                },
+                "type": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "$ref": "#/definitions/LimitType"
+                        }
+                    ]
+                },
+                "value": {
+                    "type": "number"
+                },
+                "variable": {
+                    "$ref": "#/definitions/LimitVariable"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "mrid",
+                "value",
+                "variable"
+            ]
+        },
+        "LimitCategory": {
+            "type": "string",
+            "enum": [
+                "category",
+                "permanent"
+            ]
+        },
+        "LimitDirection": {
+            "type": "string",
+            "enum": [
+                "direct",
+                "double",
+                "opposite"
+            ]
+        },
+        "LimitType": {
+            "type": "string",
+            "enum": [
+                "absolute",
+                "ratio"
+            ]
+        },
+        "LimitVariable": {
+            "type": "string",
+            "enum": [
+                "activePowerMax",
+                "activePowerMin",
+                "apparentPowerMax",
+                "apparentPowerMin",
+                "currentMax",
+                "currentMin",
+                "reactivePowerMax",
+                "reactivePowerMin",
+                "voltageAngleMax",
+                "voltageMax",
+                "voltageMin"
+            ]
+        },
+        "RemedialAction": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "remedialActionMrid": {
+                    "type": "string"
+                },
+                "ruleType": {
+                    "$ref": "#/definitions/RuleType"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "enabled",
+                "remedialActionMrid",
+                "ruleType"
+            ]
+        },
+        "RuleType": {
+            "type": "string",
+            "enum": [
+                "exclude",
+                "include"
+            ]
+        },
+        "SecuredExclusionReasonKind": {
+            "description": "CIM desc : The kind of secured exclusion reason.",
+            "type": "string",
+            "enum": [
+                "capacityCalculationRegion",
+                "nonNativeCapacityCalculationRegion",
+                "systemOperator"
+            ]
+        },
+        "TimeInterval": {
+            "type": "object",
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "from",
+                "to"
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "assessedElementFlatListId",
+        "contingencyFlatListId",
+        "businessTimestamp",
+        "cdsId",
+        "type",
+        "documentId",
+        "gridModelId",
+        "ownerCode",
+        "ownerRole",
+        "timeHorizon",
+        "timeInterval",
+        "version"
+    ]
+}

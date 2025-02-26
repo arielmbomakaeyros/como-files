@@ -1,0 +1,141 @@
+{
+    "businessTimestamp": "2024-01-06T01:23:41",
+    "cdsId": "31fa71ff-d070-4b5d-b0c5-4640f23ed8a2",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "17e268b4-764c-422c-90cc-8cf042accb29",
+                    "equipmentType": "switch",
+                    "mrid": "773e40fa-81a0-4280-9e12-515a7af97e62",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "a852ed06-8978-470e-92c2-8b189109c716",
+                    "equipmentType": "gen",
+                    "mrid": "cdb69f00-b305-4f37-903c-94b8cccf3840",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "b6960773-5ef8-4ca3-907e-914481ef2dd3",
+                    "equipmentType": "bus",
+                    "mrid": "0c54ee53-3294-4b65-872f-e2773eebd734",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "5bb251d7-325d-4baf-89ee-ea2550cbc95f"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "dbc8b7dd-5396-4a81-aeb8-644437eee1b1",
+                    "equipmentType": "transformer",
+                    "mrid": "8ca636fd-995f-4969-b5ee-1ab374cd46ae",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "10297fe2-0371-49d4-9956-011f8709dd33",
+                    "equipmentType": "busbar",
+                    "mrid": "d6fffc13-73e7-471f-a4de-523566d6d300",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "985a185a-fdb5-4c49-a556-8ad09f662e24",
+                    "equipmentType": "staticVarCompensator",
+                    "mrid": "0e7a3f37-d670-4252-8059-2ae4da0dcdeb",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "3d1e579f-771a-4b23-8a16-45f6ae2dc153"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "9b9a3d3f-def5-42ae-88e5-36299094a356",
+                    "equipmentType": "load",
+                    "mrid": "b693b73e-67dd-460b-9319-6a70664ff57e",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "7e6a46a2-aee0-4d88-aa6a-09032d7accef",
+                    "equipmentType": "staticVarCompensator",
+                    "mrid": "bf64b0cf-2840-4cf2-a5f6-459a09c0efbc",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "c858e67d-5db5-4845-a3d5-d1da19b23558",
+                    "equipmentType": "switch",
+                    "mrid": "71a602e4-8bb1-4518-998c-621b34f8dca8",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "54a03f70-3a6a-4546-8d98-8b992f4095b6"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "257207ec-c9d7-46fb-9e72-a23574ad9f14",
+            "groupCode": "2aae5301-8171-4f58-bb8e-e21835c86f56",
+            "mrid": "986f8259-c2ac-44d9-8298-24d4f12254c9",
+            "mustStudy": false,
+            "name": "Contingency 1",
+            "probability": 21.49
+        },
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 2",
+            "equipmentOperatorCode": "4afdceaf-3744-486c-8913-9aac915336a3",
+            "groupCode": "702670dc-4955-4277-8a39-69642fdf8f79",
+            "mrid": "7f18b558-4c41-42a8-9111-c7582136dfde",
+            "mustStudy": true,
+            "name": "Contingency 2",
+            "probability": 72.6
+        },
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "2782191c-b691-4ec5-92ca-4c8e279fe96f",
+            "groupCode": "81e79470-a2f7-48fa-b2b6-9953efd3221a",
+            "mrid": "54248114-a436-4cf7-870e-3c31bbda95c9",
+            "mustStudy": true,
+            "name": "Contingency 3",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "6bbb0fbf-8714-451f-bd8f-286911b9ca7a",
+    "documentId": "f1bce2b8-0829-441e-bacf-2840629cd2f5",
+    "gridModelId": "1437bde2-1eb7-4a29-9b8a-ccdb523abd4c",
+    "ownerCode": "10X1001A1001A329",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-06T00:00:00",
+        "to": "2024-01-06T09:00:00"
+    },
+    "version": 5
+}

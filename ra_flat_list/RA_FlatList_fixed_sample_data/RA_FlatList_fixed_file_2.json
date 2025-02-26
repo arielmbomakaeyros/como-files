@@ -1,49 +1,59 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "7184c2e6-a893-43e7-9fc5-d3a346c7f438",
+    "businessTimestamp": "2025-02-22T09:28:56.752308",
+    "cdsId": "eeba289d-4229-4f23-9679-5c9faff0388c",
     "comoDocumentType": "INTERNAL_RA_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
     "contingencyWithRemedialActionList": [
         {
-            "combinationConstraintKind": "considered",
-            "contingencyMrid": "d6fd3c13-e95a-4e9a-9cf5-8d710aac9b05",
-            "enabled": true,
-            "mrid": "cc5485e2-ed8b-49ef-a341-279cf1fae024",
-            "remedialActionMrid": "0520b8fc-0835-446a-b868-d1a0099eb19b"
+            "combinationConstraintKind": "included",
+            "contingencyMrid": "005638ab-3f1a-415c-a129-bba977b588e1",
+            "enabled": false,
+            "mrid": "ce590cd2-2c2e-42b7-8041-596a3f56dd47",
+            "remedialActionMrid": "e25e0b4f-82c5-4b45-b36f-e9c2afec6599"
         },
         {
-            "combinationConstraintKind": "included",
-            "contingencyMrid": "46542201-0855-40e1-9e3e-bb410b38c387",
-            "enabled": false,
-            "mrid": "0b3ccfe9-0ede-43ec-a979-7bf24dc577f3",
-            "remedialActionMrid": "eca7f70d-194e-481a-9d64-3ec6ffa44960"
+            "combinationConstraintKind": "considered",
+            "contingencyMrid": "eb05cbf7-6ba1-4aaa-992e-cfadc74e3e6b",
+            "enabled": true,
+            "mrid": "9da952c0-69f4-4d04-aa0b-5eb99b87b233",
+            "remedialActionMrid": "16841e35-66d5-41d4-943d-6958bff6714e"
         }
     ],
-    "documentId": "cb7cd804-25e9-4a56-9bbb-e8cb0fa9f59c",
-    "gridModelId": "5e96b46f-858d-4d48-a5b2-2046eae4e2c3",
+    "documentId": "4ccb38d4-5de0-48c2-b3af-ebf302c33f19",
+    "gridModelId": "37630e21-0342-416a-95d4-50b68f70e920",
     "gridStateAlterationRemedialActionList": null,
-    "ownerCode": "10XCZ-CEPS-GRIDE",
-    "ownerRole": "Network Engineer",
+    "ownerCode": "10YDE-VE-------2",
+    "ownerRole": "Grid Manager",
     "powerBidScheduleList": null,
     "powerRemedialActionList": null,
-    "powerShiftKeyDistributionList": null,
-    "powerShiftKeyList": null,
-    "remedialActionGroupList": [
+    "powerShiftKeyDistributionList": [
         {
             "description": "Sample description 1",
-            "maxRegulatingDown": 0.02,
-            "maxRegulatingUp": null,
-            "mrid": "f023d429-4312-42ec-9db1-683f5edaf46b",
-            "name": "Sample name 1",
-            "remedialActionDependencyList": null
+            "mrid": "dd60964e-ab62-447a-a630-faa7ce6e947e",
+            "name": null,
+            "powerBidScheduleMrid": "ff3cdc71-af51-427e-b988-e787cf929ae6",
+            "resourceMrid": "4cd39ba7-2c4b-467c-b0f7-1a0935a8e661"
+        },
+        {
+            "description": null,
+            "mrid": "5069703f-0499-4f8b-95e9-5a8d5a984be1",
+            "name": null,
+            "powerBidScheduleMrid": "0b218388-978a-400e-9fbd-cf6fe876e3c7",
+            "resourceMrid": "1e1f135c-31c5-4a46-9c6d-0df23b13160c"
+        },
+        {
+            "description": null,
+            "mrid": "4b3ef95e-e601-47a6-a2a4-e358c07861f4",
+            "name": null,
+            "powerBidScheduleMrid": "a6b553e8-cc50-4487-9817-68f0d5730250",
+            "resourceMrid": "26df3a0e-3e23-497f-84f2-84ddcaa32655"
         }
     ],
-    "remedialActionListId": "f269f3aa-4bbf-426a-8151-58074ab1b304",
+    "powerShiftKeyList": null,
+    "remedialActionGroupList": null,
+    "remedialActionListId": "bab953bd-da02-41fc-af56-7fb24e9fc6ac",
     "timeHorizon": "dayAhead",
-    "timeInterval": {
-        "from": "2024-01-02T00:00:00",
-        "to": "2024-01-03T00:00:00"
-    },
+    "timeInterval": null,
     "version": 3,
-    "areaCode": "10YCZ-CEPS-----N"
+    "areaCode": "10YDE-VE-------2"
 }

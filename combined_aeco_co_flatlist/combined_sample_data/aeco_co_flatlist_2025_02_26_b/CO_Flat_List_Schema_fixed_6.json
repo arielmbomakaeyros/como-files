@@ -1,0 +1,53 @@
+{
+    "businessTimestamp": "2025-01-06T00:30:00",
+    "cdsId": "52311e1f-d912-4fd3-ada6-069b46a17ef9",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "48596adb-1933-4980-b6db-1cc2122669ae",
+                    "equipmentType": "transformer",
+                    "mrid": "aa79f671-9b94-43cf-bc7e-26a068ee9fa1",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YHU-MAVIR----U",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "cff20ac0-c43e-415a-a90c-16bf18339753",
+                    "equipmentType": "gen",
+                    "mrid": "20c7c740-6574-48ac-a9b0-abcd04822d6a",
+                    "name": "Equipment 2"
+                }
+            ],
+            "groupCode": "c85330c8-73a9-40a3-80d1-7415bd917896"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "7576bf0a-0b04-4b77-94b8-adbe7c27872d",
+            "groupCode": "c85330c8-73a9-40a3-80d1-7415bd917896",
+            "mrid": "39499df7-04ca-4e92-8cd0-6871887451d6",
+            "mustStudy": true,
+            "name": "Contingency 1",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "b7072662-a923-49ae-b1c6-2b0079c25a9f",
+    "documentId": "eaf45356-c50e-4d49-af95-a4341debbccb",
+    "gridModelId": "cb077d25-0ec0-4a96-a2a3-2b17b2b6ff36",
+    "ownerCode": "10X1001A1001A329",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-06T00:00:00",
+        "to": "2025-01-06T01:00:00"
+    },
+    "version": 3
+}

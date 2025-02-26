@@ -1,0 +1,98 @@
+{
+    "businessTimestamp": "2024-01-03T00:05:47",
+    "cdsId": "495d01b0-6757-42f3-a0db-bdce57a6a09e",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YDE-ENBW-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "f07e7cae-3fcb-451e-992c-bdc8ff21c160",
+                    "equipmentType": "line",
+                    "mrid": "0d0a7810-7b96-4ac4-91ce-4ff1171209ed",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "0018ef33-fb14-445e-858b-53ca0677852c"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YDE-ENBW-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "50aba42e-d02b-45bb-bf3b-82f6e6a72696",
+                    "equipmentType": "load",
+                    "mrid": "3acc242a-6a72-42b9-a91b-8426c5fce89f",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YDE-ENBW-----N",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "620b553c-a09b-43f3-808c-44c93a846293",
+                    "equipmentType": "bus",
+                    "mrid": "fb2d5f9a-2b31-43b8-9d91-a53a738b44ae",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YDE-ENBW-----N",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "e11b7382-ab94-49cb-a038-17e9f56bd757",
+                    "equipmentType": "gen",
+                    "mrid": "1735564f-0abe-4bcc-b9e8-79fd641e4680",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "d0afe627-07ba-4176-b3aa-0586de7cb4d7"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YDE-ENBW-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "0704967b-de16-4deb-a34f-38080fc96a49",
+                    "equipmentType": "gen",
+                    "mrid": "81c1a333-e26f-4c3a-a0b8-dbb4784c62c2",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "8aaac9e5-54a6-46a6-841f-b89f44f62ffd"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "design",
+            "contingencyType": "exceptional",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "f5a86980-9ac7-4727-b56f-bae494b740b3",
+            "groupCode": "01f76aca-a794-468f-b494-151756e29612",
+            "mrid": "f32e0077-caa9-4be7-9b2c-31b5f88a58d6",
+            "mustStudy": true,
+            "name": null,
+            "probability": 52.36
+        },
+        {
+            "contingencyCondition": "operation",
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "8a29f768-27a3-41d0-b5bb-140bc689ceef",
+            "groupCode": "8e87ecff-c581-4579-81c4-0cdb1808b0e2",
+            "mrid": "910b782d-2ddd-4555-b611-69a949c3b4a1",
+            "mustStudy": false,
+            "name": "Contingency 2",
+            "probability": 85.75
+        }
+    ],
+    "contingencyListId": "0a7d44af-c239-486b-8e0f-3d021f9b0b40",
+    "documentId": "097ae456-17a9-418e-acf6-161d27eb4b2f",
+    "gridModelId": "bc1e5a93-045e-478e-afc4-d0054bcc01f2",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-03T00:00:00",
+        "to": "2024-01-03T04:00:00"
+    },
+    "version": 6
+}

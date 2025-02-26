@@ -1,0 +1,77 @@
+{
+    "businessTimestamp": "2025-01-05T00:30:00",
+    "cdsId": "58863cc3-b840-43fd-879e-2b111043c8c1",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YAT-APG------L",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "b98ca700-1268-40fc-ab2c-85b80f8a8126",
+                    "equipmentType": "shuntCompensator",
+                    "mrid": "6901f1b5-6a2d-486d-9c30-c34261f4d2ed",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YAT-APG------L",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "9297ec8f-3d3c-4f50-a80c-5c1f7db84aee",
+                    "equipmentType": "staticVarCompensator",
+                    "mrid": "b054dc22-8e00-4b56-a43e-9471a6b3c3f7",
+                    "name": "Equipment 2"
+                }
+            ],
+            "groupCode": "e6c3bf19-2ff4-4d41-9c90-df3c65644fa9"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YAT-APG------L",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "43782726-4796-4271-80da-674125f39ee4",
+                    "equipmentType": "gen",
+                    "mrid": "fe0e158c-799a-43dd-8d48-5b13e589e550",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "e4ae9d27-4419-4c21-adb9-e568bd25358a"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": null,
+            "equipmentOperatorCode": "00eb332e-e370-4e81-aae6-a3e4bbdf82c8",
+            "groupCode": "e6c3bf19-2ff4-4d41-9c90-df3c65644fa9",
+            "mrid": "7c1099ea-6ee6-4242-b1e2-070c5d8dee1c",
+            "mustStudy": true,
+            "name": "Contingency 1",
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "d7bb62b3-365c-4a5e-874c-0f539b5a2ed4",
+            "groupCode": "e4ae9d27-4419-4c21-adb9-e568bd25358a",
+            "mrid": "bcf7fbc7-b7d2-449e-ad09-26f3bf7de310",
+            "mustStudy": false,
+            "name": null,
+            "probability": null
+        }
+    ],
+    "contingencyListId": "f9afbe07-769b-4d5c-8310-c59fde9605f4",
+    "documentId": "6d65cc44-67b6-4ba7-9645-3b53b2666bd5",
+    "gridModelId": "1760e4a0-0d00-4d94-858e-cc8a9cc33cbd",
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-05T00:00:00",
+        "to": "2025-01-05T01:00:00"
+    },
+    "version": 3
+}

@@ -1,0 +1,498 @@
+{
+    "id": "66a2654fac244b450091070b",
+    "awid": "00119103100000000000000000000100",
+    "businessTimestamp": "2031-10-19T01:30:00Z",
+    "documentId": "66a26529ac244b45009106c2",
+    "ownerCode": "22XCORESO------S",
+    "ownerRole": "tso",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2031-10-19T01:00:00Z",
+        "to": "2031-10-19T02:00:00Z"
+    },
+    "version": 1,
+    "cdsId": "66a265527f3eb244ef8ab030",
+    "gridModelId": "668d30c61e458e44f97ed088",
+    "assessedElementFlatListId": "66a2654fac244b450091070b",
+    "contingencyFlatListId": "66a26529ac244b45009106c8",
+    "type": "final",
+    "assessedElementList": [
+        {
+            "mrid": "_y1kafewc-5962-47a0-a61c-8r17b60bbc91",
+            "name": "LAND-SOTT-BLAU",
+            "conductingEquipmentMrid": "_0b6f94f5-7a6f-4d44-bb9a-c1efbec377ad",
+            "conductingEquipmentName": "LAND-SOTT-BLAU",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_9eef1cd8-501a-4ad1-8c2d-cd3a93be7ab5",
+                    "limitMrid": "_9e473285-3cf6-4aff-bf5c-ad18361385b7"
+                },
+                {
+                    "terminalMrid": "_e2441033-04fd-42c3-ace5-cdd4e355d648",
+                    "limitMrid": "_5e2f07da-c2fb-4c39-8156-cebaa779c2df"
+                }
+            ],
+ 
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_fca45b8e-a55b-41cd-a84d-a9bd8b5592a1",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_740e3afb-1939-4c17-9a09-cf59179d622d",
+            "name": "LAND-SOTT-GELB",
+            "conductingEquipmentMrid": "_bded472d-4521-4ad5-a56b-caecceab7f88",
+            "conductingEquipmentName": "LAND-SOTT-GELB",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_f8898f5b-c9d6-4f96-a3b8-1c8746ca2572",
+                    "limitMrid": "_8d1d14a7-fd93-4ea2-94fb-e8e479945d62"
+                },
+                {
+                    "terminalMrid": "_ae068d16-2916-4a44-8735-db0d76df96f8",
+                    "limitMrid": "_436fd6ab-97c6-4fff-b355-8dc88c8d1a8f"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_ac76a869-0cd7-4b65-9cd0-8f189cf5ffg6",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_b56dbbd2-012f-4451-9975-e47d233eafbc",
+            "name": "DOLL-SOTT-GELB",
+            "conductingEquipmentMrid": "_2309537e-b409-4ec2-b795-f162bd49f7c2",
+            "conductingEquipmentName": "DOLL-SOTT-GELB",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_f96232f0-da3d-4967-9b6f-01d4e950aa46",
+                    "limitMrid": "_e473141d-d6af-43c4-8596-dea5f852ce53"
+                },
+                {
+                    "terminalMrid": "_c5c2a37d-1132-40ac-9990-8409f2fe9184",
+                    "limitMrid": "_1157a130-dcbe-4b9a-814f-7fca431892d2"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_cb67fc82-110e-445d-bbee-0bb03e5039876",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_a233f14f-3868-4786-b6a0-7fe5d569450c",
+            "name": "DOLL-SOTT-BLAU",
+            "conductingEquipmentMrid": "_a9db3109-2d90-4ebc-9513-45ce43cc07f2",
+            "conductingEquipmentName": "DOLL-SOTT-BLAU",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_8dfdb6b5-b99d-4027-9cb9-06a1fccf5a11",
+                    "limitMrid": "_1a247f03-9ba2-4fe0-bf7f-5695fe632435"
+                },
+                {
+                    "terminalMrid": "_b7d108d1-ff19-42f8-800a-d9b4d00b5599",
+                    "limitMrid": "_871b12d4-b606-4792-af4c-6f177296ec01"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_5f7724a3-cc2e-47ba-aa9b-ea77ac776023",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_c37b61de-abf8-4711-a2ae-fea12eb15575",
+            "name": "LAND-WAHL-BLAU-1",
+            "conductingEquipmentMrid": "_0f353476-b3f3-4713-ad9a-5294ce9d04e2",
+            "conductingEquipmentName": "LAND - X",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_54dd876a-efa9-4e6a-bf05-cca19761ccd7",
+                    "limitMrid": "_94f094c4-ee4a-491e-9ee3-5295ca25d0cf"
+                },
+                {
+                    "terminalMrid": "_500c6659-413b-4545-ab70-676d070c73a2",
+                    "limitMrid": "_73af5a99-d1f0-45c3-b427-3fbae4e588de"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_c6a724a3-cc2e-47ba-aa9b-ea77ac776365",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_2e611c20-d756-4b8c-9410-29b03b425f88",
+            "name": "SOTT-STAD-BLAU-1",
+            "conductingEquipmentMrid": "_7666c7ec-6b4e-487f-b31e-a433107dcd9b",
+            "conductingEquipmentName": "SOTT - X",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_8b28d4e0-fbc2-4f69-a6c2-0c686d71466e",
+                    "limitMrid": "_c5202492-1a5a-4df3-96f9-b0f0366163a2"
+                },
+                {
+                    "terminalMrid": "_c03c248c-8007-4915-84e6-5a496c4ccfcb",
+                    "limitMrid": "_c2493347-6864-4b22-945a-acf0b153a97e"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_b5e76b71-a98c-4763-a5c5-1aabd51ad62e",
+                    "enabled": false,
+                    "ruleType": "exclude"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_48e8af56-21ac-4e73-aec6-fcc27a6731ca",
+            "name": "DOLL-LUEN-BLAU-2",
+            "conductingEquipmentMrid": "_32f81589-fd27-4063-99fa-16789cfc8762",
+            "conductingEquipmentName": "DOLL - X",
+            "equipmentType": "line",
+            "areaCode": "10YRO-TEL------P",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XRO-TEL------2",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_ccd03867-18a0-47e4-934c-4a757d75b6f4",
+                    "limitMrid": "_aa3c05dd-e2a6-48bb-8db2-32a155edc851"
+                },
+                {
+                    "terminalMrid": "_e566e875-888e-463d-a44a-ed3ef6ae283a",
+                    "limitMrid": "_b27c99a4-d496-4182-a504-b100cedd4fbe"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_d783772c-b644-4603-8d72-b213431be829",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_b84ffe2c-5962-47a0-a61c-8617b60bbc91",
+            "name": "STAD-WAHL-GELB",
+            "conductingEquipmentMrid": "_5255fdcc-b844-48ac-8a3b-2bd1208fb84b",
+            "conductingEquipmentName": "STAD-WAHL-GELB",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_cb8db5ad-5851-44b0-9b29-d37662296e7d",
+                    "limitMrid": "_43359768-3471-43a1-b826-c3e0bca0217a"
+                },
+                {
+                    "terminalMrid": "_400fd21d-ddbd-4532-b08b-6adf9149f75f",
+                    "limitMrid": "_04f21769-5c1f-4bb2-a4e3-bc1a64b7d59c"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_b43d2168-3381-421f-a312-9479094ab29a",
+            "name": "STAD-WAHL-BLAU",
+            "conductingEquipmentMrid": "_ef6a0789-684f-46a0-b9e2-e06c25b93aea",
+            "conductingEquipmentName": "STAD-WAHL-BLAU",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_bb69c5c3-f29c-4365-8267-ed050214b68a",
+                    "limitMrid": "_011a579e-5bcd-4bbb-bf31-9ddbcb978f4d"
+                },
+                {
+                    "terminalMrid": "_3df6021b-368d-4ddd-a966-b8d0a8aa0d59",
+                    "limitMrid": "_e550ee48-21a4-4855-8f29-e0a4e470894e"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_17819726-5dc0-4054-bfbf-e383256987db",
+            "name": "LUEN-STAD-BLAU",
+            "conductingEquipmentMrid": "_c012239d-8960-4688-a656-79c786d21646",
+            "conductingEquipmentName": "LUEN-STAD-BLAU",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_5e0186f5-e627-4c2d-9750-0aba940be0ca",
+                    "limitMrid": "_8f174382-90e1-45f9-98d2-598368502abb"
+                },
+                {
+                    "terminalMrid": "_22814567-78a8-4e98-9a4b-45b35c8b4d16",
+                    "limitMrid": "_e285782d-5e0e-49c3-b184-076b21a37e02"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_c77cc0bc-62a1-473c-b178-4fd408659b30",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_f71f118e-bf0f-449c-a4a8-5404cf9096e4",
+            "name": "LUEN-STAD-GELB",
+            "conductingEquipmentMrid": "_c084eca3-8cdb-4b78-8317-954f593ba2a0",
+            "conductingEquipmentName": "LUEN-STAD-GELB",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_4ce44330-2132-4d4b-9dfe-e825f0d72b37",
+                    "limitMrid": "_57419c0b-2284-422a-b197-6ff758ab9cad"
+                },
+                {
+                    "terminalMrid": "_3a9aa744-c43d-4fb6-bdbb-fa1e0cce6c9c",
+                    "limitMrid": "_4e50ba6f-67aa-4b05-9eb0-aeedb070839b"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_c37b61de-abf8-4711-a2ae-fea12eb15577",
+            "name": "WAHL-LAND-BLAU-2",
+            "conductingEquipmentMrid": "_f43035d8-3122-4b19-ba9d-50fe8b790d2d",
+            "conductingEquipmentName": "WAHL - X",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_884f02af-671f-4ade-9b9a-7aa20f339d5f",
+                    "limitMrid": "_53507acf-71b0-46d4-8bc1-02249b867167"
+                },
+                {
+                    "terminalMrid": "_0c4b2af3-ba5e-4932-a95f-c3e1d41e86a7",
+                    "limitMrid": "_3d49ff7a-6204-4cd7-ae09-492272aab28b"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_c6a724a3-cc2e-47ba-aa9b-ea77ac776365",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_2e611c20-d756-4b8c-9410-29b03b425f8c",
+            "name": "STAD-SOTT-BLAU-1",
+            "conductingEquipmentMrid": "_f43035d8-3122-4b19-ba9d-50fe8b790d2d",
+            "conductingEquipmentName": "WAHL - X",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_884f02af-671f-4ade-9b9a-7aa20f339d5f",
+                    "limitMrid": "_53507acf-71b0-46d4-8bc1-02249b867167"
+                },
+                {
+                    "terminalMrid": "_0c4b2af3-ba5e-4932-a95f-c3e1d41e86a7",
+                    "limitMrid": "_3d49ff7a-6204-4cd7-ae09-492272aab28b"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        },
+        {
+            "mrid": "_48e8af56-21ac-4e73-aec6-fcc27a6731cb",
+            "name": "LUEN-DOLL-BLAU-2",
+            "conductingEquipmentMrid": "_fea2f0d1-0602-4af8-9256-4fb06a666e0b",
+            "conductingEquipmentName": "LUEN - X",
+            "equipmentType": "line",
+            "areaCode": "10YCA-BULGARIA-R",
+            "enabled": true,
+            "inBaseCase": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isCombinableWithContingency": true,
+            "assessedSystemOperatorCode": "10XBG-ESO------A",
+            "nativeRegionCode": "10Y1001C--00059P",
+            "securedForRegionCode": "10Y1001C--00059P",
+            "terminalList": [
+                {
+                    "terminalMrid": "_dbed945a-1448-4dd5-8941-3b057492d975",
+                    "limitMrid": "_61c80032-85ca-4006-b386-bd53065290b4"
+                },
+                {
+                    "terminalMrid": "_d204f61d-4837-49d2-9dc0-b05fadb9e8dc",
+                    "limitMrid": "_08e780d5-21cb-413f-afcc-44c5b8f0ef9a"
+                }
+            ],
+            "contingencyList": [
+                {
+                    "contingencyMrid": "_ac76a869-0cd7-4b65-9cd0-8f189cf5ffg6",
+                    "enabled": true,
+                    "ruleType": "include"
+                }
+            ],
+            "remedialActionList": []
+        }
+    ]
+}

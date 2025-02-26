@@ -1,0 +1,14 @@
+{
+    "assessedElementFlatListId": "5fd2279c-b48d-40c1-b6c3-11a93a71cf37",
+    "contingencyFlatListId": "f7d88cea-a884-4370-acc4-7848a708b43e",
+    "businessTimestamp": "2025-02-23T18:27:00.341801",
+    "cdsId": "7cfcef4e-bef5-4258-92fd-850ccbfa3ede",
+    "documentId": "4b93a055-947f-43c7-896a-058e88dd60ac",
+    "gridModelId": "3bf18d53-e496-4470-8979-1689f4a79039",
+    "ownerCode": "10XDE-RWENET---W",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 7,
+    "assessedElementList": null
+}

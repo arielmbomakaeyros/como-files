@@ -1,0 +1,117 @@
+{
+    "businessTimestamp": "2025-01-02T00:30:00",
+    "cdsId": "9717c2d8-1616-49e2-a312-e613d5c7a5aa",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "7208059b-88f4-4f12-91ed-b2f7e5c93824",
+                    "equipmentType": "shuntCompensator",
+                    "mrid": "db5d3d7a-3e7a-4873-a048-81800da78c3f",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "669d336d-6470-4ae5-93cc-1fbe81767448",
+                    "equipmentType": "transformer",
+                    "mrid": "3bfbfade-e6b6-4b9e-ad83-25fad6fd8b8d",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "08e5f130-5c37-4972-8b26-a4a3a61db59f",
+                    "equipmentType": "bus",
+                    "mrid": "ecf62195-39b2-4f18-8f25-83edf0659c39",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "f8a82991-14b9-43b9-95b9-ebd013dee1d0"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "cd17f51d-89af-4740-b9c7-376701cb9d28",
+                    "equipmentType": "busbar",
+                    "mrid": "c95d6593-30bf-49f2-b7f3-6ed4a30f4f70",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "862aebd7-c70b-45d6-a4f8-2b4acf3f8e4e",
+                    "equipmentType": "transformer",
+                    "mrid": "726c6f06-969d-444b-9012-64a0083fc81c",
+                    "name": "Equipment 2"
+                }
+            ],
+            "groupCode": "46540ae9-c0b4-486a-801c-05920763bf12"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10Y1001A1001A82H",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "35d74ef0-0585-416e-a06d-991141d93ca1",
+                    "equipmentType": "switch",
+                    "mrid": "47ac1d45-5bd1-43f4-bfee-4b315d3fecc3",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "9bca28ad-83cf-4095-b0c2-681c26eafee7"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "environmental",
+            "contingencyType": "ordinary",
+            "description": null,
+            "equipmentOperatorCode": "650cd691-cd99-46bb-b9a4-62bb63c3ff85",
+            "groupCode": "f8a82991-14b9-43b9-95b9-ebd013dee1d0",
+            "mrid": "d5dc2e17-0b72-427b-857c-521b2c809665",
+            "mustStudy": true,
+            "name": "Contingency 1",
+            "probability": 43.72
+        },
+        {
+            "contingencyCondition": "operation",
+            "contingencyType": "ordinary",
+            "description": null,
+            "equipmentOperatorCode": "1d9756a2-b824-4229-9e9d-9d4920b0bb0e",
+            "groupCode": "46540ae9-c0b4-486a-801c-05920763bf12",
+            "mrid": "15252d5b-5e61-4d0d-8fa6-4e32d43926de",
+            "mustStudy": false,
+            "name": null,
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "bf2a7ee3-cae7-4083-9168-0558289d000c",
+            "groupCode": "9bca28ad-83cf-4095-b0c2-681c26eafee7",
+            "mrid": "146f09dc-7350-499b-abfe-3a268d98c6f9",
+            "mustStudy": true,
+            "name": "Contingency 3",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "cd00c5a6-ab72-4376-b032-85abedfd37ea",
+    "documentId": "47b291e1-9bd0-43b4-bb43-2ebb10630845",
+    "gridModelId": "8fb26753-a5e1-45ba-a393-9b93885c9cab",
+    "ownerCode": "10XDE-ENBW--TNGX",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-02T00:00:00",
+        "to": "2025-01-02T01:00:00"
+    },
+    "version": 7
+}

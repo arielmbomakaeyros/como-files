@@ -1,0 +1,125 @@
+{
+    "businessTimestamp": "2025-01-03T00:30:00",
+    "cdsId": "481bfe63-28eb-4256-925c-df4c419c8f1c",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "d5d9a622-87b8-4f6a-a58c-8d8ba65110f9",
+                    "equipmentType": "line",
+                    "mrid": "bb847dc8-1777-44ed-a339-87284beab7e4",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "ee15651e-1218-4a9a-bc33-b5310116ae9d"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "646723ec-cdc7-45d7-b749-025cb4f86963",
+                    "equipmentType": "line",
+                    "mrid": "3149afe1-47dc-4528-a3df-72c5862d76f4",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "dd117e48-1c56-4bff-b547-0810233ee48d",
+                    "equipmentType": "busbar",
+                    "mrid": "75283b89-8272-4399-81fd-26a5c438e137",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "077d5cee-4814-4dfd-b7d6-ffa4d36442c4",
+                    "equipmentType": "load",
+                    "mrid": "72b057fb-953d-4d51-b9dc-2effe139ec8a",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "4ef98902-c99f-40ec-9060-1529504145cc"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "0782d1c7-54bf-4bac-a433-3fc716f99126",
+                    "equipmentType": "load",
+                    "mrid": "e86dd618-c551-4a3c-9359-73ab5247b32a",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "05aa5cbe-8089-4e73-9a06-b0a56a0e5fe1",
+                    "equipmentType": "gen",
+                    "mrid": "2095855c-7d29-4e2d-abfb-32a5a76ccaf5",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YCZ-CEPS-----N",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "442264d6-e0bc-4409-a8c9-251489710538",
+                    "equipmentType": "busbar",
+                    "mrid": "ee8df83a-8185-4f40-928f-810be06f7a5e",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "99f88275-e896-44fe-bac0-539f7a8157e8"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "exceptional",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "56edc149-a2a0-4973-8028-3df36a00a81e",
+            "groupCode": "ee15651e-1218-4a9a-bc33-b5310116ae9d",
+            "mrid": "b544b518-a9f1-4433-9b11-e5f08ec45490",
+            "mustStudy": true,
+            "name": "Contingency 1",
+            "probability": 12.91
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 2",
+            "equipmentOperatorCode": "681c7e27-7b6a-4ed5-b2ca-59bda5063b75",
+            "groupCode": "4ef98902-c99f-40ec-9060-1529504145cc",
+            "mrid": "2978dfa1-8c62-4fec-a16b-b1088b03139a",
+            "mustStudy": true,
+            "name": null,
+            "probability": 90.5
+        },
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 3",
+            "equipmentOperatorCode": "9b3a37a3-1d11-44d2-a196-c913ed33155d",
+            "groupCode": "99f88275-e896-44fe-bac0-539f7a8157e8",
+            "mrid": "86ef6771-6fd5-4978-9fc7-59518225a4e6",
+            "mustStudy": false,
+            "name": null,
+            "probability": 49.88
+        }
+    ],
+    "contingencyListId": "4df46a82-93fa-4f69-ad1f-eaa431b3f2a6",
+    "documentId": "0a70ebe6-7934-4f2b-a6e5-9c35e869439d",
+    "gridModelId": "4ceec59b-cece-46d5-8a31-7301c4497f6a",
+    "ownerCode": "10XCZ-CEPS-GRIDE",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2025-01-03T00:00:00",
+        "to": "2025-01-03T01:00:00"
+    },
+    "version": 7
+}

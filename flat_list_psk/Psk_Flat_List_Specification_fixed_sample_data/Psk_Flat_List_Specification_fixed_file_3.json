@@ -1,16 +1,13 @@
 {
     "businessTimestamp": null,
-    "cdsId": "88b33b18-8317-48af-be23-5aa6a5ba41c7",
+    "cdsId": "f75ffe64-0828-4019-bd54-1dfa070786a2",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "b4e93df7-18cd-4d9b-b0ac-d555879fd80d",
-    "ownerCode": "10XSI-ELES-----1",
-    "ownerRole": "System Operator",
+    "documentId": "1f856011-399f-4d73-a208-11dec2b0f05b",
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "Grid Manager",
     "powerShiftKeyList": null,
-    "timeHorizon": "intraday",
-    "timeInterval": {
-        "from": "2024-01-03T00:00:00",
-        "to": "2024-01-03T03:00:00"
-    },
-    "version": 8
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 3
 }

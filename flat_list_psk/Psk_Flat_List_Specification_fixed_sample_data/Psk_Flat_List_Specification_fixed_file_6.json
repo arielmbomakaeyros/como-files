@@ -1,16 +1,31 @@
 {
-    "businessTimestamp": "2025-02-18T05:57:38.552525",
-    "cdsId": "6c5fd30a-2b42-4f93-9f5c-145126a64328",
+    "businessTimestamp": null,
+    "cdsId": "14cf8f16-4f0e-479d-b107-4785d7e0dcfd",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "f0bdba68-755e-42e5-8098-29d1ba49bfa6",
-    "ownerCode": "10X1001A1001A329",
-    "ownerRole": "Network Engineer",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
+    "documentId": "63c944f4-9d3d-49e6-b0df-22861d349920",
+    "ownerCode": "10XSK-SEPS-GRIDB",
+    "ownerRole": "System Operator",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10YSK-SEPS-----K",
+            "blockType": "generatorsP",
+            "energyGroupMrid": null,
+            "resourceMrid": null,
+            "resourceType": "energyGroup",
+            "value": {
+                "activePowerMax": 852.99,
+                "activePowerMin": null,
+                "blockOrder": null,
+                "participationFactor": null,
+                "shiftDirection": null
+            }
+        }
+    ],
+    "timeHorizon": "twoDaysAhead",
     "timeInterval": {
         "from": "2024-01-06T00:00:00",
-        "to": "2024-01-07T00:00:00"
+        "to": "2024-01-06T06:00:00"
     },
-    "version": 2
+    "version": 6
 }

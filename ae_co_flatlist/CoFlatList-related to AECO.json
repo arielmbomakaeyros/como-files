@@ -1,0 +1,341 @@
+{
+    "id": "66a2654fac244b450091070d",
+    "awid": "00119103100000000000000000000100",
+    "businessTimestamp": "2031-10-19T01:30:00Z",
+    "documentId": "66a26529ac244b45009106c8",
+    "ownerCode": "22XCORESO------S",
+    "ownerRole": "tso",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2031-10-19T01:00:00Z",
+        "to": "2031-10-19T02:00:00Z"
+    },
+    "version": 1,
+    "cdsId": "66a265527f3eb244ef8ab03d",
+    "gridModelId": "668d30c61e458e44f97ed088",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyListId": "66a26529ac244b45009106c8",
+    "type": "final",
+    "contingencyList": [
+        {
+            "mrid": "_fca45b8e-a55b-41cd-a84d-a9bd8b5592a1",
+            "name": "CO-WAHL-LAND-BLAU",
+            "description": "CO-WAHL-LAND-BLAU",
+            "groupCode": "2510a018-337e-4dd6-b73e-4c3495dc6ed5",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_ac76a869-0cd7-4b65-9cd0-8f189cf5ffg6",
+            "name": "CO-STAD-SOTT-BLAU",
+            "description": "CO-STAD-SOTT-BLAU",
+            "groupCode": "a0705cca-dc57-44aa-bea7-277e865dab9d",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_cb67fc82-110e-445d-bbee-0bb03e5039876",
+            "name": "CO-LUEN-DOLL-BLAU",
+            "description": "CO-LUEN-DOLL-BLAU",
+            "groupCode": "4e0fa1f6-a391-4c1a-8715-bd163f2a5e29",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_5f7724a3-cc2e-47ba-aa9b-ea77ac776023",
+            "name": "CO-STAD-WAHL-BLAU",
+            "description": "CO-STAD-WAHL-BLAU",
+            "groupCode": "733417fa-4478-4977-91c5-20abc32d5c1e",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_c6a724a3-cc2e-47ba-aa9b-ea77ac776365",
+            "name": "CO-STAD-WAHL-GELB",
+            "description": "CO-STAD-WAHL-GELB",
+            "groupCode": "26abbec4-0465-4616-b4ee-c31bea9f1115",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_b5e76b71-a98c-4763-a5c5-1aabd51ad62e",
+            "name": "CO-LUEN-STAD-BLAU",
+            "description": "CO-LUEN-STAD-BLAU",
+            "groupCode": "d3520a66-0144-43f2-8033-5cd0004e6b7d",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_d783772c-b644-4603-8d72-b213431be829",
+            "name": "CO-LUEN-STAD-GELB",
+            "description": "CO-LUEN-STAD-GELB",
+            "groupCode": "3a690605-8bf6-4a39-b49c-a503eb1f711e",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_298826d7-6ba4-47ea-a3a6-1674e088c711",
+            "name": "CO-STAD-WAHL-GELB",
+            "description": "CO-STAD-WAHL-GELB",
+            "groupCode": "26abbec4-0465-4616-b4ee-c31bea9f1115",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_d7d45b8e-a55b-41cd-a84d-a9bd8b5591d4",
+            "name": "CO-LAND-WAHL-BLAU",
+            "description": "CO-LAND-WAHL-BLAU",
+            "groupCode": "86a7c40a-f302-4cf5-9ae5-2013fbbdbe2a",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_1286a869-0cd7-4b65-9cd0-8f189cf553c5",
+            "name": "CO-SOTT-STAD-BLAU",
+            "description": "CO-SOTT-STAD-BLAU",
+            "groupCode": "8f19061c-12fe-4cef-9e44-15b637dd06dc",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_cef8fc82-110e-445d-bbee-0bb03e503772",
+            "name": "CO-DOLL-LUEN-BLAU",
+            "description": "CO-DOLL-LUEN-BLAU",
+            "groupCode": "93204871-7237-4bf4-a48f-51ecb365aca6",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_66068553-cb30-4a9a-94f8-13ba6a76967d",
+            "name": "CO-DOLL-SOTT-GELB",
+            "description": "CO-DOLL-SOTT-GELB",
+            "groupCode": "c8777f1b-2a16-4bb7-a0d1-01c51e8015ac",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_c77cc0bc-62a1-473c-b178-4fd408659b30",
+            "name": "CO-DOLL-SOTT-BLAU",
+            "description": "CO-DOLL-SOTT-BLAU",
+            "groupCode": "72f958de-e4cb-4346-9e7a-8cc74a8c4763",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_2605e86e-a071-4f88-b48c-5d8b947e35c1",
+            "name": "CO-LAND-SOTT-GELB",
+            "description": "CO-LAND-SOTT-GELB",
+            "groupCode": "824715ad-b17f-4001-ad65-e0e02af3fc94",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        },
+        {
+            "mrid": "_65b7cc52-9dee-4d07-bc13-0818c44550f2",
+            "name": "CO-LAND-SOTT-BLAU",
+            "description": "CO-LAND-SOTT-BLAU",
+            "groupCode": "6cd8ee53-d439-431e-91a0-8bdab05785bf",
+            "mustStudy": true,
+            "contingencyType": "ordinary",
+            "equipmentOperatorCode": "10XDE-EON-NETZ-C"
+        }
+    ],
+    "contingencyGroupList": [
+        {
+            "groupCode": "a0705cca-dc57-44aa-bea7-277e865dab9d",
+            "equipmentList": [
+                {
+                    "description": "STAD-SOTT-BLAU",
+                    "mrid": "_bc73b4c8-0cbf-4d4b-aaf2-aa366c35ag67",
+                    "name": "STAD-SOTT-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_0780fa7e-02f6-480c-a56c-a7a558a37d30",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "4e0fa1f6-a391-4c1a-8715-bd163f2a5e29",
+            "equipmentList": [
+                {
+                    "description": "LUEN-DOLL-BLAU-1",
+                    "mrid": "_gac67113-f5b3-44af-a8df-d02f025a86ca",
+                    "name": "LUEN-DOLL-BLAU-1",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_fea2f0d1-0602-4af8-9256-4fb06a666e0b",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "8f19061c-12fe-4cef-9e44-15b637dd06dc",
+            "equipmentList": [
+                {
+                    "description": "SOTT-STAD-BLAU",
+                    "mrid": "_a163b4c8-0cbf-4d4b-aaf2-aa366c35ad19",
+                    "name": "SOTT-STAD-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_7666c7ec-6b4e-487f-b31e-a433107dcd9b",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "93204871-7237-4bf4-a48f-51ecb365aca6",
+            "equipmentList": [
+                {
+                    "description": "DOLL-LUEN-BLAU-1",
+                    "mrid": "_3beb7113-f5b3-44af-a8df-d02f025a7c71",
+                    "name": "DOLL-LUEN-BLAU-1",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_32f81589-fd27-4063-99fa-16789cfc8762",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "d3520a66-0144-43f2-8033-5cd0004e6b7d",
+            "equipmentList": [
+                {
+                    "description": "LUEN-STAD-BLAU",
+                    "mrid": "_35bd99fb-8193-46d3-a574-41f3f37eb795",
+                    "name": "LUEN-STAD-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_c012239d-8960-4688-a656-79c786d21646",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "3a690605-8bf6-4a39-b49c-a503eb1f711e",
+            "equipmentList": [
+                {
+                    "description": "LUEN-STAD-GELB",
+                    "mrid": "_721e8bff-c958-4809-99a3-b215c7112544",
+                    "name": "LUEN-STAD-GELB",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_c084eca3-8cdb-4b78-8317-954f593ba2a0",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "2510a018-337e-4dd6-b73e-4c3495dc6ed5",
+            "equipmentList": [
+                {
+                    "description": "WAHL-LAND-BLAU",
+                    "mrid": "_ac1c8569-906a-4370-aed7-d57b12c7f098",
+                    "name": "WAHL-LAND-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_0f353476-b3f3-4713-ad9a-5294ce9d04e2",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "86a7c40a-f302-4cf5-9ae5-2013fbbdbe2a",
+            "equipmentList": [
+                {
+                    "description": "LAND-WAHL-BLAU",
+                    "mrid": "_851c8569-906a-4370-aed7-d57b12c7f975",
+                    "name": "LAND-WAHL-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_f43035d8-3122-4b19-ba9d-50fe8b790d2d",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "c8777f1b-2a16-4bb7-a0d1-01c51e8015ac",
+            "equipmentList": [
+                {
+                    "description": "DOLL-SOTT-GELB",
+                    "mrid": "_762dd89e-5bda-4971-8db0-de4dea499920",
+                    "name": "DOLL-SOTT-GELB",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_2309537e-b409-4ec2-b795-f162bd49f7c2",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "6cd8ee53-d439-431e-91a0-8bdab05785bf",
+            "equipmentList": [
+                {
+                    "description": "LAND-SOTT-BLAU",
+                    "mrid": "_f9b50ada-6c58-4a67-8595-c0bbb9ca1e00",
+                    "name": "LAND-SOTT-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_0b6f94f5-7a6f-4d44-bb9a-c1efbec377ad",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "72f958de-e4cb-4346-9e7a-8cc74a8c4763",
+            "equipmentList": [
+                {
+                    "description": "DOLL-SOTT-BLAU",
+                    "mrid": "_e98954e7-cf41-4360-bdaa-5772ad62d705",
+                    "name": "DOLL-SOTT-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_a9db3109-2d90-4ebc-9513-45ce43cc07f2",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        },
+        {
+            "groupCode": "733417fa-4478-4977-91c5-20abc32d5c1e",
+            "equipmentList": [
+                {
+                    "description": "STAD-WAHL-BLAU",
+                    "mrid": "_96bf5142-a531-434a-9925-27918ed84f70",
+                    "name": "STAD-WAHL-BLAU",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_ef6a0789-684f-46a0-b9e2-e06c25b93aea",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "26abbec4-0465-4616-b4ee-c31bea9f1115",
+            "equipmentList": [
+                {
+                    "description": "STAD-WAHL-GELB",
+                    "mrid": "_987f5142-a531-434a-9925-27918ed8476b",
+                    "name": "STAD-WAHL-BELB",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_5255fdcc-b844-48ac-8a3b-2bd1208fb84b",
+                    "areaCode": "10YCA-BULGARIA-R"
+                }
+            ]
+        },
+        {
+            "groupCode": "824715ad-b17f-4001-ad65-e0e02af3fc94",
+            "equipmentList": [
+                {
+                    "description": "LAND-SOTT-GELB",
+                    "mrid": "_3122c1e1-4989-48de-bff9-4255d2e78a0c",
+                    "name": "LAND-SOTT-GELB",
+                    "equipmentType": "line",
+                    "equipmentMrid": "_bded472d-4521-4ad5-a56b-caecceab7f88",
+                    "areaCode": "10YRO-TEL------P"
+                }
+            ]
+        }
+    ]
+}

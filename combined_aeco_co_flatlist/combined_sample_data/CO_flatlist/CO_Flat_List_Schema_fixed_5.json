@@ -1,0 +1,125 @@
+{
+    "businessTimestamp": "2024-01-05T15:29:14",
+    "cdsId": "fe414335-08cf-4c63-a676-52de0333e6aa",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "7ca1ec83-022f-49cd-870b-964d68205fdc",
+                    "equipmentType": "gen",
+                    "mrid": "ab234d76-1839-4f46-a116-ddf931a15ce3",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "7e417ea0-d840-4fd1-99fa-2918b05d8481",
+                    "equipmentType": "staticVarCompensator",
+                    "mrid": "08ea6de5-99fa-453f-8ca2-ee2f7a0a04f3",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "629aa5c6-ab30-463b-9935-70843b3a3aa0",
+                    "equipmentType": "shuntCompensator",
+                    "mrid": "96fe0637-0334-450d-ab42-f108dd5f82ad",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "dc46fe8c-0d5b-41e8-894b-e73aece5b9e3"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "174a03e9-7ac3-479f-990d-80885047454d",
+                    "equipmentType": "bus",
+                    "mrid": "7e199059-f293-4b11-9bcf-61454cf7a076",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "1d8c8107-3e9d-47c7-b38d-bff530f7a536"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "3d03f2e2-e465-4dae-bd7b-6458b772e968",
+                    "equipmentType": "gen",
+                    "mrid": "89f9941f-59f4-4b2b-bd89-ac6e6fb001d4",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "66cd2766-99e5-4155-b5c8-d80ea3976b02",
+                    "equipmentType": "load",
+                    "mrid": "379ea2a4-00e6-47c6-8265-4bfbf8581820",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YSK-SEPS-----K",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "d123dd78-867c-4166-9059-c11e89bb44e6",
+                    "equipmentType": "line",
+                    "mrid": "c8c4a187-1092-469b-bb1a-ed84aeb13176",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "31dc91c2-446d-4414-89e3-4941798e9f7a"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": null,
+            "contingencyType": "outOfRange",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "9d30c04d-0255-4002-b741-1d029f6940d7",
+            "groupCode": "7a48fe6f-68b1-4d3e-a787-1a90bb8e36e2",
+            "mrid": "7faf8c6c-92dc-4963-846c-20eac10d4f1a",
+            "mustStudy": false,
+            "name": "Contingency 1",
+            "probability": null
+        },
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "ordinary",
+            "description": null,
+            "equipmentOperatorCode": "a41f6604-8e31-4523-a167-610ce8b3a66e",
+            "groupCode": "0ce65bb2-58ab-42b3-a64c-a1e58b0a3536",
+            "mrid": "6776f831-fa06-457b-a25e-34d615913592",
+            "mustStudy": true,
+            "name": null,
+            "probability": null
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "b25aebdc-1e26-498c-a39c-786f4c46d3d2",
+            "groupCode": "3d2d26cf-d322-4f0d-be7f-185b369acd3a",
+            "mrid": "b7326f4d-7c24-43fe-8906-e02350c8c5b2",
+            "mustStudy": false,
+            "name": null,
+            "probability": null
+        }
+    ],
+    "contingencyListId": "7515f38f-ebbc-414a-894d-9fa3df2df653",
+    "documentId": "4c1d3d7e-6c7e-4a10-a6f3-9a391733ba2b",
+    "gridModelId": "250ff2d6-d49c-42da-b725-3ce6276946bc",
+    "ownerCode": "10XSK-SEPS-GRIDB",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-05T00:00:00",
+        "to": "2024-01-05T19:00:00"
+    },
+    "version": 7
+}

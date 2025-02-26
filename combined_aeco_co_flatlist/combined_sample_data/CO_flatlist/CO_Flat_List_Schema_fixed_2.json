@@ -1,0 +1,69 @@
+{
+    "businessTimestamp": "2024-01-02T01:55:35",
+    "cdsId": "9a4ad2e0-fe76-4fd3-b8de-6f616804af8b",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YCB-BE-------T",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "7b477b43-e374-422f-8778-2781373277c1",
+                    "equipmentType": "switch",
+                    "mrid": "d1968494-3ed8-4ecd-805a-54aa8f3172c4",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "7036878b-3e6b-4a3c-9c66-bd6204b6e0a2"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YCB-BE-------T",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "2a4a2666-d4b0-449b-8982-7ae4c408fa42",
+                    "equipmentType": "shuntCompensator",
+                    "mrid": "81a4a388-7123-4772-91e7-4b0312c71711",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "b4e9df62-7f88-4a62-a93f-a89f225e3b6a"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "design",
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "e32d9077-1ee0-41df-999e-d6b2b4d0cef6",
+            "groupCode": "dec10e3f-80ca-40b4-9d89-a17504da382f",
+            "mrid": "f218925c-c803-4e01-8ffc-22f0da066871",
+            "mustStudy": true,
+            "name": null,
+            "probability": 13.59
+        },
+        {
+            "contingencyCondition": "operation",
+            "contingencyType": "exceptional",
+            "description": null,
+            "equipmentOperatorCode": "5d160ca9-1f34-4446-a4de-613f22f97e1a",
+            "groupCode": "2e03620d-53b1-407c-bd30-3ac50d1df086",
+            "mrid": "c5496f8c-0cd7-4b34-b836-07581bbe49b6",
+            "mustStudy": true,
+            "name": "Contingency 2",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "41792e7b-3294-48cb-aff1-98b359d005e7",
+    "documentId": "78718d22-8ed1-4082-8e5e-a4c8612c792e",
+    "gridModelId": "4c70571d-a96a-41fa-bb5a-c74174d3cb6c",
+    "ownerCode": "10X1001A1001A094",
+    "ownerRole": "System Operator",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-02T00:00:00",
+        "to": "2024-01-02T16:00:00"
+    },
+    "version": 9
+}

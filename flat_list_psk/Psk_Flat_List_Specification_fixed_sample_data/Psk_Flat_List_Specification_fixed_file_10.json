@@ -1,56 +1,16 @@
 {
     "businessTimestamp": null,
-    "cdsId": "69ac8049-b007-4ece-846a-4e98c923fd7a",
+    "cdsId": "9a027926-e2e5-498f-b67f-314e93fb75ed",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "1055edf7-9195-419a-987f-93b574fd637e",
+    "documentId": "7b45c276-062d-4350-a907-1c7793439f9b",
     "ownerCode": "10XPL-TSO------P",
-    "ownerRole": "Grid Manager",
-    "powerShiftKeyList": [
-        {
-            "areaCode": null,
-            "blockType": "generatorsUsedCapacity",
-            "energyGroupMrid": "d539b155-c6e9-47ae-92db-143a41f875e6",
-            "resourceMrid": null,
-            "resourceType": "energyGroup",
-            "value": {
-                "activePowerMax": 623.13,
-                "activePowerMin": null,
-                "blockOrder": null,
-                "participationFactor": 0.32,
-                "shiftDirection": "up"
-            }
-        },
-        {
-            "areaCode": "668955a1-1a46-44f3-986b-5b3f7607c52f",
-            "blockType": null,
-            "energyGroupMrid": null,
-            "resourceMrid": null,
-            "resourceType": "energyGroup",
-            "value": {
-                "activePowerMax": null,
-                "activePowerMin": 379.2,
-                "blockOrder": 9,
-                "participationFactor": null,
-                "shiftDirection": "upAndDown"
-            }
-        },
-        {
-            "areaCode": "e58008fb-ed37-46e8-b6f7-cf78bbb2bf0d",
-            "blockType": "explicitDistribution",
-            "energyGroupMrid": "3d1a4585-d234-4cb5-9065-785a6e302749",
-            "resourceMrid": null,
-            "resourceType": null,
-            "value": {
-                "activePowerMax": 342.48,
-                "activePowerMin": null,
-                "blockOrder": null,
-                "participationFactor": 0.14,
-                "shiftDirection": "upAndDown"
-            }
-        }
-    ],
-    "timeHorizon": "yearAhead",
-    "timeInterval": null,
-    "version": 8
+    "ownerRole": "System Operator",
+    "powerShiftKeyList": null,
+    "timeHorizon": "monthAhead",
+    "timeInterval": {
+        "from": "2024-01-10T00:00:00",
+        "to": "2024-01-10T09:00:00"
+    },
+    "version": 1
 }

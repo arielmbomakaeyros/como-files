@@ -1,13 +1,13 @@
 {
-    "businessTimestamp": "2025-02-22T05:57:38.551734",
-    "cdsId": "0e22139a-9c63-4962-85c6-5b013d5272bd",
+    "businessTimestamp": null,
+    "cdsId": "d5dfa418-9660-4259-bd80-4761ac7491ab",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "0b1f8281-c2c7-458e-ac69-9520dc8feb08",
-    "ownerCode": "10XDE-ENBW--TNGX",
-    "ownerRole": "Network Engineer",
+    "documentId": "c313cffc-b339-435f-af2d-1a9bc9a7f7ca",
+    "ownerCode": "10XDE-RWENET---W",
+    "ownerRole": "System Operator",
     "powerShiftKeyList": null,
-    "timeHorizon": "twoDaysAhead",
+    "timeHorizon": "monthAhead",
     "timeInterval": null,
-    "version": 6
+    "version": 7
 }

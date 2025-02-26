@@ -4,15 +4,7 @@ import csv
 import uuid
 from datetime import datetime, timedelta
 import random
-
-# Function to load TSO EIC codes and corresponding Area Codes from the CSV file
-def load_tso_eic_and_area_codes(csv_file_path):
-    tso_eic_to_area_code = {}  # Dictionary to map TSO EIC code to Area Code
-    with open(csv_file_path, mode='r', newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            tso_eic_to_area_code[row['TSO EIC code']] = row['Area Code']
-    return tso_eic_to_area_code
+from utils import load_tso_eic_and_area_codes, generate_time_interval, generate_power_shift_key_list
 
 # Function to generate sample data based on the schema
 def generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_code):
@@ -29,32 +21,12 @@ def generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_
         "documentId": str(uuid.uuid4()),  # Use native UUID
         "ownerCode": owner_code,  # Use the selected TSO EIC code
         "ownerRole": random.choice(["System Operator", "Grid Manager", "Network Engineer"]),  # Random role
-        "powerShiftKeyList": generate_power_shift_key_list(schema),
+        "powerShiftKeyList": generate_power_shift_key_list(area_code),
         "timeHorizon": random.choice(["dayAhead", "intraday", "monthAhead", "twoDaysAhead", "weekAhead", "yearAhead"]),
         "timeInterval": generate_time_interval(start_date, offset_days),
         "version": random.randint(1, 10)
     }
     return sample_data
-
-# Helper function to generate a power shift key list
-def generate_power_shift_key_list(schema):
-    if random.choice([True, False]):
-        return None
-    return [{
-        "areaCode": str(uuid.uuid4()) if random.choice([True, False]) else None,
-        "blockType": random.choice([
-            "consumptionsFlat", "consumptionsP", "explicitDistribution", "explicitInstruction",
-            "generatorsAndConsumptionsP", "generatorsFlat", "generatorsP", "generatorsPmax",
-            "generatorsPmin", "generatorsPriority", "generatorsRemainingCapacity", "generatorsUsedCapacity",
-            "nonConformLoadP", "storageFlat", "storageP"
-        ]) if random.choice([True, False]) else None,
-        "energyGroupMrid": str(uuid.uuid4()) if random.choice([True, False]) else None,
-        "resourceMrid": str(uuid.uuid4()) if random.choice([True, False]) else None,
-        "resourceType": random.choice([
-            "energyConsumer", "energyGroup", "generatingUnit", "hydroPump", "powerElectronicsUnit"
-        ]) if random.choice([True, False]) else None,
-        "value": generate_power_shift_key_value(schema)
-    } for _ in range(random.randint(1, 3))]
 
 # Helper function to generate a power shift key value
 def generate_power_shift_key_value(schema):
@@ -66,27 +38,6 @@ def generate_power_shift_key_value(schema):
         "shiftDirection": random.choice(["down", "up", "upAndDown"]) if random.choice([True, False]) else None
     }
 
-# Helper function to generate a time interval
-def generate_time_interval(start_date, offset_days):
-    if random.choice([True, False]):
-        return None
-    from_date = start_date + timedelta(days=offset_days)
-    to_date = from_date + timedelta(hours=random.randint(1, 24))
-    return {
-        "from": from_date.isoformat(),
-        "to": to_date.isoformat()
-    }
-
-# Helper function to generate a time interval
-def generate_time_interval(start_date, offset_days):
-    if random.choice([True, False]):
-        return None
-    from_date = start_date + timedelta(days=offset_days)
-    to_date = from_date + timedelta(hours=random.randint(1, 24))
-    return {
-        "from": from_date.isoformat(),
-        "to": to_date.isoformat()
-    }
 # Main function to load schema, generate data, and write to multiple files
 def generate_sample_data_files(schema_file_path, output_dir, output_file_prefix, tso_eic_to_area_code):
     num_samples=10

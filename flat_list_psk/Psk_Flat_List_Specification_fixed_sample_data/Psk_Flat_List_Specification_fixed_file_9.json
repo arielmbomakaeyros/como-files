@@ -1,16 +1,31 @@
 {
-    "businessTimestamp": "2025-02-15T05:57:38.553168",
-    "cdsId": "58fbbc37-fbf8-45b1-92fb-86e05d38cd8e",
+    "businessTimestamp": "2025-02-15T08:54:31.994538",
+    "cdsId": "695f7afb-bf86-47f9-acff-ac720fc8f875",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "736f66ad-0016-4594-950c-d46428273505",
-    "ownerCode": "10XDE-EON-NETZ-C",
+    "documentId": "f55e3375-94e5-4802-b0a4-61f818766009",
+    "ownerCode": "10XSI-ELES-----1",
     "ownerRole": "Grid Manager",
-    "powerShiftKeyList": null,
-    "timeHorizon": "intraday",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10YSI-ELES-----O",
+            "blockType": "explicitInstruction",
+            "energyGroupMrid": "70a71c3d-fda0-4c73-8bdf-d67bc73b6d55",
+            "resourceMrid": null,
+            "resourceType": "hydroPump",
+            "value": {
+                "activePowerMax": 372.09,
+                "activePowerMin": null,
+                "blockOrder": 2,
+                "participationFactor": 0.64,
+                "shiftDirection": null
+            }
+        }
+    ],
+    "timeHorizon": "dayAhead",
     "timeInterval": {
         "from": "2024-01-09T00:00:00",
-        "to": "2024-01-09T12:00:00"
+        "to": "2024-01-09T01:00:00"
     },
-    "version": 7
+    "version": 9
 }

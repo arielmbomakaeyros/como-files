@@ -1,0 +1,77 @@
+{
+    "businessTimestamp": "2024-01-01T03:00:10",
+    "cdsId": "26e79ec1-912d-4598-b1c7-3547d3d64d16",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSI-ELES-----O",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "193ccad0-3719-49fb-bb1e-f97440c6d467",
+                    "equipmentType": "load",
+                    "mrid": "1d754e5b-8089-4d84-8288-b4590f01b0df",
+                    "name": "Equipment 1"
+                }
+            ],
+            "groupCode": "4912516d-8d76-4228-80f8-30675b18296a"
+        },
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YSI-ELES-----O",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "8bb1b7d2-3883-4107-b51f-6461de1b7ab2",
+                    "equipmentType": "switch",
+                    "mrid": "9c3d44a8-b6f5-4200-b9de-046937e8092d",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YSI-ELES-----O",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "a8a5d68b-94d2-4931-b14c-e284137adb23",
+                    "equipmentType": "gen",
+                    "mrid": "d788815b-fcd9-4ff0-bfd4-bb977deae4c7",
+                    "name": "Equipment 2"
+                }
+            ],
+            "groupCode": "836ecd4a-01c1-45bb-ada8-08957fce88e4"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "malfunction",
+            "contingencyType": "ordinary",
+            "description": "Sample contingency description 1",
+            "equipmentOperatorCode": "950a7ea5-d3da-449c-aaee-e3fe4f6d4a51",
+            "groupCode": "7001d218-b820-48c8-9b3a-9c38f4fc7998",
+            "mrid": "e5eade97-32ef-4053-b52b-bfdcb0c63ade",
+            "mustStudy": false,
+            "name": "Contingency 1",
+            "probability": null
+        },
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "exceptional",
+            "description": "Sample contingency description 2",
+            "equipmentOperatorCode": "b0e31bc7-cae0-434a-861f-2c2c1954958a",
+            "groupCode": "90fef6d6-c2b9-42ed-abbd-b6cd556cfb64",
+            "mrid": "2b3e5849-a1d3-4eb5-b0ff-c09eafadbe4b",
+            "mustStudy": false,
+            "name": "Contingency 2",
+            "probability": 76.06
+        }
+    ],
+    "contingencyListId": "25b60101-c881-4dfb-9e8e-251d737c7f72",
+    "documentId": "40f98fca-e7d8-4fbb-baff-97bfde3570e4",
+    "gridModelId": "5f675029-fed4-4a12-a54e-5c24d8f3c2d7",
+    "ownerCode": "10XSI-ELES-----1",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-01T00:00:00",
+        "to": "2024-01-01T07:00:00"
+    },
+    "version": 4
+}

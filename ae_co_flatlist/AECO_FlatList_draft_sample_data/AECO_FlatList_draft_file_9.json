@@ -1,0 +1,262 @@
+{
+    "assessedElementFlatListId": "1569e18c-254a-44ef-8a68-0187a2862c2d",
+    "contingencyFlatListId": "c568378f-6185-484d-9a22-b020bdc01ffe",
+    "businessTimestamp": "2025-02-17T18:27:00.350441",
+    "cdsId": "1f190ae1-60a1-435a-ae89-428c448b237a",
+    "documentId": "43c6d9b5-00c8-4f42-912e-ee5320ba0593",
+    "gridModelId": "ceb8a906-cb60-4d99-af06-77b00ba5f22e",
+    "ownerCode": "10XDE-RWENET---W",
+    "ownerRole": "Grid Manager",
+    "timeHorizon": "dayAhead",
+    "timeInterval": null,
+    "version": 3,
+    "assessedElementList": [
+        {
+            "appointedMargin": 49.77,
+            "areaCode": "10YDE-RWENET---I",
+            "assessedPowerTransferCorridorCode": "84d55acb-0145-4877-890b-a7193940fff0",
+            "assessedSystemOperatorCode": null,
+            "conductingEquipmentMrid": null,
+            "conductingEquipmentName": null,
+            "contingencyList": null,
+            "dcTieCorridorCode": "026fdf1e-0bf1-4f3d-b42f-4201b75348b3",
+            "description": "Sample assessed element description 1",
+            "enabled": true,
+            "equipmentType": "shuntCompensator",
+            "exclusionReason": "capacityCalculationRegion",
+            "flowReliabilityMargin": 80.76,
+            "inBaseCase": true,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": false,
+            "maxFlow": null,
+            "maxMarginAdjustment": 24.36,
+            "mrid": "da1b954f-989b-4036-887c-8e129f051887",
+            "name": null,
+            "nativeRegionCode": "f69744ff-ea6e-4377-b0ab-bc8fdb7cfcee",
+            "overlappingZoneCode": null,
+            "positiveVirtualMargin": 51.73,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "2cdc65cb-b2d4-4aff-9e64-35214cd5ec22",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": null,
+            "scannedThresholdMargin": 92.43,
+            "securedForRegionCode": null,
+            "targetRemainingAvailableMargin": null,
+            "terminalList": null
+        },
+        {
+            "appointedMargin": 86.14,
+            "areaCode": "10YDE-RWENET---I",
+            "assessedPowerTransferCorridorCode": null,
+            "assessedSystemOperatorCode": "1ce184c3-c288-4c0e-a67e-56c1d41f0685",
+            "conductingEquipmentMrid": "9b249fba-3f94-4ebd-9f08-d3e8c6e22124",
+            "conductingEquipmentName": "Equipment 2",
+            "contingencyList": null,
+            "dcTieCorridorCode": "6e1c730f-b9e8-4ca0-b687-bd309f5087de",
+            "description": "Sample assessed element description 2",
+            "enabled": true,
+            "equipmentType": "busbar",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": 19.08,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": true,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": true,
+            "maxFlow": 458.24,
+            "maxMarginAdjustment": 23.57,
+            "mrid": "e34001c2-6a19-4fc4-9d6a-933dd88f9937",
+            "name": "Assessed Element 2",
+            "nativeRegionCode": "c79244c0-40b6-4bf5-9b36-68d2c4f113af",
+            "overlappingZoneCode": "5a1a2995-a6ab-4179-b902-3b2cd931f3a6",
+            "positiveVirtualMargin": null,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "608abe15-7b22-4f02-94b5-4ebb486c712c",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": null,
+            "scannedThresholdMargin": null,
+            "securedForRegionCode": "807e08f7-9fd3-4301-8e09-647f12dc5588",
+            "targetRemainingAvailableMargin": 53.45,
+            "terminalList": [
+                {
+                    "limit": {
+                        "category": null,
+                        "direction": "direct",
+                        "duration": null,
+                        "mrid": "9ae29490-5ae2-4035-9106-10cc2811ec70",
+                        "type": "ratio",
+                        "value": 770.14,
+                        "variable": "currentMin"
+                    },
+                    "limitMrid": "9825f161-a2e5-4fab-8b2f-2f1ab0d79d13",
+                    "terminalMrid": "ce1909fd-31ef-4e0d-b7e8-f58a31287803"
+                },
+                {
+                    "limit": {
+                        "category": null,
+                        "direction": null,
+                        "duration": "PT43M",
+                        "mrid": "ce7960af-f683-46fe-b6f1-f1006b9a8b41",
+                        "type": "absolute",
+                        "value": 919.49,
+                        "variable": "currentMin"
+                    },
+                    "limitMrid": null,
+                    "terminalMrid": "5b6fd852-027a-441b-9f0a-35dde780232c"
+                },
+                {
+                    "limit": null,
+                    "limitMrid": null,
+                    "terminalMrid": "8aaba99f-39d0-4a04-a1ab-9dee89ba6062"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 17.37,
+            "areaCode": "10YDE-RWENET---I",
+            "assessedPowerTransferCorridorCode": "ea818e0a-7f93-43a7-960d-22ea8486af21",
+            "assessedSystemOperatorCode": null,
+            "conductingEquipmentMrid": null,
+            "conductingEquipmentName": null,
+            "contingencyList": null,
+            "dcTieCorridorCode": "600de081-03fc-48b7-b029-324e563f816f",
+            "description": "Sample assessed element description 3",
+            "enabled": true,
+            "equipmentType": "busbar",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": null,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": true,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": true,
+            "maxFlow": 110.48,
+            "maxMarginAdjustment": 17.92,
+            "mrid": "6394c30c-5ff1-442c-ab11-ac14921d062c",
+            "name": null,
+            "nativeRegionCode": "8d834af3-a95e-4235-a0d0-d558612c9145",
+            "overlappingZoneCode": "90ce5cb2-1794-4f45-a3c9-2f29c486cf15",
+            "positiveVirtualMargin": 52.04,
+            "remedialActionList": null,
+            "scannedForRegionCode": null,
+            "scannedThresholdMargin": 55.85,
+            "securedForRegionCode": "6e600445-0899-438f-9913-cdaeb635912d",
+            "targetRemainingAvailableMargin": null,
+            "terminalList": [
+                {
+                    "limit": null,
+                    "limitMrid": null,
+                    "terminalMrid": "617eecce-650c-43bd-883a-41993a4f0299"
+                },
+                {
+                    "limit": null,
+                    "limitMrid": null,
+                    "terminalMrid": "4036a972-0735-4c44-afa2-a7d1e802d625"
+                }
+            ]
+        },
+        {
+            "appointedMargin": null,
+            "areaCode": "10YDE-RWENET---I",
+            "assessedPowerTransferCorridorCode": "ff469f53-6313-454d-a4e0-fd1228f729bc",
+            "assessedSystemOperatorCode": "1224a546-8791-43fd-9c8b-92b89ca3b305",
+            "conductingEquipmentMrid": "6ad67409-c5ef-4423-9b57-55f9ce2b418b",
+            "conductingEquipmentName": null,
+            "contingencyList": null,
+            "dcTieCorridorCode": null,
+            "description": null,
+            "enabled": true,
+            "equipmentType": "bus",
+            "exclusionReason": "nonNativeCapacityCalculationRegion",
+            "flowReliabilityMargin": 77.63,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": true,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": false,
+            "maxFlow": 173.59,
+            "maxMarginAdjustment": null,
+            "mrid": "974ef0b8-b5e9-4556-9d8b-ea4ad9be798e",
+            "name": null,
+            "nativeRegionCode": "a7668335-21c4-4400-8584-e0744bba9b07",
+            "overlappingZoneCode": null,
+            "positiveVirtualMargin": 49.71,
+            "remedialActionList": null,
+            "scannedForRegionCode": "9b304459-3190-4a1c-a132-39e3b147fe5b",
+            "scannedThresholdMargin": 14.84,
+            "securedForRegionCode": "78f7be45-f23e-4d85-8a02-0cd16ffebc01",
+            "targetRemainingAvailableMargin": null,
+            "terminalList": null
+        },
+        {
+            "appointedMargin": null,
+            "areaCode": "10YDE-RWENET---I",
+            "assessedPowerTransferCorridorCode": null,
+            "assessedSystemOperatorCode": "d1bc7116-50b0-4758-89e7-419e4cdf6fc7",
+            "conductingEquipmentMrid": "39e682e3-5d9f-4072-b823-2427f37b8b58",
+            "conductingEquipmentName": null,
+            "contingencyList": [
+                {
+                    "contingencyMrid": "12d25bb2-9ef0-49dd-83fc-2a5afc5a14fc",
+                    "enabled": false,
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "117e2197-0d43-4451-8d6d-7062d9984d1b",
+                    "enabled": false,
+                    "ruleType": "exclude"
+                },
+                {
+                    "contingencyMrid": "1ed3c159-c82d-49e4-a9f8-27baf4bcde6d",
+                    "enabled": false,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "0e624e2a-801b-4c8a-9a21-3892af689965",
+            "description": "Sample assessed element description 5",
+            "enabled": true,
+            "equipmentType": "transformer",
+            "exclusionReason": null,
+            "flowReliabilityMargin": null,
+            "inBaseCase": false,
+            "isCombinableWithContingency": true,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": false,
+            "maxFlow": 554.72,
+            "maxMarginAdjustment": 95.43,
+            "mrid": "e478925d-fb9d-4d58-bd06-9def6cf96e11",
+            "name": null,
+            "nativeRegionCode": "f7a3e28b-8418-4259-8d48-2951dfaa1cd0",
+            "overlappingZoneCode": null,
+            "positiveVirtualMargin": null,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "e3b2d544-0afd-4632-b20b-da4a6db4046b",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": "0caf76dc-1546-4fbd-8da5-7cd0d2a0b5b0",
+            "scannedThresholdMargin": null,
+            "securedForRegionCode": "fad20bea-042a-4f13-9c41-20486a3864df",
+            "targetRemainingAvailableMargin": 8.26,
+            "terminalList": null
+        }
+    ]
+}

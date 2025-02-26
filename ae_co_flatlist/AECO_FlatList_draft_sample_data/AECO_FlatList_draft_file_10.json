@@ -1,0 +1,197 @@
+{
+    "assessedElementFlatListId": "0520f888-e0b6-4149-bb69-b3f0ee32e83b",
+    "contingencyFlatListId": "100f82c8-ef3d-4f8c-9a85-545d18e0f17e",
+    "businessTimestamp": "2025-02-16T18:27:00.351609",
+    "cdsId": "e1e33c02-aa16-43a5-bffc-b6af708d21cd",
+    "documentId": "23929d62-5ace-49d0-9374-cec5624eacaa",
+    "gridModelId": "e53d4edf-3f6c-4509-9767-a5b7ed62bb15",
+    "ownerCode": "10XAT-APG------Z",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-10T00:00:00",
+        "to": "2024-01-10T14:00:00"
+    },
+    "version": 4,
+    "assessedElementList": [
+        {
+            "appointedMargin": 28.27,
+            "areaCode": "10YDOM-1010A019R",
+            "assessedPowerTransferCorridorCode": "73fb59da-728a-493b-88a3-8f9ffa878993",
+            "assessedSystemOperatorCode": "8744b7fb-2704-44fb-8319-a5c5890f89ac",
+            "conductingEquipmentMrid": null,
+            "conductingEquipmentName": "Equipment 1",
+            "contingencyList": null,
+            "dcTieCorridorCode": null,
+            "description": null,
+            "enabled": true,
+            "equipmentType": "transformer",
+            "exclusionReason": "systemOperator",
+            "flowReliabilityMargin": 15.91,
+            "inBaseCase": true,
+            "isCombinableWithContingency": true,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": false,
+            "maxFlow": null,
+            "maxMarginAdjustment": null,
+            "mrid": "68a56b65-e4f0-404c-8f6d-a2d50e67aa1a",
+            "name": null,
+            "nativeRegionCode": "1499772d-d5bf-412f-bd0c-5023a3f4debf",
+            "overlappingZoneCode": "a9fb34ca-4048-4eb7-8ad8-e5816b7ae7df",
+            "positiveVirtualMargin": 44.17,
+            "remedialActionList": [
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "25cfd904-4674-4664-b693-888813e23f6b",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "91ec3fd5-5f15-44e8-a0a6-243f92e18c43",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": null,
+            "scannedThresholdMargin": null,
+            "securedForRegionCode": null,
+            "targetRemainingAvailableMargin": null,
+            "terminalList": [
+                {
+                    "limit": null,
+                    "limitMrid": null,
+                    "terminalMrid": "edd51197-035f-4c5c-8b16-6002e57dae91"
+                }
+            ]
+        },
+        {
+            "appointedMargin": null,
+            "areaCode": "10YDOM-1010A019R",
+            "assessedPowerTransferCorridorCode": "2b5e314f-ea84-47fd-b948-bafaad1a458c",
+            "assessedSystemOperatorCode": "71a5ce7e-9bed-4377-954a-5080d719f96f",
+            "conductingEquipmentMrid": null,
+            "conductingEquipmentName": "Equipment 2",
+            "contingencyList": [
+                {
+                    "contingencyMrid": "881bf0a3-0c1d-4627-9f61-caab9bee88f2",
+                    "enabled": false,
+                    "ruleType": "exclude"
+                },
+                {
+                    "contingencyMrid": "eaba8ee6-e4a9-4802-aa91-14727050ac25",
+                    "enabled": false,
+                    "ruleType": "include"
+                },
+                {
+                    "contingencyMrid": "631aa47c-4988-4e9c-af7b-4e27f0a9d1f7",
+                    "enabled": true,
+                    "ruleType": "exclude"
+                }
+            ],
+            "dcTieCorridorCode": "bf878fc8-219d-441b-9a7f-852a6b61cfc1",
+            "description": null,
+            "enabled": true,
+            "equipmentType": "transformer",
+            "exclusionReason": "nonNativeCapacityCalculationRegion",
+            "flowReliabilityMargin": null,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": true,
+            "isCritical": false,
+            "isCrossBorderRelevant": false,
+            "isExcludedAdHoc": true,
+            "maxFlow": null,
+            "maxMarginAdjustment": null,
+            "mrid": "9d7c46e3-d15b-4341-ba87-7be77ba39586",
+            "name": "Assessed Element 2",
+            "nativeRegionCode": null,
+            "overlappingZoneCode": "3bfe1a6d-eb5b-4ea6-be38-cf4e467cf207",
+            "positiveVirtualMargin": null,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "49fa54c0-f7ab-4bb8-81d5-125543681cdd",
+                    "ruleType": "exclude"
+                },
+                {
+                    "enabled": false,
+                    "remedialActionMrid": "322ab8f7-2b76-4582-b973-70338e0dc7e6",
+                    "ruleType": "exclude"
+                }
+            ],
+            "scannedForRegionCode": "ad3a7480-b69d-49c6-96bc-5130c1adc421",
+            "scannedThresholdMargin": null,
+            "securedForRegionCode": "88c44796-db9b-44c0-a9b0-5bfdede516e8",
+            "targetRemainingAvailableMargin": null,
+            "terminalList": [
+                {
+                    "limit": null,
+                    "limitMrid": null,
+                    "terminalMrid": "db5c951e-6011-4f25-a648-b3f4753ff1c5"
+                },
+                {
+                    "limit": null,
+                    "limitMrid": "9886c651-ff91-4cee-a03a-cbcd8af594e7",
+                    "terminalMrid": "ceacd19b-e1c1-4e9a-88df-895867244dd2"
+                }
+            ]
+        },
+        {
+            "appointedMargin": 42.9,
+            "areaCode": "10YDOM-1010A019R",
+            "assessedPowerTransferCorridorCode": "eecc63b2-983b-4d03-ad8b-321f3f9ccd38",
+            "assessedSystemOperatorCode": "4ca8ffc2-6ada-4b3c-b0b5-2f4f1d6b6cd8",
+            "conductingEquipmentMrid": "0bb71c1e-dea5-4eb7-a197-c1737d45b1da",
+            "conductingEquipmentName": "Equipment 3",
+            "contingencyList": [
+                {
+                    "contingencyMrid": "c20f6f0a-2f70-4e53-80e1-7ec56868c853",
+                    "enabled": false,
+                    "ruleType": "include"
+                }
+            ],
+            "dcTieCorridorCode": "011626ff-af40-46f2-aa0a-39d51c9ae23a",
+            "description": "Sample assessed element description 3",
+            "enabled": false,
+            "equipmentType": null,
+            "exclusionReason": null,
+            "flowReliabilityMargin": null,
+            "inBaseCase": false,
+            "isCombinableWithContingency": false,
+            "isCombinableWithRemedialAction": false,
+            "isCritical": false,
+            "isCrossBorderRelevant": true,
+            "isExcludedAdHoc": false,
+            "maxFlow": 568.22,
+            "maxMarginAdjustment": null,
+            "mrid": "593f8ee3-8e4f-4750-aa27-44c245359f92",
+            "name": null,
+            "nativeRegionCode": "c18a7b4d-08fa-4a13-9809-3173163e1310",
+            "overlappingZoneCode": "5c71341d-7d02-4a79-b60d-23ffb8a176d1",
+            "positiveVirtualMargin": 68.75,
+            "remedialActionList": [
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "e78a5da6-e70c-422f-a87e-047d807b10d8",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "118fe8b7-237f-467f-8302-97e728e358a0",
+                    "ruleType": "include"
+                },
+                {
+                    "enabled": true,
+                    "remedialActionMrid": "daffda7e-90b8-47ec-a463-5384db75d4f4",
+                    "ruleType": "include"
+                }
+            ],
+            "scannedForRegionCode": null,
+            "scannedThresholdMargin": 72.88,
+            "securedForRegionCode": "8a98583b-523d-4ee1-b62b-e581de639a31",
+            "targetRemainingAvailableMargin": 44.31,
+            "terminalList": null
+        }
+    ]
+}

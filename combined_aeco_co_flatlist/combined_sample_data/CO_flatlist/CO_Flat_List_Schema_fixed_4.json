@@ -1,0 +1,83 @@
+{
+    "businessTimestamp": "2024-01-04T00:10:35",
+    "cdsId": "dc7b63c7-1fc1-4f3b-b951-19b3bed8d38d",
+    "comoDocumentType": "INTERNAL_CO_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "contingencyGroupList": [
+        {
+            "equipmentList": [
+                {
+                    "areaCode": "10YDE-VE-------2",
+                    "description": "Sample equipment description 1",
+                    "equipmentMrid": "72a5830e-e377-4431-99b0-c4e69169bf34",
+                    "equipmentType": "bus",
+                    "mrid": "7f4951f8-f248-41d6-aef6-8a7ce220de90",
+                    "name": "Equipment 1"
+                },
+                {
+                    "areaCode": "10YDE-VE-------2",
+                    "description": "Sample equipment description 2",
+                    "equipmentMrid": "321d93a5-2b4d-4513-8ddf-95853c21d4ac",
+                    "equipmentType": "bus",
+                    "mrid": "25977b55-4ccc-486e-a48c-c267be7615d6",
+                    "name": "Equipment 2"
+                },
+                {
+                    "areaCode": "10YDE-VE-------2",
+                    "description": "Sample equipment description 3",
+                    "equipmentMrid": "452be186-60cc-4593-a2af-2310de210a8b",
+                    "equipmentType": "switch",
+                    "mrid": "0392692f-faf0-4deb-8806-2a6d2fe99cc6",
+                    "name": "Equipment 3"
+                }
+            ],
+            "groupCode": "008320de-f03d-42ff-a261-fbe94c3b6549"
+        }
+    ],
+    "contingencyList": [
+        {
+            "contingencyCondition": "geographicalLocation",
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "f6f39066-fa5e-4164-b934-919bcfde75c8",
+            "groupCode": "5e947e8d-5529-481b-b548-5de1175ccf00",
+            "mrid": "3ae9daa8-88ae-4b70-9837-de535cb32cd4",
+            "mustStudy": true,
+            "name": null,
+            "probability": 44.56
+        },
+        {
+            "contingencyCondition": null,
+            "contingencyType": "ordinary",
+            "description": null,
+            "equipmentOperatorCode": "6b32b3ed-3b02-4fcf-9fb9-b4ca07a0fec2",
+            "groupCode": "e36b04ab-3d18-496c-a328-3d9355fd07dd",
+            "mrid": "3ab150e4-bf58-4258-8bee-a1fdf261ed3b",
+            "mustStudy": true,
+            "name": null,
+            "probability": 74.59
+        },
+        {
+            "contingencyCondition": "environmental",
+            "contingencyType": "outOfRange",
+            "description": null,
+            "equipmentOperatorCode": "5e6671f6-1784-40e1-8da6-7975ac094a54",
+            "groupCode": "c9c8892c-38d3-4fff-82dd-82a5e30964a0",
+            "mrid": "ab709a39-0827-4062-a8e1-4c648bd1e54d",
+            "mustStudy": false,
+            "name": "Contingency 3",
+            "probability": null
+        }
+    ],
+    "contingencyListId": "75375f75-dae8-477d-9dd6-9ce157d791bb",
+    "documentId": "ffb06f3c-4c01-4163-b6c9-58c2cc30b038",
+    "gridModelId": "7674426c-6b44-4aa2-8b6d-726148733080",
+    "ownerCode": "10YDE-VE-------2",
+    "ownerRole": "Network Engineer",
+    "timeHorizon": "dayAhead",
+    "timeInterval": {
+        "from": "2024-01-04T00:00:00",
+        "to": "2024-01-04T01:00:00"
+    },
+    "version": 7
+}
