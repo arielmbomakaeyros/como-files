@@ -1,31 +1,31 @@
 {
-    "businessTimestamp": "2025-02-15T08:54:31.994538",
-    "cdsId": "695f7afb-bf86-47f9-acff-ac720fc8f875",
+    "businessTimestamp": "2024-01-01T08:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T08:00:00",
+        "to": "2024-01-01T09:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XHR-HEP-OPS--A",
+    "ownerRole": "Grid Manager",
+    "cdsId": "b009f515-1b50-4b58-adf1-a560721145ab",
+    "documentId": "a56405a4-d089-4fef-95cf-e99cb870266b",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "f55e3375-94e5-4802-b0a4-61f818766009",
-    "ownerCode": "10XSI-ELES-----1",
-    "ownerRole": "Grid Manager",
     "powerShiftKeyList": [
         {
-            "areaCode": "10YSI-ELES-----O",
-            "blockType": "explicitInstruction",
-            "energyGroupMrid": "70a71c3d-fda0-4c73-8bdf-d67bc73b6d55",
-            "resourceMrid": null,
-            "resourceType": "hydroPump",
+            "areaCode": "10YHR-HEP------M",
+            "blockType": "generatorsPmin",
+            "energyGroupMrid": "54709288-8905-4334-b729-9e133b617bf4",
+            "resourceMrid": "432605d1-4486-4628-8f93-5cb9f5b88a2a",
+            "resourceType": "energyConsumer",
             "value": {
-                "activePowerMax": 372.09,
-                "activePowerMin": null,
-                "blockOrder": 2,
-                "participationFactor": 0.64,
-                "shiftDirection": null
+                "activePowerMax": 159.61,
+                "activePowerMin": 99.76,
+                "blockOrder": 1,
+                "participationFactor": 43.4,
+                "shiftDirection": "up"
             }
         }
-    ],
-    "timeHorizon": "dayAhead",
-    "timeInterval": {
-        "from": "2024-01-09T00:00:00",
-        "to": "2024-01-09T01:00:00"
-    },
-    "version": 9
+    ]
 }

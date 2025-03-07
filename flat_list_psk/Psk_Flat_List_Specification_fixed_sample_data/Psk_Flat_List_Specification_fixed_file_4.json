@@ -1,56 +1,45 @@
 {
-    "businessTimestamp": "2025-02-20T08:54:31.993317",
-    "cdsId": "8afef394-dd41-461b-b67a-0b4782c8b60e",
+    "businessTimestamp": "2024-01-01T03:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T03:00:00",
+        "to": "2024-01-01T04:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10X1001A1001A329",
+    "ownerRole": "System Operator",
+    "cdsId": "39a2aaba-6950-4fb3-a0ce-2873b0c687b5",
+    "documentId": "dfa80842-abd3-4b1e-8093-7a2741caacbf",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "d10ff8b7-ad91-438f-a525-4bac42d25a1a",
-    "ownerCode": "10X1001A1001A361",
-    "ownerRole": "Network Engineer",
     "powerShiftKeyList": [
         {
-            "areaCode": "49Y000000000003M",
-            "blockType": null,
-            "energyGroupMrid": null,
-            "resourceMrid": "86498be3-5e29-4b07-83be-221b5276c84c",
-            "resourceType": null,
+            "areaCode": "10YHU-MAVIR----U",
+            "blockType": "storageP",
+            "energyGroupMrid": "eb3c6fbd-434b-46dd-96e4-6080b7ca298b",
+            "resourceMrid": "333338a9-f34b-49dc-907a-0912eee336f9",
+            "resourceType": "powerElectronicsUnit",
             "value": {
                 "activePowerMax": null,
                 "activePowerMin": null,
-                "blockOrder": 7,
-                "participationFactor": null,
-                "shiftDirection": "up"
-            }
-        },
-        {
-            "areaCode": "49Y000000000003M",
-            "blockType": "consumptionsP",
-            "energyGroupMrid": null,
-            "resourceMrid": "9971d5f8-c6ad-448a-b6bb-2c019b9ff239",
-            "resourceType": null,
-            "value": {
-                "activePowerMax": 858.5,
-                "activePowerMin": 883.69,
-                "blockOrder": 4,
-                "participationFactor": 0.67,
-                "shiftDirection": "up"
-            }
-        },
-        {
-            "areaCode": "49Y000000000003M",
-            "blockType": null,
-            "energyGroupMrid": null,
-            "resourceMrid": null,
-            "resourceType": null,
-            "value": {
-                "activePowerMax": 607.31,
-                "activePowerMin": 65.97,
                 "blockOrder": 1,
-                "participationFactor": null,
-                "shiftDirection": null
+                "participationFactor": 75.68,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "10YHU-MAVIR----U",
+            "blockType": "generatorsAndConsumptionsP",
+            "energyGroupMrid": "1b9c06a6-21f8-4b9a-b47f-00bdd3721049",
+            "resourceMrid": "9238ffcf-fa49-41a0-a59a-f0000844e73b",
+            "resourceType": "hydroPump",
+            "value": {
+                "activePowerMax": 140.19,
+                "activePowerMin": 41.11,
+                "blockOrder": 2,
+                "participationFactor": 84.66,
+                "shiftDirection": "upAndDown"
             }
         }
-    ],
-    "timeHorizon": "weekAhead",
-    "timeInterval": null,
-    "version": 6
+    ]
 }

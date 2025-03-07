@@ -1,16 +1,31 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "9a027926-e2e5-498f-b67f-314e93fb75ed",
+    "businessTimestamp": "2024-01-01T09:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T09:00:00",
+        "to": "2024-01-01T10:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XSI-ELES-----1",
+    "ownerRole": "System Operator",
+    "cdsId": "46ce52e6-4e0a-4219-a80f-9ec191938d43",
+    "documentId": "9baa18e3-f45c-4144-8f17-dbf4c0f483ec",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "7b45c276-062d-4350-a907-1c7793439f9b",
-    "ownerCode": "10XPL-TSO------P",
-    "ownerRole": "System Operator",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
-    "timeInterval": {
-        "from": "2024-01-10T00:00:00",
-        "to": "2024-01-10T09:00:00"
-    },
-    "version": 1
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10YSI-ELES-----O",
+            "blockType": "consumptionsP",
+            "energyGroupMrid": "9a41a5f3-14b2-463f-8ed8-cd174b86ce69",
+            "resourceMrid": "1e30ab3d-135c-49bf-a512-48f4ad4fed08",
+            "resourceType": "generatingUnit",
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 1,
+                "participationFactor": 56.06,
+                "shiftDirection": "down"
+            }
+        }
+    ]
 }

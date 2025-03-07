@@ -1,46 +1,55 @@
 import os
 import json
-import csv
 import uuid
 from datetime import datetime, timedelta
 import random
-from utils import load_tso_eic_and_area_codes, generate_time_interval, generate_power_shift_key_list
+from utils import load_tso_eic_and_area_codes, generate_power_shift_key_list
 
 # Function to generate sample data based on the schema
-def generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_code):
+def generate_sample_data_final(schema, start_date, offset_hours, tso_eic_to_area_code):
     # Randomly select a TSO EIC code and its corresponding Area Code
     owner_code = random.choice(list(tso_eic_to_area_code.keys()))
     area_code = tso_eic_to_area_code[owner_code]
 
+    # Generate time interval and business timestamp
+    time_interval, business_timestamp = generate_time_interval_and_business_timestamp(start_date, offset_hours)
+
     # Generate a sample JSON object based on the schema
     sample_data = {
-        "businessTimestamp": (datetime.now() - timedelta(days=offset_days)).isoformat() if random.choice([True, False]) else None,
-        "cdsId": str(uuid.uuid4()),  # Use native UUID
-        "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
-        "comoDocumentVersion": "R24Q4V1_0",
-        "documentId": str(uuid.uuid4()),  # Use native UUID
+        "businessTimestamp": business_timestamp,
+        "timeInterval": time_interval,
+        "version": random.randint(1, 1),
+        "timeHorizon": random.choice(["dayAhead"]),
         "ownerCode": owner_code,  # Use the selected TSO EIC code
         "ownerRole": random.choice(["System Operator", "Grid Manager", "Network Engineer"]),  # Random role
+        "cdsId": str(uuid.uuid4()),  # Use native UUID
+        "documentId": str(uuid.uuid4()),  # Use native UUID
+        "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+        "comoDocumentVersion": "R24Q4V1_0",
         "powerShiftKeyList": generate_power_shift_key_list(area_code),
-        "timeHorizon": random.choice(["dayAhead", "intraday", "monthAhead", "twoDaysAhead", "weekAhead", "yearAhead"]),
-        "timeInterval": generate_time_interval(start_date, offset_days),
-        "version": random.randint(1, 10)
     }
     return sample_data
 
-# Helper function to generate a power shift key value
-def generate_power_shift_key_value(schema):
+# Helper function to generate a time interval and ensure businessTimestamp is the middle of the hour
+def generate_time_interval_and_business_timestamp(start_date, offset_hours):
+    # Calculate the start of the interval (beginning of the hour)
+    interval_start = start_date + timedelta(hours=offset_hours)
+    interval_start = interval_start.replace(minute=0, second=0, microsecond=0)  # Start of the hour
+
+    # Calculate the end of the interval (one hour later)
+    interval_end = interval_start + timedelta(hours=1)
+
+    # Calculate the businessTimestamp as the middle of the hour
+    business_timestamp = interval_start + timedelta(minutes=30)
+
     return {
-        "activePowerMax": round(random.uniform(0, 1000), 2) if random.choice([True, False]) else None,
-        "activePowerMin": round(random.uniform(0, 1000), 2) if random.choice([True, False]) else None,
-        "blockOrder": random.randint(1, 10) if random.choice([True, False]) else None,
-        "participationFactor": round(random.uniform(0, 1), 2) if random.choice([True, False]) else None,
-        "shiftDirection": random.choice(["down", "up", "upAndDown"]) if random.choice([True, False]) else None
-    }
+        "from": interval_start.isoformat(),
+        "to": interval_end.isoformat()
+    }, business_timestamp.isoformat()
 
 # Main function to load schema, generate data, and write to multiple files
 def generate_sample_data_files(schema_file_path, output_dir, output_file_prefix, tso_eic_to_area_code):
-    num_samples=10
+    num_samples = 10
     # Load the schema from the file
     with open(schema_file_path, 'r') as f:
         schema = json.load(f)
@@ -53,8 +62,8 @@ def generate_sample_data_files(schema_file_path, output_dir, output_file_prefix,
 
     # Generate and save multiple samples
     for i in range(num_samples):
-        offset_days = i
-        sample_data = generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_code)
+        offset_hours = i  # Increment by 1 hour for each file
+        sample_data = generate_sample_data_final(schema, start_date, offset_hours, tso_eic_to_area_code)
         output_file_path = os.path.join(output_dir, f"{output_file_prefix}_{i+1}.json")
         with open(output_file_path, 'w') as f:
             json.dump(sample_data, f, indent=4)
@@ -75,6 +84,106 @@ tso_eic_to_area_code = load_tso_eic_and_area_codes(tso_eic_csv_path)
 # Generate sample data files
 output_file_prefix = f'{baseFileName}_file'
 generate_sample_data_files(schema_file_path, output_dir, output_file_prefix, tso_eic_to_area_code)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import os
+# import json
+# import csv
+# import uuid
+# from datetime import datetime, timedelta
+# import random
+# from utils import load_tso_eic_and_area_codes, generate_time_interval, generate_power_shift_key_list, generate_time_interval_and_business_timestamp
+
+# # Function to generate sample data based on the schema
+# def generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_code):
+#     # Randomly select a TSO EIC code and its corresponding Area Code
+#     owner_code = random.choice(list(tso_eic_to_area_code.keys()))
+#     area_code = tso_eic_to_area_code[owner_code]
+
+#     # Generate time interval and business timestamp
+#     time_interval, business_timestamp = generate_time_interval_and_business_timestamp(start_date, offset_days)
+
+#     # Generate a sample JSON object based on the schema
+#     sample_data = {
+#         "businessTimestamp": business_timestamp, # (datetime.now() - timedelta(days=offset_days)).isoformat() if random.choice([True, False]) else None,
+#         "timeInterval": time_interval, # generate_time_interval(start_date, offset_days),
+#         "version": random.randint(1, 10),
+#         "timeHorizon": random.choice(["dayAhead"]),
+#         # "timeHorizon": random.choice(["dayAhead", "intraday", "monthAhead", "twoDaysAhead", "weekAhead", "yearAhead"]),
+#         "ownerCode": owner_code,  # Use the selected TSO EIC code
+#         "ownerRole": random.choice(["System Operator", "Grid Manager", "Network Engineer"]),  # Random role
+#         "cdsId": str(uuid.uuid4()),  # Use native UUID
+#         "documentId": str(uuid.uuid4()),  # Use native UUID
+#         "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+#         "comoDocumentVersion": "R24Q4V1_0",
+#         "powerShiftKeyList": generate_power_shift_key_list(area_code),
+#     }
+#     return sample_data
+
+# # Helper function to generate a power shift key value
+# def generate_power_shift_key_value(schema):
+#     return {
+#         "activePowerMax": round(random.uniform(0, 1000), 2) if random.choice([True, False]) else None,
+#         "activePowerMin": round(random.uniform(0, 1000), 2) if random.choice([True, False]) else None,
+#         "blockOrder": random.randint(1, 10) if random.choice([True, False]) else None,
+#         "participationFactor": round(random.uniform(0, 1), 2) if random.choice([True, False]) else None,
+#         "shiftDirection": random.choice(["down", "up", "upAndDown"]) if random.choice([True, False]) else None
+#     }
+
+# # Main function to load schema, generate data, and write to multiple files
+# def generate_sample_data_files(schema_file_path, output_dir, output_file_prefix, tso_eic_to_area_code):
+#     num_samples=10
+#     # Load the schema from the file
+#     with open(schema_file_path, 'r') as f:
+#         schema = json.load(f)
+
+#     # Create the output directory if it doesn't exist
+#     os.makedirs(output_dir, exist_ok=True)
+
+#     # Start date for the first sample
+#     start_date = datetime(2024, 1, 1)
+
+#     # Generate and save multiple samples
+#     for i in range(num_samples):
+#         offset_days = i + 1
+#         sample_data = generate_sample_data_final(schema, start_date, offset_days, tso_eic_to_area_code)
+#         output_file_path = os.path.join(output_dir, f"{output_file_prefix}_{i+1}.json")
+#         with open(output_file_path, 'w') as f:
+#             json.dump(sample_data, f, indent=4)
+
+# # Example usage
+# baseFileName = "Psk_Flat_List_Specification_fixed"
+# schema_file_path = os.path.join('flat_list_psk', 'schema', 'Psk_Flat_List_Specification_fixed.json')
+
+# # Path to the output directory (2 levels down)
+# output_dir = os.path.join('flat_list_psk', 'Psk_Flat_List_Specification_fixed_sample_data')
+
+# # Path to the TSO EIC codes CSV file
+# tso_eic_csv_path = os.path.join('csv_files', 'Mapping_TSO_Bidding_Zone_EIC.csv')
+
+# # Load TSO EIC codes and corresponding Area Codes from the CSV file
+# tso_eic_to_area_code = load_tso_eic_and_area_codes(tso_eic_csv_path)
+
+# # Generate sample data files
+# output_file_prefix = f'{baseFileName}_file'
+# generate_sample_data_files(schema_file_path, output_dir, output_file_prefix, tso_eic_to_area_code)
 
 
 

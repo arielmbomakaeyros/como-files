@@ -1,13 +1,59 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "f91cf4cc-370c-4dff-b6aa-9ae7897c047b",
+    "businessTimestamp": "2024-01-01T07:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T07:00:00",
+        "to": "2024-01-01T08:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XPL-TSO------P",
+    "ownerRole": "System Operator",
+    "cdsId": "14678e9a-305b-4cd0-a12f-ff7ed5805e64",
+    "documentId": "82f1b5fb-9179-4822-b2ef-edd4432d7066",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "be4015e0-94bd-4ccd-b071-bf755356bb7d",
-    "ownerCode": "10YDE-VE-------2",
-    "ownerRole": "Grid Manager",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
-    "timeInterval": null,
-    "version": 1
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10YPL-AREA-----S",
+            "blockType": "storageFlat",
+            "energyGroupMrid": "1ad09ba9-34fc-4aac-a015-fc51577529af",
+            "resourceMrid": "55f59937-c4d1-4b9b-b647-e04772c30676",
+            "resourceType": "generatingUnit",
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 1,
+                "participationFactor": 13.23,
+                "shiftDirection": "upAndDown"
+            }
+        },
+        {
+            "areaCode": "10YPL-AREA-----S",
+            "blockType": "generatorsRemainingCapacity",
+            "energyGroupMrid": "fb421e19-905d-4e06-b7d4-123ff61374d4",
+            "resourceMrid": "e644bfaf-0a79-4986-8e51-688727c9210c",
+            "resourceType": "energyConsumer",
+            "value": {
+                "activePowerMax": 138.96,
+                "activePowerMin": 69.41,
+                "blockOrder": 2,
+                "participationFactor": 27.04,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "10YPL-AREA-----S",
+            "blockType": "explicitInstruction",
+            "energyGroupMrid": "8d7b1f41-799a-4f7b-8656-6dc0ab53f912",
+            "resourceMrid": "58586d6c-847b-4529-9c3d-0c0fe744b6e0",
+            "resourceType": "energyConsumer",
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 3,
+                "participationFactor": 88.87,
+                "shiftDirection": "upAndDown"
+            }
+        }
+    ]
 }

@@ -1,13 +1,45 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "ce3255af-4b1e-46f8-b09c-1bc9763b6cbd",
+    "businessTimestamp": "2024-01-01T06:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T06:00:00",
+        "to": "2024-01-01T07:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XDE-RWENET---W",
+    "ownerRole": "System Operator",
+    "cdsId": "b465aae6-9bcc-4c05-b492-f205ba673af5",
+    "documentId": "01f3e72e-aeda-4372-887a-613cc15c6979",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "54797d72-90e0-47c0-8fad-7fbc1965fe5a",
-    "ownerCode": "10YDE-VE-------2",
-    "ownerRole": "System Operator",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
-    "timeInterval": null,
-    "version": 7
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10Y1001A1001A82H",
+            "blockType": "explicitDistribution",
+            "energyGroupMrid": "7e30aa52-d03a-4a1b-969a-68594d71e150",
+            "resourceMrid": "85fdb398-70cc-4660-97b9-98b566047e9b",
+            "resourceType": "generatingUnit",
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 1,
+                "participationFactor": 83.28,
+                "shiftDirection": "upAndDown"
+            }
+        },
+        {
+            "areaCode": "10Y1001A1001A82H",
+            "blockType": "storageFlat",
+            "energyGroupMrid": "b2ebeefe-e720-44e5-b9c6-21b331b26c25",
+            "resourceMrid": "b5b94c64-995f-4716-ac02-45930b741ed4",
+            "resourceType": "hydroPump",
+            "value": {
+                "activePowerMax": 112.47,
+                "activePowerMin": 99.64,
+                "blockOrder": 2,
+                "participationFactor": 76.09,
+                "shiftDirection": "up"
+            }
+        }
+    ]
 }

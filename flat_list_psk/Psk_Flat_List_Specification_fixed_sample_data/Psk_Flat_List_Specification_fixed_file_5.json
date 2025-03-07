@@ -1,45 +1,59 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "495a07a5-4665-4d68-a4bd-39d196379c3c",
+    "businessTimestamp": "2024-01-01T04:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T04:00:00",
+        "to": "2024-01-01T05:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XHR-HEP-OPS--A",
+    "ownerRole": "Network Engineer",
+    "cdsId": "56f7287c-70ae-47e5-bb52-2930e78b169d",
+    "documentId": "9c87fe9f-b668-4f33-88ae-8416008ede45",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "49262b04-1588-472a-83a5-7224c6b47185",
-    "ownerCode": "10XDE-ENBW--TNGX",
-    "ownerRole": "Grid Manager",
     "powerShiftKeyList": [
         {
-            "areaCode": "10YDE-ENBW-----N",
-            "blockType": "generatorsAndConsumptionsP",
-            "energyGroupMrid": "94270824-0074-4efa-b4c5-3677210cef70",
-            "resourceMrid": "610dc08a-531e-47ad-9c40-d611a2cb333d",
-            "resourceType": null,
+            "areaCode": "10YHR-HEP------M",
+            "blockType": "generatorsPmin",
+            "energyGroupMrid": "09b9ebde-ba6e-4907-a425-a3d193852f41",
+            "resourceMrid": "203e2b88-59fa-4613-b1fb-dcdcfa3b1508",
+            "resourceType": "hydroPump",
             "value": {
                 "activePowerMax": null,
-                "activePowerMin": 444.83,
-                "blockOrder": null,
-                "participationFactor": null,
-                "shiftDirection": "upAndDown"
+                "activePowerMin": null,
+                "blockOrder": 1,
+                "participationFactor": 71.66,
+                "shiftDirection": "up"
             }
         },
         {
-            "areaCode": "10YDE-ENBW-----N",
-            "blockType": "generatorsFlat",
-            "energyGroupMrid": null,
-            "resourceMrid": null,
-            "resourceType": null,
+            "areaCode": "10YHR-HEP------M",
+            "blockType": "generatorsPmin",
+            "energyGroupMrid": "38d69bb7-bb39-4567-b9ff-500beb6e9c05",
+            "resourceMrid": "f1aa4c33-09fc-45b5-8176-6875f4c10ba2",
+            "resourceType": "powerElectronicsUnit",
             "value": {
-                "activePowerMax": 18.61,
-                "activePowerMin": 344.52,
-                "blockOrder": null,
-                "participationFactor": 0.05,
-                "shiftDirection": null
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 2,
+                "participationFactor": 98.55,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "10YHR-HEP------M",
+            "blockType": "generatorsPriority",
+            "energyGroupMrid": "a2317b34-46ee-4beb-8a5a-b0303cf9e768",
+            "resourceMrid": "c726a2cc-bcf8-46c5-81c0-a0287a5e0697",
+            "resourceType": "generatingUnit",
+            "value": {
+                "activePowerMax": 104.32,
+                "activePowerMin": 44.02,
+                "blockOrder": 3,
+                "participationFactor": 44.72,
+                "shiftDirection": "upAndDown"
             }
         }
-    ],
-    "timeHorizon": "monthAhead",
-    "timeInterval": {
-        "from": "2024-01-05T00:00:00",
-        "to": "2024-01-05T07:00:00"
-    },
-    "version": 9
+    ]
 }

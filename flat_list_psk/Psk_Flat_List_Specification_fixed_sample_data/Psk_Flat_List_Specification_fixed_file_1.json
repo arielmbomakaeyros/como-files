@@ -1,31 +1,59 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "b45a52c7-0346-4ebd-801b-ab7b1610ac04",
+    "businessTimestamp": "2024-01-01T00:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T00:00:00",
+        "to": "2024-01-01T01:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10XCZ-CEPS-GRIDE",
+    "ownerRole": "Grid Manager",
+    "cdsId": "e7db56ec-45fd-4f08-bbdb-64b24c6d01c6",
+    "documentId": "c4798225-4145-423d-aa28-7426908ff3cd",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "93573d27-6972-4a36-8d2d-7090d79b437e",
-    "ownerCode": "10XDE-EON-NETZ-C",
-    "ownerRole": "Network Engineer",
     "powerShiftKeyList": [
         {
-            "areaCode": "10YDOM-1010A0213",
-            "blockType": null,
-            "energyGroupMrid": null,
-            "resourceMrid": null,
-            "resourceType": "hydroPump",
+            "areaCode": "10YCZ-CEPS-----N",
+            "blockType": "generatorsAndConsumptionsP",
+            "energyGroupMrid": "2476c6d0-883d-4a3e-8903-32b463ea0673",
+            "resourceMrid": "3bbeaa82-f8a6-4f79-8b34-a835971064c0",
+            "resourceType": "energyConsumer",
+            "value": {
+                "activePowerMax": 147.17,
+                "activePowerMin": 79.12,
+                "blockOrder": 1,
+                "participationFactor": 34.66,
+                "shiftDirection": "down"
+            }
+        },
+        {
+            "areaCode": "10YCZ-CEPS-----N",
+            "blockType": "generatorsPmin",
+            "energyGroupMrid": "e85070c1-7329-4cab-bd65-d4a1fbe4bd67",
+            "resourceMrid": "afdae5f7-cfcd-4e3f-b8f3-7478d416fb80",
+            "resourceType": "energyGroup",
             "value": {
                 "activePowerMax": null,
                 "activePowerMin": null,
-                "blockOrder": null,
-                "participationFactor": null,
-                "shiftDirection": null
+                "blockOrder": 2,
+                "participationFactor": 98.62,
+                "shiftDirection": "up"
+            }
+        },
+        {
+            "areaCode": "10YCZ-CEPS-----N",
+            "blockType": "storageFlat",
+            "energyGroupMrid": "97b194b4-a85a-408b-a530-173823441589",
+            "resourceMrid": "f91f8b1e-3fdf-4a6d-aee2-438af52a1480",
+            "resourceType": "energyConsumer",
+            "value": {
+                "activePowerMax": null,
+                "activePowerMin": null,
+                "blockOrder": 3,
+                "participationFactor": 72.35,
+                "shiftDirection": "up"
             }
         }
-    ],
-    "timeHorizon": "monthAhead",
-    "timeInterval": {
-        "from": "2024-01-01T00:00:00",
-        "to": "2024-01-01T06:00:00"
-    },
-    "version": 9
+    ]
 }

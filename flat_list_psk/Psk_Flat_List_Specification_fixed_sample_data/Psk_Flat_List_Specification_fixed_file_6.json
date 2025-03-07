@@ -1,31 +1,31 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "14cf8f16-4f0e-479d-b107-4785d7e0dcfd",
+    "businessTimestamp": "2024-01-01T05:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T05:00:00",
+        "to": "2024-01-01T06:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10X1001A1001A094",
+    "ownerRole": "System Operator",
+    "cdsId": "4ba0254d-937e-48b6-b0c2-dbff17106c84",
+    "documentId": "0a26b6a2-4347-47c4-80e3-c9cebc083cd8",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "63c944f4-9d3d-49e6-b0df-22861d349920",
-    "ownerCode": "10XSK-SEPS-GRIDB",
-    "ownerRole": "System Operator",
     "powerShiftKeyList": [
         {
-            "areaCode": "10YSK-SEPS-----K",
-            "blockType": "generatorsP",
-            "energyGroupMrid": null,
-            "resourceMrid": null,
-            "resourceType": "energyGroup",
+            "areaCode": "10YBE----------2",
+            "blockType": "explicitDistribution",
+            "energyGroupMrid": "032ead8a-2424-41f7-b713-86bb656215e8",
+            "resourceMrid": "4a0f239e-974b-4d76-9a66-b679178d5419",
+            "resourceType": "hydroPump",
             "value": {
-                "activePowerMax": 852.99,
+                "activePowerMax": null,
                 "activePowerMin": null,
-                "blockOrder": null,
-                "participationFactor": null,
-                "shiftDirection": null
+                "blockOrder": 1,
+                "participationFactor": 75.87,
+                "shiftDirection": "upAndDown"
             }
         }
-    ],
-    "timeHorizon": "twoDaysAhead",
-    "timeInterval": {
-        "from": "2024-01-06T00:00:00",
-        "to": "2024-01-06T06:00:00"
-    },
-    "version": 6
+    ]
 }

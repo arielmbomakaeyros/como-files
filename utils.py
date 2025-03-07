@@ -25,14 +25,14 @@ def generate_time_interval(start_date, offset_days):
     }
 
 # Helper function to generate a power shift key value
-def generate_power_shift_key_value():
+def generate_power_shift_key_value(blockOrder):
     active_power_min = round(random.uniform(0, 100), 2) if random.choice([True, False]) else None
     active_power_max = round(random.uniform(active_power_min + 1, 200), 2) if active_power_min is not None else None
 
     return {
         "activePowerMax": active_power_max,
         "activePowerMin": active_power_min,
-        "blockOrder": random.randint(1, 10), # if random.choice([True, False]) else None,
+        "blockOrder": blockOrder, # random.randint(1, 10), # if random.choice([True, False]) else None,
         "participationFactor": round(random.uniform(0, 100), 2), # if random.choice([True, False]) else None,
         "shiftDirection": random.choice(["down", "up", "upAndDown"]), # if random.choice([True, False]) else None
     }
@@ -51,25 +51,48 @@ def generate_range_constraint_list():
         "valueKind": random.choice(["absolute", "incremental", "incrementalPercentage"]), # if random.choice([True, False]) else None
     } for i in range(random.randint(1, 3))]
 
+# # Helper function to generate a power shift key list
+# def generate_power_shift_key_list(area_code):
+#     # if random.choice([True, False]):
+#     #     return None
+#     return [{
+#         "areaCode": area_code, # str(uuid.uuid4()) if random.choice([True, False]) else None,
+#         "blockType": random.choice([
+#             "consumptionsFlat", "consumptionsP", "explicitDistribution", "explicitInstruction",
+#             "generatorsAndConsumptionsP", "generatorsFlat", "generatorsP", "generatorsPmax",
+#             "generatorsPmin", "generatorsPriority", "generatorsRemainingCapacity", "generatorsUsedCapacity",
+#             "nonConformLoadP", "storageFlat", "storageP"
+#         ]), # if random.choice([True, False]) else None,
+#         "energyGroupMrid": str(uuid.uuid4()), # if random.choice([True, False]) else None,
+#         "resourceMrid": str(uuid.uuid4()), # if random.choice([True, False]) else None,
+#         "resourceType": random.choice([
+#             "energyConsumer", "energyGroup", "generatingUnit", "hydroPump", "powerElectronicsUnit"
+#         ]), # if random.choice([True, False]) else None,
+#         "value": generate_power_shift_key_value()
+#     } for _ in range(random.randint(1, 3))]
+
 # Helper function to generate a power shift key list
 def generate_power_shift_key_list(area_code):
-    # if random.choice([True, False]):
-    #     return None
-    return [{
-        "areaCode": area_code, # str(uuid.uuid4()) if random.choice([True, False]) else None,
-        "blockType": random.choice([
-            "consumptionsFlat", "consumptionsP", "explicitDistribution", "explicitInstruction",
-            "generatorsAndConsumptionsP", "generatorsFlat", "generatorsP", "generatorsPmax",
-            "generatorsPmin", "generatorsPriority", "generatorsRemainingCapacity", "generatorsUsedCapacity",
-            "nonConformLoadP", "storageFlat", "storageP"
-        ]), # if random.choice([True, False]) else None,
-        "energyGroupMrid": str(uuid.uuid4()), # if random.choice([True, False]) else None,
-        "resourceMrid": str(uuid.uuid4()), # if random.choice([True, False]) else None,
-        "resourceType": random.choice([
-            "energyConsumer", "energyGroup", "generatingUnit", "hydroPump", "powerElectronicsUnit"
-        ]), # if random.choice([True, False]) else None,
-        "value": generate_power_shift_key_value()
-    } for _ in range(random.randint(1, 3))]
+    # Generate a list with a random length between 1 and 3
+    power_shift_key_list = []
+    for i in range(random.randint(1, 3)):
+        power_shift_key_list.append({
+            "areaCode": area_code,
+            "blockType": random.choice([
+                "consumptionsFlat", "consumptionsP", "explicitDistribution", "explicitInstruction",
+                "generatorsAndConsumptionsP", "generatorsFlat", "generatorsP", "generatorsPmax",
+                "generatorsPmin", "generatorsPriority", "generatorsRemainingCapacity", "generatorsUsedCapacity",
+                "nonConformLoadP", "storageFlat", "storageP"
+            ]),
+            "energyGroupMrid": str(uuid.uuid4()),
+            "resourceMrid": str(uuid.uuid4()),
+            "resourceType": random.choice([
+                "energyConsumer", "energyGroup", "generatingUnit", "hydroPump", "powerElectronicsUnit"
+            ]),
+            "value": generate_power_shift_key_value(i + 1)  # Pass the index + 1 as blockOrder
+        })
+    
+    return power_shift_key_list
 
 # Helper function to generate a time interval and ensure businessTimestamp is the middle of the hour
 def generate_time_interval_and_business_timestamp(start_date, offset_days):

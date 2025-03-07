@@ -1,13 +1,31 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "d5dfa418-9660-4259-bd80-4761ac7491ab",
+    "businessTimestamp": "2024-01-01T01:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T01:00:00",
+        "to": "2024-01-01T02:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
+    "ownerCode": "10YDE-VE-------2",
+    "ownerRole": "System Operator",
+    "cdsId": "6ea5c83d-85e5-4885-ba89-0e70aa23a84c",
+    "documentId": "d26733fd-ca9e-49ff-8063-39d9b0734125",
     "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
     "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "c313cffc-b339-435f-af2d-1a9bc9a7f7ca",
-    "ownerCode": "10XDE-RWENET---W",
-    "ownerRole": "System Operator",
-    "powerShiftKeyList": null,
-    "timeHorizon": "monthAhead",
-    "timeInterval": null,
-    "version": 7
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10Y1001A1001A82H",
+            "blockType": "generatorsAndConsumptionsP",
+            "energyGroupMrid": "51e2c05b-9f3e-4a79-bea4-7365db85bb4f",
+            "resourceMrid": "6694ab80-5e24-4021-99ca-100db1366401",
+            "resourceType": "energyConsumer",
+            "value": {
+                "activePowerMax": 118.55,
+                "activePowerMin": 37.2,
+                "blockOrder": 1,
+                "participationFactor": 97.06,
+                "shiftDirection": "down"
+            }
+        }
+    ]
 }

@@ -1,13 +1,31 @@
 {
-    "businessTimestamp": null,
-    "cdsId": "f75ffe64-0828-4019-bd54-1dfa070786a2",
-    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
-    "comoDocumentVersion": "R24Q4V1_0",
-    "documentId": "1f856011-399f-4d73-a208-11dec2b0f05b",
+    "businessTimestamp": "2024-01-01T02:30:00",
+    "timeInterval": {
+        "from": "2024-01-01T02:00:00",
+        "to": "2024-01-01T03:00:00"
+    },
+    "version": 1,
+    "timeHorizon": "dayAhead",
     "ownerCode": "10XAT-APG------Z",
     "ownerRole": "Grid Manager",
-    "powerShiftKeyList": null,
-    "timeHorizon": "dayAhead",
-    "timeInterval": null,
-    "version": 3
+    "cdsId": "8cfccce3-00d3-4565-b50b-eedfaa7b4534",
+    "documentId": "c00e7996-9978-408e-911a-f9f33cd04838",
+    "comoDocumentType": "INTERNAL_PSK_FLAT_LIST",
+    "comoDocumentVersion": "R24Q4V1_0",
+    "powerShiftKeyList": [
+        {
+            "areaCode": "10YAT-APG------L",
+            "blockType": "generatorsAndConsumptionsP",
+            "energyGroupMrid": "a5381ffb-26f8-4361-85dd-603bf733e72c",
+            "resourceMrid": "550b17b2-280d-4a83-a8fb-04286225c12f",
+            "resourceType": "hydroPump",
+            "value": {
+                "activePowerMax": 64.85,
+                "activePowerMin": 54.88,
+                "blockOrder": 1,
+                "participationFactor": 95.97,
+                "shiftDirection": "up"
+            }
+        }
+    ]
 }
